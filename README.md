@@ -1,6 +1,6 @@
 # D8 project
 
-Sample of a project I built in my company in Drupal 8 CMS
+Sample of a project I built in my company in Drupal 8 CMS.
 The website is intergerated with Salesforce CRM
 
 
