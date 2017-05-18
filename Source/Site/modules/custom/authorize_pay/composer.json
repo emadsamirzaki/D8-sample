@@ -1,0 +1,14 @@
+{
+  "name": "drupal/authorize_pay",
+  "type": "drupal-module",
+  "description": "Use Authorize.net payment gateway",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/authorize_pay",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/authorize_pay",
+    "source": "http://cgit.drupalcode.org/authorize_pay"
+  },
+  "require": { }
+}

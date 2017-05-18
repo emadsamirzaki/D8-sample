@@ -1,0 +1,19 @@
+uuid: e6467706-af76-4122-90c0-4aec1acc2d32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_director_position
+    - node.type.director
+id: node.director.field_director_position
+field_name: field_director_position
+entity_type: node
+bundle: director
+label: Position
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

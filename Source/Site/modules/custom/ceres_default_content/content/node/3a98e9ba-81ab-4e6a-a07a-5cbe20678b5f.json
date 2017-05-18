@@ -1,0 +1,187 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/investors-update-guidance-strengthen-engagement-climate-risk-oil-and-gas-companies?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/blog_post"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/revision_uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/field_blog_post_author": [
+            {
+                "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/6?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/field_content_image": [
+            {
+                "href": "http:\/\/dev.ceres.org\/file\/51?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": "15"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3a98e9ba-81ab-4e6a-a07a-5cbe20678b5f"
+        }
+    ],
+    "vid": [
+        {
+            "value": "15"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "blog_post"
+        }
+    ],
+    "title": [
+        {
+            "value": "Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/field_blog_post_author": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/authors"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f0ae8371-9bad-41ea-92d2-d1cda6814daa"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/blog_post\/field_content_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/file\/51?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "4bacad3a-a56d-440b-9963-d01804f1cfdd"
+                    }
+                ],
+                "lang": "en",
+                "alt": "Investors Update Guidance to Strengthen Engagement on Climate",
+                "title": "",
+                "width": "370",
+                "height": "244"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "1480668331",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1484157913",
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": "0",
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "1484037963"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ]
+}

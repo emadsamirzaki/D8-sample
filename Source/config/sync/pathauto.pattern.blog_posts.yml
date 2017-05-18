@@ -1,0 +1,22 @@
+uuid: dfeb0961-8bc3-49d1-b739-312912f08bac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: blog_posts
+label: 'Blog Posts'
+type: 'canonical_entities:node'
+pattern: 'news-center/blog/[node:title]'
+selection_criteria:
+  d713ebdc-0361-4f74-b20f-a93e7e57ce28:
+    id: node_type
+    bundles:
+      blog_post: blog_post
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d713ebdc-0361-4f74-b20f-a93e7e57ce28
+selection_logic: and
+weight: -8
+relationships: {  }

@@ -1,0 +1,27 @@
+uuid: 762c8041-d158-4188-8d88-8c0e54c543a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_issue_type
+field_name: field_issue_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Issue
+      label: Issue
+    -
+      value: Sector
+      label: Sector
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

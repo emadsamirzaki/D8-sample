@@ -1,0 +1,22 @@
+uuid: ad0de590-1682-4d0f-851a-52d208316894
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ceres_annual_report
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: ceres_annual_report_help
+theme: ceres_annual_report
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

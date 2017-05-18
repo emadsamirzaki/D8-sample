@@ -1,0 +1,19 @@
+uuid: 9425bf5c-11d0-43b9-9dbc-2d4d9eb5d4b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_author_organization
+    - taxonomy.vocabulary.authors
+id: taxonomy_term.authors.field_author_organization
+field_name: field_author_organization
+entity_type: taxonomy_term
+bundle: authors
+label: Organization
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

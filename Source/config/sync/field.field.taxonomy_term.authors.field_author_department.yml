@@ -1,0 +1,28 @@
+uuid: 23df4aac-a562-4b10-813a-0d5d60280e97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_author_department
+    - taxonomy.vocabulary.authors
+    - taxonomy.vocabulary.staff_departments
+id: taxonomy_term.authors.field_author_department
+field_name: field_author_department
+entity_type: taxonomy_term
+bundle: authors
+label: Department
+description: 'You can manage departements from here <a href=''[site:url]/admin/structure/taxonomy/manage/staff_departments/overview'' target=''_blank''>[site:url]/admin/structure/taxonomy/manage/staff_departments/overview</a>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      staff_departments: staff_departments
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

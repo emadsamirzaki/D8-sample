@@ -1,0 +1,27 @@
+uuid: 73597f2d-51ad-4aaa-aec1-fb65642a43af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annual_report_finance_file
+    - node.type.annual_report_financial
+  module:
+    - file
+id: node.annual_report_financial.field_annual_report_finance_file
+field_name: field_annual_report_finance_file
+entity_type: node
+bundle: annual_report_financial
+label: 'Report file'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf docx doc'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,19 @@
+add authorize transaction entities:
+  title: 'Create new Authorize transaction entities'
+
+administer authorize transaction entities:
+  title: 'Administer Authorize transaction entities'
+  description: 'Allow to access the administration form to configure Authorize transaction entities.'
+  restrict access: true
+
+delete authorize transaction entities:
+  title: 'Delete Authorize transaction entities'
+
+edit authorize transaction entities:
+  title: 'Edit Authorize transaction entities'
+
+view published authorize transaction entities:
+  title: 'View published Authorize transaction entities'
+
+view unpublished authorize transaction entities:
+  title: 'View unpublished Authorize transaction entities'

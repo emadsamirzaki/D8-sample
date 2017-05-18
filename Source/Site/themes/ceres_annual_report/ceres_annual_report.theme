@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * Implements hook_preprocess_breadcrumb()
+ * @param array $variables
+ */
+function ceres_annual_report_preprocess_breadcrumb(&$variables){
+  if($variables['breadcrumb']){
+    $variables['breadcrumb'] = array_slice($variables['breadcrumb'] , 1);
+    if($node = \Drupal::routeMatch()->getParameter('node') && "annual_report_home" == \Drupal::routeMatch()->getParameter('node')->getType()){
+      unset($variables['breadcrumb']);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page()
+ * @param array $variables
+ */
+function ceres_annual_report_preprocess_page(&$variables) {
+  if (isset($variables['node']) && isset($variables['node']->field_banner_image)) {
+    /* @var $node Node */
+    $node = $variables['node'];
+    $bannerImage = $node->field_banner_image->getValue();
+
+    /* @var $imageFile Drupal\file_entity\Entity\FileEntity */
+    $imageFile = _ceres_preprocess_page_get_default_image($node, 'field_banner_image');
+    $defaultImageUrl = ($imageFile) ? file_create_url($imageFile->getFileUri()) : 
+      '/' . drupal_get_path('theme', 'ceres_annual_report') . '/assets/images/home/banner.jpg';
+
+    $data = [
+      'banner_image' => !empty($bannerImage) ?
+          file_create_url($node->field_banner_image->entity->getFileUri()) : $defaultImageUrl
+    ];
+
+    $variables['banner'] = $data;
+  }
+}
+
+/**
+ * Implements hook_preprocess_field()
+ */
+function ceres_annual_report_preprocess_field(&$variables) {
+  switch ($variables['element']['#field_name']) {
+
+    case 'field_featured_impact_story':
+    case 'field_featured_feature_impact':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'full-width', 'flex-wrap'), 'flex-display col-xs-12 col-sm-4');
+      break;
+    case 'field_home_financial_links':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'full-width', 'flex-wrap', 'mar-top-50'), 'flex-display col-xs-12 col-sm-3');
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_preprocess_page_title()
+ * @param array $variables
+ */
+function ceres_annual_report_preprocess_page_title(&$variables) {
+  if ($node = Drupal::routeMatch()->getParameter('node')) {
+    if ('annual_report_listing' == $node->getType()) {
+      $variables['fluid_title'] = true;
+      $variables['subtitle'] = $node->get('field_annual_report_intro_text')->getString();
+    }
+  }
+}

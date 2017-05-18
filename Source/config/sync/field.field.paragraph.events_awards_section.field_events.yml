@@ -1,0 +1,28 @@
+uuid: dd51bdfa-adb5-496d-89ec-519d118c2103
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events
+    - node.type.event
+    - paragraphs.paragraphs_type.events_awards_section
+id: paragraph.events_awards_section.field_events
+field_name: field_events
+entity_type: paragraph
+bundle: events_awards_section
+label: Events
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

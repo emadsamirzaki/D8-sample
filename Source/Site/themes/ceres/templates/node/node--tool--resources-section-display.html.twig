@@ -1,0 +1,15 @@
+{% set imgURI = content.field_resource_image['#items'].entity.uri.value %}
+
+<a class="news-wrapper" href="{{ url }}">
+  <div class="news-img-wrapper">
+    {% if node.field_resource_image.value %}
+      {{ content.field_resource_image }}
+    {% else %}
+      <img src="/{{ directory }}/assets/images/news/green-wheat.jpg" alt="Tool" class="img-responsive">
+    {% endif %}
+  </div>
+  <div class="news-content text-center">
+    <p class="news-date text-uppercase">{{ node.getType() }}</p>
+    <h3 class="news-title">{{ node.getTitle() }}</h3>
+  </div>
+</a>

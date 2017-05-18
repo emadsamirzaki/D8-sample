@@ -1,0 +1,42 @@
+uuid: d7f3db5f-1106-4a1f-9416-3f1f4399ec5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.roadmap.body
+    - field.field.node.roadmap.field_banner_image
+    - field.field.node.roadmap.field_content_image
+    - field.field.node.roadmap.field_meta_tags
+    - field.field.node.roadmap.field_roadmap_description
+    - field.field.node.roadmap.field_roadmap_explore_categories
+    - field.field.node.roadmap.field_roadmap_key_expectations
+    - field.field.node.roadmap.field_roadmap_resources
+    - node.type.roadmap
+  module:
+    - text
+    - user
+id: node.roadmap.teaser
+targetEntityType: node
+bundle: roadmap
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_content_image: true
+  field_meta_tags: true
+  field_roadmap_description: true
+  field_roadmap_explore_categories: true
+  field_roadmap_key_expectations: true
+  field_roadmap_resources: true

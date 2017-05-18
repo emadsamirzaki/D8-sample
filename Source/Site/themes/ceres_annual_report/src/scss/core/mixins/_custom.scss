@@ -1,0 +1,11 @@
+@mixin flex-display(){
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+@mixin flex-wrap(){
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}

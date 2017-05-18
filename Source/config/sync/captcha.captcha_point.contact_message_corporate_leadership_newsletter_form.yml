@@ -1,0 +1,7 @@
+uuid: c026b9fc-007a-4156-a423-349db1c091e2
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_message_corporate_leadership_newsletter_form
+captchaType: recaptcha/reCAPTCHA
+label: contact_message_corporate_leadership_newsletter_form

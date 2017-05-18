@@ -1,0 +1,8 @@
+global-styling:
+  css:
+    theme:
+      assets/css/style.min.css: {}
+  js:
+    assets/js/main.min.js: {}
+  dependencies:
+    - ceres/global-styling

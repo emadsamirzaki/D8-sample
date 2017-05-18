@@ -1,0 +1,9 @@
+services:
+  theme.negotiator.annual_report:
+    class: Drupal\annual_report\Theme\AnnualReportManager
+    tags:
+      - { name: theme_negotiator, priority: 0 }
+  redirect_event_subscriber:
+     class: Drupal\annual_report\EventSubscriber\AnnualReportRedirectSubscriber
+     tags:
+       - {name: event_subscriber}

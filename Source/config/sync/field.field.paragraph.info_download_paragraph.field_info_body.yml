@@ -1,0 +1,21 @@
+uuid: 1cf76b91-e4bc-4685-96db-3d5440242fb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info_body
+    - paragraphs.paragraphs_type.info_download_paragraph
+  module:
+    - text
+id: paragraph.info_download_paragraph.field_info_body
+field_name: field_info_body
+entity_type: paragraph
+bundle: info_download_paragraph
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

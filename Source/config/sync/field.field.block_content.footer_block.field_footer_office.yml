@@ -1,0 +1,36 @@
+uuid: e68d43c5-f323-4d0a-914f-b604ca31c12a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.storage.block_content.field_footer_office
+    - paragraphs.paragraphs_type.footer_office
+  module:
+    - entity_reference_revisions
+id: block_content.footer_block.field_footer_office
+field_name: field_footer_office
+entity_type: block_content
+bundle: footer_block
+label: Office
+description: 'Place the office information for the footer block'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      footer_office: footer_office
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 4
+        enabled: false
+      footer_office:
+        enabled: true
+        weight: 5
+      press_source:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,75 @@
+uuid: fcaef8ec-5308-4870-a74e-37e7187861ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_column_section.field_info_title
+    - field.field.paragraph.two_column_section.field_two_column_id
+    - field.field.paragraph.two_column_section.field_two_column_left
+    - field.field.paragraph.two_column_section.field_two_column_right
+    - paragraphs.paragraphs_type.two_column_section
+  module:
+    - field_states_ui
+    - paragraphs
+id: paragraph.two_column_section.default
+targetEntityType: paragraph
+bundle: two_column_section
+mode: default
+content:
+  field_info_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_two_column_id:
+    weight: 3
+    settings:
+      size: 30
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: string_textfield
+    region: content
+  field_two_column_left:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    region: content
+  field_two_column_right:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

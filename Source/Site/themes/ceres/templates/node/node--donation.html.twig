@@ -1,0 +1,47 @@
+{% if node.body.value %}
+  <section class="intro-wrapper row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <div class="universal-section-desc text-center"> {{ content.body }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+<section class="row">
+  <div class="container">
+    <div class="row flex-display flex-wrap">
+      <div class="col-sm-8 col-md-9">
+        {{ form }}
+      </div>
+      <div class="col-sm-4 col-md-3 donation-right-section">
+        <h3>{{ content.field_donation_right_first_title }}</h3>
+        {% if node.field_donation_right_first_body.value %}
+          <p>{{ content.field_donation_right_first_body }}</p>
+        {% endif %}
+        {% if node.field_donation_right_first_link.value %}
+          <a href="{{ file_url(content.field_donation_right_first_link['#items'].0.uri) }}">{{ content.field_donation_right_first_link['#items'].0.title }}</a>
+        {% endif %}
+
+        <h3 class="mar-top-50">{{ content.field_donation_right_sec_title }}</h3>
+        {% if node.field_donation_right_sec_body.value %}
+          <p>{{ content.field_donation_right_sec_body }}</p>
+        {% endif %}
+        {% if node.field_donation_right_sec_phone.value %}
+          <div><a href="tel:{{ node.field_donation_right_sec_phone.value }}">
+              <i class="fa fa-mobile" aria-hidden="true"></i> {{ node.field_donation_right_sec_phone.value }}</a>
+          </div>
+        {% endif %}
+        {% if node.field_donation_right_sec_email.value  %}
+          <div><a href="mailto:{{ node.field_donation_right_sec_email.value }}">
+              <i class="fa fa-envelope" aria-hidden="true"></i> {{ node.field_donation_right_sec_email.value }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+uuid: 750f1cb3-cc77-4a93-a655-a658aa355ecd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_impact_story.field_featured_impact_story
+    - field.field.paragraph.featured_impact_story.field_featured_impactstory_title
+    - paragraphs.paragraphs_type.featured_impact_story
+id: paragraph.featured_impact_story.default
+targetEntityType: paragraph
+bundle: featured_impact_story
+mode: default
+content:
+  field_featured_impact_story:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: image_link_with_badge_title
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_featured_impactstory_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

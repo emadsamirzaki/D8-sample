@@ -1,0 +1,28 @@
+uuid: ef201c84-689f-4ca9-ac62-0f7461aeeb3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_referenced_issue
+    - node.type.issue
+    - node.type.press
+id: node.press.field_referenced_issue
+field_name: field_referenced_issue
+entity_type: node
+bundle: press
+label: 'Referenced Issue'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      issue: issue
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

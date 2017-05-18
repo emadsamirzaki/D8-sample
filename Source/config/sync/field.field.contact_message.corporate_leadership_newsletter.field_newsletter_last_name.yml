@@ -1,0 +1,19 @@
+uuid: 6f6d389c-390d-4d07-8885-9979b62890b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.corporate_leadership_newsletter
+    - field.storage.contact_message.field_newsletter_last_name
+id: contact_message.corporate_leadership_newsletter.field_newsletter_last_name
+field_name: field_newsletter_last_name
+entity_type: contact_message
+bundle: corporate_leadership_newsletter
+label: 'Last Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

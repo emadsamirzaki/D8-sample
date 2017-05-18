@@ -1,0 +1,21 @@
+uuid: 6af6a361-a43b-45ca-a36e-c41ce655f52c
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_creditcardnum
+field_name: field_tx_creditcardnum
+entity_type: authorize_transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

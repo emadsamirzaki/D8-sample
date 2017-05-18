@@ -1,0 +1,81 @@
+uuid: acadeb79-fd50-4e05-a33f-e45f848d6e41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_roadmap_key_expectations
+    - node.type.roadmap
+    - paragraphs.paragraphs_type.roadmap_key_expectation
+  module:
+    - entity_reference_revisions
+id: node.roadmap.field_roadmap_key_expectations
+field_name: field_roadmap_key_expectations
+entity_type: node
+bundle: roadmap
+label: 'Key Expectations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      roadmap_key_expectation: roadmap_key_expectation
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 18
+        enabled: false
+      campaigns_section:
+        weight: 19
+        enabled: false
+      collage:
+        weight: 20
+        enabled: false
+      collage_section:
+        weight: 21
+        enabled: false
+      company_section:
+        weight: 22
+        enabled: false
+      events_awards_section:
+        weight: 23
+        enabled: false
+      experts_section:
+        weight: 24
+        enabled: false
+      footer_office:
+        weight: 25
+        enabled: false
+      image_link:
+        weight: 26
+        enabled: false
+      join_section:
+        weight: 27
+        enabled: false
+      networks_section:
+        weight: 28
+        enabled: false
+      news_section:
+        weight: 29
+        enabled: false
+      press_source:
+        weight: 30
+        enabled: false
+      roadmap_key_expectation:
+        enabled: true
+        weight: 31
+      testimonial_section:
+        weight: 32
+        enabled: false
+      roadmap_resources_section:
+        weight: 33
+        enabled: false
+      text_paragraph:
+        weight: 33
+        enabled: false
+      video_paragraph:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

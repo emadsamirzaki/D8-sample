@@ -1,0 +1,19 @@
+uuid: 0513766f-150e-499d-a7dd-9096c51c1011
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_phone
+id: authorize_transaction.basic_transaction.field_tx_phone
+field_name: field_tx_phone
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

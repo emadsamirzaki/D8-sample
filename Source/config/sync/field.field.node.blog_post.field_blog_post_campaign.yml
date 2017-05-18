@@ -1,0 +1,29 @@
+uuid: f66cc410-f4c3-432f-86a6-00d3314360cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_post_campaign
+    - node.type.blog_post
+    - node.type.campaign
+id: node.blog_post.field_blog_post_campaign
+field_name: field_blog_post_campaign
+entity_type: node
+bundle: blog_post
+label: Campaign
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

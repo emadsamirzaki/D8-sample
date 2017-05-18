@@ -1,0 +1,74 @@
+uuid: 10d69ae7-7b03-473e-bfa4-8a0aff5f8c5f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_section_display
+    - field.field.node.webinar.field_banner_image
+    - field.field.node.webinar.field_description
+    - field.field.node.webinar.field_meta_tags
+    - field.field.node.webinar.field_resource_campaigns
+    - field.field.node.webinar.field_resource_download_body
+    - field.field.node.webinar.field_resource_download_file
+    - field.field.node.webinar.field_resource_download_link
+    - field.field.node.webinar.field_resource_download_link_txt
+    - field.field.node.webinar.field_resource_image
+    - field.field.node.webinar.field_resource_issues
+    - field.field.node.webinar.field_resource_networks
+    - field.field.node.webinar.field_resource_programs
+    - field.field.node.webinar.field_webinar_date
+    - node.type.webinar
+  module:
+    - datetime
+    - user
+id: node.webinar.news_section_display
+targetEntityType: node
+bundle: webinar
+mode: news_section_display
+content:
+  field_resource_campaigns:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_issues:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_programs:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_webinar_date:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_meta_tags: true
+  field_resource_download_body: true
+  field_resource_download_file: true
+  field_resource_download_link: true
+  field_resource_download_link_txt: true
+  field_resource_image: true
+  field_resource_networks: true

@@ -1,0 +1,19 @@
+uuid: 3044ec32-2855-4679-b2fc-d4301cdd79db
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_state
+id: authorize_transaction.basic_transaction.field_tx_state
+field_name: field_tx_state
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

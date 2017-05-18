@@ -1,0 +1,52 @@
+uuid: 1aabbb36-04f2-442d-8885-e88a20ca0217
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_banner_image
+    - field.field.node.campaign.field_campaign_companies_action
+    - field.field.node.campaign.field_campaign_companies_link
+    - field.field.node.campaign.field_campaign_description
+    - field.field.node.campaign.field_campaign_donation_source
+    - field.field.node.campaign.field_campaign_join_section
+    - field.field.node.campaign.field_campaign_ongoing_campaign
+    - field.field.node.campaign.field_campaign_start_end_date
+    - field.field.node.campaign.field_content_image
+    - field.field.node.campaign.field_experts
+    - field.field.node.campaign.field_meta_tags
+    - field.field.node.campaign.field_network_sf_members
+    - node.type.campaign
+  module:
+    - text
+    - user
+id: node.campaign.teaser
+targetEntityType: node
+bundle: campaign
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_campaign_companies_action: true
+  field_campaign_companies_link: true
+  field_campaign_description: true
+  field_campaign_donation_source: true
+  field_campaign_join_section: true
+  field_campaign_ongoing_campaign: true
+  field_campaign_start_end_date: true
+  field_content_image: true
+  field_experts: true
+  field_meta_tags: true
+  field_network_sf_members: true

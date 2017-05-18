@@ -1,0 +1,8 @@
+uuid: c3fc9a57-fc83-4faf-8070-9125d412fd17
+langcode: en
+status: true
+dependencies: {  }
+id: header_social_links
+label: 'Header Social Links'
+revision: 0
+description: 'Social media links for header'

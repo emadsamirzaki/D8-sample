@@ -1,0 +1,20 @@
+uuid: 37aed51a-3f9b-4400-96aa-0c2a6e6b8dd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_featured_impact_story
+field_name: field_featured_impact_story
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

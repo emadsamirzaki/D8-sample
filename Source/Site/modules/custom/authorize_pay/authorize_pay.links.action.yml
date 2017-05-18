@@ -1,0 +1,19 @@
+entity.authorize_transaction.add_form:
+  route_name: 'authorize_transaction.add_page'
+  title: 'Add Authorize transaction'
+  appears_on:
+    - entity.authorize_transaction.collection
+    - entity.authorize_transaction.canonical
+
+entity.authorize_transaction_type.add_form:
+  route_name: 'entity.authorize_transaction_type.add_form'
+  title: 'Add Authorize transaction type'
+  appears_on:
+    - entity.authorize_transaction_type.collection
+
+entity.authorize_config_api.add_form:
+  route_name: 'entity.authorize_config_api.add_form'
+  title: 'Add Autorize config api'
+  appears_on:
+    - entity.authorize_config_api.collection
+

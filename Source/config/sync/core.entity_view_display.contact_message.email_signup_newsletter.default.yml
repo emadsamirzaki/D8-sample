@@ -1,0 +1,87 @@
+uuid: 347e3c40-c548-4368-9191-748bb694bed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.email_signup_newsletter
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_email
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_first_name
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_last_name
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_organization
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_zip
+id: contact_message.email_signup_newsletter.default
+targetEntityType: contact_message
+bundle: email_signup_newsletter
+mode: default
+content:
+  field_newsletter_email:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_newsletter_first_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_newsletter_last_name:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_newsletter_organization:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_newsletter_zip:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  mail:
+    weight: -2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  message:
+    type: string
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: -3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  subject:
+    weight: -1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

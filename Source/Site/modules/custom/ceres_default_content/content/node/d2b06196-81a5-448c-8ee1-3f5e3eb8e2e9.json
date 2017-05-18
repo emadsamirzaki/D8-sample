@@ -1,0 +1,168 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/connect-dots?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/campaign"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/campaign\/uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/campaign\/revision_uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/campaign\/field_campaign_banner_image": [
+            {
+                "href": "http:\/\/dev.ceres.org\/file\/34?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": "20"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "d2b06196-81a5-448c-8ee1-3f5e3eb8e2e9"
+        }
+    ],
+    "vid": [
+        {
+            "value": "20"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "campaign"
+        }
+    ],
+    "title": [
+        {
+            "value": "Connect the Dots",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/campaign\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/campaign\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/campaign\/field_campaign_banner_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/file\/34?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b430edf8-e7a0-46d3-832b-2305cbeacf79"
+                    }
+                ],
+                "alt": "campaign-img",
+                "title": "",
+                "width": "299",
+                "height": "300"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "1484038297",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1484150431",
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": "0",
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "1484038311"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "field_campaign_ongoing_campaign": [
+        {
+            "value": "1"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+uuid: 7d3f1649-c5b4-427e-9553-63edf74514ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_badge_image
+    - paragraphs.paragraphs_type.image_link_with_badge_title
+  module:
+    - image
+id: paragraph.image_link_with_badge_title.field_image_badge_image
+field_name: field_image_badge_image
+entity_type: paragraph
+bundle: image_link_with_badge_title
+label: Image
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 300x300
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

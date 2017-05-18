@@ -1,0 +1,225 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/jackie-miller-0?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/staff"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/revision_uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/field_staff_author": [
+            {
+                "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/5?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/field_staff_department": [
+            {
+                "href": "http:\/\/dev.ceres.org\/experts?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/field_staff_picture": [
+            {
+                "href": "http:\/\/dev.ceres.org\/file\/38?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": "5"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5fd48eea-92f7-4a03-ba4a-580023f7da47"
+        }
+    ],
+    "vid": [
+        {
+            "value": "5"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "staff"
+        }
+    ],
+    "title": [
+        {
+            "value": "Jackie Miller",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/field_staff_author": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/5?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/authors"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "aca0b15c-efea-44df-9c8c-4de4307c1aa7"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/field_staff_department": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/experts?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/staff_departments"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fafa89d6-cd90-44bf-99ff-75b7da46dcd4"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/staff\/field_staff_picture": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/file\/38?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fbddbe00-f11c-42d5-bea5-409cb47f7579"
+                    }
+                ],
+                "alt": "Jackie Miller",
+                "title": "",
+                "width": "140",
+                "height": "139"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "1477402562",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1484151198",
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": "0",
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "1477402593"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Sue Reid is Vice President of Climate and Clean Energy Programs at Ceres, overseeing Ceres\u2019 energy and climate programs and coordinating across the organization to advance the Clean Trillion initiative.&nbsp; The Clean Trillion is a clean energy investment target intended to avoid the worst effects of climate change, requiring more than $1 trillion additional investment in clean energy globally each year.<\/p>\r\n\r\n<p>Sue has two decades of experience as an attorney and specialist in clean energy and climate policy. Prior to joining Ceres in 2014, she served as Vice President and Massachusetts Advocacy Center Director at the Conservation Law Foundation, where she successfully spearheaded efforts to secure some of the strongest climate and clean energy policies in the U.S.<\/p>\r\n\r\n<p>She also previously worked as an intellectual property litigation attorney at law firms in Silicon Valley and Boston, where she represented a broad range of high tech clients.&nbsp; She earned her law degree with honors from Boston University School of Law.<\/p>\r\n",
+            "format": "basic_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_staff_expert": [
+        {
+            "value": "0"
+        }
+    ],
+    "field_staff_position": [
+        {
+            "value": "Vice President, Climate & Clean Energy Programs"
+        }
+    ]
+}

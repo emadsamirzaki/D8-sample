@@ -1,0 +1,194 @@
+<?php
+
+/**
+ * @file
+ * Contains ceres_features.module..
+ */
+use Drupal\block\Entity\Block;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\salesforce\Service\ConsumerService;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_help().
+ */
+function ceres_features_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+// Main module help for the ceres_features module.
+    case 'help.page.ceres_features':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('List of different features added to Ceres website') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * HOOK_form_alter
+ * @param array $form
+ * @param FormStateInterface $form_state
+ * @param string $form_id
+ */
+function ceres_features_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  /** Change contact us form input labels * */
+//  print $form_id;
+  switch ($form_id) {
+    case 'contact_message_feedback_form':
+      $form['name']['#title'] = t('Name: ');
+      $form['mail']['#title'] = t('Email Address: ');
+      break;
+    case 'contact_message_email_signup_newsletter_form':
+    case 'contact_message_investor_leadership_newsletter_form':
+    case 'contact_message_corporate_leadership_newsletter_form':
+      if (!Drupal::currentUser()->isAnonymous()) {
+        $user = User::load(Drupal::currentUser()->id());
+        $form['field_newsletter_email']['widget'][0]['value']["#default_value"] = Drupal::currentUser()->getEmail();
+        $form['field_newsletter_first_name']['widget'][0]['value']["#default_value"] = $user->field_user_register_first_name->value;
+        $form['field_newsletter_last_name']['widget'][0]['value']["#default_value"] = $user->field_user_register_last_name->value;
+        $form['field_newsletter_organization']['widget'][0]['value']["#default_value"] = (!empty($user->field_user_register_organization->value)) ? $user->field_user_register_organization->value : '';
+      }
+      $form['#validate'][] = "_ceres_features_newsletter_form_validate";
+      $form['actions']['submit']['#submit'][] = "_ceres_features_newsletter_form_submit_handler";
+      break;
+  }
+}
+
+function _ceres_features_newsletter_form_validate(&$form, FormStateInterface $form_state) {
+  if (!filter_var($form_state->getValue('field_newsletter_email')[0]['value'], FILTER_VALIDATE_EMAIL)) {
+    $form_state->setError($form['field_newsletter_email'], t('Enter a valid email address'));
+  }
+  if (strlen($form_state->getValue('field_newsletter_first_name')[0]['value']) > 40) {
+    $form_state->setError($form['field_newsletter_first_name'], t('First name must be no longer than 40 characters'));
+  }
+  if (strlen($form_state->getValue('field_newsletter_last_name')[0]['value']) > 80) {
+    $form_state->setError($form['field_newsletter_last_name'], t('Last name must be no longer than 80 characters'));
+  }
+  if (strlen($form_state->getValue('field_newsletter_zip')[0]['value']) > 20) {
+    $form_state->setError($form['field_newsletter_zip'], t('Zip must be no longer than 20 characters'));
+  }
+}
+
+function _ceres_features_newsletter_form_submit_handler(&$form, FormStateInterface $form_state) {
+  $campaign = '';
+  switch ($form['#form_id']) {
+    case 'contact_message_email_signup_newsletter_form':
+      $block = Block::load('homepagesignupblock');
+      $campaign = $block->get('settings')['content']['type'];
+      break;
+    case 'contact_message_investor_leadership_newsletter_form':
+      $block = Block::load('investor_leadership_newsletter');
+      $campaign = $block->get('settings')['content']['type'];
+      break;
+    case 'contact_message_corporate_leadership_newsletter_form':
+      $block = Block::load('corporate_leadership_newsletter');
+      $campaign = $block->get('settings')['content']['type'];
+      break;
+  }
+  (emailSignUp($form_state, $campaign)) ?
+          drupal_set_message('Thank you for signing up to get email updates from Ceres. '
+              . 'Check your inbox soon for your first email and keep up on the latest sustainability challenges and opportunities.') :
+          drupal_set_message('Your email is already subscribed.', 'error');
+}
+
+/**
+ * Assign lead to specific campaign
+ * @param FormStateInterface $form_state
+ * @param string $campaign Campaign Name
+ */
+function emailSignUp(FormStateInterface $form_state, $campaign) {
+  /* @var $sfService ConsumerService */
+  $sfService = Drupal::service('salesforce.consumer');
+  $client = $sfService->getClient();
+  $leadId = '';
+  $data = [
+    'FirstName' => $form_state->getValue('field_newsletter_first_name')[0]['value'],
+    'LastName' => $form_state->getValue('field_newsletter_last_name')[0]['value'],
+    'Email' => $form_state->getValue('field_newsletter_email')[0]['value'],
+    'PostalCode' => $form_state->getValue('field_newsletter_zip')[0]['value'],
+    'Company' => !empty($form_state->getValue('field_newsletter_organization')[0]['value']) ? $form_state->getValue('field_newsletter_organization')[0]['value'] : 'N/A',
+    'LeadSource' => 'Website'
+  ];
+
+  $leadId = $sfService->createObject($client, 'Lead', $data);
+  return $sfService->assignLeadToCampaign($client, 'Lead', $leadId, $campaign);
+}
+
+/**
+ * HOOK_FORM_ID_form_alter
+ * Modify user registeration form submit handler
+ * @param array $form
+ * @param FormStateInterface $form_states
+ */
+function ceres_features_form_user_register_form_alter(&$form, FormStateInterface $form_states) {
+  $form['actions']['submit']['#submit'][] = "ceres_features_user_register_form_submit_handler";
+}
+
+/**
+ * HOOK_FORM_ID_form_alter
+ * Modify user form submit handler
+ * @param array $form
+ * @param FormStateInterface $form_states
+ */
+function ceres_features_form_user_form_alter(&$form, FormStateInterface $form_state) {
+  $form['actions']['submit']['#submit'][] = "ceres_features_user_register_form_submit_handler";
+  if ($form['field_user_register_mail_updates']['widget']['value']["#default_value"]) {
+    $form['field_user_register_mail_updates']['#disabled'] = TRUE;
+  }
+  $form['#validate'][] = "ceres_features_user_register_form_validate";
+}
+
+function ceres_features_user_register_form_validate(&$form, FormStateInterface $form_state) {
+  if (!is_numeric($form_state->getValue('field_user_register_mobile')[0]['value']) && !empty($form_state->getValue('field_user_register_mobile')[0]['value'])) {
+    $form_state->setError($form['field_user_register_mobile'], t('Mobile number has to be only numbers'));
+  }
+  if (!filter_var($form_state->getValue('mail'), FILTER_VALIDATE_EMAIL)) {
+    $form_state->setError($form['account'], t('Enter a valid email address'));
+  }
+  if (is_numeric($form_state->getValue('name'))) {
+    $form_state->setError($form['account'], t('Enter a valid username (alphanumeric)'));
+  }
+  if (strlen($form_state->getValue('field_user_register_first_name')[0]['value']) >= 40 ||
+      strlen($form_state->getValue('field_user_register_last_name')[0]['value']) >= 40) {
+    $form_state->setError($form['field_user_register_last_name'], t('First/Last Name must not exceed (40) characters'));
+  }
+}
+
+/**
+ * Handle user register submit with salesforce
+ * @param array $form
+ * @param FormStateInterface $form_state
+ */
+function ceres_features_user_register_form_submit_handler($form, &$form_state) {
+  /* @var $sfService ConsumerService */
+  $sfService = Drupal::service('salesforce.consumer');
+  $client = $sfService->getClient();
+  $form_state->setRedirect('user.page');
+  $data = [
+    'LastName' => $form_state->getValue('field_user_register_last_name')[0]['value'],
+    'FirstName' => $form_state->getValue('field_user_register_first_name')[0]['value'],
+    'Email' => filter_var($form_state->getValue('mail'), FILTER_VALIDATE_EMAIL) ? $form_state->getValue('mail') : '',
+    'MobilePhone' => !empty($form_state->getValue('field_user_register_mobile')) ? $form_state->getValue('field_user_register_mobile')[0]['value'] : '',
+    'Company' => (!empty($form_state->getValue('field_user_register_organization')[0]['value'])) ? $form_state->getValue('field_user_register_organization')[0]['value'] : 'N/A',
+    'LeadSource' => 'Website'
+  ];
+
+  $lead = $sfService->getObjectByFieldName($client, 'Lead', array_slice($data, 2, 1))[0];
+  $leadIsConverted = $lead['IsConverted'];
+  if ($lead && !$leadIsConverted) {
+    $leadId = $sfService->updateObject($client, 'Lead', $lead['Id'], $data);
+  }
+  else {
+    $leadId = $sfService->createObject($client, 'Lead', $data);
+  }
+
+  if ($form_state->getValue('field_user_register_mail_updates')['value']) {
+    return ($leadIsConverted) ? $sfService->assignLeadToCampaign($client, 'Contact', $lead['ConvertedContactId'], 'Ceres eCommunity') :
+        $sfService->assignLeadToCampaign($client, 'Lead', (($lead) ? $lead['Id'] : $leadId), 'Ceres eCommunity');
+  }
+
+  return $leadId;
+}

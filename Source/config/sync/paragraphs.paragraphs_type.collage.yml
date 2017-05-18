@@ -1,0 +1,6 @@
+uuid: 60418e24-3245-4e8c-b5e1-a9b68a4ebc1c
+langcode: en
+status: true
+dependencies: {  }
+id: collage
+label: Collage

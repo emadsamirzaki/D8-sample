@@ -1,0 +1,10 @@
+uuid: 19768c7c-4161-4005-84b0-638976a1b8fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.roadmap_categories_section
+label: 'Roadmap Categories Section'
+targetEntityType: node
+cache: true

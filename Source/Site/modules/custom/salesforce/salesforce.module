@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains salesforce.module..
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function salesforce_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the salesforce module.
+    case 'help.page.salesforce':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Map salesforce with drupal 8 through REST API library') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function salesforce_uninstall() {
+  Drupal::configFactory()->getEditable('salesforce.config.settings')->delete();
+}

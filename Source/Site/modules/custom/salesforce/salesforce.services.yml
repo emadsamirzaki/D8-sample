@@ -1,0 +1,6 @@
+parameters:
+    salesforce.consumer.class: \Drupal\salesforce\Service\ConsumerService
+services:
+  salesforce.consumer:
+      class: '%salesforce.consumer.class%'
+      arguments: ['@config.factory','@entity_type.manager']

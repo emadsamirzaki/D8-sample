@@ -1,0 +1,25 @@
+uuid: 3959bf8c-b5d3-498d-9908-8d008fcd91c0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_social_links:5db6ddff-bca4-420b-ba2c-19c34bc3dd2d'
+  module:
+    - block_content
+  theme:
+    - ceres_annual_report
+id: ceres_annual_report_social_media_links
+theme: ceres_annual_report
+region: header_links
+weight: -8
+provider: null
+plugin: 'block_content:5db6ddff-bca4-420b-ba2c-19c34bc3dd2d'
+settings:
+  id: 'block_content:5db6ddff-bca4-420b-ba2c-19c34bc3dd2d'
+  label: 'Social media links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

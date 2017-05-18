@@ -1,0 +1,22 @@
+salesforce.sf_config_settings:
+  path: 'admin/structure/sf_config/settings'
+  defaults:
+    _form: '\Drupal\salesforce\Controller\SfConfig'
+    _title: 'Salesforce OAuth Authentication'
+  requirements:
+    _permission: 'administer site configuration'
+
+salesforce.authorization_endpoint:
+  path: 'salesforce/oauth_callback'
+  defaults:
+    _controller: '\Drupal\salesforce\Controller\AuthorizationController::authorize'
+  requirements:
+    _permission: 'access content'
+
+system.admin_salesforce_config:
+  path: '/admin/config/salesforce'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Salesforce'
+  requirements:
+    _permission: 'access administration pages'

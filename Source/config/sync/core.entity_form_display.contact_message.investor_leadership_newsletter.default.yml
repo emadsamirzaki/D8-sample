@@ -1,0 +1,63 @@
+uuid: a2f18122-1ff6-4393-8b7c-52368a42aa6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.investor_leadership_newsletter
+    - field.field.contact_message.investor_leadership_newsletter.field_newsletter_email
+    - field.field.contact_message.investor_leadership_newsletter.field_newsletter_first_name
+    - field.field.contact_message.investor_leadership_newsletter.field_newsletter_last_name
+    - field.field.contact_message.investor_leadership_newsletter.field_newsletter_organization
+    - field.field.contact_message.investor_leadership_newsletter.field_newsletter_zip
+id: contact_message.investor_leadership_newsletter.default
+targetEntityType: contact_message
+bundle: investor_leadership_newsletter
+mode: default
+content:
+  field_newsletter_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_newsletter_first_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_last_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_organization:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_zip:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

@@ -1,0 +1,116 @@
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+    );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+    );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin transition-animation($time: 300){
+  -webkit-transition: all #{$time}ms ease-in-out;
+  -moz-transition: all #{$time}ms ease-in-out;
+  -o-transition: all #{$time}ms ease-in-out;
+  transition: all #{$time}ms ease-in-out;
+}
+
+@mixin background-image-with-color($color, $image-path){
+  background-color: $color;
+  background-image: url($image-path);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+
+@mixin section-title-with-margin-bottom($margin-amount: 25px, $color: $light-black){
+  font-weight: 300;
+  font-size: 45px;
+  line-height: 52px;
+  color: $color;
+  margin-bottom: $margin-amount;
+  @media (max-width: $screen-xs-max){
+    padding-#{$default}: 15px;
+    padding-#{$opposite}: 15px;
+  }
+}
+
+@mixin section-description-with-margin-bottom($margin-amount: 55px, $color: $light-black){
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 34px;
+  color: $color;
+  &:not(.no-mar-bottom){
+    margin-bottom: $margin-amount;
+  }
+  @media (max-width: $screen-xs-max){
+    padding-#{$default}: 15px;
+    padding-#{$opposite}: 15px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @media (min-width: $screen-lg-min){
+    padding-#{$default}: 50px;
+    padding-#{$opposite}: 50px;
+  }
+}
+
+@mixin hover-after-decleration($scale: 0 , $top: 0, $left: 0, $z-index: 2, $back-color: $hover-light-green, $opacity: $green-hover-opacity, $animate-time: 300){
+  z-index: $z-index;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+  display: block;
+  position: absolute;
+  top: $top;
+  bottom: $top;
+  #{$default}: $left;
+  #{$opposite}: $left;
+  margin: auto;
+  width: $scale * 100%;
+  height: $scale * 100%;
+  background-color: rgba($back-color, $opacity);
+  @include transition-animation($animate-time);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@mixin hover-after-effect($width: 100%, $height: 100%, $scale: 1, $opacity: 1){
+  opacity: $opacity;
+  width: $scale * $width;
+  height: $scale * $height;
+}

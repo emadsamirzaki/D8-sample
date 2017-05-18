@@ -1,0 +1,6 @@
+uuid: a282c261-4b72-48ce-b831-14fb13787f61
+langcode: en
+status: true
+dependencies: {  }
+id: news_section
+label: 'News Section'

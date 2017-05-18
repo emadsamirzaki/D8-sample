@@ -1,0 +1,35 @@
+uuid: c1bfc8d5-1088-48f9-b2bd-4d5831be545d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.press_source.field_paragraph_pess_source_logo
+    - field.field.paragraph.press_source.field_paragraph_publication_name
+    - paragraphs.paragraphs_type.press_source
+  module:
+    - file_entity
+id: paragraph.press_source.default
+targetEntityType: paragraph
+bundle: press_source
+mode: default
+content:
+  field_paragraph_pess_source_logo:
+    weight: 1
+    label: hidden
+    settings:
+      access_message: 'You don''t have access to download this file.'
+      text: 'Download [file:name]'
+    third_party_settings: {  }
+    type: file_download_link
+    region: content
+  field_paragraph_publication_name:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

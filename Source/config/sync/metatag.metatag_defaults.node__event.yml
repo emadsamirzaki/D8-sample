@@ -1,0 +1,10 @@
+uuid: 93b36832-7f65-4cae-b6f8-408599d97d58
+langcode: en
+status: true
+dependencies: {  }
+id: node__event
+label: 'Content: Event'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  twitter_cards_description: '[node:summary]'

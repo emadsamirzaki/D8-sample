@@ -1,0 +1,50 @@
+uuid: 55000e7c-2c0a-428e-b336-8ff1b39bb4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.network.body
+    - field.field.node.network.field_banner_image
+    - field.field.node.network.field_experts
+    - field.field.node.network.field_meta_tags
+    - field.field.node.network.field_network_description
+    - field.field.node.network.field_network_image
+    - field.field.node.network.field_network_join_section
+    - field.field.node.network.field_network_sf_members
+    - field.field.node.network.field_network_work_group_title
+    - field.field.node.network.field_network_working_groups
+    - field.field.node.network.field_subtitle
+    - field.field.node.network.field_testimonials
+    - node.type.network
+  module:
+    - text
+    - user
+id: node.network.teaser
+targetEntityType: node
+bundle: network
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_experts: true
+  field_meta_tags: true
+  field_network_description: true
+  field_network_image: true
+  field_network_join_section: true
+  field_network_sf_members: true
+  field_network_work_group_title: true
+  field_network_working_groups: true
+  field_subtitle: true
+  field_testimonials: true

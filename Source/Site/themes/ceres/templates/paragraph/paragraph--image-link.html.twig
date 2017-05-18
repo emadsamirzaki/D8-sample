@@ -1,0 +1,16 @@
+{% set imgURI = content.field_image_link_image['#items'].entity.uri.value %}
+
+<div class="col-xs-12 col-sm-4 flex-display news-item load-more-item" >
+  <a class="news-wrapper" href="{{ paragraph.field_image_link_url.0.url }}">
+    <div class="news-img-wrapper">
+      {% if imgURI %}
+          <img src="{{ file_url(imgURI) }}" alt="news" class="img-responsive">
+      {% else %}
+          <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+      {% endif %}
+    </div>
+    <div class="news-content text-center">
+      <h3 class="news-title">{{ paragraph.field_image_link_url.0.title }}</h3>
+    </div>
+  </a>
+</div>

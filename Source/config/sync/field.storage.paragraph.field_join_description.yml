@@ -1,0 +1,19 @@
+uuid: 6cbbd5c2-635d-4f06-b252-5a5af418e512
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_join_description
+field_name: field_join_description
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

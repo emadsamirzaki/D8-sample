@@ -1,0 +1,19 @@
+uuid: 90a0d8b2-e6e9-4e44-87d2-f4ce42dd2bc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_donation_right_first_body
+field_name: field_donation_right_first_body
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

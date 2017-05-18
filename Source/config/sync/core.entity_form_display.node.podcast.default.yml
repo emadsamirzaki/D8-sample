@@ -1,0 +1,163 @@
+uuid: 116d3ccd-5309-4f67-9117-42a1c31ec598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.podcast.field_banner_image
+    - field.field.node.podcast.field_description
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_podcast_audio_link
+    - field.field.node.podcast.field_podcast_file_upload
+    - field.field.node.podcast.field_podcast_thumbnail
+    - field.field.node.podcast.field_resource_campaigns
+    - field.field.node.podcast.field_resource_issues
+    - field.field.node.podcast.field_resource_networks
+    - field.field.node.podcast.field_resource_programs
+    - image.style.thumbnail
+    - node.type.podcast
+  module:
+    - field_group
+    - file
+    - image
+    - link
+    - metatag
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_for_resources_sections:
+      children:
+        - field_resource_issues
+        - field_resource_campaigns
+        - field_resource_programs
+        - field_resource_networks
+      parent_name: ''
+      weight: 11
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'For Resources sections'
+id: node.podcast.default
+targetEntityType: node
+bundle: podcast
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_description:
+    weight: 10
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_podcast_audio_link:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_podcast_file_upload:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_podcast_thumbnail:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_resource_campaigns:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_resource_issues:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_resource_networks:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_resource_programs:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

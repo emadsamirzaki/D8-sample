@@ -1,0 +1,33 @@
+uuid: 56574d33-cbc0-4435-b73b-8e8f4bc30533
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.roadmap_landing_categories.field_roadmap_landing_cat_title
+    - field.field.paragraph.roadmap_landing_categories.field_roadmap_landing_categories
+    - paragraphs.paragraphs_type.roadmap_landing_categories
+id: paragraph.roadmap_landing_categories.default
+targetEntityType: paragraph
+bundle: roadmap_landing_categories
+mode: default
+content:
+  field_roadmap_landing_cat_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_roadmap_landing_categories:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: roadmap_landing_resources_section
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  uid: true

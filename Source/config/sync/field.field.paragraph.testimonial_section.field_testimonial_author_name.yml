@@ -1,0 +1,19 @@
+uuid: 59f97ba1-4b7a-47ec-9dc6-438e791c4359
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testimonial_author_name
+    - paragraphs.paragraphs_type.testimonial_section
+id: paragraph.testimonial_section.field_testimonial_author_name
+field_name: field_testimonial_author_name
+entity_type: paragraph
+bundle: testimonial_section
+label: 'Author Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

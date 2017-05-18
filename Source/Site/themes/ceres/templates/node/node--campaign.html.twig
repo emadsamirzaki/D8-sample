@@ -1,0 +1,82 @@
+{% if node.body.value %}
+    <section class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="universal-section-desc text-center">{{ content.body }}</div>
+        </div>
+      </div>
+    </section>
+{% endif %}
+
+{% if node.field_campaign_description.entity.field_text_paragraph_body.value %}
+    {{ content.field_campaign_description }}
+{% endif %}
+
+{% if node.field_network_sf_members.value %}
+    {{ content.field_network_sf_members }}
+{% endif %}
+
+{% if content.field_campaign_join_section %}
+    {% set joinSectionCount = content.field_campaign_join_section['#items']|length %}
+    {{ content.field_campaign_join_section.0 }}
+{% endif %}
+
+{% if node.field_campaign_companies_action.value %}
+    <section class="home-page-news row">
+      <div class="container">
+        <div class="row">
+          {{ content.field_campaign_companies_action }}
+          {% if node.field_campaign_companies_link.value %}
+              <div class="read-more-wrapper text-center">
+                <a href="{{ node.field_campaign_companies_link.0.url }}" class="read-more-btn text-uppercase ">More Actions</a>
+              </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+{% endif %}
+
+{% if content.field_experts %}
+    {{ content.field_experts }}
+{% endif %}
+
+{% if news_section %}
+    <section class="home-page-news row">
+      <div class="container">
+        <div class="row">
+          <h2 class="section-title text-center">News</h2>
+          {{ news_section | render }}
+        </div>
+      </div>
+    </section>
+{% endif %}
+
+{% if resources_section %}
+    <section class="home-page-news row">
+      <div class="container">
+        <div class="row">
+          <h2 class="section-title text-center">Resources</h2>
+          {{ resources_section | render }}
+        </div>
+      </div>
+    </section>
+{% endif %}
+
+{% if joinSectionCount > 1 %}
+    {{ content.field_campaign_join_section.1 }}
+{% endif%}
+
+{% if other_campaigns %}
+    <section class="home-page-network home-page-campaign row">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-push-1">
+            <div class="row">
+              <h2 class="section-title text-center">Other Campaigns</h2>
+              {{ other_campaigns | render }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endif %}

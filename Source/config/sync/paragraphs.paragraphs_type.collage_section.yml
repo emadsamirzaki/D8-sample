@@ -1,0 +1,6 @@
+uuid: 43d19ce8-c01e-4db9-b083-53e54f204735
+langcode: en
+status: true
+dependencies: {  }
+id: collage_section
+label: 'Collage Section'

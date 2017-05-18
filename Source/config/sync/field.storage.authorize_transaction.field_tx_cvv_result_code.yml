@@ -1,0 +1,21 @@
+uuid: e8005550-94b2-49c4-9de3-a4dc6ad2d2d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_cvv_result_code
+field_name: field_tx_cvv_result_code
+entity_type: authorize_transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

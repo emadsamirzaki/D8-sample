@@ -1,0 +1,42 @@
+uuid: fd2208a1-3c52-408b-92e1-a325fd105e94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer_office.field_office_address
+    - field.field.paragraph.footer_office.field_office_state_zip
+    - field.field.paragraph.footer_office.field_office_title
+    - paragraphs.paragraphs_type.footer_office
+id: paragraph.footer_office.default
+targetEntityType: paragraph
+bundle: footer_office
+mode: default
+content:
+  field_office_address:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_office_state_zip:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_office_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

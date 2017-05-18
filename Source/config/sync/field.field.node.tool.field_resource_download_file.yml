@@ -1,0 +1,27 @@
+uuid: 2a4b9dc7-8798-427a-a0b8-9d8d8e4fd2ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_download_file
+    - node.type.tool
+  module:
+    - file
+id: node.tool.field_resource_download_file
+field_name: field_resource_download_file
+entity_type: node
+bundle: tool
+label: 'File Upload'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'tool/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx doc'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

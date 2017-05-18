@@ -1,0 +1,20 @@
+{% set imgURI = content.field_join_image['#items'].entity.uri.value %}
+
+<div class="row">
+  <section class="home-page-signup campain-join rltv">
+    <img src="{{ file_url(imgURI) }}" alt="news" class="img-responsive">
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">Join</h2>
+            <p class="section-desc text-center">{{ content.field_join_description.0 }}</p>
+            <div class="read-more-wrapper text-center">
+              <a href="{{ paragraph.field_join_url.0.url }}" class="read-more-btn subscribr-btn text-uppercase ">{{ paragraph.field_join_url.0.title }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

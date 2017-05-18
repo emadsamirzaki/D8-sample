@@ -1,0 +1,17 @@
+uuid: 18e0dfd4-a1ff-4e3d-9364-cc758769fa4e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: News
+type: news
+description: 'Create new News.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

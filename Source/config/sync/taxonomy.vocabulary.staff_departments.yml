@@ -1,0 +1,9 @@
+uuid: ec8a0184-bec1-4543-89e7-80960cb9caec
+langcode: en
+status: true
+dependencies: {  }
+name: 'Staff Departments'
+vid: staff_departments
+description: 'The different departments to be only one assigned to staff member'
+hierarchy: 0
+weight: 0

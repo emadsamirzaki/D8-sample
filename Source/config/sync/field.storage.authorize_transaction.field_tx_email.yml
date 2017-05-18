@@ -1,0 +1,18 @@
+uuid: 88a93958-0d34-4404-b572-066fc9db1df4
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_email
+field_name: field_tx_email
+entity_type: authorize_transaction
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 267ebd9f-8d15-423f-b12d-29d6755720a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.annual_report_impact_story
+  module:
+    - text
+id: node.annual_report_impact_story.body
+field_name: body
+entity_type: node
+bundle: annual_report_impact_story
+label: 'Lead Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

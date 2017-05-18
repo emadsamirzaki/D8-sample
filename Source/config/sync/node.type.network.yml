@@ -1,0 +1,17 @@
+uuid: 098bef4b-ecd8-4e68-8cd1-6e9813b52928
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Network
+type: network
+description: 'Creating new Network.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,20 @@
+uuid: 4edc4c33-5c96-42a7-8023-c043a50dd321
+langcode: en
+status: true
+dependencies: {  }
+id: node__blog_post
+label: 'Content: Blog Post'
+tags:
+  description: '[node:field_description]'
+  keywords: '[node:field_tags]'
+  title: '[node:title] | [site:name]'
+  og_url: '[current-page:url]'
+  og_title: '[node:title] '
+  og_description: '[node:field_description]'
+  og_site_name: '[site:name]'
+  og_type: '[node:content-type]'
+  twitter_cards_image_alt: '[node:title]'
+  twitter_cards_type: summary_large_image
+  twitter_cards_description: '[node:field_description]'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_page_url: '[current-page:url]'

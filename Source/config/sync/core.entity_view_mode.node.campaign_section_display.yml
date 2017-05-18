@@ -1,0 +1,10 @@
+uuid: d5821c0f-fdcb-4db0-9cda-74cd59ee8dc5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.campaign_section_display
+label: 'Campaign Section Display'
+targetEntityType: node
+cache: true

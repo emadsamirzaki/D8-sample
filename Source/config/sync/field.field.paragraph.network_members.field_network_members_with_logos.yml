@@ -1,0 +1,23 @@
+uuid: 93883b6d-762c-41cb-90d4-910d3f181acb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_network_members_with_logos
+    - paragraphs.paragraphs_type.network_members
+id: paragraph.network_members.field_network_members_with_logos
+field_name: field_network_members_with_logos
+entity_type: paragraph
+bundle: network_members
+label: 'With Logos'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

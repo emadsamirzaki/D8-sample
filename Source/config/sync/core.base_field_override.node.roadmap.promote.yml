@@ -1,0 +1,22 @@
+uuid: ff8fba0b-89ab-4388-9ff3-2d5d6e9b6ac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.roadmap
+id: node.roadmap.promote
+field_name: promote
+entity_type: node
+bundle: roadmap
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

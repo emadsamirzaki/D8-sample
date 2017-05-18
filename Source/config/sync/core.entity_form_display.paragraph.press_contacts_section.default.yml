@@ -1,0 +1,22 @@
+uuid: baef68ab-3d92-4de5-8b6a-db8990a5d49c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.press_contacts_section.field_press_contact
+    - paragraphs.paragraphs_type.press_contacts_section
+id: paragraph.press_contacts_section.default
+targetEntityType: paragraph
+bundle: press_contacts_section
+mode: default
+content:
+  field_press_contact:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,22 @@
+uuid: 16ed2210-633e-4451-be95-25451239f033
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: annual_report_progress
+label: 'Annual Report Progress'
+type: 'canonical_entities:node'
+pattern: 'annual-report/2016/progress/[node:title]'
+selection_criteria:
+  7dcc99bb-8900-4704-aa11-ccbb9855d841:
+    id: node_type
+    bundles:
+      annual_report_impact_story: annual_report_impact_story
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7dcc99bb-8900-4704-aa11-ccbb9855d841
+selection_logic: and
+weight: -5
+relationships: {  }

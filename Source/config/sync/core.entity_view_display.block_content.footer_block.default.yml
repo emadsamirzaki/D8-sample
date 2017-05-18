@@ -1,0 +1,52 @@
+uuid: b2cb943a-a30b-4715-89d9-0c689ae5d9da
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.field.block_content.footer_block.field_footer_charity_logo
+    - field.field.block_content.footer_block.field_footer_contact_email
+    - field.field.block_content.footer_block.field_footer_office
+    - field.field.block_content.footer_block.field_footer_phone_number
+  module:
+    - entity_reference_revisions
+    - image
+id: block_content.footer_block.default
+targetEntityType: block_content
+bundle: footer_block
+mode: default
+content:
+  field_footer_charity_logo:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_footer_contact_email:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_footer_office:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_footer_phone_number:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

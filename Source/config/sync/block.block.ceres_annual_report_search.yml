@@ -1,0 +1,22 @@
+uuid: 04ceda94-c912-4acc-a948-edecab2346fe
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - ceres_annual_report
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: ceres_annual_report_search
+theme: ceres_annual_report
+region: navigation
+weight: -9
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

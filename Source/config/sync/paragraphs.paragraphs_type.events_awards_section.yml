@@ -1,0 +1,6 @@
+uuid: 928a6c6a-16a3-48d0-bfc3-a90b6c293724
+langcode: en
+status: true
+dependencies: {  }
+id: events_awards_section
+label: 'Events and Awards Section'

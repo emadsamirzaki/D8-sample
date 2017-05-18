@@ -1,0 +1,71 @@
+uuid: 7f0126a1-c2a6-4485-90d2-5936da8a67c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - node
+    - system
+  theme:
+    - ceres_annual_report
+id: ceres_annual_report_homepagesignupblock
+theme: ceres_annual_report
+region: before_footer
+weight: -11
+provider: null
+plugin: hp_signup_block
+settings:
+  id: hp_signup_block
+  label: 'Email Signup'
+  provider: ceres_core
+  label_display: '0'
+  imageFid:
+    - '819'
+  content:
+    title: 'Email Signup'
+    body: 'Get the latest news and updates from Ceres in your inbox.'
+    type: 'Ceres eCommunity'
+    url: /signup_newsletter
+    submitText: Subscribe
+    image: 'public://images/sunrise_windmill_1.jpg'
+visibility:
+  request_path:
+    id: request_path
+    pages: /ceres-roadmap-sustainability/
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      annual_report_feature: annual_report_feature
+      annual_report_financial: annual_report_financial
+      annual_report_home: annual_report_home
+      annual_report_impact_story: annual_report_impact_story
+      annual_report_listing: annual_report_listing
+      blog_post: blog_post
+      campaign: campaign
+      case_study: case_study
+      director: director
+      event: event
+      issue: issue
+      job: job
+      news: news
+      page: page
+      podcast: podcast
+      press: press
+      press_contact: press_contact
+      roadmap: roadmap
+      roadmap_resource: roadmap_resource
+      staff: staff
+      tool: tool
+      video: video
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

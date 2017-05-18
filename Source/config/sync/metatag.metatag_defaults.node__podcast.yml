@@ -1,0 +1,10 @@
+uuid: e14e1d4b-47b1-4878-b813-a493474eb632
+langcode: en
+status: true
+dependencies: {  }
+id: node__podcast
+label: 'Content: Podcast'
+tags:
+  description: '[node:field_description]'
+  og_description: '[node:field_description]'
+  twitter_cards_description: '[node:field_description]'

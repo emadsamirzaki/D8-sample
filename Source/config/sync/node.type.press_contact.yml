@@ -1,0 +1,17 @@
+uuid: 907129f6-5e3b-40c3-8ca1-3bbce3d4f266
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Press Contact'
+type: press_contact
+description: 'Create new Press Contact.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

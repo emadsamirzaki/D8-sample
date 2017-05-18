@@ -1,0 +1,45 @@
+{% if node.body.value %}
+  <section class="intro-wrapper row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            {#<h2 class="universal-section-title text-center">Vision</h2>#}
+            <h2 class="road-single-intro-title text-center text-uppercase">Vision</h2>
+            <div class="universal-section-desc text-center">{{ content.body }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if content.field_roadmap_key_expectations %}
+  {% set keyExpectationsCount = content.field_roadmap_key_expectations['#items'] | length %}
+  <section class="keys-wrapper row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row flex-display flex-wrap">
+            {% for i in 0..keyExpectationsCount %}
+              {{ content.field_roadmap_key_expectations[i] }}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_roadmap_description.entity.field_text_paragraph_body.value %}
+  {{ content.field_roadmap_description }}
+{% endif %}
+
+
+{% if content.field_roadmap_resources %}
+  {{ content.field_roadmap_resources }}
+{% endif %}
+
+{% if content.field_roadmap_explore_categories %}
+  {{ content.field_roadmap_explore_categories }}
+{% endif %}

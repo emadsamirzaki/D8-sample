@@ -1,0 +1,155 @@
+uuid: 8b900b16-d6ba-4064-aeab-e5cb14f9fee3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annual_report_description
+    - node.type.annual_report_feature
+    - paragraphs.paragraphs_type.text_paragraph
+    - paragraphs.paragraphs_type.video_paragraph
+  module:
+    - entity_reference_revisions
+id: node.annual_report_feature.field_annual_report_description
+field_name: field_annual_report_description
+entity_type: node
+bundle: annual_report_feature
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_paragraph: text_paragraph
+      video_paragraph: video_paragraph
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 43
+        enabled: false
+      basic_text_paragraph:
+        weight: 44
+        enabled: false
+      campaigns_section:
+        weight: 45
+        enabled: false
+      collage:
+        weight: 46
+        enabled: false
+      collage_section:
+        weight: 47
+        enabled: false
+      company_section:
+        weight: 48
+        enabled: false
+      events_awards_section:
+        weight: 49
+        enabled: false
+      experts_section:
+        weight: 50
+        enabled: false
+      featured_feature_growing_impact:
+        weight: 51
+        enabled: false
+      featured_impact_story:
+        weight: 52
+        enabled: false
+      footer_office:
+        weight: 53
+        enabled: false
+      image_link:
+        weight: 54
+        enabled: false
+      image_link_with_badge_title:
+        weight: 55
+        enabled: false
+      info_download_paragraph:
+        weight: 56
+        enabled: false
+      info_paragraph:
+        weight: 57
+        enabled: false
+      issues_reference_listing:
+        weight: 58
+        enabled: false
+      join_section:
+        weight: 59
+        enabled: false
+      networks_section:
+        weight: 60
+        enabled: false
+      network_members:
+        weight: 61
+        enabled: false
+      network_working_group:
+        weight: 62
+        enabled: false
+      news_section:
+        weight: 63
+        enabled: false
+      press_contacts_section:
+        weight: 64
+        enabled: false
+      press_source:
+        weight: 65
+        enabled: false
+      programs_reference_listing:
+        weight: 66
+        enabled: false
+      programs_section:
+        weight: 67
+        enabled: false
+      quote_testimonial:
+        weight: 68
+        enabled: false
+      resource_download_file:
+        weight: 69
+        enabled: false
+      roadmap_key_expectation:
+        weight: 70
+        enabled: false
+      roadmap_landing_categories:
+        weight: 71
+        enabled: false
+      roadmap_landing_info:
+        weight: 72
+        enabled: false
+      roadmap_resources_section:
+        weight: 73
+        enabled: false
+      roadmap_section:
+        weight: 74
+        enabled: false
+      sectors_reference_listing:
+        weight: 75
+        enabled: false
+      testimonial_section:
+        weight: 76
+        enabled: false
+      text_paragraph:
+        enabled: true
+        weight: 77
+      title_description:
+        weight: 78
+        enabled: false
+      two_columns_section:
+        weight: 79
+        enabled: false
+      two_column_section:
+        weight: 80
+        enabled: false
+      video_message_with_title:
+        weight: 81
+        enabled: false
+      video_paragraph:
+        enabled: true
+        weight: 82
+      video_testimonial:
+        weight: 83
+        enabled: false
+      views_listing:
+        weight: 84
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,12 @@
+#block-ceres-annual-report-footer{
+    clear: $default;
+    float: $default;
+    padding-#{$default}: 15px;
+    a{
+        padding: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 20px;
+        background-color: transparent !important;
+    }
+}

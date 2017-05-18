@@ -1,0 +1,14 @@
+uuid: 1f9a0a7d-0afb-4e29-aca0-b4a48764fed2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ceres_admin
+  module:
+    - user
+id: user_remove_role_action.ceres_admin
+label: 'Remove the Ceres Admin role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: ceres_admin

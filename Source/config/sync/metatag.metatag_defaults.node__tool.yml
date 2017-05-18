@@ -1,0 +1,10 @@
+uuid: 1eee3a76-0514-4270-9e5a-8fd6d165eb45
+langcode: en
+status: true
+dependencies: {  }
+id: node__tool
+label: 'Content: Tool'
+tags:
+  description: '[node:field_description]'
+  og_description: '[node:field_description]'
+  twitter_cards_description: '[node:field_description]'

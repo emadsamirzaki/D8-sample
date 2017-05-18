@@ -1,0 +1,216 @@
+@include font-face("Tofino", "../fonts/Tofino-thin/Tofino-thin", 100, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-light/Tofino-light", 300, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-book/Tofino-book", 400, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-regular/Tofino-regular", 500, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-medium/Tofino-medium", 600, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-bold/Tofino-bold", 700, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-black/Tofino-black", 800, null, ttf otf woff);
+@include font-face("Tofino", "../fonts/Tofino-ultra/Tofino-ultra", 900, null, ttf otf woff);
+body{
+  font-weight: 400;
+}
+a{
+  @include transition-animation();
+}
+img{
+  max-width: 100%;
+}
+.logo{
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+    max-width: 150px;
+  }
+  @media (max-width: $screen-xs-max){
+    max-width: 130px;
+    margin-#{$default}: 10px;
+  }
+}
+.clear{
+  clear: both;
+}
+.clear-left{
+  clear: if-ltr($default,$opposite);
+}
+.clear-right{
+  clear: if-rtl($default,$opposite);
+}
+.no-pad-left{
+  padding-#{$default}: 0;
+}
+.no-pad-right{
+  padding-#{$opposite}: 0;
+}
+.no-min-height{
+  min-height: 0;
+}
+.flex-wrap{
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.flex-grow{
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.flex-display{
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /*    -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;*/
+}
+.flex-column{
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.flex-start{
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  /*-webkit-align-items: flex-start;*/
+  /*align-items: flex-start;*/
+}
+.full-height{
+  height: 100%;
+}
+.full-width{
+  width: 100%; 
+}
+.full-absolute{
+  height: 100%;
+  @media (min-width: $screen-md-min){
+    position: absolute;
+    width: 100%;
+    #{$default}: 0;
+    top: 0;
+  }
+}
+.rltv{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.z-index-2{
+  z-index: 2;
+}
+/*helper classes*/
+.universal-section-title{
+  @include section-title-with-margin-bottom();
+}
+.viewsreference-title{
+  @include section-title-with-margin-bottom(50px);
+  text-align: center;
+}
+.universal-section-desc{
+  @include section-description-with-margin-bottom();
+}
+.read-more-btn{
+  font-weight: 500;
+  color: $dark-brown;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 55px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  padding: 10px 22px;
+  opacity: 1;
+  border: 1px solid rgba($dark-brown, 0.2);
+  @include transition-animation();
+  &:hover{
+    color: $dark-brown;
+    border-color: rgba($hover-light-green, 0.5);
+    background-color: #fff;
+  }
+  @media (max-width: $screen-md-max){
+    margin-top: 35px;
+    margin-bottom: 15px;
+  }
+  @media (max-width: $screen-xs-max){
+    + .read-more-btn{
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: $screen-sm-min){
+    + .read-more-btn{
+      margin-#{$default}: 50px;
+    }
+  }
+  &.more-members{
+    margin-top: 15px;
+  }
+}
+.white-back{
+  background-color: #fff;
+}
+.no-border{
+  border: 0 !important;
+}
+.no-background{
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.light-background{
+  background-color: $light-gray-background;
+}
+.light-border-bottom{
+  border-bottom: 1px solid $border-color;
+}
+.pad-top-20{
+  padding-top: 20px;
+}
+.no-mar-top{
+  margin-top: 0;
+}
+.mar-top-40{
+  margin-top: 40px;
+}
+.mar-top-50{
+  margin-top: 50px;
+}
+.mar-bottom--15{
+  margin-bottom: -15px;
+}
+.mar-bottom-15{
+  margin-bottom: 15px;
+}
+.mar-bottom-25{
+  margin-bottom: 25px;
+}
+
+@media (min-width: $screen-sm-min){
+  .col-sm-3-small{
+    width: 20%;
+  }
+}
+.views-footer-wrapper{
+  border-top: 2px solid $border-color;
+  padding-top: 20px;
+  .view-footer{
+    text-align: left;
+  }
+}
+
+::-moz-selection { 
+  color: #fff;
+  background-color: $lighten-green;
+}
+::selection { 
+  color: #fff;
+  background-color: $lighten-green;
+}
+
+.caption > figcaption {
+  font-size: 0.9em;
+  text-align: center;
+}
+.captcha{
+  clear: both;
+  @include clearfix;
+}
+@media(max-width: $screen-xxs-max){
+  .g-recaptcha{
+    margin-#{$default}: -7px;
+    margin-#{$opposite}: -14px;
+
+  }
+}

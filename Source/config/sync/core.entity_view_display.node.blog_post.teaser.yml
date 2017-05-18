@@ -1,0 +1,47 @@
+uuid: 0dbeaf09-0bd1-4532-972d-84e5d0b88a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.blog_post.field_author_is_staff
+    - field.field.node.blog_post.field_banner_image
+    - field.field.node.blog_post.field_blog_post_author
+    - field.field.node.blog_post.field_blog_post_campaign
+    - field.field.node.blog_post.field_blog_post_issue_sector
+    - field.field.node.blog_post.field_blog_post_staff_author
+    - field.field.node.blog_post.field_campaigns
+    - field.field.node.blog_post.field_content_image
+    - field.field.node.blog_post.field_description
+    - field.field.node.blog_post.field_issues
+    - field.field.node.blog_post.field_meta_tags
+    - field.field.node.blog_post.field_networks
+    - field.field.node.blog_post.field_reports
+    - field.field.node.blog_post.field_tags
+    - node.type.blog_post
+  module:
+    - user
+id: node.blog_post.teaser
+targetEntityType: node
+bundle: blog_post
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_author_is_staff: true
+  field_banner_image: true
+  field_blog_post_author: true
+  field_blog_post_campaign: true
+  field_blog_post_date: true
+  field_blog_post_issue_sector: true
+  field_blog_post_staff_author: true
+  field_campaigns: true
+  field_content_image: true
+  field_description: true
+  field_issues: true
+  field_meta_tags: true
+  field_networks: true
+  field_reports: true
+  field_tags: true

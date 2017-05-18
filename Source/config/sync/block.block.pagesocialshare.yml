@@ -1,0 +1,57 @@
+uuid: 8e9490ab-5b24-4ae4-87bb-ad84d0749d23
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - node
+    - system
+  theme:
+    - ceres
+id: pagesocialshare
+theme: ceres
+region: content
+weight: -19
+provider: null
+plugin: page_social_share
+settings:
+  id: page_social_share
+  label: 'Page Social Share'
+  provider: ceres_core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/roadmap\r\n/donate/thank-you"
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      blog_post: blog_post
+      campaign: campaign
+      case_study: case_study
+      event: event
+      issue: issue
+      job: job
+      network: network
+      news: news
+      page: page
+      page_simple: page_simple
+      podcast: podcast
+      press: press
+      program: program
+      report: report
+      roadmap_resource: roadmap_resource
+      tool: tool
+      video: video
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

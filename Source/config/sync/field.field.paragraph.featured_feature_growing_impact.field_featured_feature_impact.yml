@@ -1,0 +1,28 @@
+uuid: 22eadff1-3b84-41fa-86ad-4e017e34a825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_feature_impact
+    - node.type.annual_report_feature
+    - paragraphs.paragraphs_type.featured_feature_growing_impact
+id: paragraph.featured_feature_growing_impact.field_featured_feature_impact
+field_name: field_featured_feature_impact
+entity_type: paragraph
+bundle: featured_feature_growing_impact
+label: 'Featured Feature (Growing Impact)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      annual_report_feature: annual_report_feature
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

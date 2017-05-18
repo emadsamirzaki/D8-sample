@@ -1,0 +1,9 @@
+.content-text p img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.content-text p span img{
+  max-width: 80vw;
+  @include h-align(relative);
+}

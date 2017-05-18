@@ -1,0 +1,36 @@
+# Autorize config api menu items definition
+entity.authorize_config_api.collection:
+  title: 'Autorize.net REST API Config'
+  route_name: entity.authorize_config_api.collection
+  description: 'Configure REST API credentials.'
+  parent: system.admin_config_authorize_pay
+  weight: -2
+
+# Authorize transaction menu items definition
+entity.authorize_transaction.collection:
+  title: 'Authorize transaction list'
+  route_name: entity.authorize_transaction.collection
+  description: 'List Authorize transaction entities'
+  parent: system.admin_structure
+  weight: 100
+
+# Authorize transaction type menu items definition
+entity.authorize_transaction_type.collection:
+  title: 'Authorize transaction type'
+  route_name: entity.authorize_transaction_type.collection
+  description: 'List Authorize transaction type (bundles)'
+  parent: system.admin_config_authorize_pay
+  weight: -1
+
+system.admin_config_authorize_pay:
+  route_name: system.admin_authorize_pay_config
+  parent: system.admin_config
+  title: Authorize.net Payment
+  description: 'Configure Authorize Pay module'
+  weight: -10
+
+system.admin_config_authorize_pay_settings:
+  route_name: authorize_pay.authorize_config_settings
+  parent: system.admin_config_authorize_pay
+  title: Autorize.net Configuration
+  weight: -3

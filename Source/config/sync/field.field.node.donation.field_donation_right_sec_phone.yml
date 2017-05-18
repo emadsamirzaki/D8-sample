@@ -1,0 +1,19 @@
+uuid: 2c150916-e7ce-422d-9502-ed4a8b6907f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donation_right_sec_phone
+    - node.type.donation
+id: node.donation.field_donation_right_sec_phone
+field_name: field_donation_right_sec_phone
+entity_type: node
+bundle: donation
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

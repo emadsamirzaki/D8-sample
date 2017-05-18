@@ -1,0 +1,22 @@
+uuid: 22a92c24-1f6f-4816-a279-2385720bfbd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_report_lead_body
+    - node.type.report
+  module:
+    - text
+id: node.report.field_report_lead_body
+field_name: field_report_lead_body
+entity_type: node
+bundle: report
+label: 'Lead Body'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

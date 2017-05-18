@@ -1,0 +1,25 @@
+uuid: 4c862910-d87b-4273-9250-e85250d5e0b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_type_with_name
+label: 'Content Type with name'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  4622768a-275d-42cf-bd20-3d329dfdb3ef:
+    id: node_type
+    bundles:
+      case_study: case_study
+      event: event
+      news: news
+      report: report
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 4622768a-275d-42cf-bd20-3d329dfdb3ef
+selection_logic: and
+weight: 4
+relationships: {  }

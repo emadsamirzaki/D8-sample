@@ -1,0 +1,21 @@
+<section class="home-page-network home-page-campaign row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">
+            {%if paragraph.field_featured_feature_title.value %}
+              {{ content.field_featured_feature_title }}
+            {%else%}
+              {% trans %}Growing Impact{% endtrans %}
+            {%endif%}
+          </h2>
+          {{ title_suffix }}
+          <div class="networks-list flex-display mar-top-50">
+            {{ content.field_featured_feature_impact }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

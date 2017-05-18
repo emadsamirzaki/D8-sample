@@ -1,0 +1,45 @@
+uuid: e7c9cfa5-44d8-409f-a219-c2c922135969
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.network_working_group.field_network_work_group_body
+    - field.field.paragraph.network_working_group.field_network_work_group_link
+    - field.field.paragraph.network_working_group.field_network_work_group_title
+    - paragraphs.paragraphs_type.network_working_group
+  module:
+    - link
+    - text
+id: paragraph.network_working_group.default
+targetEntityType: paragraph
+bundle: network_working_group
+mode: default
+content:
+  field_network_work_group_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_network_work_group_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_network_work_group_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

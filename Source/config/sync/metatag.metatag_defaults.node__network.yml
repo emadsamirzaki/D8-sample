@@ -1,0 +1,12 @@
+uuid: 880f89b3-3298-4571-82e9-039a426bfafc
+langcode: en
+status: true
+dependencies: {  }
+id: node__network
+label: 'Content: Network'
+tags:
+  description: '[node:summary]'
+  og_image: '[node:field_network_image]'
+  og_description: '[node:summary]'
+  twitter_cards_image: '[node:field_network_image]'
+  twitter_cards_description: '[node:summary]'

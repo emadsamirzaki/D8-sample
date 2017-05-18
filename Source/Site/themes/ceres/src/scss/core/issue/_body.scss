@@ -1,0 +1,41 @@
+.body-issue-wrapper{
+  &:not(.no-back-border){
+    background-color: $light-gray-background;
+    border-top: 1px solid #dad8d6;
+    border-bottom: 1px solid #dad8d6;
+  }
+  padding-top: 85px;
+  padding-bottom: 65px;
+  &.register-block{
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  font-size: 18px;
+  p{
+    font-weight: 400;
+    margin-bottom: 35px;
+  }
+  @media (max-width: $screen-xs-max){
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 15px;
+  }
+  &.pad-top-20{
+    padding-top: 20px;
+  }
+}
+.content-text{
+  @include h-align(relative);
+  @media (max-width: $screen-xs-max){
+    padding-#{$default}: 30px; 
+    padding-#{$opposite}: 30px;
+  }
+}
+.content-video{
+  margin-top: 25px;
+  margin-bottom: 65px;
+  @media (max-width: $screen-xs-max){
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}

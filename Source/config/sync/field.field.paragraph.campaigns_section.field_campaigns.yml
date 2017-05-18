@@ -1,0 +1,28 @@
+uuid: 00e545fa-8de4-436b-8aba-742843382f44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_campaigns
+    - node.type.campaign
+    - paragraphs.paragraphs_type.campaigns_section
+id: paragraph.campaigns_section.field_campaigns
+field_name: field_campaigns
+entity_type: paragraph
+bundle: campaigns_section
+label: Campaigns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 3ae10f57-e97a-414c-a960-45e0623f99c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_tx_honoree_type
+id: authorize_transaction.monthly_subscription_transaction.field_tx_honoree_type
+field_name: field_tx_honoree_type
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: 'Honoree Type'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

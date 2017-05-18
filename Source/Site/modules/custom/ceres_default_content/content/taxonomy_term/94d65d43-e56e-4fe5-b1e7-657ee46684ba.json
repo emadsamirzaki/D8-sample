@@ -1,0 +1,61 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/9?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/authors"
+        }
+    },
+    "tid": [
+        {
+            "value": "9"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "94d65d43-e56e-4fe5-b1e7-657ee46684ba"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "authors"
+        }
+    ],
+    "name": [
+        {
+            "value": "Jackie Miller",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "value": "<p>Jackie Miller has been added from Staff content type<\/p>",
+            "format": null,
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": "0"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1484151159",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ]
+}

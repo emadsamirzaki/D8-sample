@@ -1,0 +1,19 @@
+uuid: 1d16760e-9b74-472f-b582-16a17a8d5218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testimonial_body
+    - paragraphs.paragraphs_type.video_testimonial
+id: paragraph.video_testimonial.field_testimonial_body
+field_name: field_testimonial_body
+entity_type: paragraph
+bundle: video_testimonial
+label: 'Testimonial Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

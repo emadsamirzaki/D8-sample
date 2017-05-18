@@ -1,0 +1,163 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/ceres-company-network?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/network"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/network\/uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/network\/revision_uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/network\/field_network_banner_image": [
+            {
+                "href": "http:\/\/dev.ceres.org\/file\/11?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": "17"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "39dc1c65-0426-4a46-881c-c4a0d5558df5"
+        }
+    ],
+    "vid": [
+        {
+            "value": "17"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "network"
+        }
+    ],
+    "title": [
+        {
+            "value": "Ceres Company Network",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/network\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/network\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/network\/field_network_banner_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/file\/11?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ecce549c-6f48-4c07-bc3a-d5db13e24b11"
+                    }
+                ],
+                "alt": "network-img",
+                "title": "",
+                "width": "299",
+                "height": "300"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "1484038117",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1484158295",
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": "0",
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "1484038136"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ]
+}

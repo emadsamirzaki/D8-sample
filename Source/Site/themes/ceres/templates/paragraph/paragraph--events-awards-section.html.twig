@@ -1,0 +1,42 @@
+{#{{ paragraph.field_awards_url.0.url }}#}
+<section class="home-page-events row">
+  <div class="container">
+    <div class="row flex-display events-awards-wrapper">
+      <div class="col-sm-12 col-md-8 events-section">
+        <h2 class="section-title text-center">Events</h2>
+        <div class="row">
+          {% for i in content.field_events['#items'] | keys %}
+            {% set node = content.field_events[i]['#node'] %}
+            <div class="col-sm-6 event-container flex-display">
+              <a href="{{ path('entity.node.canonical', {'node': node.id }) }}" class="event-date-container flex-display text-center">
+                <span>{{ node.field_event_date.value | date("M") }}</span>
+                <span class="number">{{ node.field_event_date.value | date("d") }}</span>
+              </a>
+              <div class="event-data-container ">
+                <h3><a href="{{ path('entity.node.canonical', {'node': node.id }) }}" class="event-title">{{ node.getTitle() }}</a></h3>
+                <div class="event-desc dot-ellipsis dot-resize-update dot-height-104">
+                  <p>{{ node.body.0.value | striptags }}</p>
+                </div>
+              </div>
+            </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4 awards-section">
+        <h2 class="section-title text-center">Awards</h2>
+        <div class="row text-center">
+          {# <a class="award-image-wrapper text-center"  href="{{ paragraph.field_awards_url.url }}"> #}
+            {% if paragraph.field_awards_image %}
+              <img src="{{ file_url(paragraph.field_awards_image.entity.uri.value) }}" alt="{{ paragraph.field_awards_image.value.0.alt }}" class="award-image-wrapper img-responsive">
+            {% else %}
+              <img src="/{{ directory }}/assets/images/awards/award.jpg" alt="award" class="award-image-wrapper img-responsive">
+            {% endif %}
+          {# </a> #}
+          <div class="read-more-wrapper text-center">
+            <a href="{{ paragraph.field_awards_url.0.url }}" class="read-more-link">More Awards</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

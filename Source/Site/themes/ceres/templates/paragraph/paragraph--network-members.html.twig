@@ -1,0 +1,38 @@
+{%
+set classes = paragraph.field_network_members_with_logos.value ?
+    'campaign-members' : 'network-groups light-background'
+%}
+
+<section class="{{ classes }} row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">Network Members</h2>
+          {% if paragraph.field_network_members_body %}
+            <div class="section-desc text-center">
+              {{ paragraph.field_network_members_body.value | raw }}
+            </div>
+          {% endif %}
+          <div class="members-list flex-display flex-wrap">
+            {% if paragraph.field_network_members_with_logos.value %}
+              {% for member in members %}
+                <div class="col-xs-6 col-sm-3-small flex-display member-item">
+                  <div class="member-item-inner">
+                    <img class="img-responsive"  src="{{ member.Logo__c }}" alt="{{ member.Name }}" />
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              {% for member in members %}
+                <div class="col-xs-6 col-sm-4 flex-display member-item">
+                  <div class="member-item-inner text-center">{{ member.Name }}</div>
+                </div>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

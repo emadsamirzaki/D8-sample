@@ -1,0 +1,51 @@
+.donation-right-section{
+  background-color: rgba($expert-back-color, 0.4);
+  padding: 140px 40px 0;
+  @media (min-width: $screen-sm-min){
+    margin-#{$opposite}: -1px; 
+  }
+  color: $dark-brown;
+  h3{
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28px;
+  }
+  p{
+    font-weight: 500;
+    font-size: 15px;
+  }
+  i.fa {
+    font-size: 25px;
+    vertical-align: middle;
+    margin-#{$opposite}: 10px;
+    min-width: 26px;
+    text-align: center;
+    &.fa-mobile{
+      font-size: 45px;
+    }
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+    padding: 140px 25px 0;
+    h3{
+      font-size: 18px;
+    }
+    i.fa {
+      font-size: 20px;
+      min-width: 20px;
+      &.fa-mobile{
+        font-size: 35px;
+      }
+    }
+  }
+  @media (max-width: $screen-xs-max){
+    margin-top: 20px;
+    padding: 40px 30px;
+  }
+}
+.donation-capatcha{
+  width: 304px;
+  margin: 0 auto;
+  @media(max-width: $screen-xxs-max){
+    width: auto;
+  }
+}

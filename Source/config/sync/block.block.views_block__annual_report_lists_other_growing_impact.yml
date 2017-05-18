@@ -1,0 +1,38 @@
+uuid: 1188e85f-9836-4a9c-82c4-c1a258a31c12
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.annual_report_lists
+  module:
+    - block_visibility_groups
+    - node
+    - views
+  theme:
+    - ceres_annual_report
+id: views_block__annual_report_lists_other_growing_impact
+theme: ceres_annual_report
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:annual_report_lists-other_growing_impact'
+settings:
+  id: 'views_block:annual_report_lists-other_growing_impact'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      annual_report_feature: annual_report_feature
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

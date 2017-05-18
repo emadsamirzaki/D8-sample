@@ -1,0 +1,22 @@
+system.admin_config_salesforce:
+  route_name: system.admin_salesforce_config
+  parent: system.admin_config
+  title: Salesforce Integration
+  description: 'Configure salesforce extension'
+  weight: -10
+
+system.salesforce_settings:
+  title: REST API Config
+  parent: system.admin_config_salesforce
+  description: 'Configure REST API credentials.'
+  route_name: salesforce.sf_config_settings
+  weight: -20
+
+# Sf mapping menu items definition
+entity.sf_mapping.collection:
+  title: 'Sf mapping'
+  route_name: entity.sf_mapping.collection
+  description: 'List Sf mapping (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

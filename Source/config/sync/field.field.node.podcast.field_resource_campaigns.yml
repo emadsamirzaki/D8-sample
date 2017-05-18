@@ -1,0 +1,29 @@
+uuid: 8fa7e839-ca31-4f33-923f-2ebfd8aa0873
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_campaigns
+    - node.type.campaign
+    - node.type.podcast
+id: node.podcast.field_resource_campaigns
+field_name: field_resource_campaigns
+entity_type: node
+bundle: podcast
+label: Campaigns
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

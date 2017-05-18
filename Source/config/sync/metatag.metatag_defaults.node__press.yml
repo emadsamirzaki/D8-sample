@@ -1,0 +1,10 @@
+uuid: e8985546-bc39-447d-a80c-20d3df3c6d42
+langcode: en
+status: true
+dependencies: {  }
+id: node__press
+label: 'Content: Press'
+tags:
+  description: '[node:field_description]'
+  og_description: '[node:field_description]'
+  twitter_cards_description: '[node:field_description]'

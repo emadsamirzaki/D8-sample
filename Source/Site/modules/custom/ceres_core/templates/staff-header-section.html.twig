@@ -1,0 +1,29 @@
+<div class="staff-details">
+  <div class="expert-image-wrapper">
+    <div class="expert-image-circle-container">
+      <img src="{{ content.image }}" alt="news" class="img-responsive">
+    </div>
+  </div>
+  <div class="flex-display">
+    {% if content.twitter %}
+        <a class="staff-twitter" target="_blank" href="https://twitter.com/{{ content.twitter }}" data-toggle="tooltip" data-placement="bottom" title="{{ content.twitter }}">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+    {% if content.phone %}
+        <a class="staff-phone" href="tel:{{ content.phone }}" data-toggle="tooltip" data-placement="bottom" title="{{ content.phone }}">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+    {% if content.email %}
+        <a class="staff-email" href="mailto:{{ content.email }}" data-toggle="tooltip" data-placement="bottom" title="{{ content.email }}">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+    {% if content.group %}
+        <a class="staff-group" href="jQuery:void(0);" data-toggle="tooltip" data-placement="bottom" title="{{ content.group }}">
+          <i class="fa fa-object-group" aria-hidden="true"></i>
+        </a>
+    {% endif %}
+  </div>
+</div>

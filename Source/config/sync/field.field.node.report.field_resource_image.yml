@@ -1,0 +1,38 @@
+uuid: 0cef05bb-63fb-42f3-aecf-8b9e23cb6dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_image
+    - node.type.report
+  module:
+    - image
+id: node.report.field_resource_image
+field_name: field_resource_image
+entity_type: node
+bundle: report
+label: 'Thumbnail image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 370x244
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 45923e42-e8cd-4abb-aa5f-c873259b8515
+    alt: Report
+    title: ''
+    width: 2880
+    height: 1920
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

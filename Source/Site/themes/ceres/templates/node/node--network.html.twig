@@ -1,0 +1,99 @@
+{% if node.body.value %}
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="universal-section-desc text-center">{{ content.body }}</div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_network_description.entity.field_text_paragraph_body.value %}
+  {{ content.field_network_description }}
+{% endif %}
+
+{% if content.field_network_sf_members %}
+  {{ content.field_network_sf_members }}
+{% endif %}
+
+{% if content.field_network_join_section %}
+  {% set joinSectionCount = content.field_network_join_section['#items']|length %}
+
+  {{ content.field_network_join_section.0 }}
+{% endif %}
+
+{% if node.field_network_working_groups.value %}
+  <section class="network-groups row">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">{{ node.field_network_work_group_title.value }}</h2>
+            {{ content.field_network_working_groups }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_testimonials.value %}
+  {% set quoteTestimonialCount = content.field_testimonials['#items']|length %}
+  <section class="network-qoute flex-display row">
+    {% if quoteTestimonialCount >= 2 %}
+      {% for i in 0..1 %}
+        <div class="quote-item col-xs-12 col-sm-6 rltv">
+          {{ content.field_testimonials[i] }}
+        </div>
+      {% endfor %}
+    {% else %}
+      <div class="quote-item col-xs-12 col-sm-6 rltv">
+        {{ content.field_testimonials.0 }}
+      </div>
+    {% endif %}
+  </section>
+{% endif %}
+
+{% if content.field_experts %}
+  {{ content.field_experts }}
+{% endif %}
+
+{% if resources_section %}
+  <section class="home-page-news row">
+    <div class="container">
+      <div class="row">
+        <h2 class="section-title text-center">Resources</h2>
+        {{ resources_section | render }}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if news_section %}
+  <section class="home-page-news row">
+    <div class="container">
+      <div class="row">
+        <h2 class="section-title text-center">News</h2>
+        {{ news_section | render }}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if joinSectionCount > 1 %}
+  {{ content.field_network_join_section.1 }}
+{% endif %}
+
+
+<section class="home-page-network row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">More Ceres Networks</h2>
+          {{ more_networks | render }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

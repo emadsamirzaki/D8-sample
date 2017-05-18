@@ -1,0 +1,19 @@
+{#members text section#}
+<section class="network-groups light-background row"{% if paragraph.field_title_desc_section_id.value %} id="{{ paragraph.field_title_desc_section_id.value }}"{% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-push-1">
+        <div class="row">
+          {% if paragraph.field_title_desc_title.value %}
+            <h2 class="section-title text-center">{{ content.field_title_desc_title }}</h2>
+          {% endif %}
+          <div class="paragraph-list-content">
+            {% if paragraph.field_title_desc_description.value %}
+              {{ content.field_title_desc_description }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

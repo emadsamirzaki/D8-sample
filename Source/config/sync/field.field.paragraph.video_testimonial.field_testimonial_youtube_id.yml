@@ -1,0 +1,19 @@
+uuid: d0678cf3-e025-4d1b-aca9-c7d25d618cd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testimonial_youtube_id
+    - paragraphs.paragraphs_type.video_testimonial
+id: paragraph.video_testimonial.field_testimonial_youtube_id
+field_name: field_testimonial_youtube_id
+entity_type: paragraph
+bundle: video_testimonial
+label: 'Youtube ID'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

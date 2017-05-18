@@ -1,0 +1,46 @@
+uuid: cca29c11-184d-4344-9255-a0125fd8b9e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.collage.field_collage_image
+    - field.field.paragraph.collage.field_collage_title
+    - field.field.paragraph.collage.field_collage_url
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.collage
+  module:
+    - image
+    - link
+id: paragraph.collage.default
+targetEntityType: paragraph
+bundle: collage
+mode: default
+content:
+  field_collage_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_collage_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_collage_url:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

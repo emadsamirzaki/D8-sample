@@ -1,0 +1,8 @@
+uuid: 221740e1-5bf7-426e-8c43-4555e16ec6a4
+langcode: en
+status: true
+dependencies: {  }
+id: annual-report-menu
+label: 'Annual Report Menu'
+description: 'Administer Annual Report Menu'
+locked: false

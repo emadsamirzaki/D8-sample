@@ -1,0 +1,22 @@
+uuid: e6ab57a9-abcd-44b4-909b-91545fb248dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.roadmap_section.field_roadmap_categories
+    - paragraphs.paragraphs_type.roadmap_section
+id: paragraph.roadmap_section.default
+targetEntityType: paragraph
+bundle: roadmap_section
+mode: default
+content:
+  field_roadmap_categories:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

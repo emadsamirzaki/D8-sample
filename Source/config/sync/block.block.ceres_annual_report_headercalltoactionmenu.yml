@@ -1,0 +1,20 @@
+uuid: ebab8cad-3e4e-4460-9b20-05c739d69c15
+langcode: en
+status: true
+dependencies:
+  module:
+    - ceres_core
+  theme:
+    - ceres_annual_report
+id: ceres_annual_report_headercalltoactionmenu
+theme: ceres_annual_report
+region: header_links
+weight: -9
+provider: null
+plugin: header_call_to_action
+settings:
+  id: header_call_to_action
+  label: 'Header Call-to-action Menu'
+  provider: ceres_core
+  label_display: '0'
+visibility: {  }

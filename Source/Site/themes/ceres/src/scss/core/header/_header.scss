@@ -1,0 +1,62 @@
+.sticky-header{
+  z-index: 50;
+  background-color: #fff;
+  width: 100%;
+  &.scroll{
+    position: relative !important;
+  }
+  &.affix:not(.scroll) {
+    + .main-container{
+      padding-top: 90px;
+      @media (max-width: $screen-xs-max){
+        padding-top: 70px;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+        padding-top: 80px;
+      }
+    }
+  }
+}
+.navbar-default{
+  min-height: 90px;
+  margin-bottom: -1px;
+  border: 0;
+  @media (max-width: $screen-xs-max){
+    min-height: 70px;
+  }
+  @media (min-width: $screen-sm-min){
+    padding-#{$opposite}: 0;
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+    min-height: 80px;
+  }
+  .navbar-header{
+    @media (min-width: $screen-sm-min){
+      padding: 5px 0;
+    }
+  }
+  @media (min-width: $screen-lg-min){
+    width: 1185px;
+  }
+}
+.region-header-links{
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    display: -webkit-flex;
+    display: flex;
+    float: left;
+
+  }
+  .search-block-form{
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      order: 2;
+    }
+    position: relative;
+    z-index: 1;
+  }
+}
+#block-ceres-call-to-action{
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    order: 1;
+    margin-#{$default}: 35px;
+  }
+}

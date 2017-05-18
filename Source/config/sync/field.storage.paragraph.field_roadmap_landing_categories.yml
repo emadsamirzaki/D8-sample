@@ -1,0 +1,20 @@
+uuid: 8aac819a-a90e-465e-bd7e-949763a637d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_roadmap_landing_categories
+field_name: field_roadmap_landing_categories
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

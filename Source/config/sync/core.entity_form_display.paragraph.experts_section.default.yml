@@ -1,0 +1,22 @@
+uuid: b2aedaef-1bcd-4768-9935-d3762894118e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.experts_section.field_experts
+    - paragraphs.paragraphs_type.experts_section
+id: paragraph.experts_section.default
+targetEntityType: paragraph
+bundle: experts_section
+mode: default
+content:
+  field_experts:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

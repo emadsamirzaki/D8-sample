@@ -1,0 +1,26 @@
+uuid: 0f793890-efa9-4189-a13b-ddabf7631b1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: resources_tool
+label: Resources
+type: 'canonical_entities:node'
+pattern: 'resources/[node:content-type]s/[node:title]'
+selection_criteria:
+  2e2ae7e9-4f06-4027-9e96-bd2bc898815f:
+    id: node_type
+    bundles:
+      podcast: podcast
+      report: report
+      tool: tool
+      video: video
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2e2ae7e9-4f06-4027-9e96-bd2bc898815f
+selection_logic: and
+weight: 0
+relationships: {  }

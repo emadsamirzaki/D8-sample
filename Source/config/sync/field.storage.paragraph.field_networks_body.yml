@@ -1,0 +1,19 @@
+uuid: cf3ccb49-9bc0-4c3e-8d36-e9d2e7ffd8c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_networks_body
+field_name: field_networks_body
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

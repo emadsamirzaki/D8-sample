@@ -1,0 +1,18 @@
+uuid: be78dac9-59a4-49d8-965e-95976f0c359d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_author_is_staff
+field_name: field_author_is_staff
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

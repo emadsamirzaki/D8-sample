@@ -1,0 +1,384 @@
+/* ====================================================================================================================
+    * Variables
+* ====================================================================================================================*/
+$font-name:                           "FontAwesome";
+$default-duration:                    1s;
+$default-easing:                      ease;
+$default-border-radius:               5px;
+$default-box-shadow-x-axis:           0;
+$default-box-shadow-y-axis:           1px;
+$default-box-shadow-blur:             2px;
+$default-box-shadow-color:            rgba( 0, 0, 0, 0.2 );
+$default-box-shadow-inset:            '';
+$flexslider-margin:                   0 0 60px;
+$flexslider-bg:                       #fff;
+$flexslider-border:                   0;
+$flexslider-border-radius:            4px;
+$flexslider-box-shadow-x-axis:        0;
+$flexslider-box-shadow-y-axis:        1px;
+$flexslider-box-shadow-blur:          4px;
+$flexslider-box-shadow-color:         rgba( 0, 0, 0, 0.2 );
+$flexslider-box-shadow-inset:         '';
+$flex-viewport-max-height:            2000px;
+$flex-viewport-loading-max-height:    300px;
+$flex-control-thumbs:                 5px 0 0;
+$flex-direction-nav-color:            rgba(0,0,0,0.8);
+$flex-direction-nav-text-shadow:      1px 1px 0 rgba( 255, 255, 255, 0.3 );
+$flex-direction-nav-icon-color:       rgba(0,0,0,0.8);
+$flex-direction-nav-icon-text-shadow: 1px 1px 0 rgba( 255, 255, 255, 0.3 );
+$flex-direction-nav-icon-prev:        $fa-var-angle-left;
+$flex-direction-nav-icon-next:        $fa-var-angle-right;
+$flex-pauseplay-icon-play:            $fa-var-play;
+$flex-pauseplay-icon-pause:           $fa-var-pause;
+
+/* ====================================================================================================================
+    * Mixins
+* ====================================================================================================================*/
+//
+// Transition
+//
+@mixin flex-transition( $duration: $default-duration , $easing: $default-easing ) {
+  -webkit-transition: all $duration $easing;
+  -moz-transition: all $duration $easing;
+  -ms-transition: all $duration $easing;
+  -o-transition: all $duration $easing;
+  transition: all $duration $easing;
+}
+//
+// Border-radius
+//
+@mixin flex-border-radius( $radius: $default-border-radius ){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+//
+// Box-shadow
+//
+@mixin flex-box-shadow( $x-axis: $default-box-shadow-x-axis, $y-axis: $default-box-shadow-y-axis, $blur: $default-box-shadow-blur, $color: $default-box-shadow-color, $inset: $default-box-shadow-inset ) {
+  -webkit-box-shadow: $inset $x-axis $y-axis $blur $color;
+  -moz-box-shadow: $inset $x-axis $y-axis $blur $color;
+  -o-box-shadow: $inset $x-axis $y-axis $blur $color;
+  box-shadow: $inset $x-axis $y-axis $blur $color;
+}
+/* ====================================================================================================================
+    * RESETS
+* ====================================================================================================================*/
+.flex-container,
+.flex-slider {
+  a:hover {
+    outline: none;
+  }
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+
+/* ====================================================================================================================
+    * BASE STYLES
+* ====================================================================================================================*/
+
+
+.flexslider {
+  padding: 0;
+  direction: $dir;
+  margin: $flexslider-margin;
+  background: $flexslider-bg;
+  border: $flexslider-border;
+  position: relative;
+  zoom: 1;
+  @include flex-border-radius( $flexslider-border-radius );
+  @include flex-box-shadow( $flexslider-box-shadow-x-axis, $flexslider-box-shadow-y-axis, $flexslider-box-shadow-blur, $flexslider-box-shadow-color, $flexslider-box-shadow-inset);
+
+  .slides {
+    zoom: 1;
+    display: inline-block;
+    @media(min-width: $screen-lg-min){
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      justify-content: center;
+    }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: inline-block !important;
+    }
+    @supports (-ms-accelerator:true) {
+      display: inline-block !important;
+    }
+    margin-bottom: -7px;
+    > li {
+      display: none; 
+      position: relative;
+      //-webkit-backface-visibility: hidden;
+    }
+    img{
+      width: 100%;
+      display: block;
+      height: auto;
+      -moz-user-select: none;
+    }
+    //
+    // Clearfix for the .slides element
+    //
+    .flex-caption{
+      padding: 2%;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+      font-size: 14px;
+      line-height: 18px;    
+    }
+    &:after{
+      content: "\0020"; 
+      display: block; 
+      clear: both; 
+      visibility: hidden; 
+      line-height: 0; 
+      height: 0;
+    }
+
+    /*        html[xmlns] &{
+                display: block;
+            }*/
+    * html &{
+      height: 1%;
+    }
+    // 
+    // No JavaScript Fallback
+    // If you are not using another script, such as Modernizr, make sure you
+    // include js that eliminates this class on page load
+    // 
+    .no-js &{
+      > li{
+        &:first-child{
+          display: block;
+        }
+      }
+    }
+  }
+}
+/* ====================================================================================================================
+    * DEFAULT THEME
+* ====================================================================================================================*/
+.flex-viewport {
+  max-height: $flex-viewport-max-height;
+  @media(min-width: $screen-lg-min){
+    display: -webkit-flex;
+    display: flex;
+  }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: block !important;
+  }
+  @supports (-ms-accelerator:true) {
+    display: block !important;
+  }
+  @include flex-transition();
+  .loading &{
+    max-height: $flex-viewport-loading-max-height;
+  }
+
+}
+.carousel li {
+  margin-#{$opposite}: 5px;
+}
+//
+// Direction Nav
+//
+
+.flex-direction-nav {
+  *height: 0;
+  //
+  // Global styles
+  //
+  a  {
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    color: $flex-direction-nav-color;
+    text-shadow: $flex-direction-nav-text-shadow;
+    @include flex-transition( 0.3s, ease-in-out );
+    &:before  {
+      font-family: $font-name;
+      font-size: 40px;
+      display: inline-block;
+      content: if-ltr($flex-direction-nav-icon-prev, $flex-direction-nav-icon-next);
+      color: $flex-direction-nav-icon-color;
+      text-shadow: $flex-direction-nav-icon-text-shadow;
+    }
+    &.flex-next:before {
+      content: if-ltr($flex-direction-nav-icon-next, $flex-direction-nav-icon-prev);
+    }
+  }
+  //
+  // Prev
+  //
+  .flex-prev {
+    #{$default}: -35px;
+  }
+  //
+  // Next
+  //
+  .flex-next {
+    #{$opposite}: -35px;
+    text-align: $opposite;
+  }
+  //
+  // Hover states
+  //
+
+  .flexslider:hover &{
+    .flex-prev {
+      opacity: 0.7;
+      #{$default}: 10px;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .flex-next {
+      opacity: 0.7;
+      #{$opposite}: 10px;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+  //
+  // Disabled
+  //
+  .flex-disabled {
+    opacity: 0!important;
+    filter: alpha(opacity=0);
+    cursor: default;
+    z-index: -1;
+  }
+}
+//
+// Pause/Play
+//
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  #{$default}: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+  &:before {
+    font-family: $font-name;
+    font-size: 20px;
+    display: inline-block;
+    content: $flex-pauseplay-icon-pause;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &.flex-play:before {
+    content: $flex-pauseplay-icon-play;
+  }
+}
+//
+// Control Nav
+//
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+  li {
+    margin: 0 3px !important;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+  }
+}
+//
+// Control paging
+//
+.flex-control-paging li {
+  a {
+    width: 11px;
+    height: 11px;
+    display: block;
+    background: #666;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    @include flex-box-shadow( 0, 0, 3px, rgba(0,0,0,0.3), inset );
+    @include flex-border-radius( 20px );
+    outline: none;
+    &:hover {
+      background: #333;
+      background: rgba(0,0,0,0.7);
+    }
+    &.flex-active {
+      background: #000;
+      background: rgba( 0, 0, 0, 0.9 );
+      cursor: default;
+    }
+  }
+}
+.flex-control-thumbs {
+  margin: $flex-control-thumbs;
+  position: static;
+  overflow: hidden;
+  li {
+    width: 25%;
+    float: $default;
+    margin: 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+    -moz-user-select: none;
+    @include flex-transition();
+    &:hover {opacity: 1;}
+  }
+  .flex-active {
+    opacity: 1;
+    cursor: default;
+  }
+}
+/* ====================================================================================================================
+    * RESPONSIVE
+* ====================================================================================================================*/
+@media screen and ( max-width: 860px ) {
+  .flex-direction-nav {
+    .flex-prev { 
+      opacity: 1; 
+      #{$default}: 10px;
+    }
+    .flex-next { 
+      opacity: 1; 
+      #{$opposite}: 10px;
+    }
+  }
+}

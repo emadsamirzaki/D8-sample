@@ -1,0 +1,137 @@
+uuid: 35b60938-0fa9-4564-9219-14d294046193
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.network.body
+    - field.field.node.network.field_banner_image
+    - field.field.node.network.field_experts
+    - field.field.node.network.field_meta_tags
+    - field.field.node.network.field_network_description
+    - field.field.node.network.field_network_image
+    - field.field.node.network.field_network_join_section
+    - field.field.node.network.field_network_sf_members
+    - field.field.node.network.field_network_work_group_title
+    - field.field.node.network.field_network_working_groups
+    - field.field.node.network.field_subtitle
+    - field.field.node.network.field_testimonials
+    - node.type.network
+  module:
+    - entity_reference_revisions
+    - image
+    - metatag
+    - text
+    - user
+id: node.network.default
+targetEntityType: node
+bundle: network
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 108
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_experts:
+    weight: 111
+    label: hidden
+    settings:
+      view_mode: experts_section
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_meta_tags:
+    weight: 115
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_network_description:
+    type: entity_reference_revisions_entity_view
+    weight: 109
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_network_image:
+    weight: 107
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_network_join_section:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_network_sf_members:
+    type: entity_reference_revisions_entity_view
+    weight: 113
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_network_work_group_title:
+    weight: 114
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_network_working_groups:
+    type: entity_reference_revisions_entity_view
+    weight: 112
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_subtitle:
+    weight: 106
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonials:
+    type: entity_reference_revisions_entity_view
+    weight: 110
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

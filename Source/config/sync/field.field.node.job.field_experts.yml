@@ -1,0 +1,25 @@
+uuid: 7a17c307-70d8-445f-86c2-8e49e9ce67fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experts
+    - node.type.job
+id: node.job.field_experts
+field_name: field_experts
+entity_type: node
+bundle: job
+label: Experts
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: staff_experts
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

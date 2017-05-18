@@ -1,0 +1,6 @@
+uuid: 1c82b0c7-89a0-4cc6-894c-b652f2e3a2ff
+langcode: en
+status: true
+dependencies: {  }
+id: join_section
+label: 'Join Section'

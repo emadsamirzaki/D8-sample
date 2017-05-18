@@ -1,0 +1,27 @@
+uuid: d1fb1355-2e17-4506-aba3-b4a43e4796d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ceres
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: ceres_page_title
+theme: ceres
+region: content_banner
+weight: -12
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /homepage
+    negate: true
+    context_mapping: {  }

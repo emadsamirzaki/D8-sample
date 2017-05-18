@@ -1,0 +1,19 @@
+uuid: e72c00bc-5d75-4ec3-86bf-3060413eaf48
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_block
+    - field.storage.block_content.field_testimonial_block_quote
+id: block_content.testimonial_block.field_testimonial_block_quote
+field_name: field_testimonial_block_quote
+entity_type: block_content
+bundle: testimonial_block
+label: Quote
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,22 @@
+uuid: edb2dcf6-20c8-4ba0-a51f-e9ecf6bbb05a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.network
+  module:
+    - text
+id: node.network.body
+field_name: body
+entity_type: node
+bundle: network
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

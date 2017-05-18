@@ -1,0 +1,8 @@
+uuid: 1b274243-5416-44ad-b9f3-79856889b050
+langcode: en
+status: true
+dependencies: {  }
+id: authorize_live_api
+label: 'Authorize Live API'
+apiId: ceres2
+transactionKey: 7Mh8dFCC3sD58x76

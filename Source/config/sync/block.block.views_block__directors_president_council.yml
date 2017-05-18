@@ -1,0 +1,36 @@
+uuid: 2e9eec18-2ca6-4368-a245-640113704181
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.directors
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - ceres
+id: views_block__directors_president_council
+theme: ceres
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:directors-president_council'
+settings:
+  id: 'views_block:directors-president_council'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '40'
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us/ceres-presidents-council
+    negate: false
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

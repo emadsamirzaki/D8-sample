@@ -1,0 +1,20 @@
+global-styling:
+  css:
+    theme:
+      assets/css/style.min.css: {}
+  js:
+    assets/js/main.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+jplayer:
+  css:
+    theme:
+      assets/jplayer/blue.monday/css/jplayer.blue.monday.min.css: { weight: -5, minified: true }
+  js:
+    assets/jplayer/jquery.jplayer.min.js: { weight: -5, minified: true }
+  dependencies:
+    - core/jquery
+       

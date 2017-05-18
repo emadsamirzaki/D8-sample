@@ -1,0 +1,48 @@
+uuid: 92c5b310-dd39-49ed-8132-528a158761f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.job.body
+    - field.field.node.job.field_banner_image
+    - field.field.node.job.field_description
+    - field.field.node.job.field_experts
+    - field.field.node.job.field_job_apply_banner
+    - field.field.node.job.field_job_apply_email
+    - field.field.node.job.field_job_apply_info
+    - field.field.node.job.field_job_apply_tip
+    - field.field.node.job.field_job_post_date
+    - field.field.node.job.field_meta_tags
+    - field.field.node.job.field_subtitle
+    - node.type.job
+  module:
+    - text
+    - user
+id: node.job.teaser
+targetEntityType: node
+bundle: job
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_experts: true
+  field_job_apply_banner: true
+  field_job_apply_email: true
+  field_job_apply_info: true
+  field_job_apply_tip: true
+  field_job_post_date: true
+  field_meta_tags: true
+  field_subtitle: true

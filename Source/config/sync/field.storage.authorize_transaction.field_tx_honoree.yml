@@ -1,0 +1,21 @@
+uuid: 834d2ded-483d-4482-9e98-bf03594b75c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_honoree
+field_name: field_tx_honoree
+entity_type: authorize_transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

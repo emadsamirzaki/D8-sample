@@ -1,0 +1,18 @@
+uuid: c80dab19-219c-4bbf-a4b4-43fc42c33508
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.director
+id: node.director.title
+field_name: title
+entity_type: node
+bundle: director
+label: 'Full Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

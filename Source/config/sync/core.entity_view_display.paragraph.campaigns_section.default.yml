@@ -1,0 +1,32 @@
+uuid: b4278cc3-f53f-4ee5-a8c6-bd00b03d0ad8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campaigns_section.field_campaigns
+    - field.field.paragraph.campaigns_section.field_campaigns_body
+    - paragraphs.paragraphs_type.campaigns_section
+id: paragraph.campaigns_section.default
+targetEntityType: paragraph
+bundle: campaigns_section
+mode: default
+content:
+  field_campaigns:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: campaign_section_display
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_campaigns_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  created: true
+  uid: true

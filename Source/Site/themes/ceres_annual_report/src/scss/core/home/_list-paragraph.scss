@@ -1,0 +1,23 @@
+.paragraph-list-content ul{
+  padding: 0;
+  @include flex-display();
+  @include flex-wrap();
+  list-style: none;
+  li{
+    width: 50%;
+    float: left;
+    @include flex-display();
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 10px 15px 20px;
+    @media(min-width: $screen-sm-min){
+      width: 33.33333%;
+      border-left: 1px solid #edeceb;
+      &:nth-child(3n+1) {
+        border-left: 0;
+      }
+
+    } 
+  }
+
+}

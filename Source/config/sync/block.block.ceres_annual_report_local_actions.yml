@@ -1,0 +1,20 @@
+uuid: e501f1b6-a371-47f5-b9ae-13498f701903
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ceres_annual_report
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: ceres_annual_report_local_actions
+theme: ceres_annual_report
+region: header
+weight: -11
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

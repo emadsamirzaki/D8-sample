@@ -1,0 +1,19 @@
+uuid: 9a122769-de9a-4e61-b863-2a1fda6515d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_creditcardtype
+id: authorize_transaction.basic_transaction.field_tx_creditcardtype
+field_name: field_tx_creditcardtype
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Credit Card Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

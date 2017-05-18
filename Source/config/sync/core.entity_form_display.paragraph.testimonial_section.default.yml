@@ -1,0 +1,99 @@
+uuid: 57e5ee55-3e5e-44d5-bd9f-7958f5d15fbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonial_section.field_mission_body
+    - field.field.paragraph.testimonial_section.field_mission_title
+    - field.field.paragraph.testimonial_section.field_testimonial_author_image
+    - field.field.paragraph.testimonial_section.field_testimonial_author_name
+    - field.field.paragraph.testimonial_section.field_testimonial_author_org
+    - field.field.paragraph.testimonial_section.field_testimonial_body
+    - field.field.paragraph.testimonial_section.field_testimonial_video_caption
+    - field.field.paragraph.testimonial_section.field_testimonial_video_image
+    - field.field.paragraph.testimonial_section.field_testimonial_youtube_id
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.testimonial_section
+  module:
+    - image
+id: paragraph.testimonial_section.default
+targetEntityType: paragraph
+bundle: testimonial_section
+mode: default
+content:
+  field_mission_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_mission_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_author_image:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testimonial_author_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_author_org:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_body:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_testimonial_video_caption:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_video_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testimonial_youtube_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

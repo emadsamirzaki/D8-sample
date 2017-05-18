@@ -1,0 +1,29 @@
+uuid: b852e0d6-a656-4734-afef-453e1eb2941b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reports
+    - node.type.blog_post
+    - node.type.report
+id: node.blog_post.field_reports
+field_name: field_reports
+entity_type: node
+bundle: blog_post
+label: Reports
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      report: report
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

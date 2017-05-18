@@ -1,0 +1,26 @@
+{
+    "name": "ark_frontend",
+    "version": "0.1",
+    "authors": [
+        "Rafik E Younan <rafik.younan@arkdev.net>"
+    ],
+    "description": "Frontend using Bootstrap SCSS, jQuery",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~1.11",
+        "bootstrap-sass": "",
+        "bootstrap-sass-rtl": "",
+        "bootstrap-carousel-swipe": "",
+        "bootstrap-dialog": "",
+        "fontawesome": "",
+        "mappy-breakpoints": "~0.2.1"
+    }
+}

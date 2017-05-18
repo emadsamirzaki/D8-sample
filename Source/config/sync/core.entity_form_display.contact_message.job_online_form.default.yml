@@ -1,0 +1,63 @@
+uuid: 1e9299df-727a-43ec-9d7d-cb83cf906a87
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.job_online_form
+    - field.field.contact_message.job_online_form.field_job_apply_cv
+    - field.field.contact_message.job_online_form.field_job_apply_jobs
+    - field.field.contact_message.job_online_form.field_job_apply_mobile
+    - field.field.contact_message.job_online_form.field_job_apply_organization
+  module:
+    - file
+id: contact_message.job_online_form.default
+targetEntityType: contact_message
+bundle: job_online_form
+mode: default
+content:
+  field_job_apply_cv:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_job_apply_jobs:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_job_apply_mobile:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_job_apply_organization:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  mail:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  preview:
+    weight: 50
+    region: content
+hidden:
+  copy: true
+  message: true
+  subject: true

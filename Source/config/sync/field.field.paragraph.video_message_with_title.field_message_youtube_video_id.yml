@@ -1,0 +1,19 @@
+uuid: 4b7e57ac-9a75-421c-8ad8-7bab087ac9d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_message_youtube_video_id
+    - paragraphs.paragraphs_type.video_message_with_title
+id: paragraph.video_message_with_title.field_message_youtube_video_id
+field_name: field_message_youtube_video_id
+entity_type: paragraph
+bundle: video_message_with_title
+label: 'Youtube Video ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

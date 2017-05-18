@@ -1,0 +1,28 @@
+uuid: 0455847f-8db3-4efe-9408-55560518ac33
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.token
+    - field.field.paragraph.text_paragraph.field_text_paragraph_body
+    - field.field.paragraph.text_paragraph.field_text_paragraph_center
+    - paragraphs.paragraphs_type.text_paragraph
+  module:
+    - text
+id: paragraph.text_paragraph.token
+targetEntityType: paragraph
+bundle: text_paragraph
+mode: token
+content:
+  field_text_paragraph_body:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    type: text_trimmed
+    region: content
+hidden:
+  created: true
+  field_text_paragraph_center: true
+  uid: true

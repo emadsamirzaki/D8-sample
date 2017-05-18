@@ -1,0 +1,19 @@
+uuid: 2daa625d-5afd-4c0d-8410-fd42b044903c
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_transaction_hash
+id: authorize_transaction.basic_transaction.field_tx_transaction_hash
+field_name: field_tx_transaction_hash
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Transaction Hash'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

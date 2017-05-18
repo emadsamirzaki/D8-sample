@@ -1,0 +1,22 @@
+uuid: 1ee3e96b-8f98-49ae-8a61-ce3244482d77
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webinar
+id: node.webinar.promote
+field_name: promote
+entity_type: node
+bundle: webinar
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

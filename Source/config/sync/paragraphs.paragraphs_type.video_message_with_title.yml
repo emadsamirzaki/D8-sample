@@ -1,0 +1,6 @@
+uuid: fa1341ce-dd6e-452a-be7d-44cd87def938
+langcode: en
+status: true
+dependencies: {  }
+id: video_message_with_title
+label: 'Video message with title'

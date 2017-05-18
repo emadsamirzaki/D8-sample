@@ -1,0 +1,29 @@
+.pager-nav{
+  clear: both;
+  width: 100%;
+}
+.pager__item{
+  padding: 0 !important;
+  a{
+    border: 1px solid $border-color;
+    background-color: #fff;
+    padding: 2px 10px;
+    min-width: 30px;
+    display: inline-block;
+  }
+  &:first-child a{
+    border-top-#{$default}-radius: 5px; 
+    border-bottom-#{$default}-radius: 5px; 
+  }
+  &:last-child a{
+    border-top-#{$opposite}-radius: 5px; 
+    border-bottom-#{$opposite}-radius: 5px; 
+  }
+  &:not(:first-child) a{
+    border-#{$default}: 0;
+  }
+  &:hover a, &.is-active a{
+    color: #fff;
+    background-color: $light-green;
+  }
+}

@@ -1,0 +1,13 @@
+{% set imgURI = content.field_quote_testimonial_image['#items'].entity.uri.value %}
+
+{% if imgURI %}
+    <img src="{{ file_url(imgURI) }}" alt="news" class="img-responsive">
+{% else %}
+    <img src="/{{ directory }}/assets/images/network/quote1.jpg" alt="Quote" class="img-responsive">
+{% endif %}
+<div class="guote-text z-index-2 flex-display flex-column">
+  <i class="quote-icon"></i>
+  <div class="quote-desc dot-ellipsis dot-resize-update dot-height-120">
+    {{ paragraph.field_quote_testimonial_body.value | raw }}
+  </div>
+</div>

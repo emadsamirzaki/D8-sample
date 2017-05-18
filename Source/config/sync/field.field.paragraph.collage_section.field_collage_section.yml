@@ -1,0 +1,45 @@
+uuid: 9982a965-d59d-4e04-9dcf-c503e573e508
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_collage_section
+    - paragraphs.paragraphs_type.collage
+    - paragraphs.paragraphs_type.collage_section
+  module:
+    - entity_reference_revisions
+id: paragraph.collage_section.field_collage_section
+field_name: field_collage_section
+entity_type: paragraph
+bundle: collage_section
+label: 'Collage Section'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      collage: collage
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 7
+        enabled: false
+      collage:
+        enabled: true
+        weight: 8
+      collage_section:
+        weight: 9
+        enabled: false
+      footer_office:
+        weight: 10
+        enabled: false
+      press_source:
+        weight: 11
+        enabled: false
+      testimonial_section:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,24 @@
+uuid: f52e2c1b-c390-4e24-bb1a-e2fff987638d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.press_contacts_section.field_press_contact
+    - paragraphs.paragraphs_type.press_contacts_section
+id: paragraph.press_contacts_section.default
+targetEntityType: paragraph
+bundle: press_contacts_section
+mode: default
+content:
+  field_press_contact:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: experts_section
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  uid: true

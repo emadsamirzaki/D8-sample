@@ -1,0 +1,25 @@
+uuid: 8a3a5a43-59b5-464e-a9f7-19ad9e4f7275
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_section.field_news
+    - paragraphs.paragraphs_type.news_section
+id: paragraph.news_section.default
+targetEntityType: paragraph
+bundle: news_section
+mode: default
+content:
+  field_news:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 75
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

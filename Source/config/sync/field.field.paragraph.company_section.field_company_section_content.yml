@@ -1,0 +1,69 @@
+uuid: ae24df2d-58df-4151-8644-acaceee16976
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_company_section_content
+    - paragraphs.paragraphs_type.company_section
+    - paragraphs.paragraphs_type.image_link
+  module:
+    - entity_reference_revisions
+id: paragraph.company_section.field_company_section_content
+field_name: field_company_section_content
+entity_type: paragraph
+bundle: company_section
+label: Content
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_link: image_link
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 15
+        enabled: false
+      campaigns_section:
+        weight: 16
+        enabled: false
+      collage:
+        weight: 17
+        enabled: false
+      collage_section:
+        weight: 18
+        enabled: false
+      company_section:
+        weight: 19
+        enabled: false
+      events_awards_section:
+        weight: 20
+        enabled: false
+      experts_section:
+        weight: 21
+        enabled: false
+      footer_office:
+        weight: 22
+        enabled: false
+      image_link:
+        enabled: true
+        weight: 23
+      join_section:
+        weight: 24
+        enabled: false
+      networks_section:
+        weight: 25
+        enabled: false
+      news_section:
+        weight: 26
+        enabled: false
+      press_source:
+        weight: 27
+        enabled: false
+      testimonial_section:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

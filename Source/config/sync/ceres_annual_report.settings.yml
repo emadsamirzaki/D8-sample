@@ -1,0 +1,18 @@
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://ceres/themes/ceres/favicon.ico'
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: themes/ceres/logo.png
+  url: ''
+  use_default: false
+schemas:
+  bootstrap: 8000
+  ceres: 8000
+  ceres_annual_report: 8000

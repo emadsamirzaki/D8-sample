@@ -1,0 +1,23 @@
+uuid: 631acb51-31f7-41aa-bcec-e02217e2cb47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_join_url
+    - paragraphs.paragraphs_type.join_section
+  module:
+    - link
+id: paragraph.join_section.field_join_url
+field_name: field_join_url
+entity_type: paragraph
+bundle: join_section
+label: CTA
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

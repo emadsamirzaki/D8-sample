@@ -1,0 +1,5 @@
+authorize_pay:
+  config:
+    authorize_api: authorize_pay.authorize_config_api.authorize_sandbox_api
+_core:
+  default_config_hash: w4638t1CXdmjtQPJKXrKbcPNTY9r54OIwwLFepfejMA

@@ -1,0 +1,6 @@
+name: Salesforce
+type: module
+description: Map salesforce with drupal 8 through REST API library
+core: 8.x
+package: Custom
+configure: system.admin_salesforce_config

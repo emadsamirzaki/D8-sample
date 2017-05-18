@@ -1,0 +1,17 @@
+uuid: 6b641768-0e22-46a0-a0cc-1d6aeb59e8cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Director
+type: director
+description: 'Create new Director.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

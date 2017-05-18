@@ -1,0 +1,22 @@
+uuid: 900dc481-a69c-4da0-85db-65a81a78a776
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.annual_report_feature
+id: node.annual_report_feature.promote
+field_name: promote
+entity_type: node
+bundle: annual_report_feature
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

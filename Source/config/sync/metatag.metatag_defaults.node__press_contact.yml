@@ -1,0 +1,12 @@
+uuid: f147a5a2-52d3-43d7-89f7-e4e311c31233
+langcode: en
+status: true
+dependencies: {  }
+id: node__press_contact
+label: 'Content: Press Contact'
+tags:
+  description: '[node:field_staff_about]'
+  og_image: '[node:field_staff_picture]'
+  og_description: '[node:field_staff_about]'
+  twitter_cards_image: '[node:field_staff_picture]'
+  twitter_cards_description: '[node:field_staff_about]'

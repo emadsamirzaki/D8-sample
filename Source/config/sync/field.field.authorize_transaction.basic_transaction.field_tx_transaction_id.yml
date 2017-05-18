@@ -1,0 +1,19 @@
+uuid: 80c07fb4-a69e-4f76-8705-bc73f9b7a9a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_transaction_id
+id: authorize_transaction.basic_transaction.field_tx_transaction_id
+field_name: field_tx_transaction_id
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Transaction Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

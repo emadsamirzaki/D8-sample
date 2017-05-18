@@ -1,0 +1,27 @@
+<div class="col-xs-12 col-sm-5">
+  <div class="row">
+    <a class="news-img-wrapper" href="{{ url }}">
+      {% if node.field_content_image.value %}
+        {{ content.field_content_image }}
+      {% else %}
+        <img src="/{{ directory }}/assets/images/news/conference-room.jpg" alt="Blog Post" class="img-responsive">
+      {% endif %}
+    </a>
+  </div>
+</div>
+<div class="news-content blog-content col-xs-12 col-sm-7">
+  <h3 class="news-title"><a href="{{ url }}">{{ node.getTitle() }}</a></h3>
+  <div class="tag-section mar-bottom-15">
+    <ul>
+      <li class="no-pad-left"><span class="no-pad-left">{{ node.getCreatedTime() | date("F j, Y") }}</span></li>
+        {% if author %}
+        <li>
+          <a href="{{ author.url }}">{{ author.title }}</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+  <div class="dot-ellipsis dot-resize-update blog-desc-wrapper blog-desc">
+    {{ node.field_description.entity.field_text_paragraph_body.value | striptags | raw }}
+  </div>
+</div>

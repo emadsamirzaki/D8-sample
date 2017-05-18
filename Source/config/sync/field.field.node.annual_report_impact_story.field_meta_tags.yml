@@ -1,0 +1,23 @@
+uuid: 09844c19-2311-4c13-b452-b8bd34592fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.annual_report_impact_story
+  module:
+    - metatag
+id: node.annual_report_impact_story.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: annual_report_impact_story
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

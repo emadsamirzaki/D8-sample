@@ -1,0 +1,155 @@
+uuid: 792ba62b-06fd-42b1-b98f-2c198f58131b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_banner_image
+    - field.field.node.campaign.field_campaign_companies_action
+    - field.field.node.campaign.field_campaign_companies_link
+    - field.field.node.campaign.field_campaign_description
+    - field.field.node.campaign.field_campaign_donation_source
+    - field.field.node.campaign.field_campaign_join_section
+    - field.field.node.campaign.field_campaign_ongoing_campaign
+    - field.field.node.campaign.field_campaign_start_end_date
+    - field.field.node.campaign.field_content_image
+    - field.field.node.campaign.field_experts
+    - field.field.node.campaign.field_meta_tags
+    - field.field.node.campaign.field_network_sf_members
+    - node.type.campaign
+  module:
+    - datetime_range
+    - entity_reference_revisions
+    - image
+    - link
+    - metatag
+    - text
+    - user
+id: node.campaign.default
+targetEntityType: node
+bundle: campaign
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_campaign_companies_action:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_campaign_companies_link:
+    weight: 13
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_campaign_description:
+    type: entity_reference_revisions_entity_view
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_campaign_donation_source:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_campaign_join_section:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_campaign_ongoing_campaign:
+    weight: 3
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_campaign_start_end_date:
+    weight: 5
+    label: hidden
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_content_image:
+    weight: 11
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_experts:
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: experts_section
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_meta_tags:
+    weight: 14
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_network_sf_members:
+    weight: 12
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,43 @@
+uuid: dcca9fe4-978c-4632-a7be-f36ebbcfe73a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tool.field_banner_image
+    - field.field.node.tool.field_description
+    - field.field.node.tool.field_meta_tags
+    - field.field.node.tool.field_resource_campaigns
+    - field.field.node.tool.field_resource_download_body
+    - field.field.node.tool.field_resource_download_file
+    - field.field.node.tool.field_resource_download_link
+    - field.field.node.tool.field_resource_download_link_txt
+    - field.field.node.tool.field_resource_image
+    - field.field.node.tool.field_resource_issues
+    - field.field.node.tool.field_resource_networks
+    - field.field.node.tool.field_resource_programs
+    - node.type.tool
+  module:
+    - user
+id: node.tool.teaser
+targetEntityType: node
+bundle: tool
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_meta_tags: true
+  field_resource_campaigns: true
+  field_resource_download_body: true
+  field_resource_download_file: true
+  field_resource_download_link: true
+  field_resource_download_link_txt: true
+  field_resource_image: true
+  field_resource_issues: true
+  field_resource_networks: true
+  field_resource_programs: true
+  field_webinar_downloadable_file: true

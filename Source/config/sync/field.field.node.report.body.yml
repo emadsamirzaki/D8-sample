@@ -1,0 +1,22 @@
+uuid: 421ca044-0895-4800-aeb5-0cbe6ba4547b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.report
+  module:
+    - text
+id: node.report.body
+field_name: body
+entity_type: node
+bundle: report
+label: 'Intro Text'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

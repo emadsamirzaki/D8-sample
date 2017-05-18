@@ -1,0 +1,28 @@
+uuid: e6ad8bf9-2d6d-4465-9833-55e487956f0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.staff_header
+  module:
+    - block_visibility_groups
+    - ceres_core
+  theme:
+    - ceres
+id: staff_header_block
+theme: ceres
+region: content_banner
+weight: -11
+provider: null
+plugin: staff_header
+settings:
+  id: staff_header
+  label: 'Staff Header'
+  provider: ceres_core
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: staff_header
+    context_mapping: {  }

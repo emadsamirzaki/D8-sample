@@ -1,0 +1,12 @@
+uuid: fede32ea-691d-4b14-b06a-e3fe1ac70ce0
+langcode: en
+status: true
+dependencies: {  }
+id: node__staff
+label: 'Content: Staff'
+tags:
+  description: '[node:field_staff_about]'
+  og_image: '[node:field_staff_picture]'
+  og_description: '[node:field_staff_about]'
+  twitter_cards_image: '[node:field_staff_picture]'
+  twitter_cards_description: '[node:field_staff_about]'

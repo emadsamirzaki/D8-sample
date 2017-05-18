@@ -1,0 +1,24 @@
+uuid: d6c9e520-24fb-4c3c-943f-4d5b466fa971
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.call-to-action
+  module:
+    - system
+  theme:
+    - bootstrap
+id: call_to_action
+theme: bootstrap
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: 'system_menu_block:call-to-action'
+settings:
+  id: 'system_menu_block:call-to-action'
+  label: 'Call To Action'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

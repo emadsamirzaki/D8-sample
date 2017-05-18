@@ -1,0 +1,25 @@
+uuid: 973dc26a-6225-4262-bfae-f18937cbb2ea
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_social_links:5db6ddff-bca4-420b-ba2c-19c34bc3dd2d'
+  module:
+    - block_content
+  theme:
+    - ceres
+id: social_media_links
+theme: ceres
+region: header_links
+weight: -8
+provider: null
+plugin: 'block_content:5db6ddff-bca4-420b-ba2c-19c34bc3dd2d'
+settings:
+  id: 'block_content:5db6ddff-bca4-420b-ba2c-19c34bc3dd2d'
+  label: 'Social media links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

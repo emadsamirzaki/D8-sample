@@ -1,0 +1,19 @@
+uuid: b4d6da97-f9f9-44f9-9e6e-fbdb149ea2d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_donation_source
+    - node.type.campaign
+id: node.campaign.field_campaign_donation_source
+field_name: field_campaign_donation_source
+entity_type: node
+bundle: campaign
+label: 'Donation Source Code'
+description: 'A text with the campaign short name to be passed to the donation page to indicate the campaign name in the donation.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

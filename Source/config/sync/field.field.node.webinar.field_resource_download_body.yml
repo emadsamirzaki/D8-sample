@@ -1,0 +1,21 @@
+uuid: 744b072b-77dc-48d5-b6a3-5bdf279d856d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_download_body
+    - node.type.webinar
+  module:
+    - text
+id: node.webinar.field_resource_download_body
+field_name: field_resource_download_body
+entity_type: node
+bundle: webinar
+label: 'Download Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * ceres_core implementation hooks
+ */
+function ceres_core_theme() {
+  return [
+    'hp_signup' => [
+      'variables' => [
+        'label' => '',
+        'content' => '',
+        'form' => ''
+      ],
+    ],
+    'page_social_share' => [
+      'variables' => [],
+    ],
+    'staff_header_section' => [
+      'variables' => [
+        'content' => ''
+      ],
+    ],
+    'donate_block' => [
+      'variables' => [
+        'label' => '',
+        'content' => '',
+        'form' => ''
+      ],
+    ],
+    'header_call_to_action' => [
+      'variables' => [
+        'items' => [
+          [ 'url' => Drupal\Core\Url::fromUri('internal:/donate'),
+            'title' => t('Donate'),
+          ],
+        ],
+      ],
+    ],
+    'register_block' => [
+      'variables' => [
+        'content' => '',
+      ],
+    ],
+  ];
+}

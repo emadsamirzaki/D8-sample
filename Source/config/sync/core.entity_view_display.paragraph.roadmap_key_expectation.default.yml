@@ -1,0 +1,51 @@
+uuid: 9efadc4a-74ab-4da6-b3d3-229b24846610
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.roadmap_key_expectation.field_key_expectation_body
+    - field.field.paragraph.roadmap_key_expectation.field_key_expectation_label
+    - field.field.paragraph.roadmap_key_expectation.field_key_expectation_ref
+    - field.field.paragraph.roadmap_key_expectation.field_key_expectation_title
+    - paragraphs.paragraphs_type.roadmap_key_expectation
+  module:
+    - text
+id: paragraph.roadmap_key_expectation.default
+targetEntityType: paragraph
+bundle: roadmap_key_expectation
+mode: default
+content:
+  field_key_expectation_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_key_expectation_label:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_key_expectation_ref:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_key_expectation_title:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

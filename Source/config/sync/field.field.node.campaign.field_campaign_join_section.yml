@@ -1,0 +1,60 @@
+uuid: f5440a06-c379-4192-819a-931b25d0c9ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_join_section
+    - node.type.campaign
+    - paragraphs.paragraphs_type.join_section
+  module:
+    - entity_reference_revisions
+id: node.campaign.field_campaign_join_section
+field_name: field_campaign_join_section
+entity_type: node
+bundle: campaign
+label: 'Join Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      join_section: join_section
+    target_bundles_drag_drop:
+      campaigns_section:
+        weight: 12
+        enabled: false
+      collage:
+        weight: 13
+        enabled: false
+      collage_section:
+        weight: 14
+        enabled: false
+      events_awards_section:
+        weight: 15
+        enabled: false
+      experts_section:
+        weight: 16
+        enabled: false
+      footer_office:
+        weight: 17
+        enabled: false
+      join_section:
+        enabled: true
+        weight: 18
+      networks_section:
+        weight: 19
+        enabled: false
+      news_section:
+        weight: 20
+        enabled: false
+      press_source:
+        weight: 21
+        enabled: false
+      testimonial_section:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

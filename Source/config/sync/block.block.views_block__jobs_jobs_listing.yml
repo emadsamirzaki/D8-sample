@@ -1,0 +1,30 @@
+uuid: 46909440-274d-4ce7-a372-aa6fdd82b84d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.jobs
+  module:
+    - system
+    - views
+  theme:
+    - ceres
+id: views_block__jobs_jobs_listing
+theme: ceres
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:jobs-jobs_listing'
+settings:
+  id: 'views_block:jobs-jobs_listing'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us/career-opportunities
+    negate: false
+    context_mapping: {  }

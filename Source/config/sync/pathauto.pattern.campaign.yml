@@ -1,0 +1,22 @@
+uuid: 8b8a8515-b551-426f-a054-7a5ff81f4bdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: campaign
+label: Campaign
+type: 'canonical_entities:node'
+pattern: 'campaigns/[node:title]'
+selection_criteria:
+  efae29bb-6713-497b-9b9f-5adbfbad6b9e:
+    id: node_type
+    bundles:
+      campaign: campaign
+    negate: false
+    context_mapping:
+      node: node
+    uuid: efae29bb-6713-497b-9b9f-5adbfbad6b9e
+selection_logic: and
+weight: -6
+relationships: {  }

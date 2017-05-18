@@ -1,0 +1,10 @@
+uuid: 6ffda18a-8bf5-4557-ab48-50195233e0f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.image_link_with_badge_title
+label: 'Image link with badge title'
+targetEntityType: node
+cache: true

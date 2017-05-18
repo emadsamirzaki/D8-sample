@@ -1,0 +1,63 @@
+uuid: a0ab7b7b-c2bf-4dcd-8515-6070483b7c68
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.email_signup_newsletter
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_email
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_first_name
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_last_name
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_organization
+    - field.field.contact_message.email_signup_newsletter.field_newsletter_zip
+id: contact_message.email_signup_newsletter.default
+targetEntityType: contact_message
+bundle: email_signup_newsletter
+mode: default
+content:
+  field_newsletter_email:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_newsletter_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_organization:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_zip:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

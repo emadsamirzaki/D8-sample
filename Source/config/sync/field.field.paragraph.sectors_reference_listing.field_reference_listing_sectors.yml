@@ -1,0 +1,25 @@
+uuid: 7f2d1d45-e901-46d9-b845-40ed2109fa26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_listing_sectors
+    - paragraphs.paragraphs_type.sectors_reference_listing
+id: paragraph.sectors_reference_listing.field_reference_listing_sectors
+field_name: field_reference_listing_sectors
+entity_type: paragraph
+bundle: sectors_reference_listing
+label: Sectors
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: our_work_listings
+      display_name: entity_reference_3
+      arguments: {  }
+field_type: entity_reference

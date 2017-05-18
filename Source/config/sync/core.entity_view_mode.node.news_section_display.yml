@@ -1,0 +1,10 @@
+uuid: 6265589d-b833-42a5-b2f4-6da7aeb17926
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_section_display
+label: 'News section display'
+targetEntityType: node
+cache: true

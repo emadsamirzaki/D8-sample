@@ -1,0 +1,29 @@
+uuid: 78bfbcf3-a8f8-4227-b609-f57d496f32a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_post_staff_author
+    - node.type.blog_post
+    - node.type.staff
+id: node.blog_post.field_blog_post_staff_author
+field_name: field_blog_post_staff_author
+entity_type: node
+bundle: blog_post
+label: 'Staff Author'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      staff: staff
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

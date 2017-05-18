@@ -1,0 +1,26 @@
+uuid: 6d75a8b2-ad0d-40dd-a753-48fef04ac634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_text_paragraph.field_basic_text_paragraph_body
+    - field.field.paragraph.basic_text_paragraph.field_lead_paragraph
+    - paragraphs.paragraphs_type.basic_text_paragraph
+  module:
+    - text
+id: paragraph.basic_text_paragraph.default
+targetEntityType: paragraph
+bundle: basic_text_paragraph
+mode: default
+content:
+  field_basic_text_paragraph_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  created: true
+  field_lead_paragraph: true
+  uid: true

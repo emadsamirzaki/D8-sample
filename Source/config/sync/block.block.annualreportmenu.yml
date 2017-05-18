@@ -1,0 +1,30 @@
+uuid: 1d0b2b76-2a45-4940-8ffa-43996d7f1589
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.annual-report-menu
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - ceres_annual_report
+id: annualreportmenu
+theme: ceres_annual_report
+region: navigation_collapsible
+weight: 0
+provider: null
+plugin: 'system_menu_block:annual-report-menu'
+settings:
+  id: 'system_menu_block:annual-report-menu'
+  label: 'Annual Report Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

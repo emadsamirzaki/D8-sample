@@ -1,0 +1,19 @@
+uuid: 63f122c0-94b9-4ff8-b019-19a9e7ddb420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donation_right_sec_email
+    - node.type.donation
+id: node.donation.field_donation_right_sec_email
+field_name: field_donation_right_sec_email
+entity_type: node
+bundle: donation
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

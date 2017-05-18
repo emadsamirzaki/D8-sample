@@ -1,0 +1,6 @@
+uuid: 2c8e27ae-e7c6-455b-b25d-f5a21250ae78
+langcode: en
+status: true
+dependencies: {  }
+id: resources_section
+label: 'Resources Section'

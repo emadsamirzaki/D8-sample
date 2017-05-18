@@ -1,0 +1,15 @@
+uuid: 223d92bd-810e-442d-9feb-1968be62c65c
+name: Ceres
+mail: info@ceres.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /homepage
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

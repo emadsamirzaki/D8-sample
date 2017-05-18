@@ -1,0 +1,29 @@
+uuid: a0298293-a168-4682-9c3e-75334acc0cd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.collage_section.field_collage_section
+    - paragraphs.paragraphs_type.collage_section
+  module:
+    - paragraphs
+id: paragraph.collage_section.default
+targetEntityType: paragraph
+bundle: collage_section
+mode: default
+content:
+  field_collage_section:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

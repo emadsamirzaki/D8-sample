@@ -1,0 +1,49 @@
+uuid: c4bca419-efec-4643-9871-141dfbf5f537
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_social_links
+    - field.field.block_content.header_social_links.field_header_social_facebook_url
+    - field.field.block_content.header_social_links.field_header_social_linkedin_url
+    - field.field.block_content.header_social_links.field_header_social_twitter_url
+  module:
+    - link
+id: block_content.header_social_links.default
+targetEntityType: block_content
+bundle: header_social_links
+mode: default
+content:
+  field_header_social_facebook_url:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_header_social_linkedin_url:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_header_social_twitter_url:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

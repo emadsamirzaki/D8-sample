@@ -1,0 +1,8 @@
+uuid: f485bdcd-bdc5-4c03-9caa-dd8fa38efb58
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial_block
+label: 'Testimonial Block'
+revision: 0
+description: 'Create new testimonial block'

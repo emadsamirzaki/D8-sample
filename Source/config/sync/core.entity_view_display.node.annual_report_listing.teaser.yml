@@ -1,0 +1,28 @@
+uuid: 706e036f-0aa9-4e05-8798-5da2b8427cda
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annual_report_listing.body
+    - field.field.node.annual_report_listing.field_annual_report_intro_text
+    - field.field.node.annual_report_listing.field_banner_image
+    - field.field.node.annual_report_listing.field_list_page_sections
+    - field.field.node.annual_report_listing.field_meta_tags
+    - node.type.annual_report_listing
+  module:
+    - user
+id: node.annual_report_listing.teaser
+targetEntityType: node
+bundle: annual_report_listing
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_annual_report_intro_text: true
+  field_banner_image: true
+  field_list_page_sections: true
+  field_meta_tags: true

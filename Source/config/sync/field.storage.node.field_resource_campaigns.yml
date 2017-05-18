@@ -1,0 +1,19 @@
+uuid: e0d4e7dd-4e0d-4aaf-b8fa-ac7b5e7988af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_resource_campaigns
+field_name: field_resource_campaigns
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,49 @@
+.campaign-members{
+  padding: 40px 0 60px;
+  border-top: 1px solid $border-color;
+  @media (max-width: $screen-xs-max){
+    padding: 30px 0;
+  }
+  .section-title{
+    @include section-title-with-margin-bottom();
+  }
+  .section-desc{
+    @include section-description-with-margin-bottom();
+  }
+}
+.members-list{
+  padding-bottom: 60px;
+  .network-groups &{
+    padding-bottom: 0;
+  }
+}
+.member-item {
+  padding: 10px 15px 20px;
+  &:not(.flex-start){
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  *{
+    color: $light-black;
+    font-weight: 500;
+  }
+  h3{
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  @media (max-width: $screen-xs-max){
+    &:nth-child(even){
+      border-#{$default}: 1px solid $border-color;
+    }
+  }
+  @media (min-width: $screen-sm-min){
+    border-#{$default}: 1px solid $border-color;
+    &:nth-child(5n+1){
+      border-#{$default}: 0;
+    }
+  }
+}
+.more-member-text{
+  font-size: 20px;
+}

@@ -1,0 +1,19 @@
+uuid: b9dd9ba8-2307-4436-b017-099a819d812e
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Landing page'
+type: page
+description: 'Create new Landing Page.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

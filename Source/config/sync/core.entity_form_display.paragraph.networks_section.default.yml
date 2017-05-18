@@ -1,0 +1,34 @@
+uuid: b43fb93e-2efd-44d8-b8e8-975498b9fb3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.networks_section.field_networks
+    - field.field.paragraph.networks_section.field_networks_body
+    - paragraphs.paragraphs_type.networks_section
+id: paragraph.networks_section.default
+targetEntityType: paragraph
+bundle: networks_section
+mode: default
+content:
+  field_networks:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_networks_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,30 @@
+uuid: c985112c-de1a-41bf-9e5d-ab6f1952f0bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.views_listing.field_view_reference
+    - paragraphs.paragraphs_type.views_listing
+  module:
+    - field_states_ui
+    - viewsreference
+id: paragraph.views_listing.default
+targetEntityType: paragraph
+bundle: views_listing
+mode: default
+content:
+  field_view_reference:
+    weight: 0
+    settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

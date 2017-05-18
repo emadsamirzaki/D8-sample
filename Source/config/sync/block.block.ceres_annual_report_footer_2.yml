@@ -1,0 +1,25 @@
+uuid: de0c907a-3d16-4b6d-a454-26a0c1649a96
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_block:1d416c26-773a-4d79-9128-3c257480f410'
+  module:
+    - block_content
+  theme:
+    - ceres_annual_report
+id: ceres_annual_report_footer_2
+theme: ceres_annual_report
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:1d416c26-773a-4d79-9128-3c257480f410'
+settings:
+  id: 'block_content:1d416c26-773a-4d79-9128-3c257480f410'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

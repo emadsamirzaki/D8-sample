@@ -1,0 +1,81 @@
+uuid: df61fb76-bdd9-4041-b267-5a61bd3b788f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_testimonial.field_testimonial_author_image
+    - field.field.paragraph.video_testimonial.field_testimonial_author_name
+    - field.field.paragraph.video_testimonial.field_testimonial_author_org
+    - field.field.paragraph.video_testimonial.field_testimonial_body
+    - field.field.paragraph.video_testimonial.field_testimonial_video_caption
+    - field.field.paragraph.video_testimonial.field_testimonial_video_image
+    - field.field.paragraph.video_testimonial.field_testimonial_youtube_id
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.video_testimonial
+  module:
+    - image
+id: paragraph.video_testimonial.default
+targetEntityType: paragraph
+bundle: video_testimonial
+mode: default
+content:
+  field_testimonial_author_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testimonial_author_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_author_org:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_testimonial_video_caption:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_testimonial_video_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testimonial_youtube_id:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

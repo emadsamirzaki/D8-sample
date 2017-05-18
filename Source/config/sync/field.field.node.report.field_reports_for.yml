@@ -1,0 +1,28 @@
+uuid: c3b7ea0e-242f-4aa2-aaf8-74d3d1da6240
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reports_for
+    - node.type.report
+    - taxonomy.vocabulary.report_for
+id: node.report.field_reports_for
+field_name: field_reports_for
+entity_type: node
+bundle: report
+label: 'Reports For'
+description: 'You can add new Report types from here <a href="[site:url]admin/structure/taxonomy/manage/report_for/add" _target="_blank">[site:url]admin/structure/taxonomy/manage/report_for/add</a>.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      report_for: report_for
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

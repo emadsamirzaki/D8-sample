@@ -1,0 +1,23 @@
+uuid: e90ad20f-1ef9-4e4b-bf1a-2c2249df42a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annual_report_finance_link
+    - node.type.annual_report_financial
+  module:
+    - link
+id: node.annual_report_financial.field_annual_report_finance_link
+field_name: field_annual_report_finance_link
+entity_type: node
+bundle: annual_report_financial
+label: 'Report Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

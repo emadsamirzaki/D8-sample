@@ -1,0 +1,21 @@
+uuid: 1d547a49-ed28-4fed-928f-acb9513c3b01
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_donation_right_sec_phone
+field_name: field_donation_right_sec_phone
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

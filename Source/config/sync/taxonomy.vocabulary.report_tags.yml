@@ -1,0 +1,9 @@
+uuid: c4787fc7-2aad-4005-b8df-c8d36f2cbafe
+langcode: en
+status: true
+dependencies: {  }
+name: 'Report Tags'
+vid: report_tags
+description: ''
+hierarchy: 0
+weight: 0

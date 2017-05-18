@@ -1,0 +1,20 @@
+uuid: a0871ae5-5c13-4ab4-806e-ee3f6415dfe0
+langcode: en
+status: true
+dependencies:
+  module:
+    - ceres_core
+  theme:
+    - ceres
+id: headercalltoactionmenu
+theme: ceres
+region: header_links
+weight: -9
+provider: null
+plugin: header_call_to_action
+settings:
+  id: header_call_to_action
+  label: 'Header Call-to-action Menu'
+  provider: ceres_core
+  label_display: '0'
+visibility: {  }

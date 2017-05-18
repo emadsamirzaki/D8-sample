@@ -1,0 +1,69 @@
+uuid: 63d342e8-841f-4a75-9871-b641ad1fa2d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_block
+    - field.field.block_content.testimonial_block.field_testimonial_block_body
+    - field.field.block_content.testimonial_block.field_testimonial_block_image
+    - field.field.block_content.testimonial_block.field_testimonial_block_link
+    - field.field.block_content.testimonial_block.field_testimonial_block_quote
+    - field.field.block_content.testimonial_block.field_testimonial_block_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+id: block_content.testimonial_block.default
+targetEntityType: block_content
+bundle: testimonial_block
+mode: default
+content:
+  field_testimonial_block_body:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_testimonial_block_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_testimonial_block_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_testimonial_block_quote:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_testimonial_block_title:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

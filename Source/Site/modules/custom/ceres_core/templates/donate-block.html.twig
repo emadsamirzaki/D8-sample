@@ -1,0 +1,58 @@
+<section class="banner-wrapper-section row">
+  <div class="banner-wrapper rltv">
+    {% if content.banner_image %}
+        <img class="img-responsive"  src="{{ file_url(content.banner_image) }}" alt="banner" />
+    {% else%}
+        <img class="img-responsive"  src="{{directory}}/assets/images/campaign/banner.jpg" alt="banner" />
+    {% endif %}
+    <div class="container banner-text-container">
+      <h1 class="page-title">{{ label }}</h1>
+      <div class="breadcrumb-wrapper">
+        <ul class="list-inline">
+          <li><a href="/">Home</a></li>
+          <li class="active"><span>{{ label }}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro-wrapper row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <p class="universal-section-desc text-center"> {{ content.body }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="row">
+  <div class="container">
+    <div class="row flex-display flex-wrap">
+      <div class="col-sm-8 col-md-9">
+        {{ form }}
+      </div>
+      <div class="col-sm-4 col-md-3 donation-right-section">
+        <h3>{{ content.right_column_first.title }}</h3>
+        <p>{{ content.right_column_first.body }}</p>
+        <a href="{{ content.right_column_first.link }}"> Learn More</a>
+
+        <h3 class="mar-top-50">{{ content.right_column_second.title }}</h3>
+        <p>{{ content.right_column_second.body }}</p>
+        {% if content.right_column_second.phone  %}
+            <div><a href="tel:{{ content.right_column_second.phone }}">
+                <i class="fa fa-mobile" aria-hidden="true"></i> {{ content.right_column_second.phone }}</a>
+            </div>
+        {% endif %}
+        {% if content.right_column_second.email  %}
+            <div><a href="mailto:{{ content.right_column_second.email }}">
+                <i class="fa fa-envelope" aria-hidden="true"></i> {{ content.right_column_second.email }}</a>
+            </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

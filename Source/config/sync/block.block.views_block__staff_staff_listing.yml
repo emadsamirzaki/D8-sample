@@ -1,0 +1,30 @@
+uuid: e1d8bc56-d2f8-44ef-9dd0-7384d83d596f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.staff
+  module:
+    - system
+    - views
+  theme:
+    - ceres
+id: views_block__staff_staff_listing
+theme: ceres
+region: content
+weight: -16
+provider: null
+plugin: 'views_block:staff-staff_listing'
+settings:
+  id: 'views_block:staff-staff_listing'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '10'
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us/staff
+    negate: false
+    context_mapping: {  }

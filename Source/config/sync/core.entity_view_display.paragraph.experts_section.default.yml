@@ -1,0 +1,24 @@
+uuid: 2a8f5046-2212-4ad3-b04e-662a49f4da40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.experts_section.field_experts
+    - paragraphs.paragraphs_type.experts_section
+id: paragraph.experts_section.default
+targetEntityType: paragraph
+bundle: experts_section
+mode: default
+content:
+  field_experts:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: experts_section
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  created: true
+  uid: true

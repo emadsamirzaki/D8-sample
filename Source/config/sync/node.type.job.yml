@@ -1,0 +1,17 @@
+uuid: b22e525e-853e-46b1-930b-dd5a2dee32c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Job
+type: job
+description: 'Create new Job.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: c5f9ba4b-efd2-46e6-9007-551acf5d4c9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.investor_leadership_newsletter
+    - field.storage.contact_message.field_newsletter_zip
+id: contact_message.investor_leadership_newsletter.field_newsletter_zip
+field_name: field_newsletter_zip
+entity_type: contact_message
+bundle: investor_leadership_newsletter
+label: Zip
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

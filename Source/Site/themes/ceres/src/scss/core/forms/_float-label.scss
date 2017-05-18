@@ -1,0 +1,124 @@
+@mixin float-label-container {
+  display: block;
+  position: relative;
+}
+
+@mixin float-label {
+  label, > span {
+    position: absolute;
+    #{$default}: 12px;
+    top: 4px;
+    cursor: text;
+    font-size: 80%;
+    color: $dark-brown;
+    transition: all .2s;
+    opacity: 0.8;
+    font-weight: 400;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @content;
+  }
+}
+input::placeholder {
+  opacity: 0;
+}
+@mixin float-label-input {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: 1;
+    transition: all .2s;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    opacity: 1;
+    transition: all .2s;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    opacity: 1;
+    transition: all .2s;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    opacity: 1;
+    transition: all .2s;
+  }
+  &::placeholder {
+    opacity: 1;
+    transition: all .2s;
+  }
+  &:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+    opacity: 0;
+  }
+  &:placeholder-shown:not(:focus)::-moz-placeholder {
+    opacity: 0;
+  }
+  &:placeholder-shown:not(:focus):-ms-input-placeholder {
+    opacity: 0;
+  }
+  &:placeholder-shown:not(:focus):-moz-placeholder {
+    opacity: 0;
+  }
+  &:placeholder-shown:not(:focus)::placeholder {
+    opacity: 0;
+  }
+}
+
+@mixin float-label-scaled {
+  &:placeholder-shown:not(:focus) ~ * {
+    font-size: 100%;
+    opacity: 1;
+    @content;
+  }
+}
+
+.has-float-label {
+  @include float-label-container;
+
+  @include float-label;
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  @media(min-width: $screen-sm-min){
+    &.form-type-textarea{
+      width: calc(100% - 10px);
+      float: $default;
+    }
+    &:not(.form-type-textarea){
+      width: calc(50% - 10px);
+      margin-right: 10px;
+      float: $default;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding-top: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  input, select {
+    padding-top: 1em;
+    height: 54px;
+  }
+  input, select, textarea {
+    @include float-label-input;
+    font-size: inherit;
+    border-radius: 0;
+    @include float-label-scaled {
+      top: 17px;
+      left: 13px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select {
+    padding-right: 1em;
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .5em bottom .25em;
+    background-size: 8px 10px;
+  }
+}

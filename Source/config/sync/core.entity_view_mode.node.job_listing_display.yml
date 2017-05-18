@@ -1,0 +1,10 @@
+uuid: 1bdb4ce8-1034-42b6-b649-7001dff990cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.job_listing_display
+label: 'Job Listing display'
+targetEntityType: node
+cache: true

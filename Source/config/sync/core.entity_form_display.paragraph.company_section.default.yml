@@ -1,0 +1,38 @@
+uuid: 88cfb88d-0787-4aeb-b0b5-eada1b6e3d03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.company_section.field_company_section_content
+    - field.field.paragraph.company_section.field_company_section_desc
+    - paragraphs.paragraphs_type.company_section
+  module:
+    - paragraphs
+id: paragraph.company_section.default
+targetEntityType: paragraph
+bundle: company_section
+mode: default
+content:
+  field_company_section_content:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+  field_company_section_desc:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

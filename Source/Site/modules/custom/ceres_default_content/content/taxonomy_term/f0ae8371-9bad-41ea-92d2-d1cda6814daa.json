@@ -1,0 +1,61 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/authors"
+        }
+    },
+    "tid": [
+        {
+            "value": "6"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "f0ae8371-9bad-41ea-92d2-d1cda6814daa"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "authors"
+        }
+    ],
+    "name": [
+        {
+            "value": "Hilary A. Forbes",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "value": "<p>Hilary A. Forbes has been added from Staff content type<\/p>",
+            "format": null,
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": "0"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1477402688",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ]
+}

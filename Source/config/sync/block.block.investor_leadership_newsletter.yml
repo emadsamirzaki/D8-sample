@@ -1,0 +1,41 @@
+uuid: 8604d38d-a43a-4197-bbbb-af441861b860
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - system
+  theme:
+    - ceres
+id: investor_leadership_newsletter
+theme: ceres
+region: before_footer
+weight: -10
+provider: null
+plugin: hp_signup_block
+settings:
+  id: hp_signup_block
+  label: 'Investor Leadership Newsletter'
+  provider: ceres_core
+  label_display: '0'
+  content:
+    title: 'Sign Up for the Investor Leadership Newsletter'
+    body: 'Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam. Pellentesque habitant morbi tristique senectus.'
+    type: 'Ceres eCommunity'
+    url: /signup_investor_leadership_newsletter
+    submitText: ''
+    image: 'public://images/sign-up_1.jpg'
+  imageFid:
+    - '118'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/\r\n/*\r\n/networks\r\n/networks/*\r\n/programs\r\n/programs/*\r\n/roadmap\r\n/roadmap/*"
+    negate: true
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

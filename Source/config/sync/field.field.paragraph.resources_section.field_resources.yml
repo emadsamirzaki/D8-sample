@@ -1,0 +1,37 @@
+uuid: f7a0d00e-396b-4019-ae04-f61dcfe9f44c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resources
+    - node.type.podcast
+    - node.type.report
+    - node.type.tool
+    - node.type.video
+    - node.type.webinar
+    - paragraphs.paragraphs_type.resources_section
+id: paragraph.resources_section.field_resources
+field_name: field_resources
+entity_type: paragraph
+bundle: resources_section
+label: Resources
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      podcast: podcast
+      report: report
+      tool: tool
+      video: video
+      webinar: webinar
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: report
+field_type: entity_reference

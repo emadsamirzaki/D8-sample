@@ -1,0 +1,30 @@
+uuid: b22cb79b-315a-417e-90c2-b03a16dbefbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_contact
+    - node.type.news
+    - node.type.press_contact
+    - node.type.staff
+id: node.news.field_press_contact
+field_name: field_press_contact
+entity_type: node
+bundle: news
+label: 'News Contact'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      press_contact: press_contact
+      staff: staff
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: press_contact
+field_type: entity_reference

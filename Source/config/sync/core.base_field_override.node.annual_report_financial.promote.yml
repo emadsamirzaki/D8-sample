@@ -1,0 +1,22 @@
+uuid: 208451bf-b08a-4d4e-b8c4-9a48c7df5123
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.annual_report_financial
+id: node.annual_report_financial.promote
+field_name: promote
+entity_type: node
+bundle: annual_report_financial
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

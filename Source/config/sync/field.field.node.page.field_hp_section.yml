@@ -1,0 +1,177 @@
+uuid: 6ea12e3d-960d-446b-b45a-3ffd9c6e3344
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hp_section
+    - node.type.page
+    - paragraphs.paragraphs_type.basic_paragraph
+    - paragraphs.paragraphs_type.basic_text_paragraph
+    - paragraphs.paragraphs_type.campaigns_section
+    - paragraphs.paragraphs_type.collage_section
+    - paragraphs.paragraphs_type.company_section
+    - paragraphs.paragraphs_type.events_awards_section
+    - paragraphs.paragraphs_type.experts_section
+    - paragraphs.paragraphs_type.image_link
+    - paragraphs.paragraphs_type.join_section
+    - paragraphs.paragraphs_type.networks_section
+    - paragraphs.paragraphs_type.news_section
+    - paragraphs.paragraphs_type.press_contacts_section
+    - paragraphs.paragraphs_type.press_source
+    - paragraphs.paragraphs_type.programs_section
+    - paragraphs.paragraphs_type.roadmap_landing_categories
+    - paragraphs.paragraphs_type.roadmap_landing_info
+    - paragraphs.paragraphs_type.roadmap_resources_section
+    - paragraphs.paragraphs_type.testimonial_section
+    - paragraphs.paragraphs_type.text_paragraph
+    - paragraphs.paragraphs_type.two_column_section
+    - paragraphs.paragraphs_type.video_testimonial
+    - paragraphs.paragraphs_type.views_listing
+  module:
+    - entity_reference_revisions
+id: node.page.field_hp_section
+field_name: field_hp_section
+entity_type: node
+bundle: page
+label: Section
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      basic_paragraph: basic_paragraph
+      collage_section: collage_section
+      press_source: press_source
+      campaigns_section: campaigns_section
+      company_section: company_section
+      events_awards_section: events_awards_section
+      experts_section: experts_section
+      image_link: image_link
+      join_section: join_section
+      networks_section: networks_section
+      news_section: news_section
+      basic_text_paragraph: basic_text_paragraph
+      testimonial_section: testimonial_section
+      roadmap_landing_categories: roadmap_landing_categories
+      roadmap_resources_section: roadmap_resources_section
+      roadmap_landing_info: roadmap_landing_info
+      text_paragraph: text_paragraph
+      video_testimonial: video_testimonial
+      two_column_section: two_column_section
+      programs_section: programs_section
+      press_contacts_section: press_contacts_section
+      views_listing: views_listing
+    target_bundles_drag_drop:
+      basic_paragraph:
+        enabled: true
+        weight: 5
+      collage_section:
+        enabled: true
+        weight: 6
+      footer_office:
+        weight: 7
+        enabled: false
+      press_source:
+        enabled: true
+        weight: 8
+      campaigns_section:
+        enabled: true
+        weight: 16
+      collage:
+        weight: 17
+        enabled: false
+      company_section:
+        enabled: true
+        weight: 19
+      events_awards_section:
+        enabled: true
+        weight: 20
+      experts_section:
+        enabled: true
+        weight: 21
+      image_link:
+        enabled: true
+        weight: 23
+      join_section:
+        enabled: true
+        weight: 24
+      networks_section:
+        enabled: true
+        weight: 25
+      news_section:
+        enabled: true
+        weight: 26
+      basic_text_paragraph:
+        enabled: true
+        weight: 26
+      testimonial_section:
+        enabled: true
+        weight: 28
+      info_download_paragraph:
+        weight: 35
+        enabled: false
+      info_paragraph:
+        weight: 36
+        enabled: false
+      quote_testimonial:
+        weight: 41
+        enabled: false
+      network_working_group:
+        weight: 42
+        enabled: false
+      roadmap_key_expectation:
+        weight: 42
+        enabled: false
+      roadmap_landing_categories:
+        enabled: true
+        weight: 43
+      roadmap_resources_section:
+        enabled: true
+        weight: 44
+      roadmap_landing_info:
+        enabled: true
+        weight: 45
+      roadmap_section:
+        weight: 45
+        enabled: false
+      issues_reference_listing:
+        weight: 47
+        enabled: false
+      text_paragraph:
+        enabled: true
+        weight: 47
+      video_paragraph:
+        weight: 48
+        enabled: false
+      network_members:
+        weight: 50
+        enabled: false
+      video_testimonial:
+        enabled: true
+        weight: 52
+      programs_reference_listing:
+        weight: 54
+        enabled: false
+      two_column_section:
+        enabled: true
+        weight: 55
+      programs_section:
+        enabled: true
+        weight: 55
+      press_contacts_section:
+        enabled: true
+        weight: 55
+      views_listing:
+        enabled: true
+        weight: 58
+      sectors_reference_listing:
+        weight: 62
+        enabled: false
+      two_columns_section:
+        weight: 68
+        enabled: false
+field_type: entity_reference_revisions

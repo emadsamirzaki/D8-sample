@@ -1,0 +1,21 @@
+uuid: 97ea759c-990e-4f39-bcac-b958ae0cbdcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_download_link_txt
+    - node.type.tool
+id: node.tool.field_resource_download_link_txt
+field_name: field_resource_download_link_txt
+entity_type: node
+bundle: tool
+label: 'Link Text'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: Download
+default_value_callback: ''
+settings: {  }
+field_type: string

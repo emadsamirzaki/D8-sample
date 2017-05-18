@@ -1,0 +1,36 @@
+uuid: a32102e3-1fa8-4bdb-b78f-15f9d9c7debb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.press_source.field_paragraph_pess_source_logo
+    - field.field.paragraph.press_source.field_paragraph_publication_name
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.press_source
+  module:
+    - image
+id: paragraph.press_source.default
+targetEntityType: paragraph
+bundle: press_source
+mode: default
+content:
+  field_paragraph_pess_source_logo:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_paragraph_publication_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

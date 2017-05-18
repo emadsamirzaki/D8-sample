@@ -1,0 +1,5 @@
+name: Ceres Default Content
+type: module
+description: Ceres default content to be easy imported-exported
+core: 8.x
+package: Ceres

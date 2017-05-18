@@ -1,0 +1,10 @@
+uuid: 08a83987-580b-4e81-916b-6c6587b3b90e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.resources_section_without_type_display
+label: 'Resources Section without type display'
+targetEntityType: node
+cache: true

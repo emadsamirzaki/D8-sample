@@ -1,0 +1,24 @@
+uuid: 81886de4-4978-4596-afd6-dac18be379be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_webinar_date
+    - node.type.webinar
+  module:
+    - datetime
+id: node.webinar.field_webinar_date
+field_name: field_webinar_date
+entity_type: node
+bundle: webinar
+label: Date
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

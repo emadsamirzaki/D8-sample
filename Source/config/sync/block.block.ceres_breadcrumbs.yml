@@ -1,0 +1,28 @@
+uuid: 1ad9d2c1-ea06-4daa-a129-32c8250e76dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - ceres
+_core:
+  default_config_hash: wDR9JKEATSWldBjw8du8s3G2zjEYeQf88nlld11hMLo
+id: ceres_breadcrumbs
+theme: ceres
+region: content_banner
+weight: -10
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

@@ -1,0 +1,22 @@
+uuid: 832b5458-e298-4077-887e-28a70e450861
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: network
+label: Network
+type: 'canonical_entities:node'
+pattern: 'networks/[node:title]'
+selection_criteria:
+  0d64ece6-d1b0-48de-903a-5c5090e74274:
+    id: node_type
+    bundles:
+      network: network
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0d64ece6-d1b0-48de-903a-5c5090e74274
+selection_logic: and
+weight: -2
+relationships: {  }

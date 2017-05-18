@@ -1,0 +1,108 @@
+uuid: ed75abd5-0183-491b-a58e-5cdb31219755
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_network_working_groups
+    - node.type.network
+    - paragraphs.paragraphs_type.network_working_group
+  module:
+    - entity_reference_revisions
+id: node.network.field_network_working_groups
+field_name: field_network_working_groups
+entity_type: node
+bundle: network
+label: 'Working Groups'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      network_working_group: network_working_group
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 28
+        enabled: false
+      basic_text_paragraph:
+        weight: 29
+        enabled: false
+      campaigns_section:
+        weight: 30
+        enabled: false
+      collage:
+        weight: 31
+        enabled: false
+      collage_section:
+        weight: 32
+        enabled: false
+      company_section:
+        weight: 33
+        enabled: false
+      events_awards_section:
+        weight: 34
+        enabled: false
+      experts_section:
+        weight: 35
+        enabled: false
+      footer_office:
+        weight: 36
+        enabled: false
+      image_link:
+        weight: 37
+        enabled: false
+      info_download_paragraph:
+        weight: 38
+        enabled: false
+      info_paragraph:
+        weight: 39
+        enabled: false
+      join_section:
+        weight: 40
+        enabled: false
+      networks_section:
+        weight: 41
+        enabled: false
+      network_working_group:
+        enabled: true
+        weight: 42
+      news_section:
+        weight: 43
+        enabled: false
+      press_source:
+        weight: 44
+        enabled: false
+      quote_testimonial:
+        weight: 45
+        enabled: false
+      roadmap_key_expectation:
+        weight: 46
+        enabled: false
+      roadmap_landing_categories:
+        weight: 47
+        enabled: false
+      roadmap_landing_info:
+        weight: 48
+        enabled: false
+      roadmap_resources_section:
+        weight: 49
+        enabled: false
+      roadmap_section:
+        weight: 50
+        enabled: false
+      testimonial_section:
+        weight: 51
+        enabled: false
+      text_paragraph:
+        weight: 52
+        enabled: false
+      video_paragraph:
+        weight: 53
+        enabled: false
+      video_testimonial:
+        weight: 54
+        enabled: false
+field_type: entity_reference_revisions

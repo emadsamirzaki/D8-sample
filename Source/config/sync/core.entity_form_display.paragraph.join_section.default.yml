@@ -1,0 +1,46 @@
+uuid: 92c3a01c-82bf-4ad6-b42f-82b43344550f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.join_section.field_join_description
+    - field.field.paragraph.join_section.field_join_image
+    - field.field.paragraph.join_section.field_join_url
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.join_section
+  module:
+    - image
+    - link
+id: paragraph.join_section.default
+targetEntityType: paragraph
+bundle: join_section
+mode: default
+content:
+  field_join_description:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_join_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_join_url:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

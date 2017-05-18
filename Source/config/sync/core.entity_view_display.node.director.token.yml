@@ -1,0 +1,98 @@
+uuid: cc602109-3ff4-43a3-ad9f-cdf56b582dba
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.director.field_banner_image
+    - field.field.node.director.field_director_bio
+    - field.field.node.director.field_director_group
+    - field.field.node.director.field_director_organization
+    - field.field.node.director.field_director_picture
+    - field.field.node.director.field_director_position
+    - field.field.node.director.field_director_title
+    - field.field.node.director.field_meta_tags
+    - image.style.staff
+    - node.type.director
+  module:
+    - entity_reference_revisions
+    - image
+    - metatag
+    - options
+    - user
+id: node.director.token
+targetEntityType: node
+bundle: director
+mode: token
+content:
+  field_banner_image:
+    weight: 108
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_director_bio:
+    type: entity_reference_revisions_entity_view
+    weight: 109
+    label: hidden
+    settings:
+      view_mode: token
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_director_group:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_director_organization:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_director_picture:
+    weight: 106
+    label: above
+    settings:
+      image_style: staff
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_director_position:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_director_title:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_meta_tags:
+    weight: 110
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,3 @@
+authorize_pay:
+    config:
+        authorize_api: authorize_pay.authorize_config_api.authorize_sandbox_api

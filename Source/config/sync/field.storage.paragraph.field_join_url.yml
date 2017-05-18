@@ -1,0 +1,19 @@
+uuid: ccc72abb-d1ce-49b2-8cd1-b4c66477c6bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_join_url
+field_name: field_join_url
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

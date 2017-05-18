@@ -1,0 +1,22 @@
+uuid: 556ba483-a4a0-4a8e-87aa-5f5e31f896fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: annual_report_impact
+label: 'Annual Report Impact'
+type: 'canonical_entities:node'
+pattern: 'annual-report/2016/growing-impact/[node:title]'
+selection_criteria:
+  180abae3-0bcb-455d-8a27-163529775827:
+    id: node_type
+    bundles:
+      annual_report_feature: annual_report_feature
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 180abae3-0bcb-455d-8a27-163529775827
+selection_logic: and
+weight: -5
+relationships: {  }

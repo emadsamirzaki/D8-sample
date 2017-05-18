@@ -1,0 +1,19 @@
+uuid: 19cba05f-07a9-40e8-a8ba-07bd4785b90e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.email_signup_newsletter
+    - field.storage.contact_message.field_newsletter_zip
+id: contact_message.email_signup_newsletter.field_newsletter_zip
+field_name: field_newsletter_zip
+entity_type: contact_message
+bundle: email_signup_newsletter
+label: Zip
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

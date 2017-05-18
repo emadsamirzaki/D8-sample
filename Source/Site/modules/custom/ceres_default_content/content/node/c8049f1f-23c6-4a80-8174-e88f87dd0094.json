@@ -1,0 +1,177 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/lorem-ipsum-dolor-sit-0?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/event"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/event\/uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/event\/revision_uid": [
+            {
+                "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/event\/field_event_banner_image": [
+            {
+                "href": "http:\/\/dev.ceres.org\/file\/17?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": "23"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c8049f1f-23c6-4a80-8174-e88f87dd0094"
+        }
+    ],
+    "vid": [
+        {
+            "value": "23"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "event"
+        }
+    ],
+    "title": [
+        {
+            "value": "Lorem Ipsum Dolor Sit",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/event\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/event\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c7fecc00-33f3-437c-b570-573e5d897cc9"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/event\/field_event_banner_image": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/dev.ceres.org\/file\/17?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "a5ee2a78-0c44-4da1-b5dd-7f6a76bb3d6f"
+                    }
+                ],
+                "alt": "event-img",
+                "title": "",
+                "width": "782",
+                "height": "661"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "1484038931",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1484160099",
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": "0",
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": "0",
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "1484038946"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Donec ipsum lacus, VVhendrerit nec \u0003augue ac, congue vestibulum ex.<\/p>\r\n",
+            "format": "basic_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "field_event_date": [
+        {
+            "value": "2017-01-28",
+            "end_value": "2017-01-30"
+        }
+    ]
+}

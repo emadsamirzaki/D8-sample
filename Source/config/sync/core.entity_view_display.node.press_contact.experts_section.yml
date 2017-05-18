@@ -1,0 +1,51 @@
+uuid: 278f04a3-86fe-4dd6-b564-34814e4af131
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.experts_section
+    - field.field.node.press_contact.field_banner_image
+    - field.field.node.press_contact.field_meta_tags
+    - field.field.node.press_contact.field_press_contact_email
+    - field.field.node.press_contact.field_press_contact_organization
+    - field.field.node.press_contact.field_press_contact_phone
+    - field.field.node.press_contact.field_staff_about
+    - field.field.node.press_contact.field_staff_picture
+    - image.style.staff
+    - node.type.press_contact
+  module:
+    - image
+    - user
+id: node.press_contact.experts_section
+targetEntityType: node
+bundle: press_contact
+mode: experts_section
+content:
+  field_press_contact_organization:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_staff_picture:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: staff
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner_image: true
+  field_meta_tags: true
+  field_press_contact_email: true
+  field_press_contact_phone: true
+  field_staff_about: true

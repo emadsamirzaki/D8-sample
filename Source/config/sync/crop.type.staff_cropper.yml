@@ -1,0 +1,12 @@
+uuid: 6560b3e4-bcce-42d9-813f-2cbe571ab237
+langcode: en
+status: true
+dependencies: {  }
+label: 'Staff Cropper'
+id: staff_cropper
+description: ''
+aspect_ratio: '1:1'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 140
+hard_limit_height: 140

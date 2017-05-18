@@ -1,0 +1,19 @@
+uuid: d5024663-297d-4cfb-913d-ac03dfef75d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_message_title
+    - paragraphs.paragraphs_type.video_message_with_title
+id: paragraph.video_message_with_title.field_message_title
+field_name: field_message_title
+entity_type: paragraph
+bundle: video_message_with_title
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

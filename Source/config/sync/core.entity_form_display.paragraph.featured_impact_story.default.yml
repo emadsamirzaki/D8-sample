@@ -1,0 +1,38 @@
+uuid: 8ab8099b-f880-41f1-a3d1-321d480abdc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_impact_story.field_featured_impact_story
+    - field.field.paragraph.featured_impact_story.field_featured_impactstory_title
+    - paragraphs.paragraphs_type.featured_impact_story
+  module:
+    - field_states_ui
+id: paragraph.featured_impact_story.default
+targetEntityType: paragraph
+bundle: featured_impact_story
+mode: default
+content:
+  field_featured_impact_story:
+    weight: 1
+    settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: options_select
+    region: content
+  field_featured_impactstory_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

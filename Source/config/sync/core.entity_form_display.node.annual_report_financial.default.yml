@@ -1,0 +1,142 @@
+uuid: 2c4a9c5d-8dd1-47bb-95fc-8c874d17ffe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.annual_report_financial.body
+    - field.field.node.annual_report_financial.field_annual_report_finance_desc
+    - field.field.node.annual_report_financial.field_annual_report_finance_file
+    - field.field.node.annual_report_financial.field_annual_report_finance_link
+    - field.field.node.annual_report_financial.field_annual_report_finance_text
+    - field.field.node.annual_report_financial.field_banner_image
+    - field.field.node.annual_report_financial.field_meta_tags
+    - image.style.thumbnail
+    - node.type.annual_report_financial
+  module:
+    - field_group
+    - file
+    - image
+    - link
+    - metatag
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_report_description:
+      children:
+        - field_annual_report_finance_desc
+        - field_annual_report_finance_file
+        - field_annual_report_finance_link
+        - field_annual_report_finance_text
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Report Description'
+id: node.annual_report_financial.default
+targetEntityType: node
+bundle: annual_report_financial
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_annual_report_finance_desc:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_annual_report_finance_file:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_annual_report_finance_link:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_annual_report_finance_text:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_banner_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

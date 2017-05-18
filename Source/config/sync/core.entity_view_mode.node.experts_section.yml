@@ -1,0 +1,10 @@
+uuid: 18ada893-9f94-4530-a01a-ac967a843866
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.experts_section
+label: 'Experts section'
+targetEntityType: node
+cache: true

@@ -1,0 +1,59 @@
+uuid: 577d5618-c053-481a-ad41-85671c8d1c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.resources_section_without_type_display
+    - field.field.node.report.body
+    - field.field.node.report.field_banner_image
+    - field.field.node.report.field_file_external_url
+    - field.field.node.report.field_meta_tags
+    - field.field.node.report.field_news
+    - field.field.node.report.field_report_file_upload
+    - field.field.node.report.field_report_lead_body
+    - field.field.node.report.field_report_other_sections
+    - field.field.node.report.field_reports_for
+    - field.field.node.report.field_resource_campaigns
+    - field.field.node.report.field_resource_image
+    - field.field.node.report.field_resource_issues
+    - field.field.node.report.field_resource_networks
+    - field.field.node.report.field_resource_programs
+    - field.field.node.report.field_salesforce_id
+    - field.field.node.report.field_subtitle
+    - field.field.node.report.field_tags
+    - node.type.report
+  module:
+    - image
+    - user
+id: node.report.resources_section_without_type_display
+targetEntityType: node
+bundle: report
+mode: resources_section_without_type_display
+content:
+  field_resource_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  body: true
+  field_banner_image: true
+  field_file_external_url: true
+  field_meta_tags: true
+  field_news: true
+  field_report_file_upload: true
+  field_report_lead_body: true
+  field_report_other_sections: true
+  field_reports_for: true
+  field_resource_campaigns: true
+  field_resource_issues: true
+  field_resource_networks: true
+  field_resource_programs: true
+  field_salesforce_id: true
+  field_subtitle: true
+  field_tags: true
+  links: true

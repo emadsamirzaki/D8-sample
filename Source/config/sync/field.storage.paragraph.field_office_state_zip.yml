@@ -1,0 +1,21 @@
+uuid: 0f58770f-f29b-4e86-a57e-c2c7171b8203
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_office_state_zip
+field_name: field_office_state_zip
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

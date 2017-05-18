@@ -1,0 +1,23 @@
+uuid: 8e1d17fc-0151-4659-a9b7-f7526187422e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_ongoing_campaign
+    - node.type.campaign
+id: node.campaign.field_campaign_ongoing_campaign
+field_name: field_campaign_ongoing_campaign
+entity_type: node
+bundle: campaign
+label: 'Ongoing Campaign'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

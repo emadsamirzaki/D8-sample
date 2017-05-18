@@ -1,0 +1,14 @@
+<div class="key-item-wrapper flex-display col-xs-12 col-sm-6 col-md-4">
+  <div class="key-item full-width borderd-item-before rltv text-center">
+    <div class="g-number">{{ paragraph.field_key_expectation_label.value }}</div>
+    {% if paragraph.field_key_expectation_ref.value %}
+        {% set target_id = paragraph.field_key_expectation_ref.value.0.target_id %}
+        <h3><a href="{{ path('entity.node.canonical', {'node': target_id }) }}">{{ paragraph.field_key_expectation_title.value }}</a></h3>
+        {% else %}
+        <h3>{{ paragraph.field_key_expectation_title.value }}</h3>
+    {% endif %}
+    <div class="key-item-text">
+      {{ paragraph.field_key_expectation_body.value | raw }}
+    </div>
+  </div>
+</div>

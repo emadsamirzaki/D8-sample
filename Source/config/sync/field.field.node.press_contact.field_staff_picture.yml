@@ -1,0 +1,38 @@
+uuid: 26312484-e45b-4a13-ab5e-b6b6ce80672c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_picture
+    - node.type.press_contact
+  module:
+    - image
+id: node.press_contact.field_staff_picture
+field_name: field_staff_picture
+entity_type: node
+bundle: press_contact
+label: Picture
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 140x140
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: a9cf164e-e5b9-4ea8-b376-e9daed1349f4
+    alt: ''
+    title: ''
+    width: 139
+    height: 139
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

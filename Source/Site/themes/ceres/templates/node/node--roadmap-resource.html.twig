@@ -1,0 +1,23 @@
+{% if node.body.value %}
+  <section class="intro-wrapper row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            {#<h2 class="universal-section-title text-center">Vision</h2>#}
+            <h2 class="road-single-intro-title text-center text-uppercase">Vision</h2>
+            <div class="universal-section-desc text-center">{{ content.body }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_roadmap_description.entity.field_text_paragraph_body.value %}
+  {{ content.field_roadmap_description }}
+{% endif %}
+
+{% if node.field_roadmap_explore_categories.entity.field_roadmap_categories.value %}
+  {{ content.field_roadmap_explore_categories }}
+{% endif %}

@@ -1,0 +1,19 @@
+uuid: b37f9acb-3160-456c-87f0-6f15b2949a98
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.storage.block_content.field_footer_phone_number
+id: block_content.footer_block.field_footer_phone_number
+field_name: field_footer_phone_number
+entity_type: block_content
+bundle: footer_block
+label: 'Phone Number'
+description: 'Provide the phone number'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

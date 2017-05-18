@@ -1,0 +1,25 @@
+uuid: b6ae710e-916e-4ef5-8e9b-2431d5a522c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_listing_programs
+    - paragraphs.paragraphs_type.programs_reference_listing
+id: paragraph.programs_reference_listing.field_reference_listing_programs
+field_name: field_reference_listing_programs
+entity_type: paragraph
+bundle: programs_reference_listing
+label: Programs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: our_work_listings
+      display_name: entity_reference_2
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,27 @@
+uuid: c846cd65-c19f-4393-93c5-262d38528087
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_report_file_upload
+    - node.type.report
+  module:
+    - file
+id: node.report.field_report_file_upload
+field_name: field_report_file_upload
+entity_type: node
+bundle: report
+label: 'PDF File Upload'
+description: 'Upload your report file in PDF format'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'reports/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

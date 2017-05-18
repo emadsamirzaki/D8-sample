@@ -1,0 +1,28 @@
+uuid: 834ada80-474b-40a1-b379-adace1059715
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_impact_story
+    - node.type.annual_report_impact_story
+    - paragraphs.paragraphs_type.featured_impact_story
+id: paragraph.featured_impact_story.field_featured_impact_story
+field_name: field_featured_impact_story
+entity_type: paragraph
+bundle: featured_impact_story
+label: 'Featured Impact Story (Progress)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      annual_report_impact_story: annual_report_impact_story
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

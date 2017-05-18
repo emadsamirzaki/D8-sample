@@ -1,0 +1,503 @@
+{# banner and breadcrumb #}
+<section class="banner-wrapper-section row">
+  <div class="banner-wrapper rltv">
+    <img class="img-responsive"  src="/{{ directory }}/assets/images/network/banner.jpg" alt="banner" />
+    <div class="container banner-text-container">
+      <h1 class="page-title">Ceres Investor Networkon<span>Climate Risk and Sustainability</span></h1>
+      <div class="breadcrumb-wrapper">
+        <ul class="list-inline">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Networks</a></li>
+          <li><a href="#">Ceres Investor Network on Climate Risk and Sustainability</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{# Intro #}
+<section class="intro-wrapper row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <div class="intro-social text-center">
+            <ul class="list-inline">
+              <li>
+                <a class="addthis_button_facebook" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+
+              <li>
+                <a class="addthis_button_twitter" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+
+              <li>
+                <a class="addthis_button_linkedin" data-toggle="tooltip" data-placement="bottom" title="Linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="universal-section-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia neque non justo convallis gravida. Etiam vitae tellus volutpat, tristique libero a, porttitor erat. Vivamus convallis, tellus eget commodo malesuada, erat est suscipit neque, quis pellentesque orci leo ut dolor. Proin venenatis non eros ut fringilla. Sed congue elementum semper. Quisque rutrum varius diam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Body #}
+<section class="body-issue-wrapper row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-7 col-sm-8 content-text">
+        <div class="row">
+          <p>Integer luctus bibendum lorem, non sodales nisi ornare at. Suspendisse bibendum fringilla odio in mattis. Integer vel justo aliquam, sollicitudin ligula quis, sodales arcu. Vestibulum semper, elit et efficitur elementum, enim massa facilisis tortor, non accumsan odio augue sed erat. Fusce a hendrerit magna. </p>
+          <p>Pellentesque interdum lacus at lacus ornare volutpat. Quisque nec nisl vel libero pellentesque porta. Nulla pulvinar aliquet metus, in auctor dolor lobortis non. Ut ornare congue metus nec hendrerit. Praesent lacus felis vestibulum sit amet rhoncus at, hendrerit quis arcu. In ut tellus sed lectus malesuada. Sagittis. Fusce molestie a nunc a volutpat. Proin condimentum condimentum augue ac tempus. Ut augue nisl, fringilla vel ultrices ut, malesuada quis turpis.</p>
+          <p>Integer luctus bibendum lorem, non sodales nisi ornare at. Suspendisse bibendum fringilla odio in mattis. Integer vel justo aliquam, sollicitudin ligula quis, sodales arcu. Vestibulum semper, elit et efficitur elementum, enim massa facilisis tortor, non accumsan odio augue sed erat. Fusce a hendrerit magna. </p>
+          <p>Pellentesque interdum lacus at lacus ornare volutpat. Quisque nec nisl vel libero pellentesque porta. Nulla pulvinar aliquet metus, in auctor dolor lobortis non. Ut ornare congue metus nec hendrerit. Praesent lacus felis vestibulum sit amet rhoncus at, hendrerit quis arcu. In ut tellus sed lectus malesuada. Sagittis. Fusce molestie a nunc a volutpat. Proin condimentum condimentum augue ac tempus. Ut augue nisl, fringilla vel ultrices ut, malesuada quis turpis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{#issues section#}
+<section class="campaign-members row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">Members</h2>
+          <p class="section-desc text-center">Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+          <div class="members-list flex-display flex-wrap">
+            {% for i in 1..20 %}
+                <div class="col-xs-6 col-sm-3-small flex-display member-item">
+                  <a href="#"><img class="img-responsive"  src="/{{ directory }}/assets/images/campaign/pepsi.jpg" alt="Pepsi" /></a>
+                </div>
+                <div class="col-xs-6 col-sm-3-small flex-display member-item">
+                  <a href="#"><img class="img-responsive"  src="/{{ directory }}/assets/images/campaign/bunge.jpg" alt="Bunge" /></a>
+                </div>
+                <div class="col-xs-6 col-sm-3-small flex-display member-item">
+                  <a href="#"><img class="img-responsive"  src="/{{ directory }}/assets/images/campaign/general.jpg" alt="General" /></a>
+                </div>
+            {% endfor %}
+          </div>
+          <div class="read-more-wrapper text-center">
+            <p class="more-member-text">Read about the commitments these companies have made.</p>
+            <a href="#" class="read-more-btn more-members text-uppercase ">More Members</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#members text section#}
+<section class="network-groups light-background row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">Network Members</h2>
+          <div class="members-list flex-display flex-wrap">
+            {% for i in 1..20 %}
+                <div class="col-xs-6 col-sm-4 flex-display member-item">
+                  <a href="#">Network Name Lorem Ipsum</a>
+                </div>
+                <div class="col-xs-6 col-sm-4 flex-display member-item">
+                  <a href="#">Network Name Lorem Ipsum</a>
+                </div>
+                <div class="col-xs-6 col-sm-4 flex-display member-item">
+                  <a href="#">Network Name Lorem Ipsum</a>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#groups text section#}
+<section class="network-groups row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">Investor Network Working Groups</h2>
+          <div class="members-list flex-display flex-wrap flex-start">
+            {% for i in 1..7 %}
+                <div class="col-xs-12 col-sm-6 flex-display flex-column flex-start group-item member-item">
+                  <a href="#"><h3>Network Name Lorem Ipsum</h3></a>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod fermentum diam sit amet faucibus. Duis feugiat sed leifend. Fusce dapibus convallis massa a ornare. Etiam eleifend ac ipsum et convallis. Morbi hendrerit imperdiet.</p>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#groups text section#}
+<section class="network-qoute flex-display row">
+  <div class="quote-item col-xs-12 col-sm-6 rltv">
+    <div class="row">
+      <img src="/{{ directory }}/assets/images/network/quote1.jpg" alt="Quote" class="img-responsive">
+      <div class="guote-text z-index-2 flex-display flex-column">
+        <i class="quote-icon"></i>
+        <p>Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+      </div>
+    </div>
+  </div>
+  <div class="quote-item col-xs-12 col-sm-6 rltv">
+    <div class="row">
+      <img src="/{{ directory }}/assets/images/network/quote2.jpg" alt="Quote" class="img-responsive">
+      <div class="guote-text z-index-2 flex-display flex-column">
+        <i class="quote-icon"></i>
+        <p>Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{#Experts section#}
+<section class="home-page-experts row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">Experts</h2>
+          <div class="experts-list clearfix">
+            <div class="flexslider carousel experts-carousel" data-animation="slide" data-animation-speed="400" data-slideshow="false" 
+                 data-move="1" data-max-items="4 4 2 1" data-animation-loop="false" data-item-width="210" data-item-margin="10" data-control-nav="false">
+              <ul class="slides">
+                <li>
+                  <div class="text-center expert-container">
+                    <a class="expert-image-wrapper" href="#">
+                      <div class="expert-image-circle-container">
+                        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                      </div>
+                    </a>
+                    <div class="expert-content">
+                      <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                      <p class="expert-org">Organization Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="text-center expert-container">
+                    <a class="expert-image-wrapper" href="#">
+                      <div class="expert-image-circle-container">
+                        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                      </div>
+                    </a>
+                    <div class="expert-content">
+                      <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                      <p class="expert-org">Organization Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="text-center expert-container">
+                    <a class="expert-image-wrapper" href="#">
+                      <div class="expert-image-circle-container">
+                        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                      </div>
+                    </a>
+                    <div class="expert-content">
+                      <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                      <p class="expert-org">Organization Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="text-center expert-container">
+                    <a class="expert-image-wrapper" href="#">
+                      <div class="expert-image-circle-container">
+                        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                      </div>
+                    </a>
+                    <div class="expert-content">
+                      <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                      <p class="expert-org">Organization Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="text-center expert-container">
+                    <a class="expert-image-wrapper" href="#">
+                      <div class="expert-image-circle-container">
+                        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                      </div>
+                    </a>
+                    <div class="expert-content">
+                      <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                      <p class="expert-org">Organization Name</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="text-center expert-container">
+                    <a class="expert-image-wrapper" href="#">
+                      <div class="expert-image-circle-container">
+                        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                      </div>
+                    </a>
+                    <div class="expert-content">
+                      <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                      <p class="expert-org">Organization Name</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="read-more-wrapper text-center">
+            <a href="#" class="read-more-btn text-uppercase ">More Experts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#Join section#}
+<div class="row">
+  <section class="home-page-signup rltv">
+    <img src="/{{ directory }}/assets/images/network/join.jpg" alt="news" class="img-responsive">
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">Join</h2>
+            <p class="section-desc text-center">Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+            <div class="read-more-wrapper text-center">
+              <a href="#" class="read-more-btn subscribr-btn text-uppercase ">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{#Resources section#}
+<section class="home-page-news row">
+  <div class="container">
+    <div class="row">
+      <h2 class="section-title text-center">Resources</h2>
+      <div class="news-list flex-display">
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="read-more-wrapper text-center">
+        <a href="#" class="read-more-btn read-more-effect text-uppercase white-back">
+          <span class="hidden-after-more">More Resources</span>
+          <span class="hidden-before-more hidden">Link to Resources Page</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#News section#}
+<section class="home-page-news row">
+  <div class="container">
+    <div class="row">
+      <h2 class="section-title text-center">News</h2>
+      <div class="news-list flex-display">
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <p class="news-date">December 2, 2016</p>
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <p class="news-date">December 2, 2016</p>
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <p class="news-date">December 2, 2016</p>
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <p class="news-date">December 2, 2016</p>
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <p class="news-date">December 2, 2016</p>
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-4 flex-display news-item" >
+          <a class="news-wrapper" href="#">
+            <img src="/{{ directory }}/assets/images/news/news.jpg" alt="news" class="img-responsive">
+            <div class="news-content text-center">
+              <p class="news-date">December 2, 2016</p>
+              <h3 class="news-title">Investors Update Guidance to Strengthen Engagement on Climate Risk with Oil and Gas Companies</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="read-more-wrapper text-center">
+        <a href="#" class="read-more-btn read-more-effect text-uppercase white-back">
+          <span class="hidden-after-more">More News</span>
+          <span class="hidden-before-more hidden">Link to News Page</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#Join section#}
+<div class="row">
+  <section class="home-page-signup rltv">
+    <img src="/{{ directory }}/assets/images/network/join.jpg" alt="news" class="img-responsive">
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">Join</h2>
+            <p class="section-desc text-center">Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+            <div class="read-more-wrapper text-center">
+              <a href="#" class="read-more-btn subscribr-btn text-uppercase ">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+{#Network section#}
+<section class="home-page-network row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">More Ceres Networks</h2>
+          <div class="networks-list flex-display">
+            <div class="col-xs-12 col-sm-4 flex-display">
+              <a class="network-wrapper text-center"  href="#">
+                <img src="/{{ directory }}/assets/images/network/network.jpg" alt="Network" class="img-responsive">
+                <h3 class="network-title">Ceres Investor Network</h3>
+              </a>
+            </div>
+            <div class="col-xs-12 col-sm-4 flex-display">
+              <a class="network-wrapper text-center"  href="#">
+                <img src="/{{ directory }}/assets/images/network/network.jpg" alt="Network" class="img-responsive">
+                <h3 class="network-title">Ceres Investor Network</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#Sign-up section#}
+<div class="row">
+  <section class="home-page-signup">
+    <img src="/{{ directory }}/assets/images/network/sign-up.jpg" alt="sign-up" class="img-responsive">
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">Email Signup</h2>
+            <p class="section-desc text-center">Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+            <div class="read-more-wrapper text-center">
+              <form class="email-signup sign-up-form form-inline" action="/" method="post" accept-charset="UTF-8">
+                <div class="form-fields-slide-container form-wrapper">
+                  <div>
+                    <div class="form-group">
+                      <input placeholder="Last Name" class="required form-control" type="text" name="last_name" value="" size="60" maxlength="150" required="required" aria-required="true">
+                    </div>
+                  </div>
+                  <div>
+                    <div class="form-group">
+                      <input placeholder="Email" class="required form-control" type="email" name="email" value="" size="60" maxlength="254" required="required" aria-required="true">
+                    </div>
+                  </div>
+                </div>
+                <button class="read-more-btn sign-slide-action subscribr-btn text-uppercase" type="submit" name="op" value="Subscribe">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

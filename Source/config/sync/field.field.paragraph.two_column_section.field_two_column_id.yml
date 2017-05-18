@@ -1,0 +1,19 @@
+uuid: 91960775-0ef0-4559-8427-e03fc6cbfa9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_two_column_id
+    - paragraphs.paragraphs_type.two_column_section
+id: paragraph.two_column_section.field_two_column_id
+field_name: field_two_column_id
+entity_type: paragraph
+bundle: two_column_section
+label: ID
+description: 'That will help you to navigate from navigation bar menu.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

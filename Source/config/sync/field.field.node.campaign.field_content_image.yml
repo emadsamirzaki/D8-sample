@@ -1,0 +1,38 @@
+uuid: 0d49955f-81fc-4d65-a3bc-acc59ba6773b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_image
+    - node.type.campaign
+  module:
+    - image
+id: node.campaign.field_content_image
+field_name: field_content_image
+entity_type: node
+bundle: campaign
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 300x300
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: a164f918-c1a9-4644-b40d-288fbfc17744
+    alt: ''
+    title: ''
+    width: 299
+    height: 300
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

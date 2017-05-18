@@ -1,0 +1,35 @@
+uuid: 0dade0d7-14b7-42e8-98ae-5188abd25bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image_link_with_badge_title
+    - field.field.node.annual_report_impact_story.body
+    - field.field.node.annual_report_impact_story.field_banner_image
+    - field.field.node.annual_report_impact_story.field_campaign_description
+    - field.field.node.annual_report_impact_story.field_content_image
+    - field.field.node.annual_report_impact_story.field_meta_tags
+    - node.type.annual_report_impact_story
+  module:
+    - image
+    - user
+id: node.annual_report_impact_story.image_link_with_badge_title
+targetEntityType: node
+bundle: annual_report_impact_story
+mode: image_link_with_badge_title
+content:
+  field_content_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  body: true
+  field_banner_image: true
+  field_campaign_description: true
+  field_meta_tags: true
+  links: true

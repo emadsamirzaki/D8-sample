@@ -1,0 +1,22 @@
+uuid: 88f1674e-c917-48e3-a0e8-744c180366c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: roadmap_category
+label: 'Roadmap Category'
+type: 'canonical_entities:node'
+pattern: 'roadmap/[node:title]'
+selection_criteria:
+  21c51120-e341-4812-bc5b-0b413bb66267:
+    id: node_type
+    bundles:
+      roadmap: roadmap
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 21c51120-e341-4812-bc5b-0b413bb66267
+selection_logic: and
+weight: 2
+relationships: {  }

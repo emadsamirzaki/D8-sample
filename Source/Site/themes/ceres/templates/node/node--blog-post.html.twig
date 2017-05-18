@@ -1,0 +1,82 @@
+{% set tagsLen = content.field_tags['#items'] | length %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-push-1">
+      <div class="row">
+        <div class="tag-section text-center">
+          <ul>
+            <li><span>{{ node.getCreatedTime() | date("F j, Y") }}</span></li>
+                {% if author %}
+              <li>
+                <a href="{{ author.url }}">{{ author.title }}</a>
+              </li>
+            {% endif %}
+            {% if node.field_tags.value %}
+              <li>
+                <ul>
+                  {% for i in 0..tagsLen-1 %}
+                    <li>
+                      <a href="{{ url('search.view_node_search', {'keys' : content.field_tags[i]['#plain_text']}) }}">{{ content.field_tags[i] }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+            {% if campaign %}<li><a href="{{ path('entity.node.canonical', {'node': campaign.id }) }}">{{ campaign.getTitle() }}</a></li>{% endif %}
+            {% if issue %}<li><a href="{{ path('entity.node.canonical', {'node': issue.id }) }}">{{ issue.getTitle() }}</a></li>{% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if node.field_description.value %}
+  <section class="body-issue-wrapper pad-top-20 no-back-border row">
+    <div class="container">
+      <div class="row">
+        {{ content.field_description }}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if author.url %}
+  <section class="home-page-experts row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">Meet The Experts</h2>
+            <div class="experts-list clearfix">
+              <div class="text-center expert-container">
+                <a class="expert-image-wrapper" href="{{ author.url }}">
+                  <div class="expert-image-circle-container">
+                    {% if author.image %}
+                      <img src="{{ author.image }}" alt="news" class="img-responsive">
+                    {% else %}
+                      <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive">
+                    {% endif %}
+                  </div>
+                </a>
+                <div class="expert-content">
+                  <h3><a class="expert-name" href="{{ author.url }}">{{ author.title }}</a></h3>
+                  {% if author.org.value %}<p class="expert-org">{{ author.org.value }}</p> {% endif %}
+                </div>
+              </div>
+              {% if author.bio.value %}
+                <div class="universal-section-desc no-mar-bottom text-center dot-ellipsis dot-resize-update author-bio-wrapper dot-height-250">
+                  {{ author.bio.value | raw }}
+                </div>
+                <div class="read-more-wrapper text-center">
+                  <a href="{{ author.url }}" class="read-more-btn text-uppercase ">Read More</a>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}

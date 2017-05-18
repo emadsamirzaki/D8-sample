@@ -1,0 +1,20 @@
+{% if node.field_staff_about.entity.field_text_paragraph_body.value %}
+    <section class="body-issue-wrapper no-back-border row">
+      <div class="container">
+        <div class="row">
+          {{ content.field_staff_about }}
+        </div>
+      </div>
+    </section>
+{% endif %}
+
+{% if press_contact_press_news %}
+    <section class="home-page-news row">
+      <div class="container">
+        <div class="row">
+          <h2 class="section-title text-center">Recent Posts</h2>
+          {{ press_contact_news_press }}
+        </div>
+      </div>
+    </section>
+{% endif %}

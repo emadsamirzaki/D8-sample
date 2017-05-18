@@ -1,0 +1,81 @@
+.select-wrapper{
+    max-height: 55px;
+    @media(min-width: $screen-sm-min){
+        padding-#{$opposite}: 10px; 
+    }
+}
+.bootstrap-select{
+    position: relative;
+    width: auto;
+    font-size: 20px;
+    height: 50px;
+    button.dropdown-toggle{
+        height: 54px;
+        line-height: 46px;
+        border-radius: 3px;
+        overflow: hidden;
+        padding: 1px 15px;
+        padding-#{$opposite}: 30px;
+        border: 1px solid rgba($dark-brown, 0.15);
+        background-color: #fff;
+        color: $dark-brown;
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+        @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+        &:focus{
+            border-color: $input-border-focus;
+            outline: 0 !important;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($input-border-focus, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($input-border-focus, 0.6);
+        }
+    }
+    .bs-caret{
+        @include v-align();
+        #{$opposite}: 10px;
+    }
+    .filter-option{
+        line-height: inherit;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    select{
+        display: none !important;
+    }
+    .dropdown-menu{
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        /*border-radius: 3px;*/
+        &:not(.inner){
+            margin-top: 5px;
+            border: 1px solid rgba($dark-brown, 0.15);
+            border-#{$opposite}: 0; 
+        }
+        a{
+            line-height: 44px;
+            font-size: 20px;
+            color: $dark-brown;
+            border-top: 1px solid rgba($dark-brown, 0.15);
+            &:hover{
+                color: #fff;
+                background-color: $lighten-green;
+            }
+        }
+        li{
+            &.selected a{
+                color: #fff;
+                background-color: $lighten-green;
+                outline: none;
+            }
+            &:first-child a{
+                border-top: 0;
+                padding-#{$opposite}: 30px;
+                &:after{
+                    @include fa-icon();
+                    content: $fa-var-angle-up;
+                    @include v-align();
+                    #{$opposite}: 10px;
+                }
+            }
+        }
+    } 
+}

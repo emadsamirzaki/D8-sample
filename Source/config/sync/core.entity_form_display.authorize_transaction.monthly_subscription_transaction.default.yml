@@ -1,0 +1,242 @@
+uuid: 642c2130-26e9-4173-8ea3-835a8d1892d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_customer_payment_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_customer_profile_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_status
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_address
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_amount
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_city
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_country
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_creditcardexpdate
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_creditcardnum
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_email
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_first_name
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree_email
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree_mail
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree_type
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_last_name
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_phone
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_response_code
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_response_desc
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_salesforce_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_state
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_zip
+id: authorize_transaction.monthly_subscription_transaction.default
+targetEntityType: authorize_transaction
+bundle: monthly_subscription_transaction
+mode: default
+content:
+  field_sub_customer_payment_id:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sub_customer_profile_id:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sub_id:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sub_status:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_address:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_amount:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_city:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_country:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_creditcardexpdate:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_creditcardnum:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_email:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_tx_first_name:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_honoree:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_honoree_email:
+    weight: 22
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_tx_honoree_mail:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_honoree_type:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_last_name:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_phone:
+    weight: 24
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_response_code:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_response_desc:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_salesforce_id:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_state:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tx_zip:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  name:
+    type: string_textfield
+    weight: -4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

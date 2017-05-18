@@ -1,0 +1,25 @@
+uuid: 0a73d5b1-1774-4a36-a762-d95066937e52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experts
+    - node.type.campaign
+id: node.campaign.field_experts
+field_name: field_experts
+entity_type: node
+bundle: campaign
+label: Experts
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: staff_experts
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,112 @@
+.home-page-events{
+    background-color: $light-gray-background;
+    border-bottom: 1px solid $border-color;
+    .section-title{
+        @include section-title-with-margin-bottom(50px);
+    }
+}
+.events-section{
+    padding: 40px 15px;
+    @media (max-width: $screen-xs-max){
+        padding: 30px 15px 20px;
+    }
+    @media (max-width: $screen-sm-max){
+        border-bottom: 1px solid $border-color;
+    } 
+    @media (min-width: $screen-md-min){
+        border-#{$opposite}: 1px solid $border-color;
+    } 
+}
+.events-awards-wrapper{
+    @media (max-width: $screen-sm-max){
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+.event-container{
+    @media (max-width: $screen-xs-max){
+        margin-bottom: 15px;
+    }
+}
+.event-date-container{
+    @include transition-animation();
+    border: 1px solid rgba($dark-brown, 0.2);
+    background-color: #fff;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 80px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    color: $dark-brown;
+    font-size: 20px;
+    line-height: 26px;
+    min-width: 70px;
+    font-weight: 400;
+    height: 100px;
+    .number{
+        font-size: 30px;
+    }
+    &:hover, &.hovered{
+        border-color: rgba($hover-light-green, 0.5);
+        color: $hover-light-green;
+        ~ .event-data-container .event-title{
+            color: $link-hover-color;
+        }
+    }
+}
+.event-data-container{
+    margin-#{$default}: 18px;
+    h3{
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+}
+.event-title{
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: $light-green;
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+        font-size: 20px;
+        line-height: 22px;
+    } 
+    @media (max-width: $screen-xs-max){
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+.event-desc{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 26px;
+    color: $light-black;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 5;
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+        line-height: 22px;
+    } 
+    @media (max-width: $screen-xs-max){
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.awards-section{
+    padding: 40px 15px;
+    @media (max-width: $screen-xs-max){
+        padding: 30px 15px 20px;
+    }
+    .award-image-wrapper{
+        display: inline-block;
+        max-width: 200px;
+    }
+    .read-more-link{
+        display: inline-block;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+    }
+}

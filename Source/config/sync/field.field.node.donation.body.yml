@@ -1,0 +1,22 @@
+uuid: cb4eb59d-2ad9-4302-9951-85a67a4e35cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.donation
+  module:
+    - text
+id: node.donation.body
+field_name: body
+entity_type: node
+bundle: donation
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

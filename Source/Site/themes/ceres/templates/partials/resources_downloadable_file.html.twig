@@ -1,0 +1,22 @@
+{% if node.field_resource_download_link.value or node.field_resource_download_file.value %}
+  <section class="body-issue-wrapper pad-top-20 no-back-border row">
+    <div class="container">
+      <div class="row">
+        {% if node.field_resource_download_body.value %}
+          <div class="universal-section-desc text-center">
+            {{ content.field_resource_download_body }}
+          </div>
+        {% endif %}
+        {% if node.field_resource_download_link.value %}
+          <div class="read-more-wrapper text-center">
+            <a href="{{ content.field_resource_download_link['#items'].0.uri }}" target="_blank" class="read-more-btn text-uppercase white-back no-mar-top">{{ content.field_resource_download_link_txt }}</a>
+          </div>
+        {% elseif node.field_resource_download_file.value %}
+          <div class="read-more-wrapper text-center">
+            <a href="{{ content.field_resource_download_file.0 }}" target="_blank" class="read-more-btn text-uppercase white-back no-mar-top">{{ content.field_resource_download_link_txt.0 }}</a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}

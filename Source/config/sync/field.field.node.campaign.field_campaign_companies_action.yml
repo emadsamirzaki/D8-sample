@@ -1,0 +1,69 @@
+uuid: f2819f2f-4f10-4d6d-8f78-1d967e41fd11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_companies_action
+    - node.type.campaign
+    - paragraphs.paragraphs_type.company_section
+  module:
+    - entity_reference_revisions
+id: node.campaign.field_campaign_companies_action
+field_name: field_campaign_companies_action
+entity_type: node
+bundle: campaign
+label: 'Companies Take Action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      company_section: company_section
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 15
+        enabled: false
+      campaigns_section:
+        weight: 16
+        enabled: false
+      collage:
+        weight: 17
+        enabled: false
+      collage_section:
+        weight: 18
+        enabled: false
+      company_section:
+        enabled: true
+        weight: 19
+      events_awards_section:
+        weight: 20
+        enabled: false
+      experts_section:
+        weight: 21
+        enabled: false
+      footer_office:
+        weight: 22
+        enabled: false
+      image_link:
+        weight: 23
+        enabled: false
+      join_section:
+        weight: 24
+        enabled: false
+      networks_section:
+        weight: 25
+        enabled: false
+      news_section:
+        weight: 26
+        enabled: false
+      press_source:
+        weight: 27
+        enabled: false
+      testimonial_section:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

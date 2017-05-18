@@ -1,0 +1,38 @@
+uuid: 12117cbf-e864-4818-8fad-757321311236
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_paragraph_image
+    - paragraphs.paragraphs_type.basic_paragraph
+  module:
+    - image
+id: paragraph.basic_paragraph.field_basic_paragraph_image
+field_name: field_basic_paragraph_image
+entity_type: paragraph
+bundle: basic_paragraph
+label: 'Banner Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,21 @@
+uuid: 4b55ed12-d380-4fe1-85a2-5d4a1581c5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_download_body
+    - node.type.tool
+  module:
+    - text
+id: node.tool.field_resource_download_body
+field_name: field_resource_download_body
+entity_type: node
+bundle: tool
+label: 'Download Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

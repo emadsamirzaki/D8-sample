@@ -1,0 +1,22 @@
+<div class="row">
+  <section class="home-page-signup">
+    {% if content.image %}
+      <img src="{{ file_url(content.image) }}" alt="sign-up" class="img-responsive">
+    {% else %}
+      <img src="/{{ directory }}/assets/images/signup/sign-up.jpg" alt="sign-up" class="img-responsive">
+    {% endif %}
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">{{ content.title }}</h2>
+            <p class="section-desc text-center">{{ content.body }}</p>
+            <div class="read-more-wrapper text-center">
+              <a href="{{ content.url }}" class="read-more-btn subscribr-btn text-uppercase" type="submit" name="op" value="Subscribe">Subscribe</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

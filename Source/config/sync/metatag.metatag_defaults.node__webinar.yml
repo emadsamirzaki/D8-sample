@@ -1,0 +1,10 @@
+uuid: 870dd4ba-326d-4095-b6c6-6dcc98667cae
+langcode: en
+status: true
+dependencies: {  }
+id: node__webinar
+label: 'Content: Webinar'
+tags:
+  description: '[node:field_description]'
+  og_description: '[node:field_description]'
+  twitter_cards_description: '[node:field_description]'

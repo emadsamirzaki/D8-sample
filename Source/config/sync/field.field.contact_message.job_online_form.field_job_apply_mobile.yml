@@ -1,0 +1,19 @@
+uuid: aa2f8604-1b79-4232-b848-676a1184f69f
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.job_online_form
+    - field.storage.contact_message.field_job_apply_mobile
+id: contact_message.job_online_form.field_job_apply_mobile
+field_name: field_job_apply_mobile
+entity_type: contact_message
+bundle: job_online_form
+label: Mobile
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

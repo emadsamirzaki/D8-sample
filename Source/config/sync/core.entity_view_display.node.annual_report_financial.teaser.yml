@@ -1,0 +1,40 @@
+uuid: d90f289d-cc37-4e50-97bb-1c0ffb958930
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annual_report_financial.body
+    - field.field.node.annual_report_financial.field_annual_report_finance_desc
+    - field.field.node.annual_report_financial.field_annual_report_finance_file
+    - field.field.node.annual_report_financial.field_annual_report_finance_link
+    - field.field.node.annual_report_financial.field_annual_report_finance_text
+    - field.field.node.annual_report_financial.field_banner_image
+    - field.field.node.annual_report_financial.field_meta_tags
+    - node.type.annual_report_financial
+  module:
+    - text
+    - user
+id: node.annual_report_financial.teaser
+targetEntityType: node
+bundle: annual_report_financial
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_annual_report_finance_desc: true
+  field_annual_report_finance_file: true
+  field_annual_report_finance_link: true
+  field_annual_report_finance_text: true
+  field_banner_image: true
+  field_meta_tags: true

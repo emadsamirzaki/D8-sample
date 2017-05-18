@@ -1,0 +1,19 @@
+<div class="text-center expert-container">
+  <a class="expert-image-wrapper" href="{{ url }}">
+    <div class="expert-image-circle-container">
+      {% if content.field_staff_picture['#items'].entity.uri.value and file_url(content.field_staff_picture['#items'].entity.uri.value) %}
+        {{content.field_staff_picture }}
+      {% else %}
+        <img src="/{{ directory }}/assets/images/expert/expert.png" alt="" class="img-responsive">
+      {% endif %}
+    </div>
+  </a>
+  <div class="expert-content">
+    <h3>
+      <a class="expert-name" href="{{ url }}">{{ node.getTitle() }}</a>
+    </h3>
+    <p class="expert-org">
+      {{ node.field_press_contact_organization.value }}
+    </p>
+  </div>
+</div>

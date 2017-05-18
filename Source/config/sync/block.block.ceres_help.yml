@@ -1,0 +1,22 @@
+uuid: 23336446-8536-4e95-b605-05f852cd89ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ceres
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: ceres_help
+theme: ceres
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

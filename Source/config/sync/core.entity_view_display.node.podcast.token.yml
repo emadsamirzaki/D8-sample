@@ -1,0 +1,120 @@
+uuid: 65ba90da-1275-483c-bb90-e1a5e77b17ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.podcast.field_banner_image
+    - field.field.node.podcast.field_description
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_podcast_audio_link
+    - field.field.node.podcast.field_podcast_file_upload
+    - field.field.node.podcast.field_podcast_thumbnail
+    - field.field.node.podcast.field_resource_campaigns
+    - field.field.node.podcast.field_resource_issues
+    - field.field.node.podcast.field_resource_networks
+    - field.field.node.podcast.field_resource_programs
+    - node.type.podcast
+  module:
+    - entity_reference_revisions
+    - file
+    - image
+    - link
+    - metatag
+    - user
+id: node.podcast.token
+targetEntityType: node
+bundle: podcast
+mode: token
+content:
+  field_banner_image:
+    weight: 111
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_description:
+    weight: 112
+    label: hidden
+    settings:
+      view_mode: token
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_meta_tags:
+    weight: 113
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_podcast_audio_link:
+    weight: 104
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_podcast_file_upload:
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+  field_podcast_thumbnail:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_resource_campaigns:
+    weight: 106
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_issues:
+    weight: 105
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_networks:
+    weight: 110
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_resource_programs:
+    weight: 107
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

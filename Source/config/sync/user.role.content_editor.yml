@@ -1,0 +1,11 @@
+uuid: 2bd25e03-da37-43dd-b1d3-c298a471fbd2
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: 4
+is_admin: null
+permissions:
+  - 'administer meta tags'
+  - 'view files'

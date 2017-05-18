@@ -1,0 +1,21 @@
+uuid: 721dd522-142f-4f6f-afc5-2d6e734439af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sf_network_name_mapper
+    - paragraphs.paragraphs_type.network_members
+  module:
+    - options
+id: paragraph.network_members.field_sf_network_name_mapper
+field_name: field_sf_network_name_mapper
+entity_type: paragraph
+bundle: network_members
+label: 'SF Network Name Mapper'
+description: 'This''s related to the Salesforce integration in the ''Networks Members'' section'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

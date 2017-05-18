@@ -1,0 +1,21 @@
+uuid: 0d183e98-0bc8-47fe-baa4-2df22a190e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_download_link_txt
+    - node.type.webinar
+id: node.webinar.field_resource_download_link_txt
+field_name: field_resource_download_link_txt
+entity_type: node
+bundle: webinar
+label: 'Link Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Download
+default_value_callback: ''
+settings: {  }
+field_type: string

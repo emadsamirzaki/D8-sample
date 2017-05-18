@@ -1,0 +1,279 @@
+uuid: 7693f489-b51c-416b-a08c-2380cbeffbac
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.field.authorize_transaction.basic_transaction.field_tx_address
+    - field.field.authorize_transaction.basic_transaction.field_tx_amount
+    - field.field.authorize_transaction.basic_transaction.field_tx_auth_code
+    - field.field.authorize_transaction.basic_transaction.field_tx_avs_response_code
+    - field.field.authorize_transaction.basic_transaction.field_tx_cavv_result_code
+    - field.field.authorize_transaction.basic_transaction.field_tx_city
+    - field.field.authorize_transaction.basic_transaction.field_tx_country
+    - field.field.authorize_transaction.basic_transaction.field_tx_creditcardexpdate
+    - field.field.authorize_transaction.basic_transaction.field_tx_creditcardnum
+    - field.field.authorize_transaction.basic_transaction.field_tx_creditcardtype
+    - field.field.authorize_transaction.basic_transaction.field_tx_creditcardverf
+    - field.field.authorize_transaction.basic_transaction.field_tx_cvv_result_code
+    - field.field.authorize_transaction.basic_transaction.field_tx_email
+    - field.field.authorize_transaction.basic_transaction.field_tx_first_name
+    - field.field.authorize_transaction.basic_transaction.field_tx_honoree
+    - field.field.authorize_transaction.basic_transaction.field_tx_honoree_email
+    - field.field.authorize_transaction.basic_transaction.field_tx_honoree_mail
+    - field.field.authorize_transaction.basic_transaction.field_tx_honoree_type
+    - field.field.authorize_transaction.basic_transaction.field_tx_last_name
+    - field.field.authorize_transaction.basic_transaction.field_tx_phone
+    - field.field.authorize_transaction.basic_transaction.field_tx_response_code
+    - field.field.authorize_transaction.basic_transaction.field_tx_response_desc
+    - field.field.authorize_transaction.basic_transaction.field_tx_salesforce_id
+    - field.field.authorize_transaction.basic_transaction.field_tx_state
+    - field.field.authorize_transaction.basic_transaction.field_tx_transaction_hash
+    - field.field.authorize_transaction.basic_transaction.field_tx_transaction_id
+    - field.field.authorize_transaction.basic_transaction.field_tx_transaction_type
+    - field.field.authorize_transaction.basic_transaction.field_tx_zip
+  module:
+    - user
+id: authorize_transaction.basic_transaction.default
+targetEntityType: authorize_transaction
+bundle: basic_transaction
+mode: default
+content:
+  field_tx_address:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_amount:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_auth_code:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_avs_response_code:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_cavv_result_code:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_city:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_country:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_creditcardexpdate:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_creditcardnum:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_creditcardtype:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_creditcardverf:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_cvv_result_code:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_email:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tx_first_name:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_honoree:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_honoree_email:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tx_honoree_mail:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_honoree_type:
+    weight: 28
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_last_name:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_phone:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_response_code:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_response_desc:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_salesforce_id:
+    weight: 26
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_state:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_transaction_hash:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_transaction_id:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_transaction_type:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_zip:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

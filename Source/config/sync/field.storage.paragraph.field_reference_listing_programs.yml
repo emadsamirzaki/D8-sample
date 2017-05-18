@@ -1,0 +1,20 @@
+uuid: 8309ab13-51f4-4b34-aa9b-acd8309f6107
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_reference_listing_programs
+field_name: field_reference_listing_programs
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,41 @@
+uuid: cb9ffc90-cfab-4196-bd68-b5a1dd7cd211
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - system
+  theme:
+    - ceres
+id: corporate_leadership_newsletter
+theme: ceres
+region: before_footer
+weight: -9
+provider: null
+plugin: hp_signup_block
+settings:
+  id: hp_signup_block
+  label: 'Corporate Leadership Newsletter'
+  provider: ceres_core
+  label_display: '0'
+  imageFid:
+    - '134'
+  content:
+    title: 'Sign Up for the Corporate Leadership Newsletter'
+    body: 'Get regular updates about corporate sustainability leadership including best practices, tools and resources, and upcoming opportunities to engage with Ceres and our partners.'
+    type: 'Ceres eCommunity'
+    url: /signup_corporate_leadership_newsletter
+    submitText: Subscribe
+    image: 'public://images/sign-up_2.jpg'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/\r\n/*\r\n/networks/ceres-company-network\r\n/roadmap\r\n/roadmap/*\r\n/programs/corporate-leadership"
+    negate: true
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

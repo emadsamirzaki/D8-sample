@@ -1,0 +1,22 @@
+uuid: f9630754-8ed6-4976-813d-7a0824a2aa3f
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - ceres_annual_report
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: ceres_annual_report_powered
+theme: ceres_annual_report
+region: navigation
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

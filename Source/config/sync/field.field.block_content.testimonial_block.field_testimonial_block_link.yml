@@ -1,0 +1,23 @@
+uuid: aa00230c-8613-464b-8992-6a8c6ff089e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_block
+    - field.storage.block_content.field_testimonial_block_link
+  module:
+    - link
+id: block_content.testimonial_block.field_testimonial_block_link
+field_name: field_testimonial_block_link
+entity_type: block_content
+bundle: testimonial_block
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

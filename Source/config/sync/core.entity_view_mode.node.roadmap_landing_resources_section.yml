@@ -1,0 +1,10 @@
+uuid: a85211c8-a8b6-43f3-b6c7-70fa96bc73cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.roadmap_landing_resources_section
+label: 'Roadmap Landing Resources Section'
+targetEntityType: node
+cache: true

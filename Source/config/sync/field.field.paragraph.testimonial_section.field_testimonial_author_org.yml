@@ -1,0 +1,19 @@
+uuid: 11894cea-9ef2-4037-aeac-e0b4385f56c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_testimonial_author_org
+    - paragraphs.paragraphs_type.testimonial_section
+id: paragraph.testimonial_section.field_testimonial_author_org
+field_name: field_testimonial_author_org
+entity_type: paragraph
+bundle: testimonial_section
+label: 'Author Organization'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

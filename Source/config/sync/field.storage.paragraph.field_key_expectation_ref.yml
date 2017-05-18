@@ -1,0 +1,20 @@
+uuid: c2d3dbd2-57f3-4816-9f24-9f26d7efff58
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_key_expectation_ref
+field_name: field_key_expectation_ref
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

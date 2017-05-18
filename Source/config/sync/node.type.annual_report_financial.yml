@@ -1,0 +1,18 @@
+uuid: b8af7a83-99c9-4d74-bd70-3543fc539858
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - annual-report-menu
+    parent: 'annual-report-menu:'
+name: 'Annual Report Financial'
+type: annual_report_financial
+description: 'Create new Annual Report Financial'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

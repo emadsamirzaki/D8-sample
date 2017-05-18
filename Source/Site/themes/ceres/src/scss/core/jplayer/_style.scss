@@ -1,0 +1,26 @@
+.jp-audio, 
+.jp-controls-holder,
+.jp-audio .jp-controls{
+    width: 100%;
+}
+.jp-volume-controls{
+    z-index: 5;
+    top: 25px;
+    #{$default}: auto;
+    #{$opposite}: 0;
+    width: 110px;
+}
+.jp-audio .jp-type-single .jp-progress {
+    width: 68%;
+    @media (max-width: $screen-xxs-max){
+        width: 58%;
+    }
+}
+.jp-current-time{
+    margin-#{$default}: 22px;
+    margin-top: 4px;
+}
+.jp-duration{
+    margin-#{$opposite}: 22px;
+    margin-top: 4px;
+}

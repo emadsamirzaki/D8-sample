@@ -1,0 +1,38 @@
+uuid: 150e4b39-ff33-482b-aba7-6b2f0405fb58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_image
+    - node.type.press_contact
+  module:
+    - image
+id: node.press_contact.field_banner_image
+field_name: field_banner_image
+entity_type: node
+bundle: press_contact
+label: 'Banner Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 1920x1058
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 0245b169-9770-4907-87a7-81ece5e453d6
+    alt: 'Press Contact Banner'
+    title: ''
+    width: 1920
+    height: 1059
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

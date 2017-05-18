@@ -1,0 +1,28 @@
+uuid: a395d39d-3fb8-4c17-ac0f-d652b0411962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_roadmap_resource_category
+    - node.type.roadmap
+    - node.type.roadmap_resource
+id: node.roadmap_resource.field_roadmap_resource_category
+field_name: field_roadmap_resource_category
+entity_type: node
+bundle: roadmap_resource
+label: 'Roadmap Categories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      roadmap: roadmap
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,15 @@
+uuid: 18673476-9cf4-407b-991f-72c50d4bf95f
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: staff
+label: Staff
+effects:
+  9c5184f1-7533-485e-b760-bcc4181c2b30:
+    uuid: 9c5184f1-7533-485e-b760-bcc4181c2b30
+    id: crop_crop
+    weight: -9
+    data:
+      crop_type: staff_cropper

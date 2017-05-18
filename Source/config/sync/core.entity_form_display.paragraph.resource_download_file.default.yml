@@ -1,0 +1,54 @@
+uuid: 08fa068a-07e2-4c5d-80dd-8813f2288fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resource_download_file.field_resource_download_body
+    - field.field.paragraph.resource_download_file.field_resource_download_file
+    - field.field.paragraph.resource_download_file.field_resource_download_link
+    - field.field.paragraph.resource_download_file.field_resource_download_link_txt
+    - paragraphs.paragraphs_type.resource_download_file
+  module:
+    - file
+    - link
+    - text
+id: paragraph.resource_download_file.default
+targetEntityType: paragraph
+bundle: resource_download_file
+mode: default
+content:
+  field_resource_download_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_resource_download_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_resource_download_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_resource_download_link_txt:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,38 @@
+uuid: a6cb7cd3-134f-4676-8e5f-62b9a11c0a1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_image
+    - node.type.case_study
+  module:
+    - image
+id: node.case_study.field_resource_image
+field_name: field_resource_image
+entity_type: node
+bundle: case_study
+label: 'Thumbnail image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 370x244
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: d3e2b2b8-01a5-4ce9-b538-01851853dbcd
+    alt: 'Case Study'
+    title: ''
+    width: 1920
+    height: 1080
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

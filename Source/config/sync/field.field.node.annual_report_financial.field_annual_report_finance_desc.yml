@@ -1,0 +1,21 @@
+uuid: 439079e5-64e6-40fb-bd24-8c3c7048092f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annual_report_finance_desc
+    - node.type.annual_report_financial
+  module:
+    - text
+id: node.annual_report_financial.field_annual_report_finance_desc
+field_name: field_annual_report_finance_desc
+entity_type: node
+bundle: annual_report_financial
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

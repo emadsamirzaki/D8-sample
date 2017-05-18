@@ -1,0 +1,16 @@
+<section class="home-page-network home-page-campaign row">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-push-1">
+                <div class="row">
+                    <h2 class="section-title text-center">{% trans %}Campaigns{% endtrans %}</h2>
+                    <p class="section-desc text-center">{{ paragraph.field_campaigns_body.value }}</p>
+                    {{ title_suffix }}
+                    <div class="networks-list flex-display">
+                        {{ content.field_campaigns }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

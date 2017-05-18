@@ -1,0 +1,19 @@
+{% if (paragraph.field_roadmap_resources_refs | length) > 0 %}
+  <section class="home-page-news roadmap-resources row">
+    <div class="container">
+      <div class="row">
+        <h2 class="section-title text-center">Resources</h2>
+        <div class="roadmap-resources-list more-list flex-display flex-wrap">
+          {{ content.field_roadmap_resources_refs }}
+        </div>
+        {% if (paragraph.field_roadmap_resources_refs | length) > 4 %}
+          <div class="read-more-wrapper text-center">
+            <a href="#" class="read-more-btn read-more-effect hidden-after-more text-uppercase white-back">
+              <span class="hidden-after-more">More Resources</span>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endif %}

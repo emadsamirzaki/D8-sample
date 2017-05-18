@@ -1,0 +1,9 @@
+uuid: 11263f4a-4b03-4ffb-b3a6-87bc5e7e2778
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issue Categories'
+vid: issue_categories
+description: 'List of issue categories which will be used in issue content type'
+hierarchy: 0
+weight: 0

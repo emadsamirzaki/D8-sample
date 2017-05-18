@@ -1,0 +1,6 @@
+name: Authorize Pay
+type: module
+description: Use Authorize.net API for payment transaction gateway
+core: 8.x
+package: Custom
+configure: system.admin_authorize_pay_config

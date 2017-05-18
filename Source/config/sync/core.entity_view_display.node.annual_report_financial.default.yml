@@ -1,0 +1,88 @@
+uuid: 106f220d-eaea-47f8-ad4c-1dbe4d9ceae2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.annual_report_financial.body
+    - field.field.node.annual_report_financial.field_annual_report_finance_desc
+    - field.field.node.annual_report_financial.field_annual_report_finance_file
+    - field.field.node.annual_report_financial.field_annual_report_finance_link
+    - field.field.node.annual_report_financial.field_annual_report_finance_text
+    - field.field.node.annual_report_financial.field_banner_image
+    - field.field.node.annual_report_financial.field_meta_tags
+    - node.type.annual_report_financial
+  module:
+    - file
+    - image
+    - link
+    - metatag
+    - text
+    - user
+id: node.annual_report_financial.default
+targetEntityType: node
+bundle: annual_report_financial
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_annual_report_finance_desc:
+    weight: 102
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_annual_report_finance_file:
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+  field_annual_report_finance_link:
+    weight: 104
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_annual_report_finance_text:
+    weight: 105
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_banner_image:
+    weight: 106
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_meta_tags:
+    weight: 107
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

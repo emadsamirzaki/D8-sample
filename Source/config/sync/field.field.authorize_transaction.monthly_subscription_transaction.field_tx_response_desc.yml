@@ -1,0 +1,19 @@
+uuid: 8f2aad57-d609-4a36-99d6-489dafd3aba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_tx_response_desc
+id: authorize_transaction.monthly_subscription_transaction.field_tx_response_desc
+field_name: field_tx_response_desc
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: 'Response Desc'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

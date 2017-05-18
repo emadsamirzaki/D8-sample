@@ -1,0 +1,14 @@
+.road-single-intro-title{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    color: $light-black;
+    margin-bottom: 20px;
+    @media (max-width: $screen-xs-max){
+        padding-#{$default}: 15px;
+        padding-#{$opposite}: 15px;
+    }
+}
+.roadmap-mission{
+    padding-top: 90px;
+}

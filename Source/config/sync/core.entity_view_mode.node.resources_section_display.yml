@@ -1,0 +1,10 @@
+uuid: 2c5e5a81-a42f-4107-ac20-10997c4d10fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.resources_section_display
+label: 'Resources Section Display'
+targetEntityType: node
+cache: true

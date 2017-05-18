@@ -1,0 +1,19 @@
+uuid: 2305ffa4-05f6-4d19-8556-f693900293df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info_title
+    - paragraphs.paragraphs_type.info_download_paragraph
+id: paragraph.info_download_paragraph.field_info_title
+field_name: field_info_title
+entity_type: paragraph
+bundle: info_download_paragraph
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 259e2ba4-c68b-4bd6-bc88-548cf1796d7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_podcast_audio_link
+field_name: field_podcast_audio_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

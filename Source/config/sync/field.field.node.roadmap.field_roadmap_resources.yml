@@ -1,0 +1,93 @@
+uuid: fc6717ff-f6dc-449e-8847-07b1fadd5f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_roadmap_resources
+    - node.type.roadmap
+    - paragraphs.paragraphs_type.roadmap_resources_section
+  module:
+    - entity_reference_revisions
+id: node.roadmap.field_roadmap_resources
+field_name: field_roadmap_resources
+entity_type: node
+bundle: roadmap
+label: 'Roadmap Resources'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      roadmap_resources_section: roadmap_resources_section
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 23
+        enabled: false
+      campaigns_section:
+        weight: 24
+        enabled: false
+      collage:
+        weight: 25
+        enabled: false
+      collage_section:
+        weight: 26
+        enabled: false
+      company_section:
+        weight: 27
+        enabled: false
+      events_awards_section:
+        weight: 28
+        enabled: false
+      experts_section:
+        weight: 29
+        enabled: false
+      footer_office:
+        weight: 30
+        enabled: false
+      image_link:
+        weight: 31
+        enabled: false
+      info_download_paragraph:
+        weight: 32
+        enabled: false
+      info_paragraph:
+        weight: 33
+        enabled: false
+      join_section:
+        weight: 34
+        enabled: false
+      networks_section:
+        weight: 35
+        enabled: false
+      news_section:
+        weight: 36
+        enabled: false
+      press_source:
+        weight: 37
+        enabled: false
+      quote_testimonial:
+        weight: 38
+        enabled: false
+      roadmap_key_expectation:
+        weight: 39
+        enabled: false
+      roadmap_resources_section:
+        enabled: true
+        weight: 40
+      roadmap_section:
+        weight: 41
+        enabled: false
+      testimonial_section:
+        weight: 42
+        enabled: false
+      text_paragraph:
+        weight: 43
+        enabled: false
+      video_paragraph:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

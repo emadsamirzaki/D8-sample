@@ -1,0 +1,34 @@
+uuid: a6b310d7-ba35-45ba-9ac0-2d0616ebb774
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.director.field_banner_image
+    - field.field.node.director.field_director_bio
+    - field.field.node.director.field_director_group
+    - field.field.node.director.field_director_organization
+    - field.field.node.director.field_director_picture
+    - field.field.node.director.field_director_position
+    - field.field.node.director.field_director_title
+    - field.field.node.director.field_meta_tags
+    - node.type.director
+  module:
+    - user
+id: node.director.teaser
+targetEntityType: node
+bundle: director
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_director_bio: true
+  field_director_group: true
+  field_director_organization: true
+  field_director_picture: true
+  field_director_position: true
+  field_director_title: true
+  field_meta_tags: true

@@ -1,0 +1,23 @@
+uuid: 193f9b78-90d4-4e18-8c16-e6d07ccadc7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_social_links
+    - field.storage.block_content.field_header_social_facebook_url
+  module:
+    - link
+id: block_content.header_social_links.field_header_social_facebook_url
+field_name: field_header_social_facebook_url
+entity_type: block_content
+bundle: header_social_links
+label: 'Facebook URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

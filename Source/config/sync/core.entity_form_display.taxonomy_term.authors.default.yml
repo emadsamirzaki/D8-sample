@@ -1,0 +1,114 @@
+uuid: 51d4ca74-52bf-433e-be6e-4d9f3dca6890
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.authors.field_author_department
+    - field.field.taxonomy_term.authors.field_author_email
+    - field.field.taxonomy_term.authors.field_author_organization
+    - field.field.taxonomy_term.authors.field_author_picture
+    - field.field.taxonomy_term.authors.field_author_position
+    - field.field.taxonomy_term.authors.field_author_twitter
+    - field.field.taxonomy_term.authors.field_banner_image
+    - image.style.staff
+    - image.style.thumbnail
+    - taxonomy.vocabulary.authors
+  module:
+    - field_states_ui
+    - image
+    - image_widget_crop
+    - path
+    - text
+id: taxonomy_term.authors.default
+targetEntityType: taxonomy_term
+bundle: authors
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 4
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+    region: content
+  field_author_department:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_author_email:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_author_organization:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_author_picture:
+    weight: 3
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: staff
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - staff_cropper
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: image_widget_crop
+    region: content
+  field_author_position:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_author_twitter:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_banner_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

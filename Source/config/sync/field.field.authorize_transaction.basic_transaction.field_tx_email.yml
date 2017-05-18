@@ -1,0 +1,19 @@
+uuid: 2d1cf00d-4d20-4406-9cb3-992fedc342da
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_email
+id: authorize_transaction.basic_transaction.field_tx_email
+field_name: field_tx_email
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,22 @@
+uuid: 2853f084-faa6-42d4-a4bc-5f9a3141484a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.programs_reference_listing.field_reference_listing_programs
+    - paragraphs.paragraphs_type.programs_reference_listing
+id: paragraph.programs_reference_listing.default
+targetEntityType: paragraph
+bundle: programs_reference_listing
+mode: default
+content:
+  field_reference_listing_programs:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

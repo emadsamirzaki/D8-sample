@@ -1,0 +1,10 @@
+uuid: 441ba649-96f2-4022-b5e0-1473d7dd3203
+langcode: en
+status: true
+dependencies: {  }
+id: node__report
+label: 'Content: Report'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  twitter_cards_description: '[node:summary]'

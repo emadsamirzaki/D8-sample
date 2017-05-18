@@ -1,0 +1,10 @@
+uuid: df379b22-e6ef-45f0-b89b-fa220df444bf
+langcode: en
+status: true
+dependencies: {  }
+id: node__issue
+label: 'Content: Issue/Sector'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  twitter_cards_description: '[node:summary]'

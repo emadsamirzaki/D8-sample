@@ -1,0 +1,19 @@
+uuid: 873f78f1-b577-46c1-b3c0-26af2f2237d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.email_signup_newsletter
+    - field.storage.contact_message.field_newsletter_email
+id: contact_message.email_signup_newsletter.field_newsletter_email
+field_name: field_newsletter_email
+entity_type: contact_message
+bundle: email_signup_newsletter
+label: Email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

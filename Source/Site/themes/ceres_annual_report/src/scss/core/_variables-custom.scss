@@ -1,0 +1,43 @@
+// Set/Override Bootstrap Variables:
+$font-family-base: 'Tofino',sans-serif, serif;
+$font-size-base: 16px;
+$grid-float-breakpoint: 992px;
+
+$navbar-default-bg: transparent;
+
+$link-color: #84b734;
+$link-hover-color: #537716;
+$link-hover-decoration: none;
+
+$input-border: rgba(#45433d, 0.15);
+
+$input-border-focus: #537716;
+
+// Include Bootstrap Variables then:
+@import "variables";
+
+/*widths*/
+$screen-xxs-max: "479px";
+/*colors*/
+$dark-green: #1f2518;
+$dark-brown: #45433d;
+$light-gray: #ececeb;
+$light-green: #84b734;
+$lighten-green: #739929;
+$light-gray-background: #fbfaf9;
+$gray-background: #f4f4f1;
+$light-black: #292a29;
+$brown-black: #46443e;
+$border-color: #edeceb;
+$hover-light-green: #537716;
+$expert-back-color: #f3f1ed;
+
+// Include Mappy Breakpoints
+$breakpoints: (
+'xs': $screen-xs,
+'sm': $screen-sm,
+'md': $screen-md,
+'lg': $screen-lg);
+
+
+

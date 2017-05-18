@@ -1,0 +1,18 @@
+uuid: 0dd4b482-634e-4890-82b9-489d7c1b04dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - annual-report-menu
+    parent: 'annual-report-menu:'
+name: 'Annual Report Home'
+type: annual_report_home
+description: 'Create new Annual Report Home'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

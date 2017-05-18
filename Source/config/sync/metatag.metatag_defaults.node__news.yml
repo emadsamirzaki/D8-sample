@@ -1,0 +1,11 @@
+uuid: 35e82a6d-b7ca-4022-a5f8-76ad1cfbebd1
+langcode: en
+status: true
+dependencies: {  }
+id: node__news
+label: 'Content: News'
+tags:
+  description: '[node:field_description]'
+  keywords: '[node:field_tags]'
+  og_description: '[node:field_description]'
+  twitter_cards_description: '[node:field_description]'

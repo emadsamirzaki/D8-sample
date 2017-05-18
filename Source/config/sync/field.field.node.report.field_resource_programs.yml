@@ -1,0 +1,29 @@
+uuid: 91a122a3-9081-450b-8261-36236432d511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_programs
+    - node.type.program
+    - node.type.report
+id: node.report.field_resource_programs
+field_name: field_resource_programs
+entity_type: node
+bundle: report
+label: Programs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: changed
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

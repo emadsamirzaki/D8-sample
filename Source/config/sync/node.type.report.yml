@@ -1,0 +1,17 @@
+uuid: ca6cedbf-7d29-483b-82c9-17090d2e7b95
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Report
+type: report
+description: 'Create new Report.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,234 @@
+uuid: 6ddc3ba2-dfd7-490e-8ae7-85c5ec715710
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_customer_payment_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_customer_profile_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_sub_status
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_address
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_amount
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_city
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_country
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_creditcardexpdate
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_creditcardnum
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_email
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_first_name
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree_email
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree_mail
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_honoree_type
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_last_name
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_phone
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_response_code
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_response_desc
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_salesforce_id
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_state
+    - field.field.authorize_transaction.monthly_subscription_transaction.field_tx_zip
+  module:
+    - user
+id: authorize_transaction.monthly_subscription_transaction.default
+targetEntityType: authorize_transaction
+bundle: monthly_subscription_transaction
+mode: default
+content:
+  field_sub_customer_payment_id:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sub_customer_profile_id:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sub_id:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sub_status:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_address:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_amount:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_city:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_country:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_creditcardexpdate:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_creditcardnum:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_email:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tx_first_name:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_honoree:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_honoree_email:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_tx_honoree_mail:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_honoree_type:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_last_name:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_phone:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_response_code:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_response_desc:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_salesforce_id:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_state:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tx_zip:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 66fe1ba1-d639-4b49-b065-37755b6dad95
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_tx_amount
+id: authorize_transaction.monthly_subscription_transaction.field_tx_amount
+field_name: field_tx_amount
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: Amount
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

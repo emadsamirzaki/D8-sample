@@ -1,0 +1,22 @@
+uuid: 7ad8c98e-6d78-4853-ac4d-da36d8a4d493
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: case_study
+label: 'Case Study'
+type: 'canonical_entities:node'
+pattern: 'leading-practices-case-studies/[node:title]'
+selection_criteria:
+  b0691501-2114-4c2e-bbcb-e9962cb4d1f5:
+    id: node_type
+    bundles:
+      case_study: case_study
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b0691501-2114-4c2e-bbcb-e9962cb4d1f5
+selection_logic: and
+weight: -4
+relationships: {  }

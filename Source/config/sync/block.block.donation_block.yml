@@ -1,0 +1,46 @@
+uuid: effdee09-4d5c-44e8-853c-92ed4f96fbf1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - system
+  theme:
+    - ceres
+id: donation_block
+theme: ceres
+region: content
+weight: -8
+provider: null
+plugin: donate_block
+settings:
+  id: donate_block
+  label: Donate
+  provider: ceres_core
+  label_display: '0'
+  imageFid:
+    - 1584
+  content:
+    banner_image: 'public://images/About-Us-banner_0.jpg'
+    body: 'Your gift to Ceres helps transform the economy to build a sustainable future for people and the planet.'
+    right_column_first:
+      title: 'More Ways To Give'
+      body: "Want to support Ceres but don't want to donate online? There are many ways you can support Ceres.\r\n"
+      link: 'http://stage.ceres.org/get-involved'
+    right_column_second:
+      title: 'Contact Regarding Your Donation'
+      body: 'Have question about your donation? Let us know. '
+      phone: '1 (617) 247-0700'
+      email: info@ceres.org
+visibility:
+  request_path:
+    id: request_path
+    pages: /donate
+    negate: false
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

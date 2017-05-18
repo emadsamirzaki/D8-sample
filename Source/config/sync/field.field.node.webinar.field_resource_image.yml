@@ -1,0 +1,38 @@
+uuid: daa59c73-141b-45ca-8f90-15193b547133
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_image
+    - node.type.webinar
+  module:
+    - image
+id: node.webinar.field_resource_image
+field_name: field_resource_image
+entity_type: node
+bundle: webinar
+label: 'Thumbnail image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 370x244
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 93ef216c-a3ab-4d67-bed8-369e11db9890
+    alt: Webinar
+    title: ''
+    width: 1920
+    height: 1280
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

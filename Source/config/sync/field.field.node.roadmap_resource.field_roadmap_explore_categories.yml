@@ -1,0 +1,105 @@
+uuid: 5f1faf57-033b-415e-ba57-c7ab3217184c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_roadmap_explore_categories
+    - node.type.roadmap_resource
+    - paragraphs.paragraphs_type.roadmap_section
+  module:
+    - entity_reference_revisions
+id: node.roadmap_resource.field_roadmap_explore_categories
+field_name: field_roadmap_explore_categories
+entity_type: node
+bundle: roadmap_resource
+label: 'Explore Roadmap Categories'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      roadmap_section: roadmap_section
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 27
+        enabled: false
+      basic_text_paragraph:
+        weight: 28
+        enabled: false
+      campaigns_section:
+        weight: 29
+        enabled: false
+      collage:
+        weight: 30
+        enabled: false
+      collage_section:
+        weight: 31
+        enabled: false
+      company_section:
+        weight: 32
+        enabled: false
+      events_awards_section:
+        weight: 33
+        enabled: false
+      experts_section:
+        weight: 34
+        enabled: false
+      footer_office:
+        weight: 35
+        enabled: false
+      image_link:
+        weight: 36
+        enabled: false
+      info_download_paragraph:
+        weight: 37
+        enabled: false
+      info_paragraph:
+        weight: 38
+        enabled: false
+      join_section:
+        weight: 39
+        enabled: false
+      networks_section:
+        weight: 40
+        enabled: false
+      news_section:
+        weight: 41
+        enabled: false
+      press_source:
+        weight: 42
+        enabled: false
+      quote_testimonial:
+        weight: 43
+        enabled: false
+      roadmap_key_expectation:
+        weight: 44
+        enabled: false
+      roadmap_landing_categories:
+        weight: 45
+        enabled: false
+      roadmap_landing_info:
+        weight: 46
+        enabled: false
+      roadmap_resources_section:
+        weight: 47
+        enabled: false
+      roadmap_section:
+        enabled: true
+        weight: 48
+      testimonial_section:
+        weight: 49
+        enabled: false
+      text_paragraph:
+        weight: 50
+        enabled: false
+      video_paragraph:
+        weight: 51
+        enabled: false
+      video_testimonial:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,32 @@
+uuid: d2275629-fe67-4064-a470-7672cc385392
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.programs_section.field_programs
+    - field.field.paragraph.programs_section.field_programs_body
+    - paragraphs.paragraphs_type.programs_section
+id: paragraph.programs_section.default
+targetEntityType: paragraph
+bundle: programs_section
+mode: default
+content:
+  field_programs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: program_section_display
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_programs_body:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  created: true
+  uid: true

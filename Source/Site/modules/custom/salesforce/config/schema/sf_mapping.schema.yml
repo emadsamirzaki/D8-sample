@@ -1,0 +1,12 @@
+salesforce.sf_mapping.*:
+  type: config_entity
+  label: 'Sf mapping config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

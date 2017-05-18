@@ -1,0 +1,201 @@
+.home-page-mission{
+  @include background-image-with-color($gray-background, "../images/mission/mission-background.png");
+  padding: 40px 0 120px;
+  border-bottom: 1px solid $border-color;
+  @media (max-width: $screen-xs-max){
+    padding: 30px 0 80px;
+  }
+  .section-title{
+    @include section-title-with-margin-bottom();
+  }
+  .section-desc{
+    @include section-description-with-margin-bottom();
+  }
+}
+.mission-testomony{
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+    .mission-testomony-video-wrapper{
+      padding: 0 30px;
+    }
+  } 
+  @media (max-width: $screen-xs-max){
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding-#{$default}: 15px;
+    padding-#{$opposite}: 15px;
+  }
+} 
+.mission-testomony-video{ 
+  display: block;
+  position:relative;
+  overflow: hidden;
+  img{
+    min-width: 100%;
+    min-height: 100%;
+    @media (min-width: $screen-md-min){
+      max-width: none;
+      @include c-align(relative);
+    }
+  }
+  p,a{
+    color: #fff;
+    font-weight: 600;
+    @include c-align();
+    z-index: 5;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 40px;
+    margin-bottom: 0;
+    border: 2px solid;
+    border-radius: 50px;
+    padding: 0px 15px 0 7px;
+    i{
+      font-size: 30px;
+      vertical-align: text-bottom;
+      margin-right: 7px;
+      line-height: 21px;
+    }
+  }
+  &:before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba($dark-brown, 0.6);
+  }
+  &:after{
+    @include hover-after-decleration();
+  }
+  &:hover:after{
+    @include hover-after-effect();
+  }
+}
+
+@media (max-width: $screen-md-max){
+  _::-webkit-full-page-media, _:future, :root .mission-testomony-video img{
+    min-height: 0;
+  }
+  _::-webkit-:not(:root:root), .mission-testomony-video img{
+    min-height: 0;
+  }
+}
+
+.modal-content{
+  background-color: #f3f1ed;
+}
+.video-popup-container{
+  .close{
+    position: absolute;
+    right: -12px;
+    top: -15px;
+    border-radius: 50%;
+    background-color: $light-green;
+    font-size: 30px;
+    width: 30px;
+    opacity: 1;
+    color: #fff;
+    text-shadow: none;
+    &:hover, &:focus{
+      opacity: 0.9;
+    }
+    @media (max-width: $screen-xs-max){
+      right: -9px;
+      top: -9px;
+      font-size: 25px;
+      width: 24px;
+      line-height: 23px;
+      padding-bottom: 1px;
+    }
+  }
+}
+.mission-testomony-quote-wrapper{
+  background-color: #fff;
+  margin-#{$default}: 15px;
+  padding: 50px 40px;
+  border: 1px solid rgba($dark-brown, 0.2);
+  position: relative;
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    margin-top: 15px;
+    margin-#{$opposite}: 15px;
+    margin-#{$default}: 0;
+    padding: 30px 35px;
+  } 
+  @media (max-width: $screen-xs-max){
+    margin-top: 15px;
+    margin-#{$opposite}: 0;
+    margin-#{$default}: -15px;
+    padding: 25px;
+  }
+  &:before{
+    content:"";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    margin: auto;
+    border: 1px solid rgba($dark-brown, 0.2);
+  }
+
+
+}
+.mission-testomony-quote{
+  z-index: 2;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $light-black;
+  margin-bottom: 55px;
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    margin-bottom: 25px;
+  } 
+  @media (max-width: $screen-xs-max){
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+}
+.mission-testomony-quote-signature{
+  z-index: 2;
+  position: relative;
+
+  .quote-signature-section {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 65%;
+  }
+}
+.quote-signature-image{
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin-#{$opposite}: 20px;
+  border-radius: 50%;
+  position: relative;
+}
+.quote-signature-name{
+  display: block;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 26px;
+  color: $link-color;
+}
+.quote-signature-org{
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 26px;
+  color: $light-black;
+  @media (max-width: $screen-xs-max){
+    font-size: 14px;
+  }
+}

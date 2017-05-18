@@ -1,0 +1,22 @@
+uuid: 37ecac81-37fa-46f5-b60f-f2feb952a159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.roadmap_resource
+  module:
+    - text
+id: node.roadmap_resource.body
+field_name: body
+entity_type: node
+bundle: roadmap_resource
+label: Vision
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: 6c826dfd-69de-46b7-b508-35e94a63cfa4
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_resource_download_link
+field_name: field_resource_download_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: bf6ff939-a1bb-498d-9395-b1161635a88a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.more_case_studies
+  module:
+    - system
+    - views
+  theme:
+    - ceres
+id: views_block__more_case_studies_case_studies
+theme: ceres
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:more_case_studies-case_studies'
+settings:
+  id: 'views_block:more_case_studies-case_studies'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /leading-practices-case-studies
+    negate: false
+    context_mapping: {  }

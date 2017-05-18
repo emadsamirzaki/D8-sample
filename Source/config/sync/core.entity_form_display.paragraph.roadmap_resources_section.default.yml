@@ -1,0 +1,29 @@
+uuid: 9274b7cc-7ac8-49ad-bdfb-6505fc447fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.roadmap_resources_section.field_roadmap_resources_refs
+    - paragraphs.paragraphs_type.roadmap_resources_section
+  module:
+    - field_states_ui
+id: paragraph.roadmap_resources_section.default
+targetEntityType: paragraph
+bundle: roadmap_resources_section
+mode: default
+content:
+  field_roadmap_resources_refs:
+    weight: 0
+    settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

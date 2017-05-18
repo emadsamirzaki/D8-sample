@@ -1,0 +1,25 @@
+uuid: 62ad5209-5117-4ea1-8b21-8e470b2fc393
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a30478e5-575e-4102-8d73-e7890a50ff71'
+  module:
+    - block_content
+  theme:
+    - ceres_annual_report
+id: ceres_annual_report_copyrights
+theme: ceres_annual_report
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:a30478e5-575e-4102-8d73-e7890a50ff71'
+settings:
+  id: 'block_content:a30478e5-575e-4102-8d73-e7890a50ff71'
+  label: Copyrights
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,39 @@
+uuid: 9a0c7f4f-c4ce-4e66-ae33-d9a3956071eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.resources_section_without_type_display
+    - field.field.node.video.field_banner_image
+    - field.field.node.video.field_description
+    - field.field.node.video.field_meta_tags
+    - field.field.node.video.field_resource_campaigns
+    - field.field.node.video.field_resource_issues
+    - field.field.node.video.field_resource_networks
+    - field.field.node.video.field_resource_programs
+    - field.field.node.video.field_video_youtube_id
+    - node.type.video
+  module:
+    - user
+id: node.video.resources_section_without_type_display
+targetEntityType: node
+bundle: video
+mode: resources_section_without_type_display
+content:
+  field_video_youtube_id:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_meta_tags: true
+  field_resource_campaigns: true
+  field_resource_issues: true
+  field_resource_networks: true
+  field_resource_programs: true
+  links: true

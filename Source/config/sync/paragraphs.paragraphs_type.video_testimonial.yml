@@ -1,0 +1,6 @@
+uuid: df348303-3d4f-4773-b315-22b6955e085f
+langcode: en
+status: true
+dependencies: {  }
+id: video_testimonial
+label: 'Video Testimonial'

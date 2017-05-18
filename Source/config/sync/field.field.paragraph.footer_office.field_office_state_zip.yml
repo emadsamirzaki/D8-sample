@@ -1,0 +1,19 @@
+uuid: 3c0d8ee6-fcc1-45d6-8ef1-a999a1ef406e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_office_state_zip
+    - paragraphs.paragraphs_type.footer_office
+id: paragraph.footer_office.field_office_state_zip
+field_name: field_office_state_zip
+entity_type: paragraph
+bundle: footer_office
+label: 'State & Zip'
+description: 'The office State and zip'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

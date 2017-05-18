@@ -1,0 +1,51 @@
+uuid: 7ccea5bb-5b60-4778-939e-db8a41d17838
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.resources_section_display
+    - field.field.node.webinar.field_banner_image
+    - field.field.node.webinar.field_description
+    - field.field.node.webinar.field_meta_tags
+    - field.field.node.webinar.field_resource_campaigns
+    - field.field.node.webinar.field_resource_download_body
+    - field.field.node.webinar.field_resource_download_file
+    - field.field.node.webinar.field_resource_download_link
+    - field.field.node.webinar.field_resource_download_link_txt
+    - field.field.node.webinar.field_resource_image
+    - field.field.node.webinar.field_resource_issues
+    - field.field.node.webinar.field_resource_networks
+    - field.field.node.webinar.field_resource_programs
+    - field.field.node.webinar.field_webinar_date
+    - node.type.webinar
+  module:
+    - image
+    - user
+id: node.webinar.resources_section_display
+targetEntityType: node
+bundle: webinar
+mode: resources_section_display
+content:
+  field_resource_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_meta_tags: true
+  field_resource_campaigns: true
+  field_resource_download_body: true
+  field_resource_download_file: true
+  field_resource_download_link: true
+  field_resource_download_link_txt: true
+  field_resource_issues: true
+  field_resource_networks: true
+  field_resource_programs: true
+  field_webinar_date: true
+  links: true

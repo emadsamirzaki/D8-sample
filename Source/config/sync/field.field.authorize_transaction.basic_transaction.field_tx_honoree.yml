@@ -1,0 +1,19 @@
+uuid: 54bad39f-a4af-4b84-b4ff-9ea33411076c
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_honoree
+id: authorize_transaction.basic_transaction.field_tx_honoree
+field_name: field_tx_honoree
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: Honoree
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+uuid: 0093d80c-23bf-42e6-89d5-9b6fd4eb39e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_podcast_file_upload
+    - node.type.podcast
+  module:
+    - file
+id: node.podcast.field_podcast_file_upload
+field_name: field_podcast_file_upload
+entity_type: node
+bundle: podcast
+label: 'File Upload'
+description: 'It allows most of audio file extensions'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: podcasts
+  file_extensions: 'mp3 wav 3gp aac flac m4a m4b ogg oga mogg wma webm'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

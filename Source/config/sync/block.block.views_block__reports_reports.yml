@@ -1,0 +1,36 @@
+uuid: 17f87668-f7ee-4694-9842-0a4bea580fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.reports
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - ceres
+id: views_block__reports_reports
+theme: ceres
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:reports-reports'
+settings:
+  id: 'views_block:reports-reports'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /resources/reports
+    negate: false
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

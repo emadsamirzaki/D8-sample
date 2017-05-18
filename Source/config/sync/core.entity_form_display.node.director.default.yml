@@ -1,0 +1,151 @@
+uuid: c8ead170-d0dc-4f18-a0d6-e4d50e3c563c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.director.field_banner_image
+    - field.field.node.director.field_director_bio
+    - field.field.node.director.field_director_group
+    - field.field.node.director.field_director_organization
+    - field.field.node.director.field_director_picture
+    - field.field.node.director.field_director_position
+    - field.field.node.director.field_director_title
+    - field.field.node.director.field_meta_tags
+    - image.style.staff
+    - image.style.thumbnail
+    - node.type.director
+  module:
+    - field_states_ui
+    - image
+    - image_widget_crop
+    - metatag
+    - paragraphs
+    - path
+id: node.director.default
+targetEntityType: node
+bundle: director
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_director_bio:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+  field_director_group:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_director_organization:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_director_picture:
+    weight: 12
+    settings:
+      show_default_crop: true
+      warn_multiple_usages: true
+      preview_image_style: staff
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - staff_cropper
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: image_widget_crop
+    region: content
+  field_director_position:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_director_title:
+    weight: 0
+    settings:
+      size: 10
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: string_textfield
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  path:
+    type: path
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

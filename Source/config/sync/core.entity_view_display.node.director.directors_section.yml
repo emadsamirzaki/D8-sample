@@ -1,0 +1,63 @@
+uuid: d8047f6f-5a57-415d-8983-e3fcc4e7ca21
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.directors_section
+    - field.field.node.director.field_banner_image
+    - field.field.node.director.field_director_bio
+    - field.field.node.director.field_director_group
+    - field.field.node.director.field_director_organization
+    - field.field.node.director.field_director_picture
+    - field.field.node.director.field_director_position
+    - field.field.node.director.field_director_title
+    - field.field.node.director.field_meta_tags
+    - image.style.staff
+    - node.type.director
+  module:
+    - image
+    - options
+    - user
+id: node.director.directors_section
+targetEntityType: node
+bundle: director
+mode: directors_section
+content:
+  field_director_group:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_director_organization:
+    type: string
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_director_picture:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: staff
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_director_position:
+    type: string
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner_image: true
+  field_director_bio: true
+  field_director_title: true
+  field_meta_tags: true
+  links: true

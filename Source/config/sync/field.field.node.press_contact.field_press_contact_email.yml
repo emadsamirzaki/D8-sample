@@ -1,0 +1,19 @@
+uuid: 1c328076-d5bc-4fac-9cf3-7490356dbf82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_contact_email
+    - node.type.press_contact
+id: node.press_contact.field_press_contact_email
+field_name: field_press_contact_email
+entity_type: node
+bundle: press_contact
+label: Email
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

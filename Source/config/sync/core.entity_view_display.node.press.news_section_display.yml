@@ -1,0 +1,57 @@
+uuid: 88f03a01-889f-475e-9fc3-8dca3b974987
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_section_display
+    - field.field.node.press.field_banner_image
+    - field.field.node.press.field_blog_post_author
+    - field.field.node.press.field_campaigns
+    - field.field.node.press.field_content_image
+    - field.field.node.press.field_description
+    - field.field.node.press.field_issues
+    - field.field.node.press.field_meta_tags
+    - field.field.node.press.field_networks
+    - field.field.node.press.field_press_contact
+    - field.field.node.press.field_press_link
+    - field.field.node.press.field_press_location
+    - field.field.node.press.field_press_subtitle
+    - field.field.node.press.field_referenced_campaign
+    - field.field.node.press.field_referenced_issue
+    - field.field.node.press.field_reports
+    - field.field.node.press.field_tags
+    - node.type.press
+  module:
+    - image
+    - user
+id: node.press.news_section_display
+targetEntityType: node
+bundle: press
+mode: news_section_display
+content:
+  field_content_image:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner_image: true
+  field_blog_post_author: true
+  field_campaigns: true
+  field_description: true
+  field_issues: true
+  field_meta_tags: true
+  field_networks: true
+  field_press_contact: true
+  field_press_link: true
+  field_press_location: true
+  field_press_subtitle: true
+  field_referenced_campaign: true
+  field_referenced_issue: true
+  field_reports: true
+  field_tags: true
+  links: true

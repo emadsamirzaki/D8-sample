@@ -1,0 +1,44 @@
+<section class="home-page-mission roadmap-mission row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <div class="mission-testomony flex-display">
+            <div class="col-md-7 mission-testomony-video-wrapper">
+              <div class="row full-height">
+                <a href="#" class="mission-testomony-video full-height">
+                  {% if paragraph.field_testimonial_youtube_id %}
+                    <img src="http://img.youtube.com/vi/{{ paragraph.field_testimonial_youtube_id.value }}/mqdefault.jpg" alt="image1" class="img-responsive">
+                    <p class="text-uppercase"><i class="fa fa-play-circle" aria-hidden="true"></i> {{ paragraph.field_testimonial_video_caption.value }}</p>
+                  {% elseif paragraph.field_testimonial_video_image %}
+                    <img src="{{ file_url(paragraph.field_testimonial_video_image.entity.uri.value) }}" alt="{{ paragraph.field_testimonial_video_image.value.0.alt }}" class="img-responsive">
+                  {% else %}
+                    <img src="/{{ directory }}/assets/images/mission/video.jpg" alt="video" class="img-responsive">
+                  {% endif %}
+                </a>
+              </div>
+            </div>
+            <div class="col-md-5 no-pad-right flex-display">
+              <div class="mission-testomony-quote-wrapper">
+                <p class="mission-testomony-quote">{{ paragraph.field_testimonial_body.value }}</p>
+                <div class="mission-testomony-quote-signature flex-display">
+                  <span class="quote-signature-section">
+                    {% if paragraph.field_testimonial_author_image %}
+                      <img src="{{ file_url(paragraph.field_testimonial_author_image.entity.uri.value) }}" alt="{{ paragraph.field_testimonial_author_image.value.0.alt }}" class="img-responsive">
+                    {% else %}
+                      <img src="/{{ directory }}/assets/images/mission/jackie.png" alt="jackie" class="img-responsive">
+                    {% endif %}
+                  </span>
+                  <span class="quote-signature-section">
+                    <span class="quote-signature-name">{{ paragraph.field_testimonial_author_name.value }}</span>
+                    <span class="quote-signature-org">{{ paragraph.field_testimonial_author_org.value }}</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+uuid: 08f3e13e-1cb8-41d0-89d6-c30fce0cc8e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_cavv_result_code
+id: authorize_transaction.basic_transaction.field_tx_cavv_result_code
+field_name: field_tx_cavv_result_code
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'CAVV Result Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

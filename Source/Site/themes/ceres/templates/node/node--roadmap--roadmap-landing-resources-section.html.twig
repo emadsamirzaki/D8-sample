@@ -1,0 +1,23 @@
+{% set imageURI = content.field_content_image['#items'].entity.uri.value %}
+{% set keyExpectationsLen =  node.field_roadmap_key_expectations | length %}
+
+<a class="network-wrapper roadmap-single text-center"  href="{{ url }}">
+  {% if imageURI %}
+    {{ content.field_content_image }}
+  {% else %}
+    <img src="/{{ directory }}/assets/images/roadmap/list.jpg" alt="Roadmap" class="img-responsive">
+  {% endif %}
+  <div class="roadmap-single-data">
+    <h3 class="network-title">{{ node.getTitle() }}</h3>
+    <div class="hover-data">
+      {% if keyExpectationsLen > 0 %}
+        <h3>Key Expectations</h3>
+        {% for i in 0..keyExpectationsLen-1 %}
+          {% set label = node.field_roadmap_key_expectations[i].entity.field_key_expectation_label.value %}
+          {% set title = node.field_roadmap_key_expectations[i].entity.field_key_expectation_title.value %}
+          <p>{{label}} - {{ title }}</p>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</a>

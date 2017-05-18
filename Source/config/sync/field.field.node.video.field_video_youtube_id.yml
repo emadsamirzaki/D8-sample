@@ -1,0 +1,19 @@
+uuid: 3e7f7819-f529-41e8-8510-fe7750896d48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_youtube_id
+    - node.type.video
+id: node.video.field_video_youtube_id
+field_name: field_video_youtube_id
+entity_type: node
+bundle: video
+label: 'YouTube ID'
+description: 'Provide YouTube id which will be used through YouTube API'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,6 @@
+uuid: 45f859a0-e94b-459d-bab1-0f412d67c557
+langcode: en
+status: true
+dependencies: {  }
+id: text_paragraph
+label: 'Text Paragraph'

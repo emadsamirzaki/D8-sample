@@ -1,0 +1,10 @@
+.network-wrapper h3{
+  min-height: 35%;
+}
+
+.image-title-badge-wrapper .network-title{
+  font-size: 18px;
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    font-size: 16px;
+  } 
+}

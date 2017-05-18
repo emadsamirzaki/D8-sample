@@ -1,0 +1,6 @@
+uuid: a4a7bcc3-4435-40c0-96f9-3dc974d34602
+langcode: en
+status: true
+dependencies: {  }
+id: quote_testimonial
+label: 'Quote Testimonial'

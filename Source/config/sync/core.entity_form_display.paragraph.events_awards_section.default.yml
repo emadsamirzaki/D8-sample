@@ -1,0 +1,47 @@
+uuid: 3abff9cf-255e-4a4a-b0ae-aa69b6f410b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.events_awards_section.field_awards_image
+    - field.field.paragraph.events_awards_section.field_awards_url
+    - field.field.paragraph.events_awards_section.field_events
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.events_awards_section
+  module:
+    - image
+    - link
+id: paragraph.events_awards_section.default
+targetEntityType: paragraph
+bundle: events_awards_section
+mode: default
+content:
+  field_awards_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_awards_url:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_events:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

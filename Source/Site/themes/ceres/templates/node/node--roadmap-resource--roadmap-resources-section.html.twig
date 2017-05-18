@@ -1,0 +1,7 @@
+{#{{ dump(node.field_roadmap_resource_category.0.entity.title.value) }}#}
+<div class="roadmap-resource-item borderd-item-before rltv text-center">
+  {% if node.field_roadmap_resource_category.value %}
+    <h4>{{ node.field_roadmap_resource_category.0.entity.title.value }}</h4>
+  {% endif %}
+  <h3><a href="{{ url }}">{{ node.getTitle() }}</a></h3>
+</div>

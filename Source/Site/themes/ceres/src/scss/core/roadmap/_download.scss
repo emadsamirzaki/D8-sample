@@ -1,0 +1,7 @@
+.download-section {
+    padding: 35px 6%;
+    border-bottom: 1px solid $border-color;
+    &:nth-child(even){
+        border-#{$default}: 1px solid $border-color;
+    }
+}

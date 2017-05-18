@@ -1,0 +1,245 @@
+.right-header-links{
+  @media (min-width: $screen-md-min){
+    float: $opposite;
+
+  } 
+}
+.region-header-links{
+  @media (min-width: $screen-sm-min){
+    display: -webkit-flex;
+    display: flex;
+  }
+}
+
+.call-to-action-menu {
+  > li {
+    > a {
+      color: #45433d;
+      background-color: $light-gray;
+      padding: 11px 30px 10.5px;
+      font-size: 15px;
+      font-weight: 600;
+      @media (min-width: $screen-lg-min){
+        @-moz-document url-prefix() { 
+          padding: 11px 30px 10px;
+        }
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+        line-height: 25px;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+        padding: 8px 20px 9px;
+      }
+      &:hover{
+        background-color: #d8d8d8;
+      }
+    }
+    &:last-child > a{
+      color: #fff;
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      background-color: $light-green;
+      @media (max-width: $screen-xs-max){
+        font-size: 15px;
+      }
+      &:hover{
+        background-color: #6c9926;
+      }
+    }
+    @media (max-width: $screen-xs-max){
+      float: none;
+      display: inline-block;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      float: $default;
+    }
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    margin-top: 15px;
+    margin-#{$default}: 30px;
+  }
+  @media (max-width: $screen-xs-max){
+    width: 100%;
+  }
+}
+@-moz-document url-prefix() { 
+  .call-to-action-menu > li:last-child > a{
+    font-size: 18.3px;
+    @media (max-width: $screen-xs-max){
+      font-size: 15px;
+    }
+  }
+}
+.social-wrapper{
+  > li{
+    > a{
+      color: $dark-brown;
+      padding: 1px 9px 0;
+      font-size: 20px;
+      -webkit-backface-visibility: hidden;
+      @media (max-width: $screen-xs-max){
+        padding: 1px 15px 0;
+      }
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+        padding: 4px 10px;
+        font-size: 24px;
+      }
+      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+        padding: 1px 9px 0;
+        font-size: 18px;
+      }
+      &:hover, &:focus{
+        background-color: transparent;
+        opacity: 0.7;
+      }
+    }
+    @media (max-width: $screen-xs-max){
+      float: none;
+      display: inline-block;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      float: $default;
+    }
+  }
+  @media (max-width: $screen-xs-max){
+    width: 100%;
+    margin: 15px 0;
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    margin-top: 22px;
+    margin-#{$default}: 10px;
+    order: 3;
+  } 
+}
+.navbar-default .search-link{
+  margin-#{$opposite}: 12px;
+  a{
+    color: $dark-brown;
+    padding: 6px 10px;
+    display: block;
+    font-size: 22px;
+    margin-top: 26px;
+    -webkit-backface-visibility: hidden;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  @media (max-width: $screen-xs-max){
+    width: 100%;
+    margin: 0;
+    a{
+      display: none;
+    }
+    .search-form-wrapper{
+      height: auto !important;
+      display: block !important;
+    }
+  } 
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+    margin-#{$default}: 15px;
+    margin-#{$opposite}: 0;
+
+    a{
+      margin-top: 16px;
+      font-size: 26px;
+    }
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+    margin-#{$opposite}: 8px;
+    a{
+      margin-top: 18px;
+    }
+  }
+  .search-form-wrapper.collapsing{
+    position: inherit;
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+  }
+}
+
+.block-search-form-block{
+  position: relative;
+  form{
+    @media (max-width: $screen-xs-max){
+      position: relative;
+    }
+
+    @media (min-width: $screen-sm-min){
+      position: absolute;
+      top: 70px;
+      width: 300px;
+      z-index: 5;
+      /* this CS forms the triangles */
+      &:after,&:before {
+        content: '';
+        display: block;
+        position: absolute;
+        #{$opposite}: 13px;
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+          #{$opposite}: auto;
+          #{$default}: 13px;
+        }
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+      /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+      &:after {
+        top: -12px;
+        border-color: transparent transparent #fff transparent;
+        border-width: 7px;
+      }
+
+      /* this border color controlls the outside, thin border */
+      &:before {
+        top: -15px;
+        border-color: transparent transparent #ccc transparent;
+        border-width: 8px;
+        #{$opposite}: 12px;
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+          #{$opposite}: auto;
+          #{$default}: 12px;
+        }
+        @include transition-animation(200);
+      }
+      &.focused{
+        &:before {
+          border-color: transparent transparent #66afe9 transparent;
+        }
+      }
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      #{$default}: 15px;
+      input[type="search"]{
+        padding-#{$opposite}: 37px; 
+      }
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+      #{$opposite}: 8px;
+      top: 64px;
+    }
+    @media (min-width: $screen-lg-min){
+      #{$opposite}: 12px;
+    }
+    .input-group-btn{
+      button{
+        border: 0;
+        background-color: transparent;
+        -webkit-appearance: none;
+        @include fa-icon();
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 20px;
+        padding: 7px 12px;
+        &:before{
+          content: $fa-var-search;
+        }
+      }
+      @media (min-width: $screen-md-min){
+        display: none;
+      }
+    }
+  }
+}

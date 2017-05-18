@@ -1,0 +1,10 @@
+uuid: ec39e120-8f3a-4e5f-8a8f-d4e4123be43e
+langcode: en
+status: true
+dependencies: {  }
+id: node__program
+label: 'Content: Program'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  twitter_cards_description: '[node:summary]'

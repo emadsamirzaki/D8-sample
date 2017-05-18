@@ -1,0 +1,19 @@
+uuid: 0f592dee-0e6b-42ac-9c29-464282c6165c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_office_title
+    - paragraphs.paragraphs_type.footer_office
+id: paragraph.footer_office.field_office_title
+field_name: field_office_title
+entity_type: paragraph
+bundle: footer_office
+label: Title
+description: 'Title of the office'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

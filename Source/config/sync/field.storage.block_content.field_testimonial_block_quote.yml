@@ -1,0 +1,19 @@
+uuid: 56406fd1-97c1-4129-902c-5bccda1778d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_testimonial_block_quote
+field_name: field_testimonial_block_quote
+entity_type: block_content
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

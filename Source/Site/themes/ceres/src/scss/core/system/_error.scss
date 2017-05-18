@@ -1,0 +1,21 @@
+.status-code{
+  width: 200px;
+  display: inline-block;
+  position: relative; 
+  border-radius: 50%;
+  color: $light-green;
+  border: 3px solid;
+  background: #fff;
+  font-size: 60px;
+  i{
+    font-size: 100px;
+  }
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  span{
+    @include c-align();
+  }
+}

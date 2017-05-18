@@ -1,0 +1,54 @@
+uuid: 9f647a95-9350-4523-8486-5b7a30351359
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.two_column_section.field_info_title
+    - field.field.paragraph.two_column_section.field_two_column_id
+    - field.field.paragraph.two_column_section.field_two_column_left
+    - field.field.paragraph.two_column_section.field_two_column_right
+    - paragraphs.paragraphs_type.two_column_section
+  module:
+    - entity_reference_revisions
+id: paragraph.two_column_section.default
+targetEntityType: paragraph
+bundle: two_column_section
+mode: default
+content:
+  field_info_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_two_column_id:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_two_column_left:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_two_column_right:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  uid: true

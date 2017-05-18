@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Default theme implementation for an item list.
+ *
+ * Available variables:
+ * - items: A list of items. Each item contains:
+ *   - attributes: HTML attributes to be applied to each list item.
+ *   - value: The content of the list element.
+ * - title: The title of the list.
+ * - list_type: The tag for list element ("ul" or "ol").
+ * - wrapper_attributes: HTML attributes to be applied to the list wrapper.
+ * - attributes: HTML attributes to be applied to the list.
+ * - empty: A message to display when there are no items. Allowed value is a
+ *   string or render array.
+ * - context: A list of contextual data associated with the list. May contain:
+ *   - list_style: The custom list style.
+ *
+ * @see template_preprocess_item_list()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if context.list_style %}
+  {%- set attributes = attributes.addClass('item-list__' ~ context.list_style) %}
+{% endif %}
+<section class="home-page-experts no-background no-border row ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        {% if items or empty %}
+          {% if title is not empty %}
+            <h3>{{ title }}</h3>
+          {% endif %}
+          {% if items %}
+            <h2 class="section-title text-center">Search Results</h2>
+            <ul class="list-unstyled search-result-list">
+              {% for item in items %}
+                <li{{ item.attributes }} class="mar-bottom-25">{{ item.value }}</li>
+                {% endfor %}
+            </ul>
+          {% else %}
+            <div class="text-center">
+              <h3>No results were found.</h3>
+              <ul class="text-left">
+                <li>Make sure that all words are spelled correctly.</li>
+                <li>Try different keywords.</li>
+                <li>Try more general keywords.</li>
+              </ul>
+            </div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+

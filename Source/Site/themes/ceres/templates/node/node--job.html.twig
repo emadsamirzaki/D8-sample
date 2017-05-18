@@ -1,0 +1,69 @@
+<div class="container mar-bottom-15">
+  <div class="row">
+    <div class="col-lg-10 col-lg-push-1">
+      <div class="row">
+        <div class="tag-section large text-center">
+          <ul>
+            <li><span>{{ node.field_job_post_date.value | date("F j, Y") }}</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if node.body.value %}
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="universal-section-desc text-center">{{ content.body }}</div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_description.entity.field_text_paragraph_body.value %}
+  <section class="body-issue-wrapper row">
+    <div class="container">
+      <div class="row">
+        {{ content.field_description }}
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_job_apply_info.value or
+      node.field_job_apply_email.value or
+      node.field_job_apply_tip.value %}
+<div class="row">
+  <section class="home-page-signup">
+    {% if node.field_job_apply_banner.value %}
+      {{ content.field_job_apply_banner }}
+    {% else %}
+      <img src="/{{ directory }}/assets/images/job/apply-banner.jpg" alt="job-apply" class="img-responsive">
+    {% endif %}
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">How to Apply</h2>
+            {% if node.field_job_apply_info.value %}
+              <p class="section-desc text-center">{{ node.field_job_apply_info.value }}</p>
+            {% endif %}
+            {% if node.field_job_apply_email.value %}
+              <div class="read-more-wrapper text-center">
+                <a href="mailto:{{ content.field_job_apply_email.0 }}" class="read-more-btn sign-slide-action subscribr-btn text-uppercase" type="submit" name="op" value="Subscribe">Apply Now</a>
+              </div>
+            {% endif %}
+            <p class="text-center section-desc small">{{ node.field_job_apply_tip.value }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endif %}
+
+  {% if node.field_experts.value %}
+    {{ content.field_experts }}
+  {% endif %}

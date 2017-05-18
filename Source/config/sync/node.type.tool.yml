@@ -1,0 +1,17 @@
+uuid: 7e8e3e54-28fe-4437-a7bc-7817f6d933b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Tool
+type: tool
+description: 'Create new Tools.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

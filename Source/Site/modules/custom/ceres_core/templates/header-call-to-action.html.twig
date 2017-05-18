@@ -1,0 +1,10 @@
+{# Available variables:
+  - items: Array of items, each has url and title.
+#}
+<ul class="menu nav pull-left call-to-action-menu text-center">
+  {% for item in items %}
+  <li>
+    <a href="{{ item.url }}">{{ item.title }}</a>
+  </li>
+  {% endfor %}
+</ul>

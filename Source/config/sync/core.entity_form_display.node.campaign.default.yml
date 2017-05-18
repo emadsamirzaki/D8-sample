@@ -1,0 +1,230 @@
+uuid: f7170fc4-a070-4633-8aad-848b3c03c289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign.body
+    - field.field.node.campaign.field_banner_image
+    - field.field.node.campaign.field_campaign_companies_action
+    - field.field.node.campaign.field_campaign_companies_link
+    - field.field.node.campaign.field_campaign_description
+    - field.field.node.campaign.field_campaign_donation_source
+    - field.field.node.campaign.field_campaign_join_section
+    - field.field.node.campaign.field_campaign_ongoing_campaign
+    - field.field.node.campaign.field_campaign_start_end_date
+    - field.field.node.campaign.field_content_image
+    - field.field.node.campaign.field_experts
+    - field.field.node.campaign.field_meta_tags
+    - field.field.node.campaign.field_network_sf_members
+    - image.style.thumbnail
+    - node.type.campaign
+  module:
+    - datetime_range
+    - field_group
+    - field_states_ui
+    - image
+    - link
+    - metatag
+    - paragraphs
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_companies_take_action:
+      children:
+        - field_campaign_companies_action
+        - field_campaign_companies_link
+      parent_name: ''
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Companies Take Action'
+id: node.campaign.default
+targetEntityType: node
+bundle: campaign
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_campaign_companies_action:
+    type: entity_reference_paragraphs
+    weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+  field_campaign_companies_link:
+    weight: 14
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_campaign_description:
+    type: entity_reference_paragraphs
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+  field_campaign_donation_source:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_campaign_join_section:
+    type: entity_reference_paragraphs
+    weight: 11
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+  field_campaign_ongoing_campaign:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_campaign_start_end_date:
+    weight: 16
+    settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            7222ddba-9954-4691-957c-ad31b44b88f6:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          7222ddba-9954-4691-957c-ad31b44b88f6:
+            uuid: 7222ddba-9954-4691-957c-ad31b44b88f6
+            id: visible
+            data:
+              target: field_campaign_ongoing_campaign
+              comparison: unchecked
+              value: ''
+              submit: 'Add Cancel'
+    type: daterange_default
+    region: content
+  field_campaign_text_graphics:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_content_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_experts:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_meta_tags:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_network_sf_members:
+    weight: 10
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

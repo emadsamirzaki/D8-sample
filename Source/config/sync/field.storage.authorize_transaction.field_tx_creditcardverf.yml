@@ -1,0 +1,21 @@
+uuid: 922734fd-53a2-4d34-b941-7d471181a366
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_creditcardverf
+field_name: field_tx_creditcardverf
+entity_type: authorize_transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

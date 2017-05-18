@@ -1,0 +1,100 @@
+.footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @media (max-width: $screen-sm-max){
+        padding-#{$default}: 0;
+        padding-#{$opposite}: 0;
+    }
+    .logo{
+        margin-#{$default}: 15px;
+    }
+}
+#block-ceres-footer{
+    clear: $default;
+    float: $default;
+    padding-#{$default}: 15px;
+    a{
+        padding: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 20px;
+        background-color: transparent !important;
+    }
+}
+.footer-charity-logo{
+    margin-#{$opposite}: 15px;
+    @media (max-width: $screen-xs-max){
+        margin-top: 7px;
+        max-width: 115px;
+    }
+}
+.footer-office{
+    margin-top: 20px;
+    padding-#{$default}: 15px;
+    padding-#{$opposite}: 25px;
+    @media (max-width: $screen-xs-max){
+        margin-top: 15px;
+    }
+    p{
+        font-weight: 600;
+        color: $dark-green;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+}
+.footer-mail-phone-wrapper{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    @media (max-width: $screen-xs-max){
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+.footer-phone-wrapper a{
+    margin-#{$opposite}: 15px; 
+    color: $dark-green;
+    font-size: 14px;
+    line-height: 24px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.footer-mail-wrapper a{
+    color: $dark-green;
+    font-size: 14px;
+    line-height: 24px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.footer-phone-wrapper  + .footer-mail-wrapper{
+    position: relative;
+    &:before{
+        content:"";
+        border-#{$default}: 2px solid #bcbcbc;
+        @include v-align();
+        height: 70%;
+    }
+    a{
+        margin-#{$default}: 15px; 
+    }
+}
+
+.copyright-wrapper {
+    @media (max-width: $screen-xxs-max){
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+    p{
+        font-weight: 600;
+        margin-#{$opposite}: 15px; 
+        margin-bottom: 0;
+        color: $dark-green;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

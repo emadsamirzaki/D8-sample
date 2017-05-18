@@ -1,0 +1,6 @@
+uuid: bf834b92-c210-4d4f-8845-ca6f63838e1c
+langcode: en
+status: true
+dependencies: {  }
+id: basic_paragraph
+label: 'Banner with Text Paragraph'

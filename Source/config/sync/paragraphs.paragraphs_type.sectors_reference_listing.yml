@@ -1,0 +1,6 @@
+uuid: 53d367c4-aee2-4f04-9167-96b23e2768bc
+langcode: en
+status: true
+dependencies: {  }
+id: sectors_reference_listing
+label: 'Sectors Reference Listing'

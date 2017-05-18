@@ -1,0 +1,173 @@
+{# banner and breadcrumb #}
+<section class="banner-wrapper-section row">
+  <div class="banner-wrapper rltv">
+    <img class="img-responsive"  src="/{{ directory }}/assets/images/roadmap/landing-banner.jpg" alt="banner" />
+    <div class="container banner-text-container">
+      <h1 class="page-title">The Ceres Roadmap for Sustainability<span>A strategic vision and framework for sustainable corporations in the 21st century economy</span></h1>
+      <div class="breadcrumb-wrapper">
+        <ul class="list-inline">
+          <li><a href="#">Home</a></li>
+          <li><a href="#"> The Ceres Roadmap for Sustainability</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{# Intro #}
+<section class="intro-wrapper row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <p class="universal-section-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia neque non justo convallis gravida. Etiam vitae tellus volutpat, tristique libero a, porttitor erat. Vivamus convallis, tellus eget commodo malesuada, erat est suscipit neque, quis pellentesque orci leo ut dolor. Proin venenatis non eros ut fringilla. Sed congue elementum semper. Quisque rutrum varius diam.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{#List section#}
+<section class="home-page-network roadmap-list-wrapper row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <h2 class="section-title text-center">Lorem Ipsum Dolor Sit Amet</h2>
+          <div class="networks-list flex-display flex-wrap">
+            {% for i in 1..4 %}
+                <div class="col-xs-12 col-sm-6 flex-display">
+                  <a class="network-wrapper roadmap-single text-center"  href="#">
+                    <img src="/{{ directory }}/assets/images/roadmap/list.jpg" alt="Roadmap" class="img-responsive">
+                    <div class="roadmap-single-data">
+                      <h3 class="network-title">Stakeholder Engagement</h3>
+                      <div class="hover-data">
+                        <h3>Key Expectations</h3>
+                        <p>G1 - Board Oversight</p>
+                        <p>G2 - Management Accountability</p>
+                        <p>G3 - Executive & Employment Compensation</p>
+                        <p>G4 - Corporate Policies &Management Systems</p>
+                        <p>G5 - Public Policy</p>
+                      </div>
+                    </div>
+                  </a>
+
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Intro #}
+<section class="flex-display flex-wrap row">
+  <div class="download-section col-xs-12 col-sm-6">
+    <h2 class="universal-section-title text-center">How to Use the Ceres Roadmap</h2>
+    <p class="download-section-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit nunc, laoreet eget enim in, gravida venenatis nibh. Etiam nulla purus, rutrum a nibh vitae, molestie. bibendum justo. Morbi ullamcorper lacus tempor massa imperdiet, eget scelerisque massa tristique. Phasellus vitae sapien mi.</p>
+    <div class="read-more-wrapper text-center">
+      <a href="#" class="read-more-btn text-uppercase white-back">Learn More</a>
+    </div>
+  </div>
+  <div class="download-section col-xs-12 col-sm-6">
+    <h2 class="universal-section-title text-center">Download the Ceres Roadmap</h2>
+    <p class="download-section-desc text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elit nunc, laoreet eget enim in, gravida venenatis nibh. Etiam nulla purus, rutrum a nibh vitae, molestie. bibendum justo. Morbi ullamcorper lacus tempor massa imperdiet, eget scelerisque massa tristique. Phasellus vitae sapien mi.</p>
+    <div class="read-more-wrapper text-center">
+      <a href="#" class="read-more-btn text-uppercase white-back">Download PDF</a>
+    </div>
+  </div>
+</section>
+
+{#Mission section#}
+<section class="home-page-mission roadmap-mission row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <div class="mission-testomony flex-display">
+            <div class="col-md-7 mission-testomony-video-wrapper">
+              <div class="row full-height">
+                <a href="#" class="mission-testomony-video full-height">
+                  <img src="/{{ directory }}/assets/images/mission/video.jpg" alt="video" class="img-responsive">
+                  <p class="text-uppercase"><i class="fa fa-play-circle" aria-hidden="true"></i> Watch bill’s testimonial</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-5 no-pad-right flex-display">
+              <div class="mission-testomony-quote-wrapper">
+                <p class="mission-testomony-quote">“Nam suscipit massa condiment um leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam. Pellentesque habitant morbi tristique senectus.”</p>
+                <div class="mission-testomony-quote-signature flex-display">
+                  <a href="#" class="quote-signature-image"><img src="/{{ directory }}/assets/images/mission/jackie.png" alt="jackie" class="img-responsive"></a>
+                  <a href="#">
+                    <span class="quote-signature-name">Jackie Miller</span>
+                    <span class="quote-signature-org">Organization Name</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{#Resources section#}
+<section class="home-page-news roadmap-resources row">
+  <div class="container">
+    <div class="row">
+      <h2 class="section-title text-center">Resources</h2>
+      <div class="roadmap-resources-list flex-display flex-wrap">
+        {% for i in 1..3 %}
+            <div class="roadmap-resources-wrapper flex-display col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <div class="roadmap-resource-item borderd-item-before rltv text-center">
+                <a class="resource-container-link" href="##"></a>
+                <h4><a href="#">STAKEHOLDER ENGAGEMENT</a></h4>
+                <h3><a href="#">Lorem Ipsum Dolor Sit Amet, Consect Adipiscing Elit</a></h3>
+              </div>
+            </div>
+        {% endfor %}
+      </div>
+      <div class="read-more-wrapper text-center">
+        <a href="#" class="read-more-btn text-uppercase white-back">More Resources</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#Sign-up section#}
+<div class="row">
+  <section class="home-page-signup">
+    <img src="/{{ directory }}/assets/images/roadmap/sign-up.jpg" alt="sign-up" class="img-responsive">
+    <div class="container z-index-2 rltv">
+      <div class="row">
+        <div class="col-lg-10 col-lg-push-1">
+          <div class="row">
+            <h2 class="section-title text-center">Sign Up for the Corporate Leadership Newsletter</h2>
+            <p class="section-desc text-center">Nam suscipit massa condimentum leo aliquet lacinia. Maecenas id felis eget magna placerat dictum non sit amet quam.  Pellentesque habitant morbi tristique senectus.</p>
+            <div class="read-more-wrapper text-center">
+              <form class="email-signup sign-up-form form-inline" action="/" method="post" accept-charset="UTF-8">
+                <div class="form-fields-slide-container form-wrapper">
+                  <div>
+                    <div class="form-group">
+                      <input placeholder="Last Name" class="required form-control" type="text" name="last_name" value="" size="60" maxlength="150" required="required" aria-required="true">
+                    </div>
+                  </div>
+                  <div>
+                    <div class="form-group">
+                      <input placeholder="Email" class="required form-control" type="email" name="email" value="" size="60" maxlength="254" required="required" aria-required="true">
+                    </div>
+                  </div>
+                </div>
+                <button class="read-more-btn sign-slide-action subscribr-btn text-uppercase" type="submit" name="op" value="Subscribe">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

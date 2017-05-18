@@ -1,0 +1,23 @@
+uuid: cc8957e7-26e0-4af8-aa38-39071cde14a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_download_link
+    - node.type.tool
+  module:
+    - link
+id: node.tool.field_resource_download_link
+field_name: field_resource_download_link
+entity_type: node
+bundle: tool
+label: 'External Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

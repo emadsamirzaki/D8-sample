@@ -1,0 +1,6 @@
+uuid: 503eb6a9-fdbb-4468-8514-d2cf321f91d0
+langcode: en
+status: true
+dependencies: {  }
+id: basic_text_paragraph
+label: 'Lead Paragraph (Center Aligned)'

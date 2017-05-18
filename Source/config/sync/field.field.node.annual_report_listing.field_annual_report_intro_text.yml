@@ -1,0 +1,19 @@
+uuid: c1c64c95-bfa8-4a5b-82b9-24d44068057e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_annual_report_intro_text
+    - node.type.annual_report_listing
+id: node.annual_report_listing.field_annual_report_intro_text
+field_name: field_annual_report_intro_text
+entity_type: node
+bundle: annual_report_listing
+label: 'Intro text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,26 @@
+{
+  "name": "ark-boostrap",
+  "version": "1.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://dev-server/front-end/ark-bootstrap.git"
+  },
+  "author": "Rafik E. Younan <rafik.younan@arkdev.net>",
+  "license": "MIT",
+  "description": "A simple frontend project based on Gulp for task management, SCSS with Bootstrap and Fontawesome for base CSS framework and font.",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-directory-sync": "^1.2.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

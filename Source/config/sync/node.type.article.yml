@@ -1,0 +1,13 @@
+uuid: 027cc68b-ed22-4eb9-b91a-5575ef56bdf2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Article
+type: article
+description: 'Create new Article.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,19 @@
+uuid: 93093aeb-d992-4219-baed-9cf4e922228a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_more_description
+    - node.type.issue
+id: node.issue.field_issue_more_description
+field_name: field_issue_more_description
+entity_type: node
+bundle: issue
+label: 'More issues description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

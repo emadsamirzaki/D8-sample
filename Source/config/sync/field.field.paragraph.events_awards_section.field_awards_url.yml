@@ -1,0 +1,23 @@
+uuid: 1032ae59-4fe4-4a7c-bccc-e2488a3d8b61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_awards_url
+    - paragraphs.paragraphs_type.events_awards_section
+  module:
+    - link
+id: paragraph.events_awards_section.field_awards_url
+field_name: field_awards_url
+entity_type: paragraph
+bundle: events_awards_section
+label: 'Awards URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

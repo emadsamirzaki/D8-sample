@@ -1,0 +1,32 @@
+uuid: a25aab44-4b9b-418d-9b21-7d4d6bbaec0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.networks_section.field_networks
+    - field.field.paragraph.networks_section.field_networks_body
+    - paragraphs.paragraphs_type.networks_section
+id: paragraph.networks_section.default
+targetEntityType: paragraph
+bundle: networks_section
+mode: default
+content:
+  field_networks:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: networks_section_display
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_networks_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  created: true
+  uid: true

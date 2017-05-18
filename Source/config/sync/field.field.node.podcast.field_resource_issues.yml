@@ -1,0 +1,29 @@
+uuid: 67e4dfdb-483b-4e6b-bebf-d953a1154a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_issues
+    - node.type.issue
+    - node.type.podcast
+id: node.podcast.field_resource_issues
+field_name: field_resource_issues
+entity_type: node
+bundle: podcast
+label: Issues
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      issue: issue
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

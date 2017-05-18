@@ -1,0 +1,17 @@
+uuid: 0e74f695-74d4-4867-8ace-861da27a1844
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Campaign
+type: campaign
+description: 'Create new Campaign.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,658 @@
+<?php
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Url;
+use Drupal\node\Entity\Node;
+use Drupal\salesforce\Service\ConsumerService;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function ceres_preprocess_html(&$variables) {
+  $variables['ga_code'] = Drupal\Core\Site\Settings::get('ga_code');
+}
+
+/**
+ * Implements hook_preprocess_views_view()
+ */
+function ceres_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+
+  switch ($view->storage->id()) {
+    case 'news_referenced_section':
+    case 'resources_referenced_section':
+    case 'staff_posts':
+      $variables['rows_class'] = 'news-list more-list flex-display';
+      $rowsCount = count($view->result);
+      if ($rowsCount <= 3) {
+        $variables['footer'] = [];
+      }
+      break;
+
+    case 'more_case_studies':
+      if ("more_case_studies" == $variables['display_id']) {
+        $variables['rows_class'] = 'row flex-display flex-wrap';
+      }
+      break;
+    case 'more_reports':
+    case 'resources_page_landing':
+      $variables['rows_class'] = 'news-list flex-display flex-wrap';
+      break;
+    case 'reports':
+      $variables['rows_class'] = 'news-list flex-display flex-wrap mar-top-40';
+      break;
+
+    case 'other_programs':
+      $variables['rows_class'] = 'networks-list flex-display flex-wrap';
+      break;
+    case 'staff':
+    case 'director':
+    case 'directors':
+      $variables['rows_class'] = 'experts-list clearfix flex-display flex-wrap';
+      break;
+    case 'jobs':
+      $variables['footer_wrapper'] = true;
+      break;
+    case 'blogs':
+    case 'news':
+    case 'press_releases':
+      if ("news_hub_section" == $variables['display_id']) {
+        $variables['rows_class'] = 'news-list flex-display flex-wrap';
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_form_alter()
+ * @param array $form
+ * @param type $form_state
+ * @param string $form_id
+ */
+function ceres_form_alter(&$form, $form_state, $form_id) {
+  if ("search_form" == $form_id) {
+    $form["#prefix"] = '<div class="home-page-experts search-form-container-wrapper row"><div class="container"><div class="row"><div class="col-lg-10 col-lg-push-1">';
+    $form["#suffix"] = '</div></div></div></div>';
+    unset($form["help_link"]);
+  }
+  $forms = ['user_register_form', 'user_login_form', 'user_pass', 'user_form', 'user_pass_reset', 'contact_message_feedback_form',
+    'contact_message_email_signup_newsletter_form', 'contact_message_investor_leadership_newsletter_form',
+    'contact_message_corporate_leadership_newsletter_form'];
+  if (in_array($form_id, $forms)) {
+    $form["#prefix"] = '<div class="home-page-experts row"><div class="container"><div class="row"><div class="col-lg-10 col-lg-push-1"><div class="row">';
+    $form["#suffix"] = '</div></div></div></div></div>';
+    $form["#attributes"]["class"][] = "custom-form-fields";
+  }
+  if (array_key_exists('field_user_register_mail_updates', $form)) {
+    $form['field_user_register_mail_updates']['#attributes']['class'][] = 'clear';
+  }
+  if ('views-exposed-form-staff-staff-listing' == $form['#id']) {
+    foreach ($form['dept']['#options'] as $key => &$option) {
+      if ($key == 'All') {
+        $option = "Ceres Staff";
+      }
+    }
+  }
+}
+
+function ceres_preprocess_search_result(&$variables) {
+  $node = $variables['result']['node'];
+  if (isset($node)) {
+    $variables['node_type'] = $node->getType();
+    $variables['node_created_date'] = $node->getCreatedTime();
+  }
+}
+
+/**
+ * Implements hook_preprocess_form_element()
+ * @param string $variables
+ */
+function ceres_preprocess_form_element(&$variables) {
+  $staff = (isset($variables['element']['#attributes']['name']) && preg_match('/dept/', $variables['element']['#attributes']['name']) ) ? true : false;
+  $reports = (isset($variables['element']['#attributes']['name']) && preg_match('/reports_for/', $variables['element']['#attributes']['name']) ) ? true : false;
+
+  if ($staff || $reports) {
+    $variables['diff_classes'] = 'staff-switch-wrapper col-xs-12 z-index-2 col-sm-6 col-md-4';
+  }
+}
+
+/**
+ * Implements hook_preprocess_page()
+ * @param array $variables
+ */
+function ceres_preprocess_page(&$variables) {
+  if (isset($variables['node']) && isset($variables['node']->field_banner_image)) {
+    /* @var $node Node */
+    $node = $variables['node'];
+    $bannerImage = $node->field_banner_image->getValue();
+
+    /* @var $imageFile Drupal\file_entity\Entity\FileEntity */
+    $imageFile = _ceres_preprocess_page_get_default_image($node, 'field_banner_image');
+    $defaultImageUrl = ($imageFile) ? file_create_url($imageFile->getFileUri()) : _ceres_preprocess_page_get_default_image_by_type($node->getType());
+
+    $data = [
+      'banner_image' => !empty($bannerImage) ?
+          file_create_url($node->field_banner_image->entity->getFileUri()) : $defaultImageUrl,
+      'classes' => ('staff' == $node->getType() || 'director' == $node->getType() || 'press_contact' == $node->getType()) ?
+          'staff-banner' : '',
+    ];
+
+    $variables['banner'] = $data;
+  }
+  elseif (preg_match('#^/user#', Drupal::service('path.current')->getPath())) {
+    if (!$variables["logged_in"]) {
+      $variables['user_page'] = true;
+    }
+    $default_image_url = '/' . drupal_get_path('theme', 'ceres') . '/assets/images/staff/banner.jpg';
+    $data = [
+      'banner_image' => $default_image_url,
+    ];
+    $variables['banner'] = $data;
+  }
+  elseif ('search.view_node_search' == \Drupal::routeMatch()->getRouteName() || 'entity.contact_form.canonical' == \Drupal::routeMatch()->getRouteName() || 'contact.site_page' == \Drupal::routeMatch()->getRouteName()) {
+    $default_image_url = '/' . drupal_get_path('theme', 'ceres') . '/assets/images/campaign/banner.jpg';
+    $data = [
+      'banner_image' => $default_image_url,
+    ];
+    if (!empty(\Drupal::routeMatch()->getParameter('contact_form'))) {
+      switch (\Drupal::routeMatch()->getParameter('contact_form')->get('id')) {
+        case 'email_signup_newsletter':
+          $image = _ceres_preprocess_page_get_block_image('homepagesignupblock');
+          $data['banner_image'] = !empty($image) ? $image : $default_image_url;
+          break;
+        case 'investor_leadership_newsletter':
+          $image = _ceres_preprocess_page_get_block_image('investor_leadership_newsletter');
+          $data['banner_image'] = !empty($image) ? $image : $default_image_url;
+          break;
+        case 'corporate_leadership_newsletter':
+          $image = _ceres_preprocess_page_get_block_image('corporate_leadership_newsletter');
+          $data['banner_image'] = !empty($image) ? $image : $default_image_url;
+          break;
+      }
+    }
+    $variables['banner'] = $data;
+  }
+  elseif ('ceres_core.authorize_donate' == \Drupal::routeMatch()->getRouteName()) {
+    $variables['donate_page'] = true;
+  }
+  elseif (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    $term_id = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+    $term = \Drupal\taxonomy\Entity\Term::load($term_id);
+    $bannerImage = $term->field_banner_image->getValue();
+    $default_image_url = '/' . drupal_get_path('theme', 'ceres') . '/assets/images/staff/staffbanner.jpg';
+    $data = [
+      'banner_image' => !empty($bannerImage) ? file_create_url($term->field_banner_image->entity->getFileUri()) : $default_image_url,
+      'classes' => 'staff-banner',
+    ];
+    $variables['banner'] = $data;
+  }
+}
+
+function _ceres_preprocess_page_get_block_image($blockId) {
+  $block = \Drupal\block\Entity\Block::load($blockId);
+  return !empty($block->get('settings')['content']['image']) ?
+      file_create_url($block->get('settings')['content']['image']) : '';
+}
+
+function _ceres_preprocess_page_get_block_body($blockId) {
+  $block = \Drupal\block\Entity\Block::load($blockId);
+  return !empty($block->get('settings')['content']['body']) ? $block->get('settings')['content']['body'] : '';
+}
+
+function _ceres_preprocess_page_get_default_image_by_type($type) {
+  $default_image_url = '/' . drupal_get_path('theme', 'ceres') . '/assets/images/campaign/banner.jpg';
+  if ('staff' == $type || 'director' == $type || 'press_contact' == $type) {
+    $default_image_url = '/' . drupal_get_path('theme', 'ceres') . '/assets/images/staff/staffbanner.jpg';
+  }
+  if ('page' == $type) {
+    $default_image_url = '';
+  }
+  return $default_image_url;
+}
+
+/**
+ * Get default image value
+ * @param Node $node
+ * @param string $fieldName
+ * @return Drupal\file_entity\Entity\FileEntity
+ */
+function _ceres_preprocess_page_get_default_image(Node $node, $fieldName) {
+  $manager = \Drupal::service('entity_field.manager');
+  $defintions = $manager->getFieldDefinitions('node', $node->getType());
+  $defaultImageUUID = $defintions[$fieldName]->getSetting('default_image')['uuid'];
+  $imageFile = \Drupal::service('entity.repository')->loadEntityByUuid('file', $defaultImageUUID);
+  return (!empty($imageFile)) ? $imageFile : false;
+}
+
+/**
+ * Implements hook_preprocess_page_title()
+ * @param array $variables
+ */
+function ceres_preprocess_page_title(&$variables) {
+
+  if ($node = Drupal::routeMatch()->getParameter('node')) {
+    $variables['subtitle'] = isset($node->field_subtitle) ? $node->field_subtitle->getString() : '';
+
+    if ('staff' == $node->getType()) {
+      $variables['fluid_title'] = true;
+      $variables['subtitle'] = $node->get('field_staff_position')->getString();
+    }
+    else if ('director' == $node->getType()) {
+      $variables['fluid_title'] = true;
+      $subtitle = array();
+      if ($organization = $node->get('field_director_organization')->getString()) {
+        array_push($subtitle, $organization);
+      }
+      if ($position = $node->get('field_director_position')->getString()) {
+        array_push($subtitle, $position);
+      }
+      if (!empty($subtitle)) {
+        $variables['subtitle'] = implode(", ", $subtitle);
+      }
+      $variables['pretitle'] = $node->get('field_director_title')->getString();
+    }
+    else if ('press' == $node->getType()) {
+      $subtitle = array();
+      if ($sub_text = isset($node->field_press_subtitle) ? $node->field_press_subtitle->getString() : NULL) {
+        array_push($subtitle, $sub_text);
+      }
+      if ($location = isset($node->field_press_location) ? $node->field_press_location->getString() : NULL) {
+        array_push($subtitle, $location);
+      }
+      if (!empty($subtitle)) {
+        $variables['subtitle'] = implode(" | ", $subtitle);
+      }
+    }
+    else if ('press_contact' == $node->getType()) {
+      $variables['fluid_title'] = true;
+      $variables['subtitle'] = $node->get('field_press_contact_organization')->getString();
+    }
+//    else if ('video' == $node->getType() || 'podcast' == $node->getType() || 'webinar' == $node->getType() || 'tool' == $node->getType()) {
+//      $variables['prefix_title'] = format_date($node->getCreatedTime(), "custom", "F j, Y");
+//    }
+    else if ('event' == $node->getType()) {
+      $variables['subtitle'] = $node->field_event_location->value;
+      if ($node->field_event_date->value == $node->field_event_date->end_value) {
+        $variables['pre_subtitle'] = date('F d Y', strtotime($node->field_event_date->value));
+      }
+      else {
+        $variables['pre_subtitle'] = event_get_dates(strtotime($node->field_event_date->value), strtotime($node->field_event_date->end_value));
+      }
+    }
+  }
+  elseif (!empty(\Drupal::routeMatch()->getParameter('contact_form'))) {
+    switch (\Drupal::routeMatch()->getParameter('contact_form')->get('id')) {
+      case 'email_signup_newsletter':
+        $subtitle = _ceres_preprocess_page_get_block_body('homepagesignupblock');
+        $variables['subtitle'] = $subtitle;
+        break;
+      case 'investor_leadership_newsletter':
+        $subtitle = _ceres_preprocess_page_get_block_body('investor_leadership_newsletter');
+        $variables['subtitle'] = $subtitle;
+        break;
+      case 'corporate_leadership_newsletter':
+        $subtitle = _ceres_preprocess_page_get_block_body('corporate_leadership_newsletter');
+        $variables['subtitle'] = $subtitle;
+        break;
+    }
+  }
+  elseif ($term = Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    $variables['fluid_title'] = true;
+    $variables['subtitle'] = $term->get('field_author_position')->getString();
+  }
+}
+
+function event_get_dates($start, $end = NULL) {
+  $date = date('F d Y', $start);
+  if ($end) {
+    if (date('Y', $start) != date('Y', $end)) {
+      $date .= ' - ' . date('F d Y', $end);
+    }
+    elseif (date('F', $start) != date('F', $end)) {
+      $date = date('F d', $start) . ' - ' . date('F d Y', $end);
+    }
+    else {
+      $date = date('F d', $start) . ' - ' . date('d Y', $end);
+    }
+  }
+  return $date;
+}
+
+/**
+ * Attach node entities from homepage events block content
+ * @param array $variables
+ */
+function ceres_preprocess_hp_events(&$variables) {
+  $blockContent = $variables['content'];
+  foreach ($blockContent['entities'] as $entityId) {
+    $variables['entities'][] = Node::load($entityId);
+  }
+}
+
+/**
+ * Implements hook_preprocess_field()
+ */
+function ceres_preprocess_field(&$variables) {
+  switch ($variables['element']['#field_name']) {
+    case 'field_roadmap_resources_refs':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'flex-wrap', 'full-width'), 'roadmap-resources-wrapper load-more-item flex-display col-xs-12 col-sm-6 col-md-4 col-lg-3');
+      break;
+
+    case 'field_network_working_groups':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'flex-wrap', 'members-list', 'flex-start'), 'col-xs-12 col-sm-6 flex-display flex-column flex-start group-item member-item');
+      break;
+
+    case 'field_roadmap_landing_categories':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'flex-wrap', 'full-width'), 'flex-display col-xs-12 col-sm-6');
+      break;
+
+    case 'field_program_related_network':
+      _ceres_preprocess_field_listing_classes($variables, array('networks-list', 'flex-display', 'flex-wrap'), 'col-xs-12 col-sm-4 flex-display');
+      break;
+
+    case 'field_roadmap_landing_info':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'flex-wrap'), 'download-section col-xs-12 col-sm-6');
+      break;
+
+    case 'field_networks':
+    case 'field_campaigns':
+    case 'field_programs':
+    case 'field_roadmap_categories':
+      _ceres_preprocess_field_listing_classes($variables, array('flex-display', 'full-width', 'flex-wrap'), 'flex-display col-xs-12 col-sm-4');
+      break;
+
+    case 'field_news':
+    case 'field_resources':
+      _ceres_preprocess_field_listing_classes($variables, array('news-list', 'flex-display', 'full-width', 'flex-wrap', 'more-list'), 'col-xs-12 col-sm-4 flex-display news-item load-more-item');
+      break;
+
+    case 'field_reference_listing_issues':
+    case 'field_reference_listing_sectors':
+    case 'field_reference_listing_programs':
+      _ceres_preprocess_field_listing_classes($variables, array(), 'col-xs-12 col-sm-6');
+      break;
+
+    case 'field_company_section_content':
+      _ceres_preprocess_field_listing_classes($variables, array('full-width'), '');
+      break;
+  }
+}
+
+function _ceres_preprocess_field_listing_classes(&$variables, $classes, $item_classes) {
+  $original_classes = (array_key_exists('class', $variables['attributes']) && is_array($variables['attributes']['class'])) ? $variables['attributes']['class'] : array();
+  $variables['attributes']['class'] = array_merge($original_classes, $classes);
+
+  $item = 0;
+  while (isset($variables['element'][$item])) {
+    $variables['items'][$item]['attributes']->addClass($item_classes);
+    $item++;
+  }
+}
+
+function ceres_preprocess_textarea(&$variables) {
+
+  if (!$variables['attributes']->offsetGet("placeholder")->__toString()) {
+    $variables['attributes']->setAttribute("placeholder", $variables['element']["#title"]);
+  }
+}
+
+function ceres_preprocess_select(&$variables) {
+  $variables['attributes']->addClass("ceres-custom-select");
+}
+
+function ceres_preprocess_input(&$variables) {
+  $element = $variables['element'];
+  if ('submit' == $element['#type'] && isset($element['#myVar'])) {
+    /* Remove form-control class from email-signup form */
+    $variables['attributes']['class']->offsetUnset(0);
+  }
+  switch ($element["#type"]) {
+    case 'textfield':
+    case 'email':
+    case 'number':
+    case 'password':
+      if (!($variables['attributes']->offsetGet("placeholder") && $variables['attributes']->offsetGet("placeholder")->__toString())) {
+        $variables['attributes']->setAttribute("placeholder", $element["#title"]);
+      }
+      break;
+  }
+}
+
+/**
+ * HOOK_preprocess_node
+ */
+function ceres_preprocess_node(&$variables) {
+  /* @var $node  Node */
+  $node = $variables['node'];
+
+  if ($node->getType() == 'issue' ||
+      $node->getType() == 'campaign' ||
+      $node->getType() == 'network') {
+    $nodeType = $node->getType();
+    if (!empty(views_get_view_result('news_referenced_section', $nodeType . '_news_reference', $node->id()))) {
+      $variables['news_section'] = views_embed_view('news_referenced_section', $nodeType . '_news_reference', $node->id());
+    }
+
+    if (!empty(views_get_view_result('resources_referenced_section', $nodeType . '_resources_reference', $node->id()))) {
+      $variables['resources_section'] = views_embed_view('resources_referenced_section', $nodeType . '_resources_reference', $node->id());
+    }
+  }
+  if ("full" == $variables['view_mode'] || "blogs_listing_display" == $variables['view_mode']) {
+    switch ($node->getType()) {
+      case 'issue':
+        $display = ($node->field_issue_type->value == 'Issue') ? 'more_issues' : 'more_sectors';
+        $results = views_get_view_result('more_issues', $display, $node->id());
+        $variables['more_issues'] = ($results) ? views_embed_view('more_issues', $display, $node->id()) : '';
+        break;
+      case 'campaign':
+        $variables['other_campaigns'] = views_embed_view('other_campaigns', 'other_campaigns', $node->id());
+        break;
+      case 'network':
+        $variables['more_networks'] = views_embed_view('more_networks', 'more_networks', $node->id());
+        break;
+      case 'staff':
+        $results = views_get_view_result('staff_posts', 'staff_blog_posts', $node->id());
+        $variables['staff_posts'] = ($results) ? views_embed_view('staff_posts', 'staff_blog_posts', $node->id()) : '';
+        break;
+      case 'press_contact':
+        $variables['press_contact_news_press'] = views_embed_view('press_contact_news_press', 'press_contact_news_press');
+        break;
+      case 'program':
+        $results = views_get_view_result('resources_referenced_section', 'program_resources_reference', $node->id());
+        $variables['resources_section'] = ($results) ? views_embed_view('resources_referenced_section', 'program_resources_reference', $node->id()) : '';
+        $variables['other_programs'] = views_embed_view('other_programs', 'other_programs', $node->id());
+        break;
+      case 'blog_post':
+        $data = _ceres_preprocess_node_get_blog_author_info($node);
+        $variables['author'] = $data;
+        $variables['#cache']['max-age'] = 0;
+        $variables['issue'] = (!empty($node->field_blog_post_issue_sector->getValue())) ?
+            $node->field_blog_post_issue_sector[0]->entity : '';
+        $variables['campaign'] = (!empty($node->field_blog_post_campaign->getValue())) ?
+            $node->field_blog_post_campaign[0]->entity : '';
+        break;
+      case 'news':
+      case 'press':
+        $tid = $node->field_blog_post_author->getString();
+        $data = ($tid) ? _ceres_preprocess_node_author_textual_info($tid) : NULL;
+
+        $variables['author'] = $data;
+        $variables['issue'] = (!empty($node->field_referenced_issue->getValue())) ? $node->field_referenced_issue[0]->entity : '';
+        $variables['campaign'] = (!empty($node->field_referenced_campaign->getValue())) ? $node->field_referenced_campaign[0]->entity : '';
+        break;
+      case 'report':
+        $results = views_get_view_result('more_reports', 'more_reports', $node->id());
+        $variables['more_reports'] = ($results) ? views_embed_view('more_reports', 'more_reports', $node->id()) : '';
+        $get = Drupal::request()->get('report');
+        $variables['report'] = !empty($get) ? Xss::filter($get) : '';
+        break;
+      case 'case_study':
+        $results = views_get_view_result('more_case_studies', 'more_case_studies', $node->id());
+        $variables['more_case_studies'] = ($results) ? views_embed_view('more_case_studies', 'more_case_studies', $node->id()) : '';
+        break;
+      case 'podcast':
+        $variables['#attached'] = ['library' => ['ceres/jplayer']];
+        break;
+      case 'donation':
+        $variables['form'] = \Drupal::formBuilder()->getForm('\Drupal\ceres_core\Form\DonateForm');
+        break;
+    }
+  }
+}
+
+function _ceres_preprocess_node_author_textual_info($tid) {
+  $query = Drupal::entityQuery('node');
+  $query->condition('type', 'staff')
+      ->condition('field_staff_author', $tid);
+  $results = $query->execute();
+  $authorData = [];
+
+  if (empty($results)) {
+    $taxonomy = Term::load($tid);
+    if ($taxonomy) {
+      $authorData['url'] = $taxonomy->url();
+      $authorData['title'] = $taxonomy->getName();
+    }
+  }
+  else {
+    $node = Drupal::entityTypeManager()->getStorage('node')->load(key($results));
+    $authorData['url'] = Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['absolute' => true]);
+    $authorData['title'] = $node->getTitle();
+  }
+
+  return $authorData;
+}
+
+function _ceres_preprocess_node_get_blog_author_info($node) {
+  $authorIsStaff = $node->field_author_is_staff->getString();
+  if (!$authorIsStaff) {
+    $tid = $node->field_blog_post_author->getString();
+    $taxonomy = Term::load($tid);
+    if ($taxonomy) {
+      $authorData['url'] = $taxonomy->url();
+      $authorData['title'] = $taxonomy->getName();
+      $authorData['image'] = isset($taxonomy->field_author_picture->value) ? file_create_url($taxonomy->field_author_picture->entity->getFileUri()) : '';
+      $authorData['org'] = !empty($taxonomy->field_author_organization->getValue()) ? $taxonomy->field_author_organization : '';
+      $authorData['bio'] = !empty($taxonomy->description->getValue()) ? $taxonomy->description : '';
+    }
+  }
+  else {
+    $nid = $node->field_blog_post_staff_author->getString();
+    $node = Drupal::entityTypeManager()->getStorage('node')->load($nid);
+    if ($node) {
+      $authorData['url'] = Url::fromRoute('entity.node.canonical', ['node' => $node->id()], ['absolute' => true]);
+      $authorData['title'] = $node->getTitle();
+      $authorData['image'] = !empty($node->field_staff_picture->getValue()) ? file_create_url($node->field_staff_picture->entity->getFileUri()) : '';
+      $authorData['org'] = $node->field_staff_position;
+      $authorData['bio'] = !empty($node->field_staff_about[0]) ? $node->field_staff_about[0]->entity->field_text_paragraph_body : '';
+    }
+  }
+
+  $authorData['#cache']['max_age'] = 0;
+  return $authorData;
+}
+
+/**
+ * Implements HOOK_preprocess_filter_caption
+ */
+function ceres_preprocess_filter_caption(&$variables) {
+  $variables["classes"] .= " caption";
+}
+
+/**
+ * Implements HOOK_preprocess_paragraph
+ */
+function ceres_preprocess_paragraph(&$variables) {
+  static $count = 0;
+  if ('two_column_section' == $variables['paragraph']->bundle()) {
+    $variables['attributes']['class'] = (0 == $count % 2 ) ? 'issue-issues-back' : 'no-background';
+    $count++;
+  }
+}
+
+/**
+ * Get salesforce network members
+ * @param type $variables
+ */
+function ceres_preprocess_paragraph__network_members(&$variables) {
+  $paragraph = $variables['paragraph'];
+  $network = $paragraph->field_sf_network_name_mapper->value;
+  $withLogos = $paragraph->field_network_members_with_logos->value;
+  $members = [];
+  $cid = 'salesforce_network:' . str_replace(' ', '_', strtolower($network));
+  $cid = ($withLogos) ? $cid . ':1' : $cid . ':0';
+
+  if ($cache = \Drupal::cache()->get($cid)) {
+    $members = $cache->data;
+  }
+  else {
+    /* @var $sfService ConsumerService */
+    $sfService = Drupal::service('salesforce.consumer');
+    $sfClient = $sfService->getClient();
+    switch ($network) {
+      case 'Investor Network':
+        $conditions = [
+          [
+            'name' => 'INCR_Membership_Status__c',
+            'values' => 'Current%,Current - Needs Renewal%',
+            'operation' => 'LIKE',
+          ]
+        ];
+        $members = $sfService->getNetworkMembers($sfClient, $conditions, 'ASC', $withLogos);
+        break;
+
+      case 'Ceres Company Network':
+        $conditions = [
+          [
+            'name' => 'Company_Membership_Status__c',
+            'values' => 'Current%',
+            'operation' => 'LIKE',
+          ]
+        ];
+        $members = $sfService->getNetworkMembers($sfClient, $conditions, 'ASC', $withLogos);
+        break;
+
+      case 'Ceres Policy Network':
+        $conditions = [
+          [
+            'name' => 'BICEP_Membership_Status__c',
+            'values' => 'Current%',
+            'operation' => 'LIKE',
+          ]
+        ];
+        $members = $sfService->getNetworkMembers($sfClient, $conditions, 'ASC', $withLogos);
+        break;
+
+      case 'Connect the Drops':
+        $conditions = [
+          [
+            'name' => 'Connect_the_Drops_Signatory__c',
+            'values' => 'True',
+            'operation' => '=',
+          ]
+        ];
+        $members = $sfService->getNetworkMembers($sfClient, $conditions, 'ASC', $withLogos);
+        break;
+    }
+
+    \Drupal::cache()->set($cid, $members, (time() + 86400));
+  }
+
+  $variables['members'] = $members;
+}
+
+function ceres_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    if ("header_social_links" == $variables['elements']['content']['#block_content']->bundle()) {
+      $suggestions[] = "block__social_media_links";
+    }
+    elseif ("footer_block" == $variables['elements']['content']['#block_content']->bundle()) {
+      $suggestions[] = "block__footer_2";
+    }
+  }
+}

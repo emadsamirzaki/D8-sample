@@ -1,0 +1,35 @@
+uuid: d16b5ae7-30f3-4442-8b06-046d4a87eb11
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+id: staff_header
+label: 'Staff Header'
+logic: or
+conditions:
+  c06238c5-f31c-4aaf-bfe6-8c9a58ed89f1:
+    id: 'entity_bundle:node'
+    bundles:
+      director: director
+      press_contact: press_contact
+      staff: staff
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    uuid: c06238c5-f31c-4aaf-bfe6-8c9a58ed89f1
+  4cc33710-2a9e-4984-9bd3-07d7fb0f3d10:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      authors: authors
+    negate: false
+    context_mapping: {  }
+    uuid: 4cc33710-2a9e-4984-9bd3-07d7fb0f3d10
+  6db6aa99-a432-454b-8478-e18baa666be9:
+    id: request_path
+    pages: "/author/*\r\nauthor/*"
+    negate: false
+    context_mapping: {  }
+    uuid: 6db6aa99-a432-454b-8478-e18baa666be9
+allow_other_conditions: false

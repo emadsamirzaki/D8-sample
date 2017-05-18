@@ -1,0 +1,21 @@
+uuid: 9265825d-c586-4df8-98f6-d88b42636ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_network_members_body
+    - paragraphs.paragraphs_type.network_members
+  module:
+    - text
+id: paragraph.network_members.field_network_members_body
+field_name: field_network_members_body
+entity_type: paragraph
+bundle: network_members
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

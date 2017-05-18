@@ -1,0 +1,9 @@
+uuid: 406f3d1f-9f16-4cb7-aca3-d1d2e5cb9d90
+langcode: en
+status: true
+dependencies: {  }
+name: 'Report for'
+vid: report_for
+description: 'Subjects of "Report for" field in Reports node type'
+hierarchy: 0
+weight: 0

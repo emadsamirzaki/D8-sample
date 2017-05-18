@@ -1,0 +1,12 @@
+uuid: 4337af5b-29e6-462e-ad9e-074b0f320707
+langcode: en
+status: true
+dependencies: {  }
+label: 'News Section'
+id: news_section
+description: ''
+aspect_ratio: '185:122'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: 370
+hard_limit_height: 244

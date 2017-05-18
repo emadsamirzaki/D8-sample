@@ -1,0 +1,10 @@
+uuid: e84d4772-f7f9-4d3c-aa73-e54bec7fb61d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.directors_section
+label: 'Directors Section'
+targetEntityType: node
+cache: true

@@ -1,0 +1,117 @@
+uuid: 615632fe-dbf1-44ce-acc3-6f4eb383a595
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_network_sf_members
+    - node.type.campaign
+    - paragraphs.paragraphs_type.network_members
+  module:
+    - entity_reference_revisions
+id: node.campaign.field_network_sf_members
+field_name: field_network_sf_members
+entity_type: node
+bundle: campaign
+label: 'SF Members'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      network_members: network_members
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 31
+        enabled: false
+      basic_text_paragraph:
+        weight: 32
+        enabled: false
+      campaigns_section:
+        weight: 33
+        enabled: false
+      collage:
+        weight: 34
+        enabled: false
+      collage_section:
+        weight: 35
+        enabled: false
+      company_section:
+        weight: 36
+        enabled: false
+      events_awards_section:
+        weight: 37
+        enabled: false
+      experts_section:
+        weight: 38
+        enabled: false
+      footer_office:
+        weight: 39
+        enabled: false
+      image_link:
+        weight: 40
+        enabled: false
+      info_download_paragraph:
+        weight: 41
+        enabled: false
+      info_paragraph:
+        weight: 42
+        enabled: false
+      join_section:
+        weight: 43
+        enabled: false
+      networks_section:
+        weight: 44
+        enabled: false
+      network_members:
+        enabled: true
+        weight: 45
+      network_working_group:
+        weight: 46
+        enabled: false
+      news_section:
+        weight: 47
+        enabled: false
+      press_source:
+        weight: 48
+        enabled: false
+      quote_testimonial:
+        weight: 49
+        enabled: false
+      roadmap_key_expectation:
+        weight: 50
+        enabled: false
+      roadmap_landing_categories:
+        weight: 51
+        enabled: false
+      roadmap_landing_info:
+        weight: 52
+        enabled: false
+      roadmap_resources_section:
+        weight: 53
+        enabled: false
+      roadmap_section:
+        weight: 54
+        enabled: false
+      testimonial_section:
+        weight: 55
+        enabled: false
+      text_paragraph:
+        weight: 56
+        enabled: false
+      two_column_section:
+        weight: 57
+        enabled: false
+      video_paragraph:
+        weight: 58
+        enabled: false
+      video_testimonial:
+        weight: 59
+        enabled: false
+      views_listing:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

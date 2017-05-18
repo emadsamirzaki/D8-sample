@@ -1,0 +1,23 @@
+{% set resourcesLen = content.field_resources['#items'] | length %}
+<section class="home-page-news row ">
+  <div class="container">
+    <div class="row">
+      <h2 class="section-title text-center">{% trans %}Resources{% endtrans %}</h2>
+      <div class="news-list more-list">
+        {{ content.field_resources }}
+      </div>
+      <div class="read-more-wrapper text-center">
+        {% if resourcesLen > 3 %}
+            <a href="/resources" class="read-more-btn read-more-effect text-uppercase ">
+              <span class="hidden-after-more">More Resources</span>
+              <span class="hidden-before-more hidden">See all Resources</span>
+            </a>
+        {% else %}
+            <a href="/resources" class="read-more-btn text-uppercase ">
+              See all Resources
+            </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

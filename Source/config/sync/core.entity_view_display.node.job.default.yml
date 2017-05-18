@@ -1,0 +1,123 @@
+uuid: a64bdd17-14f5-423e-96c4-5a97e4adc1aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.job.body
+    - field.field.node.job.field_banner_image
+    - field.field.node.job.field_description
+    - field.field.node.job.field_experts
+    - field.field.node.job.field_job_apply_banner
+    - field.field.node.job.field_job_apply_email
+    - field.field.node.job.field_job_apply_info
+    - field.field.node.job.field_job_apply_tip
+    - field.field.node.job.field_job_post_date
+    - field.field.node.job.field_meta_tags
+    - field.field.node.job.field_subtitle
+    - node.type.job
+  module:
+    - datetime
+    - entity_reference_revisions
+    - image
+    - metatag
+    - text
+    - user
+id: node.job.default
+targetEntityType: node
+bundle: job
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 107
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_description:
+    weight: 113
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_experts:
+    weight: 112
+    label: hidden
+    settings:
+      view_mode: experts_section
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_job_apply_banner:
+    weight: 117
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_job_apply_email:
+    weight: 110
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_job_apply_info:
+    weight: 114
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_job_apply_tip:
+    weight: 115
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_job_post_date:
+    weight: 116
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_meta_tags:
+    weight: 118
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_subtitle:
+    weight: 108
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

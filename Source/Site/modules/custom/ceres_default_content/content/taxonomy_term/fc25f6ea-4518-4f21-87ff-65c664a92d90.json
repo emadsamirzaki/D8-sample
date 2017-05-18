@@ -1,0 +1,61 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/dev.ceres.org\/taxonomy\/term\/4?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/authors"
+        }
+    },
+    "tid": [
+        {
+            "value": "4"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fc25f6ea-4518-4f21-87ff-65c664a92d90"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "authors"
+        }
+    ],
+    "name": [
+        {
+            "value": "Susan Sayers",
+            "lang": "en"
+        }
+    ],
+    "description": [
+        {
+            "value": "<p>Susan Sayers has been added from Staff content type<\/p>",
+            "format": null,
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": "0"
+        }
+    ],
+    "changed": [
+        {
+            "value": "1477402539",
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": "1",
+            "lang": "en"
+        }
+    ]
+}

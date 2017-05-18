@@ -1,0 +1,23 @@
+uuid: b607c7c7-7422-4abf-9e37-c8cd25ea6f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_social_links
+    - field.storage.block_content.field_header_social_twitter_url
+  module:
+    - link
+id: block_content.header_social_links.field_header_social_twitter_url
+field_name: field_header_social_twitter_url
+entity_type: block_content
+bundle: header_social_links
+label: 'Twitter URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

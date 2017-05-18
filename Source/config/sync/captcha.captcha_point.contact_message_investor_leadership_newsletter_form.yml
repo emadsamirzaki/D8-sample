@@ -1,0 +1,7 @@
+uuid: c1593456-bcb0-4b90-a945-f3dd188b6fbd
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_message_investor_leadership_newsletter_form
+captchaType: recaptcha/reCAPTCHA
+label: contact_message_investor_leadership_newsletter_form

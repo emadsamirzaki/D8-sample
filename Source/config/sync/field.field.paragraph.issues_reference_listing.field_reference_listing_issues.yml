@@ -1,0 +1,25 @@
+uuid: 4166f709-b49b-4581-843f-f4cb6daafb29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_listing_issues
+    - paragraphs.paragraphs_type.issues_reference_listing
+id: paragraph.issues_reference_listing.field_reference_listing_issues
+field_name: field_reference_listing_issues
+entity_type: paragraph
+bundle: issues_reference_listing
+label: Issues
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: our_work_listings
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

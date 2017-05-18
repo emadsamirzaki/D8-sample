@@ -1,0 +1,19 @@
+uuid: 3428c749-eeef-47aa-a913-5d18e1537d27
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_apply_email
+    - node.type.job
+id: node.job.field_job_apply_email
+field_name: field_job_apply_email
+entity_type: node
+bundle: job
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,22 @@
+uuid: 2d780819-519b-4360-b8a8-8e89e1aa5584
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ceres_annual_report
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: ceres_annual_report_local_tasks
+theme: ceres_annual_report
+region: header
+weight: -9
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

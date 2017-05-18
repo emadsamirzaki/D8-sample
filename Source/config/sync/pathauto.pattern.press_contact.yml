@@ -1,0 +1,22 @@
+uuid: 6ae5bf38-7781-4710-8940-ee8682eda827
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: press_contact
+label: 'Press Contact'
+type: 'canonical_entities:node'
+pattern: 'news-center/[node:title]'
+selection_criteria:
+  18275003-ca55-436b-9650-55df24b4db64:
+    id: node_type
+    bundles:
+      press_contact: press_contact
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 18275003-ca55-436b-9650-55df24b4db64
+selection_logic: and
+weight: -5
+relationships: {  }

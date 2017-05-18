@@ -1,0 +1,282 @@
+uuid: 941346ee-cab0-43cb-a791-0505bf19b313
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog_post.field_author_is_staff
+    - field.field.node.blog_post.field_banner_image
+    - field.field.node.blog_post.field_blog_post_author
+    - field.field.node.blog_post.field_blog_post_campaign
+    - field.field.node.blog_post.field_blog_post_issue_sector
+    - field.field.node.blog_post.field_blog_post_staff_author
+    - field.field.node.blog_post.field_campaigns
+    - field.field.node.blog_post.field_content_image
+    - field.field.node.blog_post.field_description
+    - field.field.node.blog_post.field_issues
+    - field.field.node.blog_post.field_meta_tags
+    - field.field.node.blog_post.field_networks
+    - field.field.node.blog_post.field_reports
+    - field.field.node.blog_post.field_tags
+    - image.style.thumbnail
+    - node.type.blog_post
+  module:
+    - field_group
+    - image
+    - metatag
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_for_news_sections:
+      children:
+        - field_issues
+        - field_campaigns
+        - field_networks
+        - field_reports
+      parent_name: ''
+      weight: 14
+      format_type: details
+      format_settings:
+        label: 'For News sections'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'For News sections'
+    group_blog_tagging:
+      children:
+        - field_tags
+        - field_blog_post_issue_sector
+        - field_blog_post_campaign
+      parent_name: ''
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Blog Tagging'
+    group_blog_author:
+      children:
+        - field_author_is_staff
+        - field_blog_post_author
+        - field_blog_post_staff_author
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Blog Author'
+id: node.blog_post.default
+targetEntityType: node
+bundle: blog_post
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_author_is_staff:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_banner_image:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_blog_post_author:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            5422dbd7-4de3-40f8-b3ba-34551b5eea34:
+              operations:
+                edit: Edit
+                delete: Delete
+            6358337a-72ec-48ec-aeb9-44984726a5f4:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          5422dbd7-4de3-40f8-b3ba-34551b5eea34:
+            uuid: 5422dbd7-4de3-40f8-b3ba-34551b5eea34
+            id: visible
+            data:
+              target: field_author_is_staff
+              comparison: unchecked
+              value: ''
+              submit: 'Add Cancel'
+          6358337a-72ec-48ec-aeb9-44984726a5f4:
+            uuid: 6358337a-72ec-48ec-aeb9-44984726a5f4
+            id: required
+            data:
+              target: field_author_is_staff
+              comparison: unchecked
+              value: ''
+              submit: 'Add Cancel'
+    type: entity_reference_autocomplete
+    region: content
+  field_blog_post_campaign:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_blog_post_issue_sector:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_blog_post_staff_author:
+    weight: 12
+    settings: {  }
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list:
+            1b01bb8e-3dcd-4692-b40b-f8ae4cee2f35:
+              operations:
+                edit: Edit
+                delete: Delete
+            82d69bac-6864-4291-9378-930de6964222:
+              operations:
+                edit: Edit
+                delete: Delete
+          add: Add
+        field_states:
+          1b01bb8e-3dcd-4692-b40b-f8ae4cee2f35:
+            uuid: 1b01bb8e-3dcd-4692-b40b-f8ae4cee2f35
+            id: visible
+            data:
+              target: field_author_is_staff
+              comparison: checked
+              value: ''
+              submit: 'Add Cancel'
+          82d69bac-6864-4291-9378-930de6964222:
+            uuid: 82d69bac-6864-4291-9378-930de6964222
+            id: required
+            data:
+              target: field_author_is_staff
+              comparison: checked
+              value: ''
+              submit: 'Add Cancel'
+    type: options_select
+    region: content
+  field_campaigns:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_content_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_description:
+    type: entity_reference_paragraphs
+    weight: 8
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    region: content
+  field_issues:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_meta_tags:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_networks:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_reports:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tags:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

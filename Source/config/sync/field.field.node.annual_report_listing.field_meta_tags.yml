@@ -1,0 +1,23 @@
+uuid: 873e24cb-efed-4f54-b63b-c6f18e1098d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.annual_report_listing
+  module:
+    - metatag
+id: node.annual_report_listing.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: annual_report_listing
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

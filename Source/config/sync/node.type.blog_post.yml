@@ -1,0 +1,17 @@
+uuid: e5a908a9-e4f9-492e-941a-0305c4a83136
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Blog Post'
+type: blog_post
+description: 'Create new Blog Posts.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: 3773e49b-5ba9-4818-9a9a-ee92e8fb45d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_response_desc
+field_name: field_tx_response_desc
+entity_type: authorize_transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

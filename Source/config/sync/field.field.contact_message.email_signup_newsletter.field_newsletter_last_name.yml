@@ -1,0 +1,19 @@
+uuid: f0e6875d-9d86-4203-a17a-f09f35434545
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.email_signup_newsletter
+    - field.storage.contact_message.field_newsletter_last_name
+id: contact_message.email_signup_newsletter.field_newsletter_last_name
+field_name: field_newsletter_last_name
+entity_type: contact_message
+bundle: email_signup_newsletter
+label: 'Last Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

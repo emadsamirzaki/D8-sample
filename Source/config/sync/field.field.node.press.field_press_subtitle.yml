@@ -1,0 +1,19 @@
+uuid: 55c93033-291f-4e6e-8b0e-f6ddc6d0c737
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_press_subtitle
+    - node.type.press
+id: node.press.field_press_subtitle
+field_name: field_press_subtitle
+entity_type: node
+bundle: press
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

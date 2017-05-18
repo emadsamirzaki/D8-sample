@@ -1,0 +1,19 @@
+uuid: ac06e4d1-c210-471b-8578-bc978f5af949
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_tx_last_name
+id: authorize_transaction.monthly_subscription_transaction.field_tx_last_name
+field_name: field_tx_last_name
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: 'Last Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

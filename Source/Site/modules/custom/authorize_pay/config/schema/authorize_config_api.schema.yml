@@ -1,0 +1,16 @@
+authorize_pay.authorize_config_api.*:
+  type: config_entity
+  label: 'Autorize config api config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string
+    apiId:
+      type: string
+    transactionKey:
+      type: string

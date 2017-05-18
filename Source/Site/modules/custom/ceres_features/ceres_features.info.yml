@@ -1,0 +1,5 @@
+name: Ceres Features
+type: module
+description: List of different features added to Ceres website
+core: 8.x
+package: Custom

@@ -1,0 +1,47 @@
+uuid: e4c81f3d-c8c7-4689-bce9-9f7d4565ee97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.network_members.field_network_members_body
+    - field.field.paragraph.network_members.field_network_members_with_logos
+    - field.field.paragraph.network_members.field_sf_network_name_mapper
+    - paragraphs.paragraphs_type.network_members
+  module:
+    - field_states_ui
+    - text
+id: paragraph.network_members.default
+targetEntityType: paragraph
+bundle: network_members
+mode: default
+content:
+  field_network_members_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: text_textarea
+    region: content
+  field_network_members_with_logos:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_sf_network_name_mapper:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

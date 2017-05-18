@@ -1,0 +1,27 @@
+{% set firstCollage = content.field_collage_section.0['#paragraph'] %}
+<section class="home-page-collage flex-display flex-grow row">
+    <div class="col-xs-12 col-sm-8 no-pad-left left-collage-wrapper">
+        {% if firstCollage.field_collage_url %}<a href="{{ firstCollage.field_collage_url.value.0.uri }}" class="collage-link large-link">{% else %}<div class="collage-link large-link">{% endif %}
+                {% if firstCollage.field_collage_image is defined %}
+                    <img src="{{ file_url(firstCollage.field_collage_image.entity.uri.value) }}" alt="{{ firstCollage.field_collage_image.value.0.alt }}" class="img-responsive" >
+                {% else %}
+                    <img src="/{{ directory }}/assets/images/collage/image1.jpg" alt="image1" class="img-responsive">
+                {% endif %}
+                <p>{{ firstCollage.field_collage_title.value }}</p>
+            {% if firstCollage.field_collage_url %}</a>{% else %}</div>{% endif %}
+    </div>
+
+    <div class="col-xs-12 col-sm-4 flex-display flex-grow right-collage-wrapper">
+        {% for i in 1..2 %}
+            {% set collage = content.field_collage_section[i]['#paragraph'] %}
+            {% if collage.field_collage_url is not empty %}<a href="{{ collage.field_collage_url.value.0.uri }}" class="collage-link">{% else %}<div class="collage-link">{% endif %}
+                    {% if collage.field_collage_image %}
+                        <img src="{{ file_url(collage.field_collage_image.entity.uri.value) }}" alt="{{ collage.field_collage_image.value.0.alt }}" class="img-responsive">
+                    {% else %}
+                        <img src="/{{ directory }}/assets/images/collage/image2.jpg" alt="image2" class="img-responsive">
+                    {% endif %}
+                    <p>{{ collage.field_collage_title.value }}</p>
+                {% if collage.field_collage_url is not empty %}</a>{% else %}</div>{% endif %}
+            {% endfor %}
+    </div>
+</section>

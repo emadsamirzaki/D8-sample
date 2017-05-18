@@ -1,0 +1,19 @@
+uuid: 4ebf1a78-a98f-463f-bd47-793520d25a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_last_name
+id: authorize_transaction.basic_transaction.field_tx_last_name
+field_name: field_tx_last_name
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Last Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

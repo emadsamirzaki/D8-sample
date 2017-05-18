@@ -1,0 +1,10 @@
+uuid: 792f0932-cce6-411c-940b-303a78f15aa6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.networks_section_display
+label: 'networks section display'
+targetEntityType: node
+cache: true

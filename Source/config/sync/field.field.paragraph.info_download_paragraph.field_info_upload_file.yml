@@ -1,0 +1,27 @@
+uuid: 15c5aea9-8687-49ed-9007-58e7481b8c16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info_upload_file
+    - paragraphs.paragraphs_type.info_download_paragraph
+  module:
+    - file
+id: paragraph.info_download_paragraph.field_info_upload_file
+field_name: field_info_upload_file
+entity_type: paragraph
+bundle: info_download_paragraph
+label: 'Upload File'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

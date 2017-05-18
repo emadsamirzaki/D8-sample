@@ -1,0 +1,29 @@
+uuid: 6a8827bb-9ada-4b8d-a97d-06f3232fa4b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_campaigns
+    - node.type.campaign
+    - node.type.issue
+id: node.issue.field_issue_campaigns
+field_name: field_issue_campaigns
+entity_type: node
+bundle: issue
+label: Campaigns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,13 @@
+{% if paragraph.field_network_work_group_title.value %}
+  <h3>
+    {% if paragraph.field_network_work_group_link.value %}<a href="{{ paragraph.field_network_work_group_link.0.url }}">{% endif %}
+      {{ paragraph.field_network_work_group_title.value }}
+      {% if paragraph.field_network_work_group_link.value %}</a>{% endif %}
+  </h3>
+{% endif %}
+
+{% if paragraph.field_network_work_group_body.value %}
+  <div>
+    {{ paragraph.field_network_work_group_body.value | raw }}
+  </div>
+{% endif %}

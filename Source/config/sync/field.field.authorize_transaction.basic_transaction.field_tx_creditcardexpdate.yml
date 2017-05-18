@@ -1,0 +1,19 @@
+uuid: 37ae164b-a2cb-4526-91cd-030c450560c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_creditcardexpdate
+id: authorize_transaction.basic_transaction.field_tx_creditcardexpdate
+field_name: field_tx_creditcardexpdate
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Credit Card Expiration Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

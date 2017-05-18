@@ -1,0 +1,10 @@
+uuid: a53b5b94-29e2-4ad5-bc48-f5e12df1dce4
+langcode: en
+status: true
+dependencies: {  }
+id: node__roadmap_resource
+label: 'Content: Roadmap Resource'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  twitter_cards_description: '[node:summary]'

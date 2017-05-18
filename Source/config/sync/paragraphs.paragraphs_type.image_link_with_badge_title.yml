@@ -1,0 +1,6 @@
+uuid: d5dbd51e-a160-43cd-8ad4-0e5d0f642292
+langcode: en
+status: true
+dependencies: {  }
+id: image_link_with_badge_title
+label: 'Image link with badge title'

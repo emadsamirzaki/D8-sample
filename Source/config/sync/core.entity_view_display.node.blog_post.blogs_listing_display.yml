@@ -1,0 +1,77 @@
+uuid: 93c02677-7999-4f9f-b23b-d18e7cee45a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.blogs_listing_display
+    - field.field.node.blog_post.field_author_is_staff
+    - field.field.node.blog_post.field_banner_image
+    - field.field.node.blog_post.field_blog_post_author
+    - field.field.node.blog_post.field_blog_post_campaign
+    - field.field.node.blog_post.field_blog_post_issue_sector
+    - field.field.node.blog_post.field_blog_post_staff_author
+    - field.field.node.blog_post.field_campaigns
+    - field.field.node.blog_post.field_content_image
+    - field.field.node.blog_post.field_description
+    - field.field.node.blog_post.field_issues
+    - field.field.node.blog_post.field_meta_tags
+    - field.field.node.blog_post.field_networks
+    - field.field.node.blog_post.field_reports
+    - field.field.node.blog_post.field_tags
+    - node.type.blog_post
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+id: node.blog_post.blogs_listing_display
+targetEntityType: node
+bundle: blog_post
+mode: blogs_listing_display
+content:
+  field_blog_post_author:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_content_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_description:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 1
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  field_author_is_staff: true
+  field_banner_image: true
+  field_blog_post_campaign: true
+  field_blog_post_date: true
+  field_blog_post_issue_sector: true
+  field_blog_post_staff_author: true
+  field_campaigns: true
+  field_issues: true
+  field_meta_tags: true
+  field_networks: true
+  field_reports: true
+  links: true

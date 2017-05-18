@@ -1,0 +1,21 @@
+uuid: bb1281da-f134-4dce-a646-23b646dcf859
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_basic_text_paragraph_body
+    - paragraphs.paragraphs_type.basic_text_paragraph
+  module:
+    - text
+id: paragraph.basic_text_paragraph.field_basic_text_paragraph_body
+field_name: field_basic_text_paragraph_body
+entity_type: paragraph
+bundle: basic_text_paragraph
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

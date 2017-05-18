@@ -1,0 +1,29 @@
+uuid: 62436a77-626f-47b2-b91c-732595c3371c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_campaigns
+    - node.type.campaign
+    - node.type.tool
+id: node.tool.field_resource_campaigns
+field_name: field_resource_campaigns
+entity_type: node
+bundle: tool
+label: Campaigns
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

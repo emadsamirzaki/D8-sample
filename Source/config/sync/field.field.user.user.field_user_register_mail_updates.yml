@@ -1,0 +1,24 @@
+uuid: f0d826ab-55ba-42c6-979f-867711fe3193
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_register_mail_updates
+  module:
+    - user
+id: user.user.field_user_register_mail_updates
+field_name: field_user_register_mail_updates
+entity_type: user
+bundle: user
+label: 'Yes, sign me up to receive email updates'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

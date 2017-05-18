@@ -1,0 +1,6 @@
+uuid: 367f1d94-40a4-447b-b8bc-01d2ef14d499
+langcode: en
+status: true
+dependencies: {  }
+id: image_link
+label: 'Image with Link'

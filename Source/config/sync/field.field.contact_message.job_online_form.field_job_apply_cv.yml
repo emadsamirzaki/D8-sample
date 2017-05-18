@@ -1,0 +1,27 @@
+uuid: e76e2ad2-3dec-4ce0-b464-6920123d808e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.job_online_form
+    - field.storage.contact_message.field_job_apply_cv
+  module:
+    - file
+id: contact_message.job_online_form.field_job_apply_cv
+field_name: field_job_apply_cv
+entity_type: contact_message
+bundle: job_online_form
+label: CV
+description: 'Please upload your CV.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

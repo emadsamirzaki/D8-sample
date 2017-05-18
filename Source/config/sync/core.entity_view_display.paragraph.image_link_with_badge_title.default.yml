@@ -1,0 +1,51 @@
+uuid: e007c04e-6148-4027-b8ee-bb8ec829d036
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_image
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_link
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_link_target
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_title
+    - paragraphs.paragraphs_type.image_link_with_badge_title
+  module:
+    - image
+    - link
+id: paragraph.image_link_with_badge_title.default
+targetEntityType: paragraph
+bundle: image_link_with_badge_title
+mode: default
+content:
+  field_image_badge_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_badge_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image_badge_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  field_image_badge_link_target: true
+  uid: true

@@ -1,0 +1,12 @@
+parameters:
+    ceres_core.event_subsciber.class: \Drupal\ceres_core\EventSubscriber\NewsEventSubscriber
+    ceres_core.route_subsciber.class: \Drupal\ceres_core\Routing\RouteSubscriber
+services:
+  event_subscriber.news_redirect:
+      class: '%ceres_core.event_subsciber.class%'
+      tags:
+      - { name: event_subscriber }
+  ceres_core.route_subscriber:
+      class: '%ceres_core.route_subsciber.class%'
+      tags:
+      - { name: event_subscriber }

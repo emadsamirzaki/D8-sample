@@ -1,0 +1,19 @@
+uuid: 61b5efa5-458b-4e88-a790-63de1754e966
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_tx_creditcardnum
+id: authorize_transaction.monthly_subscription_transaction.field_tx_creditcardnum
+field_name: field_tx_creditcardnum
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: 'Credit Card Number'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

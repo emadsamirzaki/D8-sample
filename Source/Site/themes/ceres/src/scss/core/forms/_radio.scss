@@ -1,0 +1,53 @@
+.button-radios{
+  legend{
+    display: none;
+  }
+  .fieldset-wrapper{
+    text-align: center;
+  }
+  .form-type-radio{
+    display: inline-block;
+    min-width: 125px;
+    @media(min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      min-width: 80px;
+    }
+    @media(min-width: $screen-lg-min){
+      margin-#{$opposite}: 5px;
+    }
+  }
+  input[type="radio"]{
+    position: absolute;
+    left: -9999px; 
+    + label{
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      font-weight: 400;
+      padding: 15px 30px;
+      @media(min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+        padding: 15px 10px;
+      }
+      text-align: center;
+      color: #fff;
+      border: 1px solid $dark-brown;
+      background-color: $dark-brown;
+      border-radius: 3px;
+    }
+    &:checked + label{
+      border-color: $lighten-green;
+      background-color: $lighten-green;
+    }
+    &.no-back-color{
+      + label{
+        color: $dark-brown;
+        border: 1px solid $dark-brown;
+        background-color: transparent;
+      }
+      &:checked + label{
+        color: #fff;
+        border-color: $lighten-green;
+        background-color: $lighten-green;
+      }
+    }
+  }
+}

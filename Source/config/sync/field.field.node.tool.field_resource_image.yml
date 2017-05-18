@@ -1,0 +1,38 @@
+uuid: d8e18380-342c-4941-bfaf-cf8d49596330
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_image
+    - node.type.tool
+  module:
+    - image
+id: node.tool.field_resource_image
+field_name: field_resource_image
+entity_type: node
+bundle: tool
+label: 'Thumbnail image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 370x244
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 4ca74800-3080-4e7b-b992-c75ccf167be5
+    alt: Tool
+    title: ''
+    width: 1920
+    height: 1281
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

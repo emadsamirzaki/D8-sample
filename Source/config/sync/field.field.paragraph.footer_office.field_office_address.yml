@@ -1,0 +1,19 @@
+uuid: ba8308a6-de65-4ed0-9493-ce24b0a1d566
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_office_address
+    - paragraphs.paragraphs_type.footer_office
+id: paragraph.footer_office.field_office_address
+field_name: field_office_address
+entity_type: paragraph
+bundle: footer_office
+label: Address
+description: 'Address of the office'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

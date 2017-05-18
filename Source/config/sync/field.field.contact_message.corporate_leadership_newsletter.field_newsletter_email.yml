@@ -1,0 +1,19 @@
+uuid: 71aa42fd-f470-41a3-a211-9e4868f735f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.corporate_leadership_newsletter
+    - field.storage.contact_message.field_newsletter_email
+id: contact_message.corporate_leadership_newsletter.field_newsletter_email
+field_name: field_newsletter_email
+entity_type: contact_message
+bundle: corporate_leadership_newsletter
+label: Email
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

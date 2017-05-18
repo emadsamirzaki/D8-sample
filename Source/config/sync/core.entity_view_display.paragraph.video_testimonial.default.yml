@@ -1,0 +1,80 @@
+uuid: 097002cd-5aa7-4127-bf35-d29d0ae43846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_testimonial.field_testimonial_author_image
+    - field.field.paragraph.video_testimonial.field_testimonial_author_name
+    - field.field.paragraph.video_testimonial.field_testimonial_author_org
+    - field.field.paragraph.video_testimonial.field_testimonial_body
+    - field.field.paragraph.video_testimonial.field_testimonial_video_caption
+    - field.field.paragraph.video_testimonial.field_testimonial_video_image
+    - field.field.paragraph.video_testimonial.field_testimonial_youtube_id
+    - paragraphs.paragraphs_type.video_testimonial
+  module:
+    - image
+id: paragraph.video_testimonial.default
+targetEntityType: paragraph
+bundle: video_testimonial
+mode: default
+content:
+  field_testimonial_author_image:
+    weight: 6
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_testimonial_author_name:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonial_author_org:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonial_body:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_testimonial_video_caption:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_testimonial_video_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_testimonial_youtube_id:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

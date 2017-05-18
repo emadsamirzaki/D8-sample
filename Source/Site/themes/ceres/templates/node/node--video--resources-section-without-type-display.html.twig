@@ -1,0 +1,12 @@
+<a class="news-wrapper" href="{{ url }}">
+  <div class="news-img-wrapper">
+    {% if node.field_video_youtube_id.value %}
+        <img src="https://img.youtube.com/vi/{{node.field_video_youtube_id.value}}/mqdefault.jpg" alt="{{ node.getTitle() }}" class="img-responsive">
+    {% else %}
+        <img src="/{{ directory }}/assets/images/news/news.jpg" alt="Video" class="img-responsive">
+    {% endif %}
+  </div>
+  <div class="news-content text-center">
+    <h3 class="news-title">{{ node.getTitle() }}</h3>
+  </div>
+</a>

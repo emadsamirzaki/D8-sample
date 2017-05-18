@@ -1,0 +1,47 @@
+{% set tagsLen = content.field_tags['#items'] | length %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-lg-push-1">
+      <div class="row">
+        <div class="tag-section text-center">
+          <ul>
+            <li><span>{{ node.getCreatedTime() | date("F j, Y") }}</span></li>
+                {% if author %}
+              <li>
+                <a href="{{ author.url }}">{{ author.title }}</a>
+              </li>
+            {% endif %}
+            {% if node.field_tags.value %}
+              <li>
+                <ul>
+                  {% for i in 0..tagsLen-1 %}
+                    <li>
+                      <a href="{{ url('search.view_node_search', {'keys' : content.field_tags[i]['#plain_text']}) }}">{{ content.field_tags[i] }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+            {% if campaign %}<li><a href="{{ path('entity.node.canonical', {'node': campaign.id }) }}">{{ campaign.getTitle() }}</a></li>{% endif %}
+            {% if issue %}<li><a href="{{ path('entity.node.canonical', {'node': issue.id }) }}">{{ issue.getTitle() }}</a></li>{% endif %}
+          </ul>
+          {% if content.field_news_press_source %}
+            {{ content.field_news_press_source }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if node.field_description.value %}
+  <section class="body-issue-wrapper pad-top-20 no-back-border row">
+    <div class="container">
+      {{ content.field_description }}
+    </div>
+  </section>
+{% endif %}
+{% if content.field_press_contact %}
+  {{ content.field_press_contact }}
+{% endif %}

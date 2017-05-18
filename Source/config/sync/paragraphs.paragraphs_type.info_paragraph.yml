@@ -1,0 +1,6 @@
+uuid: 9a534a7d-b7be-4588-8185-9c49065937aa
+langcode: en
+status: true
+dependencies: {  }
+id: info_paragraph
+label: 'Info Paragraph'

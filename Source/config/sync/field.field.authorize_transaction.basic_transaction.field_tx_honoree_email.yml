@@ -1,0 +1,19 @@
+uuid: e493ffa2-2902-477d-9391-5c9373f02e9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_honoree_email
+id: authorize_transaction.basic_transaction.field_tx_honoree_email
+field_name: field_tx_honoree_email
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Honoree Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

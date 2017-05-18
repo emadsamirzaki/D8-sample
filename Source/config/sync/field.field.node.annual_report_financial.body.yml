@@ -1,0 +1,22 @@
+uuid: 5a48dfec-417d-4ca2-9892-6d7a6bf68f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.annual_report_financial
+  module:
+    - text
+id: node.annual_report_financial.body
+field_name: body
+entity_type: node
+bundle: annual_report_financial
+label: 'Lead Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: a26691fc-d84c-4972-9bdc-608956d1eb4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_twitter
+    - node.type.staff
+id: node.staff.field_staff_twitter
+field_name: field_staff_twitter
+entity_type: node
+bundle: staff
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

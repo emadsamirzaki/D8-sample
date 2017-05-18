@@ -1,0 +1,10 @@
+{% set imageURI = content.field_content_image['#items'].entity.uri.value %}
+
+<a class="network-wrapper text-center"  href="{{ url }}">
+  {% if imageURI %}
+    {{ content.field_content_image }}
+  {% else %}
+    <img src="/{{ directory }}/assets/images/progress/progress1.jpg" alt="Progress" class="img-responsive">
+  {% endif %}
+  <h3 class="network-title">{{ node.getTitle() }}</h3>
+</a>

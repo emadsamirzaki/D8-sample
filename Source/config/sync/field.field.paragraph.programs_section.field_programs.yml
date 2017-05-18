@@ -1,0 +1,28 @@
+uuid: 40b4a74f-18c2-47ef-a5d0-1e5abda550fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_programs
+    - node.type.program
+    - paragraphs.paragraphs_type.programs_section
+id: paragraph.programs_section.field_programs
+field_name: field_programs
+entity_type: paragraph
+bundle: programs_section
+label: Programs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

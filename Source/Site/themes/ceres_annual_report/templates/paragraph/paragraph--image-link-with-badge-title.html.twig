@@ -1,0 +1,11 @@
+<a class="network-wrapper image-title-badge-wrapper text-center"  href="{{ paragraph.field_image_badge_link.0.url }}" 
+   {% if paragraph.field_image_badge_link_target.value %}target="_blank"{%endif%}>
+  {% if paragraph.field_image_badge_image.value %}
+    {{ content.field_image_badge_image }}
+  {% else %}
+    <img src="/{{ directory }}/assets/images/links/link1.jpg" alt="Financial Link" class="img-responsive">
+  {% endif %}
+  {%if paragraph.field_image_badge_title.value %}
+    <h3 class="network-title">{{ content.field_image_badge_title }}</h3>
+  {% endif %}
+</a>

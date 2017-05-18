@@ -1,0 +1,11 @@
+parameters:
+    authorize_pay.consumer.class: \Drupal\authorize_pay\Service\AuthorizeConsumerService
+    authorize_pay.post_payment.class: \Drupal\authorize_pay\Service\PostPaymentService
+services:
+  authorize_net.consumer:
+      class: '%authorize_pay.consumer.class%'
+      arguments: ['@config.factory','@entity_type.manager','@authorize_net.post_payment']
+
+  authorize_net.post_payment:
+      class: '%authorize_pay.post_payment.class%'
+      arguments: ['@twig']

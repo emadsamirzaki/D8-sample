@@ -1,0 +1,19 @@
+uuid: b4b845b5-7cf4-4871-bf14-2c5a02469bee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_impactstory_title
+    - paragraphs.paragraphs_type.featured_impact_story
+id: paragraph.featured_impact_story.field_featured_impactstory_title
+field_name: field_featured_impactstory_title
+entity_type: paragraph
+bundle: featured_impact_story
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

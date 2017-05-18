@@ -1,0 +1,67 @@
+.search-result-list{
+  strong{
+    font-weight: 600;
+  }
+}
+.search-form-container-wrapper{
+  ~ h2{
+    display: none;
+  }
+  input:not([type="checkbox"]):not([type="radio"]){
+    height: 50px;
+    border-radius: 0;
+  }
+  input[type="search"]{
+    width: 85%;
+    float: $default;
+    @media (max-width: $screen-xs-max){
+      width: 70%;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      width: 75%;
+    }
+  }
+  .input-group{
+    @include clearfix;
+  }
+  .input-group-btn{
+    float: $default;
+    width: 15%;
+    @media (max-width: $screen-xs-max){
+      width: 30%;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      width: 25%;
+    }
+  }
+  button{
+    @include transition-animation();
+    margin-#{$default}: 20px; 
+    width: calc(100% - 20px);
+    height: 50px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: $light-green;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    &:hover{
+      background-color: $hover-light-green;  
+    }
+    .sr-only{
+      width: auto;
+      height: auto;
+      display: block;
+      position: relative;
+    }
+    @media (max-width: $screen-xs-max){
+      margin-#{$default}: 10px; 
+      width: calc(100% - 10px);
+      font-size: 16px;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      font-size: 20px;
+    }
+  }
+}

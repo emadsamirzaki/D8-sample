@@ -1,0 +1,18 @@
+<section class="home-page-network home-page-campaign row">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-push-1">
+                <div class="row">
+                    <h2 class="section-title text-center">{% trans %}Campaigns{% endtrans %}</h2>
+                    <div class="networks-list flex-display">
+                        {% for item in items %}
+                            <div class="col-xs-12 col-sm-4 flex-display">
+                                {{ item.content }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

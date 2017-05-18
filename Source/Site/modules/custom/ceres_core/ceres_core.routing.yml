@@ -1,0 +1,36 @@
+ceres_core.static.templates:
+  path: '/design/static/{template_name}'
+  defaults:
+    _controller: '\Drupal\ceres_core\Controller\staticController::viewAction'
+  requirements:
+    _permission: 'access administration pages'
+
+ceres_core.report.download:
+  path: '/report/download/{node}'
+  defaults:
+    _controller: '\Drupal\ceres_core\Controller\ReportController::downloadAction'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: entity:node
+
+ceres_core.report.view:
+  path: '/report/view/{node}'
+  defaults:
+    _controller: '\Drupal\ceres_core\Controller\ReportController::viewAction'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: entity:node
+
+ceres_core.authorize_donate:
+  path: '/donate'
+  defaults:
+    _controller: '\Drupal\ceres_core\Controller\DonateController::viewAction'
+    _title: 'Donate'
+  requirements:
+    _permission: 'access content'

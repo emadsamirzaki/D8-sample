@@ -1,0 +1,26 @@
+uuid: 763d5a38-77af-4abd-82b9-c859cb30a646
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.annual_report_home.field_banner_image
+    - field.field.node.annual_report_home.field_home_financial_links
+    - field.field.node.annual_report_home.field_home_sections
+    - field.field.node.annual_report_home.field_meta_tags
+    - node.type.annual_report_home
+  module:
+    - user
+id: node.annual_report_home.teaser
+targetEntityType: node
+bundle: annual_report_home
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_home_financial_links: true
+  field_home_sections: true
+  field_meta_tags: true

@@ -1,0 +1,18 @@
+// Import bootstrap and fontawesome
+@import "core/_directional";
+@import "core/_variables-custom";
+@import 'core/_mixins-custom';
+@import 'core/_bootstrap-custom';
+/* Incude bootstrap-dialog to make use of Bootstrap Modal more friendly. Examples: http://nakupanda.github.io/bootstrap3-dialog/*/
+/*@import "components/bootstrap-dialog";*/
+/* Incude bootstrap-social-buttons to make use Social Buttons for Bootstrap. Examples: http://lipis.github.io/bootstrap-social/*/
+/*@import "components/bootstrap-social-buttons";*/
+@import '_variables';
+@import '_mixins';
+
+@import 'core/header/_menu';
+@import 'core/footer/_footer';
+
+@import 'core/system/_general';
+@import 'core/home/_image-title-badge';
+@import 'core/home/_list-paragraph';

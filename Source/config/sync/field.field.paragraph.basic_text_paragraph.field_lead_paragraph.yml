@@ -1,0 +1,23 @@
+uuid: 571494e1-72eb-42f6-b65d-d744acad9b3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_lead_paragraph
+    - paragraphs.paragraphs_type.basic_text_paragraph
+id: paragraph.basic_text_paragraph.field_lead_paragraph
+field_name: field_lead_paragraph
+entity_type: paragraph
+bundle: basic_text_paragraph
+label: 'Center Aligned'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

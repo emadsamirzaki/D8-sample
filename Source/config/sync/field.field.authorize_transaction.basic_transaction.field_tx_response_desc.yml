@@ -1,0 +1,19 @@
+uuid: c83f0dd5-b6df-4b55-a31e-8b8dfd453999
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_response_desc
+id: authorize_transaction.basic_transaction.field_tx_response_desc
+field_name: field_tx_response_desc
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Response Desc'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

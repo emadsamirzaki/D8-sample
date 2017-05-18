@@ -1,0 +1,35 @@
+uuid: eebef9ed-0fbd-4ffe-876d-d004b924926f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.image_link_with_badge_title
+    - field.field.node.annual_report_feature.body
+    - field.field.node.annual_report_feature.field_annual_report_description
+    - field.field.node.annual_report_feature.field_banner_image
+    - field.field.node.annual_report_feature.field_content_image
+    - field.field.node.annual_report_feature.field_meta_tags
+    - node.type.annual_report_feature
+  module:
+    - image
+    - user
+id: node.annual_report_feature.image_link_with_badge_title
+targetEntityType: node
+bundle: annual_report_feature
+mode: image_link_with_badge_title
+content:
+  field_content_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  body: true
+  field_annual_report_description: true
+  field_banner_image: true
+  field_meta_tags: true
+  links: true

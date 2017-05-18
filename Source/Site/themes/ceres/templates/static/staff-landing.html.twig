@@ -1,0 +1,58 @@
+{# banner and breadcrumb #}
+<section class="banner-wrapper-section row">
+  <div class="banner-wrapper rltv">
+    <img class="img-responsive"  src="/{{ directory }}/assets/images/issue/banner.jpg" alt="banner" />
+    <div class="container banner-text-container">
+      <h1 class="page-title">Staff</h1>
+      <div class="breadcrumb-wrapper">
+        <ul class="list-inline">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Staff</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{#Staff list#}
+<section class="home-page-experts row">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="row">
+          <div class="staff-switch-wrapper col-xs-12 z-index-2 col-sm-6 col-md-4">
+            <select  class="form-control">
+              <option>Ceres' Staff</option>
+              <option>Experts</option>
+              <option>Board of Directors</option>
+              <option>Ceres Presedent Council</option>
+            </select>
+          </div>
+          <p class="universal-section-desc clear text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia neque non justo convallis gravida.</p>
+          <div class="experts-list clear clearfix">
+            {% for i in 1..19 %}
+                <div class="text-center expert-container col-xs-12 col-sm-6 col-md-3">
+                  <a class="expert-image-wrapper" href="#">
+                    <div class="expert-image-circle-container">
+                      <img src="/{{ directory }}/assets/images/expert/expert.png" alt="news" class="img-responsive img-circle">
+                    </div>
+                  </a>
+                  <div class="expert-content">
+                    <h3><a class="expert-name" href="#">Jackie Miller</a></h3>
+                    <p class="expert-org">Organization Name</p>
+                  </div>
+                </div>
+            {% endfor %}
+          </div>
+          <div class="rltv">
+            <div class="spinner">
+              <div class="rect1"></div>
+              <div class="rect2"></div>
+              <div class="rect3"></div>
+              <div class="rect4"></div>
+              <div class="rect5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

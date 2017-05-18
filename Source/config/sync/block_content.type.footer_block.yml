@@ -1,0 +1,8 @@
+uuid: 4c5bea26-9e38-4536-ab62-811d6a578ea8
+langcode: en
+status: true
+dependencies: {  }
+id: footer_block
+label: 'Footer Block'
+revision: 0
+description: 'Block which contains Ceres footer data sections'

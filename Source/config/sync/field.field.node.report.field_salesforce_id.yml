@@ -1,0 +1,19 @@
+uuid: 0b23dd08-8bef-4186-acb8-f8dc9813e2e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salesforce_id
+    - node.type.report
+id: node.report.field_salesforce_id
+field_name: field_salesforce_id
+entity_type: node
+bundle: report
+label: 'Salesforce Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

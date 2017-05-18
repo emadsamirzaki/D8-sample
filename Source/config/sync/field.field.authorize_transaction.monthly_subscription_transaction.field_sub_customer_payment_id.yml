@@ -1,0 +1,19 @@
+uuid: aabc473e-6eea-42d5-ab1a-5bfba0d4495a
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_sub_customer_payment_id
+id: authorize_transaction.monthly_subscription_transaction.field_sub_customer_payment_id
+field_name: field_sub_customer_payment_id
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: 'Customer Payment Profile Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

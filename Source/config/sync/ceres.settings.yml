@@ -1,0 +1,38 @@
+cdn_provider: ''
+_core:
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://ceres/themes/ceres/favicon.ico'
+  use_default: true
+schemas:
+  bootstrap: 8000
+  ceres: 8000
+logo:
+  path: themes/ceres/logo.png
+  url: ''
+  use_default: false
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header_links: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content_banner: ''
+  content: ''
+  after_content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  before_footer: ''
+  footer: ''
+fluid_container: 1
+breadcrumb_home: 1
+table: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+table_responsive: '-1'

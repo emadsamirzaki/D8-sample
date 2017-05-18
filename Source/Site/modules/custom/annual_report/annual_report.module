@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Contains annual_report.module..
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+/**
+ * Implements hook_help().
+ */
+function annual_report_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the annual_report module.
+    case 'help.page.annual_report':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Annual Report configuration.') . '</p>';
+      return $output;
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function annual_report_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+   // Only proceed if the current form is a menu item add/edit form.
+  if ($form_id == 'menu_link_content_menu_link_content_form') {
+    
+    $menu_link = $form_state->getFormObject()->getEntity();
+    $menu_link_options = $menu_link->link->first()->options ?: [];
+    $menu_link_attributes = isset($menu_link_options['attributes']) ? $menu_link_options['attributes'] : [];
+    $form['target'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Open in new window'),
+      '#default_value' => (isset($menu_link_attributes["target"]) && reset($menu_link_attributes["target"]) == "_blank")? 1 : 0 ,
+      '#weight' => -2,
+    );
+    $form['actions']['submit']['#submit'][] = 'annual_report_menu_target_submit';
+  }
+}
+
+/**
+ * Implements hook_form_submit().
+ */
+function annual_report_menu_target_submit($form, &$form_state) {
+    $menu_link = $form_state->getFormObject()->getEntity();
+    $options = ($form_state->getValue('target')) ? ['attributes' => ["target"=>['_blank']]]: [];
+    $menu_link_options = $menu_link->link->first()->options;
+
+    $menu_link->link->first()->options = array_merge($menu_link_options, $options);
+    $menu_link->save();
+}

@@ -1,0 +1,70 @@
+uuid: 49489938-555c-40e8-a60e-455c4bc1c44d
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - node
+    - system
+  theme:
+    - ceres
+id: homepagesignupblock
+theme: ceres
+region: before_footer
+weight: -11
+provider: null
+plugin: hp_signup_block
+settings:
+  id: hp_signup_block
+  label: Subscribe
+  provider: ceres_core
+  label_display: '0'
+  imageFid:
+    - '696'
+  content:
+    title: Subscribe
+    body: 'Get the latest news and updates from Ceres in your inbox. '
+    type: 'Ceres eCommunity'
+    url: /signup_newsletter
+    submitText: Subscribe
+    image: 'public://images/sunrise_windmill_0.jpg'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog_post: blog_post
+      campaign: campaign
+      case_study: case_study
+      director: director
+      event: event
+      issue: issue
+      job: job
+      network: network
+      news: news
+      page: page
+      page_simple: page_simple
+      podcast: podcast
+      press: press
+      press_contact: press_contact
+      program: program
+      report: report
+      roadmap: roadmap
+      roadmap_resource: roadmap_resource
+      staff: staff
+      tool: tool
+      video: video
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '/about-us/career-opportunities/*'
+    negate: true
+    context_mapping: {  }

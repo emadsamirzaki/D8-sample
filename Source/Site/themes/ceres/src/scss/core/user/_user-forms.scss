@@ -1,0 +1,58 @@
+.user-header{
+  ul:not(.item-list--messages){
+    @extend .flex-display;
+    border: 0;
+    > li{ 
+      display: flex;
+      display: -webkit-flex;
+      > a {
+        display: flex;
+        display: -webkit-flex;
+        color: $brown-black;
+        border-color: $expert-back-color; 
+        &:hover, &:focus{
+          color:$brown-black; 
+          border-color: $expert-back-color; 
+          background-color: $expert-back-color; 
+        }
+        @media(max-width: $screen-xs-max){
+          display: flex;
+          display: -webkit-flex;
+          font-size: 12px;
+          min-width: 66px;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-align-items: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      &.active a, &.active a:hover, &.active a:focus{
+        color: $brown-black; 
+        border-color: $expert-back-color; 
+        background-color: $expert-back-color; 
+      } 
+    }
+  }
+}
+
+#user-form #edit-pass, .filter-wrapper{
+  clear: both;
+}
+#user-form .form-item-mail.has-float-label{
+  @media(min-width: $screen-sm-min){
+    width: calc(100% - 10px);
+  }
+}
+#user-form .form-item-current-pass + .form-item-mail.has-float-label{
+  @media(min-width: $screen-sm-min){
+    width: calc(50% - 10px);
+  }
+}
+#edit-current-pass--description{
+  top: 0;
+  left: 0;
+  @media(min-width: $screen-sm-min){
+    width: 200%;
+  }
+}

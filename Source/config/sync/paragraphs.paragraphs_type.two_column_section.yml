@@ -1,0 +1,6 @@
+uuid: 6058f731-93c7-4494-b373-3e1d906d9e45
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_section
+label: 'Two Column Section'

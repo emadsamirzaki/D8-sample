@@ -1,0 +1,44 @@
+uuid: 7fe09115-c149-4d02-9c3e-6ce05a1ad4b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_path
+label: 'Node Path'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  01acde77-74eb-4860-8800-c97de85daaa3:
+    id: node_type
+    bundles:
+      blog_post: blog_post
+      campaign: campaign
+      case_study: case_study
+      director: director
+      donation: donation
+      event: event
+      issue: issue
+      job: job
+      network: network
+      news: news
+      page: page
+      page_simple: page_simple
+      podcast: podcast
+      press: press
+      press_contact: press_contact
+      program: program
+      report: report
+      roadmap: roadmap
+      roadmap_resource: roadmap_resource
+      staff: staff
+      tool: tool
+      video: video
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 01acde77-74eb-4860-8800-c97de85daaa3
+selection_logic: and
+weight: 5
+relationships: {  }

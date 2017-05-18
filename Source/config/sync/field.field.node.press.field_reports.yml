@@ -1,0 +1,29 @@
+uuid: df209146-f9a3-4006-a1b5-d7956b4a524d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reports
+    - node.type.press
+    - node.type.report
+id: node.press.field_reports
+field_name: field_reports
+entity_type: node
+bundle: press
+label: Reports
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      report: report
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

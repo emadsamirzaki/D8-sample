@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains authorize_pay.module..
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\user\Form\UserLoginForm;
+
+/**
+ * Implements hook_help().
+ */
+function authorize_pay_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the authorize_pay module.
+    case 'help.page.authorize_pay':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Use Authorize.net API for payment transaction gateway') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function authorize_pay_theme() {
+  $theme = [];
+  $theme['authorize_transaction'] = [
+    'render element' => 'elements',
+    'file' => 'authorize_transaction.page.inc',
+    'template' => 'authorize_transaction',
+  ];
+  $theme['authorize_transaction_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'authorize_transaction.page.inc',
+  ];
+  return $theme;
+}

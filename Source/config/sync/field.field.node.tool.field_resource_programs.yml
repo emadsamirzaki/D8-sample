@@ -1,0 +1,29 @@
+uuid: 1ad69261-42a7-40ee-bdfd-5269d4b56c02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_programs
+    - node.type.program
+    - node.type.tool
+id: node.tool.field_resource_programs
+field_name: field_resource_programs
+entity_type: node
+bundle: tool
+label: Programs
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

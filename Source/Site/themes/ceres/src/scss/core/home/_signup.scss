@@ -1,0 +1,95 @@
+.home-page-signup{
+    padding: 45px 0;
+    overflow: hidden;
+    position: relative;
+    &:before{
+        content:"";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba($dark-brown, 0.7);
+    }
+    @media (max-width: $screen-xs-max){
+        padding: 20px 0 15px;
+        background-position: 65% center;
+    }
+    .section-title{
+        @include section-title-with-margin-bottom(25px, #fff);
+    }
+    .section-desc{
+        @include section-description-with-margin-bottom(10px, #fff);
+        &.small{
+            font-size: 20px;
+            @media (max-width: $screen-xs-max){
+                font-size: 16px;
+            }
+        }
+    }
+    img{
+        @include c-align();
+        min-width: 100%;
+        min-height: 100%;
+        @media (max-width: $screen-md-max){
+            max-width: none;
+        }
+    }
+}
+.sign-up-form{
+    .form-group{
+        float: left;
+        @media (max-width: $screen-xs-max){
+            width: 96%;
+            margin-#{$default}: 2%;
+            margin-#{$opposite}: 2%;
+        }
+        @media (min-width: $screen-sm-min){
+            width: 48%;
+            margin-#{$opposite}: 2%;
+        }
+        input{
+            width:100%;
+            border-radius: 50px;
+            height: 40px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+}
+.form-fields-slide-container{
+    overflow: hidden;
+    @media (max-width: $screen-xs-max){
+        height: 0;
+        display: block;
+        &.sign-slide-processed{
+            height:auto;
+            width: 100% !important;
+        }
+    }
+    @media (min-width: $screen-sm-min){
+        width: 0;
+        display: inline-block;
+        vertical-align: middle;
+        max-height: 40px;
+        &.sign-slide-processed{
+            width: 80%;
+        }
+    }
+    @media (min-width: $screen-md-min){
+        &.sign-slide-processed{
+            width: 60%;
+        }
+    }
+
+}
+.subscribr-btn{
+    color: #fff;
+    margin-top: 20px;
+    background-color: $light-green;
+    &:hover{
+        color: #fff;
+        background-color: $lighten-green;
+    }
+}

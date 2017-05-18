@@ -1,0 +1,19 @@
+uuid: 544142b6-444f-47bc-8359-df8e33eb381e
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.investor_leadership_newsletter
+    - field.storage.contact_message.field_newsletter_first_name
+id: contact_message.investor_leadership_newsletter.field_newsletter_first_name
+field_name: field_newsletter_first_name
+entity_type: contact_message
+bundle: investor_leadership_newsletter
+label: 'First Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

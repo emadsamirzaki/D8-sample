@@ -1,0 +1,7 @@
+uuid: 29b2ff86-6a1d-45f2-9e10-98097a53aa40
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_message_email_signup_newsletter_form
+captchaType: recaptcha/reCAPTCHA
+label: contact_message_email_signup_newsletter_form

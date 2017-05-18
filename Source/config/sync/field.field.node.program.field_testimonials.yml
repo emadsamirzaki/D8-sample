@@ -1,0 +1,129 @@
+uuid: 5eb4df6f-7086-4951-bff1-7e569b7a7cae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonials
+    - node.type.program
+    - paragraphs.paragraphs_type.quote_testimonial
+  module:
+    - entity_reference_revisions
+id: node.program.field_testimonials
+field_name: field_testimonials
+entity_type: node
+bundle: program
+label: Testimonials
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      quote_testimonial: quote_testimonial
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 35
+        enabled: false
+      basic_text_paragraph:
+        weight: 36
+        enabled: false
+      campaigns_section:
+        weight: 37
+        enabled: false
+      collage:
+        weight: 38
+        enabled: false
+      collage_section:
+        weight: 39
+        enabled: false
+      company_section:
+        weight: 40
+        enabled: false
+      events_awards_section:
+        weight: 41
+        enabled: false
+      experts_section:
+        weight: 42
+        enabled: false
+      footer_office:
+        weight: 43
+        enabled: false
+      image_link:
+        weight: 44
+        enabled: false
+      info_download_paragraph:
+        weight: 45
+        enabled: false
+      info_paragraph:
+        weight: 46
+        enabled: false
+      issues_reference_listing:
+        weight: 47
+        enabled: false
+      join_section:
+        weight: 48
+        enabled: false
+      networks_section:
+        weight: 49
+        enabled: false
+      network_members:
+        weight: 50
+        enabled: false
+      network_working_group:
+        weight: 51
+        enabled: false
+      news_section:
+        weight: 52
+        enabled: false
+      press_source:
+        weight: 53
+        enabled: false
+      programs_reference_listing:
+        weight: 54
+        enabled: false
+      programs_section:
+        weight: 55
+        enabled: false
+      quote_testimonial:
+        enabled: true
+        weight: 56
+      roadmap_key_expectation:
+        weight: 57
+        enabled: false
+      roadmap_landing_categories:
+        weight: 58
+        enabled: false
+      roadmap_landing_info:
+        weight: 59
+        enabled: false
+      roadmap_resources_section:
+        weight: 60
+        enabled: false
+      roadmap_section:
+        weight: 61
+        enabled: false
+      sectors_reference_listing:
+        weight: 62
+        enabled: false
+      testimonial_section:
+        weight: 63
+        enabled: false
+      text_paragraph:
+        weight: 64
+        enabled: false
+      two_column_section:
+        weight: 65
+        enabled: false
+      video_paragraph:
+        weight: 66
+        enabled: false
+      video_testimonial:
+        weight: 67
+        enabled: false
+      views_listing:
+        weight: 68
+        enabled: false
+field_type: entity_reference_revisions

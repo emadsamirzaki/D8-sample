@@ -1,0 +1,19 @@
+uuid: 1375d851-f076-47c1-83ef-df27df0c0622
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_block
+    - field.storage.block_content.field_testimonial_block_title
+id: block_content.testimonial_block.field_testimonial_block_title
+field_name: field_testimonial_block_title
+entity_type: block_content
+bundle: testimonial_block
+label: Title
+description: 'Provide testimonial title'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

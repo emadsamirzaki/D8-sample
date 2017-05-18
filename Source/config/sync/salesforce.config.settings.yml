@@ -1,0 +1,9 @@
+salesforce:
+  config:
+    login_url: 'https://ceres--cerestest.cs62.my.salesforce.com/'
+    client_id: 3MVG9er.T8KbeePQaANgdJjmCQjP.fzjATcoLzhXFC.orUcs4nyWS54hQ0.FDyo4KEri699Ydmr0OhFziAKUU
+    client_secret: '2376987379793490429'
+    api_url: /services/data/v37.0
+    access_token: '{"id":"https:\/\/test.salesforce.com\/id\/00D5C0000008gzRUAQ\/00512000005wpriAAA","dateIssued":"2017-03-13 17:24:29","dateExpires":"2017-03-13 18:19:29","scope":["refresh_token","web","api"],"tokenType":"Bearer","refreshToken":"5Aep8611q8oF1VlfNvXi7Tksn51aH9EO3GTfvrWxswXZ5Hx1ZOU_4w.H0PXAR3Fz_4D.FGcFluOkevt889Wj78g","signature":"posChk7ZZqdzX5rrJPBY0QZMC9gzEmFwa6z8FQSzuMU=","accessToken":"00D5C0000008gzR!ARQAQOumeWizf2m3R.NuXSZdELO7euRMloJAS1mf5zk.H2rTJeu35tLDI_MT1sOMIDdzYr8ULm3V1VGu7raH6gqNCcdzn2gO","apiUrl":"https:\/\/ceres--CeresTest.cs62.my.salesforce.com"}'
+_core:
+  default_config_hash: kmYfM5LEyYQwrLyHaM3X8Upxu2vwB3sBYFT9P9Lvrcs

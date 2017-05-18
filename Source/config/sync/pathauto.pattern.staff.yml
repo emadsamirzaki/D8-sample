@@ -1,0 +1,22 @@
+uuid: b223c156-cadf-42c8-96eb-12eea0ccb569
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: staff
+label: Staff
+type: 'canonical_entities:node'
+pattern: 'about-us/staff/[node:title]'
+selection_criteria:
+  e75b3f88-4cec-4e75-8b8a-86104e0a299b:
+    id: node_type
+    bundles:
+      staff: staff
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e75b3f88-4cec-4e75-8b8a-86104e0a299b
+selection_logic: and
+weight: 1
+relationships: {  }

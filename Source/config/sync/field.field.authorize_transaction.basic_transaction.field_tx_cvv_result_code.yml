@@ -1,0 +1,19 @@
+uuid: 621d1fb4-1aab-45dd-b9e7-7eca98e3a153
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_cvv_result_code
+id: authorize_transaction.basic_transaction.field_tx_cvv_result_code
+field_name: field_tx_cvv_result_code
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'CVV Result Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

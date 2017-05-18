@@ -1,0 +1,20 @@
+uuid: 6be76d9b-8e68-47e7-bf1f-e74cf17137e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Subscribe
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: investor_leadership_newsletter
+label: 'Investor Leadership Newsletter'
+recipients:
+  - example@example.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

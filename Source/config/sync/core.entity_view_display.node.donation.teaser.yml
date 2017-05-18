@@ -1,0 +1,46 @@
+uuid: d04be2ad-547c-484f-8261-8eab10d69719
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.donation.body
+    - field.field.node.donation.field_banner_image
+    - field.field.node.donation.field_donation_right_first_body
+    - field.field.node.donation.field_donation_right_first_link
+    - field.field.node.donation.field_donation_right_first_title
+    - field.field.node.donation.field_donation_right_sec_body
+    - field.field.node.donation.field_donation_right_sec_email
+    - field.field.node.donation.field_donation_right_sec_phone
+    - field.field.node.donation.field_donation_right_sec_title
+    - field.field.node.donation.field_meta_tags
+    - node.type.donation
+  module:
+    - text
+    - user
+id: node.donation.teaser
+targetEntityType: node
+bundle: donation
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_donation_right_first_body: true
+  field_donation_right_first_link: true
+  field_donation_right_first_title: true
+  field_donation_right_sec_body: true
+  field_donation_right_sec_email: true
+  field_donation_right_sec_phone: true
+  field_donation_right_sec_title: true
+  field_meta_tags: true

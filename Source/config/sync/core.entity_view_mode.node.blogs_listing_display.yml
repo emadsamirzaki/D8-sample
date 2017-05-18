@@ -1,0 +1,10 @@
+uuid: b37dcb81-d1e3-4773-88cc-eff8aab8b2ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blogs_listing_display
+label: 'Blogs Listing Display'
+targetEntityType: node
+cache: true

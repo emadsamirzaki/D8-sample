@@ -1,0 +1,19 @@
+uuid: d614e843-6de8-483d-bc23-7963123a06fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_author_position
+    - taxonomy.vocabulary.authors
+id: taxonomy_term.authors.field_author_position
+field_name: field_author_position
+entity_type: taxonomy_term
+bundle: authors
+label: Position
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

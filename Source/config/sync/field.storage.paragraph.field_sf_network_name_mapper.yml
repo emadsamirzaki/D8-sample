@@ -1,0 +1,33 @@
+uuid: 40d8ea41-be0e-4561-8f6b-542dc0936385
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_sf_network_name_mapper
+field_name: field_sf_network_name_mapper
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Investor Network'
+      label: 'Investor Network'
+    -
+      value: 'Ceres Company Network'
+      label: 'Ceres Company Network'
+    -
+      value: 'Ceres Policy Network'
+      label: 'Ceres Policy Network'
+    -
+      value: 'Connect the Drops'
+      label: 'Connect the Drops'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

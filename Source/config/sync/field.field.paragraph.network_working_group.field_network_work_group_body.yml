@@ -1,0 +1,21 @@
+uuid: 1f56ee96-600c-4660-9b89-400e04f6f1c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_network_work_group_body
+    - paragraphs.paragraphs_type.network_working_group
+  module:
+    - text
+id: paragraph.network_working_group.field_network_work_group_body
+field_name: field_network_work_group_body
+entity_type: paragraph
+bundle: network_working_group
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

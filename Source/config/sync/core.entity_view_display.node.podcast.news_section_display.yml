@@ -1,0 +1,36 @@
+uuid: 59a23565-e26c-4134-a209-d71fb4318229
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_section_display
+    - field.field.node.podcast.field_banner_image
+    - field.field.node.podcast.field_description
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_podcast_audio_link
+    - field.field.node.podcast.field_podcast_file_upload
+    - field.field.node.podcast.field_podcast_thumbnail
+    - field.field.node.podcast.field_resource_campaigns
+    - field.field.node.podcast.field_resource_issues
+    - field.field.node.podcast.field_resource_networks
+    - field.field.node.podcast.field_resource_programs
+    - node.type.podcast
+  module:
+    - user
+id: node.podcast.news_section_display
+targetEntityType: node
+bundle: podcast
+mode: news_section_display
+content: {  }
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_meta_tags: true
+  field_podcast_audio_link: true
+  field_podcast_file_upload: true
+  field_podcast_thumbnail: true
+  field_resource_campaigns: true
+  field_resource_issues: true
+  field_resource_networks: true
+  field_resource_programs: true
+  links: true

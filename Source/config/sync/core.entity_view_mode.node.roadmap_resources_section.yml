@@ -1,0 +1,10 @@
+uuid: 940d54b0-d084-4f55-a841-4741b909dd21
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.roadmap_resources_section
+label: 'Roadmap Resources Section'
+targetEntityType: node
+cache: true

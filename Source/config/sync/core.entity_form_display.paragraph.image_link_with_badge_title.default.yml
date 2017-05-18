@@ -1,0 +1,60 @@
+uuid: 4c3feac2-a285-45d4-a33e-d33ba407a0ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_image
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_link
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_link_target
+    - field.field.paragraph.image_link_with_badge_title.field_image_badge_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_link_with_badge_title
+  module:
+    - field_states_ui
+    - image
+    - link
+id: paragraph.image_link_with_badge_title.default
+targetEntityType: paragraph
+bundle: image_link_with_badge_title
+mode: default
+content:
+  field_image_badge_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_badge_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_image_badge_link_target:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings:
+      field_states_ui:
+        form:
+          type: ''
+          list: ''
+          add: Add
+    type: boolean_checkbox
+    region: content
+  field_image_badge_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

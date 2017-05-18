@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup templates
+ */
+#}
+{% if breadcrumb %}
+    <div class="breadcrumb-wrapper">
+      <ul class="breadcrumb list-inline">
+        {% for item in breadcrumb %}
+            <li {{ item.attributes }}>
+              {% if item.url %}
+                  <a href="{{ item.url }}">{% if item.text |length > 55 %}{{ item.text | slice(0, 55) ~ '...'}}{% else %}{{ item.text }}{% endif %}</a>
+              {% else %}
+                  <span>{% if item.text |length > 55 %}{{ item.text | slice(0, 55) ~ '...'}}{% else %}{{ item.text }}{% endif %}</span>
+              {% endif %}
+            </li>
+        {% endfor %}
+      </ul>
+    </div>
+{% endif %}

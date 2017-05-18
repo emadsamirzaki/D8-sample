@@ -1,0 +1,22 @@
+uuid: 03161d36-1bf3-4543-bf2c-01cf4cf39c78
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: issues_sectors
+label: Issues/Sectors
+type: 'canonical_entities:node'
+pattern: 'our-work/[node:title]'
+selection_criteria:
+  52aa51d9-8629-4031-b0da-694469604c3c:
+    id: node_type
+    bundles:
+      issue: issue
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 52aa51d9-8629-4031-b0da-694469604c3c
+selection_logic: and
+weight: -10
+relationships: {  }

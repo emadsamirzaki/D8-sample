@@ -1,0 +1,14 @@
+{
+  "name": "drupal/ceres_features",
+  "type": "drupal-module",
+  "description": "List of different features added to ceres website",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/ceres_features",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/ceres_features",
+    "source": "http://cgit.drupalcode.org/ceres_features"
+  },
+  "require": { }
+}

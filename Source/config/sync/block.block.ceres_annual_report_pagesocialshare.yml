@@ -1,0 +1,61 @@
+uuid: 624ea02c-3c46-4963-ac10-f566bef5b3b1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_visibility_groups
+    - ceres_core
+    - node
+    - system
+  theme:
+    - ceres_annual_report
+id: ceres_annual_report_pagesocialshare
+theme: ceres_annual_report
+region: content
+weight: -11
+provider: null
+plugin: page_social_share
+settings:
+  id: page_social_share
+  label: 'Page Social Share'
+  provider: ceres_core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/roadmap"
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      annual_report_feature: annual_report_feature
+      annual_report_financial: annual_report_financial
+      annual_report_impact_story: annual_report_impact_story
+      annual_report_listing: annual_report_listing
+      blog_post: blog_post
+      campaign: campaign
+      case_study: case_study
+      event: event
+      issue: issue
+      job: job
+      network: network
+      news: news
+      page: page
+      page_simple: page_simple
+      podcast: podcast
+      press: press
+      program: program
+      report: report
+      roadmap_resource: roadmap_resource
+      tool: tool
+      video: video
+      webinar: webinar
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

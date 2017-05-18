@@ -1,0 +1,47 @@
+uuid: 867fc9b1-1271-46a6-b58c-d13e52d8d82e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.job_listing_display
+    - field.field.node.job.body
+    - field.field.node.job.field_banner_image
+    - field.field.node.job.field_description
+    - field.field.node.job.field_experts
+    - field.field.node.job.field_job_apply_banner
+    - field.field.node.job.field_job_apply_email
+    - field.field.node.job.field_job_apply_info
+    - field.field.node.job.field_job_apply_tip
+    - field.field.node.job.field_job_post_date
+    - field.field.node.job.field_meta_tags
+    - field.field.node.job.field_subtitle
+    - node.type.job
+  module:
+    - datetime
+    - user
+id: node.job.job_listing_display
+targetEntityType: node
+bundle: job
+mode: job_listing_display
+content:
+  field_job_post_date:
+    weight: 0
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  body: true
+  field_banner_image: true
+  field_description: true
+  field_experts: true
+  field_job_apply_banner: true
+  field_job_apply_email: true
+  field_job_apply_info: true
+  field_job_apply_tip: true
+  field_meta_tags: true
+  field_subtitle: true
+  links: true

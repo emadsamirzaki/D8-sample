@@ -1,0 +1,22 @@
+uuid: 4754f002-2506-4b99-b2a3-b987940093fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.annual_report_feature
+  module:
+    - text
+id: node.annual_report_feature.body
+field_name: body
+entity_type: node
+bundle: annual_report_feature
+label: 'Lead Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

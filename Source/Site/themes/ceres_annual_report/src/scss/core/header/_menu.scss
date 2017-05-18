@@ -1,0 +1,9 @@
+.navbar-default .navbar-nav > li> a{
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+    padding: 14px 9px 27px;
+    font-size: 13px;
+  }
+  @media (min-width: $screen-lg-min){
+    padding: 14px 11px 28px;
+  }
+}

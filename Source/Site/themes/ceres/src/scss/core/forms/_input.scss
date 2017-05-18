@@ -1,0 +1,97 @@
+.custom-form-fields{
+  @media(max-width: $screen-xs-max){
+    padding-#{$default}: 15px;
+    padding-#{$opposite}: 15px;
+  }
+}
+label.form-required:after{
+  content:"*";
+  font-weight: 600;
+  margin-#{$default}: 1px; 
+}
+.form-item + p, .form-item .help-block{
+  clear: both;
+  top: -10px;
+  position: relative;
+  font-size: 13px;
+}
+.user-pass{
+  @media (min-width: $screen-sm-min){
+    .has-float-label{
+      width: 100%;
+    }
+  }
+}
+.three-items .form-item{
+  @media (min-width: $screen-sm-min){
+    width: calc(33.33333% - 10px);
+    float: $default;
+    .select-wrapper {
+      padding-right: 0;
+    }
+  }
+}
+.full-width-item .form-item{
+  width: calc(100% - 10px);
+}
+.full-width-item .form-inline{
+  @media (min-width: $screen-sm-min){
+    width: 35%;
+    margin: 0 auto;
+    float: none;
+  }
+}
+.full-width-item input[type="number"]{
+  display: block;
+  width: 100%;
+}
+.form-actions{
+  text-align: center;
+  @include clearfix();
+  clear: both;
+  button{
+    margin-top: 10px;
+    @include transition-animation();
+    height: 50px;
+    color: #fff;
+    padding: 5px 40px;
+    font-size: 21px;
+    font-weight: 400;
+    background-color: $light-green;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    &:hover{
+      background-color: $hover-light-green;  
+    }
+  }
+}
+
+.has-float-label .form-textarea-wrapper{
+  position: relative;
+  &:before{
+    display: block;
+    height: 1.5em;
+    background-color: #FFF;
+    position: absolute;
+    left: 1px;
+    right: 15px;
+    content:'';
+    top: 1px;
+  }
+  > .cke_reset{
+    margin-top: 30px;
+    ~ label{
+      top: 0 !important;
+      left: 0 !important;
+      font-weight: 500 !important;
+    }
+  }
+}
+.password-strength__meter{
+  width: 60%;
+  float: $opposite;
+  @media (max-width: $screen-xs-max){
+    width: 35%;
+  }
+}

@@ -1,0 +1,32 @@
+uuid: f7032f92-6247-4558-8784-bfd417e3a451
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.press_contact.field_banner_image
+    - field.field.node.press_contact.field_meta_tags
+    - field.field.node.press_contact.field_press_contact_email
+    - field.field.node.press_contact.field_press_contact_organization
+    - field.field.node.press_contact.field_press_contact_phone
+    - field.field.node.press_contact.field_staff_about
+    - field.field.node.press_contact.field_staff_picture
+    - node.type.press_contact
+  module:
+    - user
+id: node.press_contact.teaser
+targetEntityType: node
+bundle: press_contact
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_meta_tags: true
+  field_press_contact_email: true
+  field_press_contact_organization: true
+  field_press_contact_phone: true
+  field_staff_about: true
+  field_staff_picture: true

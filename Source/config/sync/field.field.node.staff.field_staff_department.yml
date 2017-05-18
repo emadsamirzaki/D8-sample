@@ -1,0 +1,28 @@
+uuid: ba8e9c4e-ea80-4d0d-a59f-d753f2b738fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_department
+    - node.type.staff
+    - taxonomy.vocabulary.staff_departments
+id: node.staff.field_staff_department
+field_name: field_staff_department
+entity_type: node
+bundle: staff
+label: Department
+description: 'You can manage departements from here <a href=''[site:url]/admin/structure/taxonomy/manage/staff_departments/overview'' target=''_blank''>[site:url]/admin/structure/taxonomy/manage/staff_departments/overview</a>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      staff_departments: staff_departments
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

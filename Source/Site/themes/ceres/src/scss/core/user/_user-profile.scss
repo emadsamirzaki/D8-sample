@@ -1,0 +1,43 @@
+.user-profile{
+  color: $dark-brown;
+  .field{
+    @include clearfix();
+    clear: both;
+    margin-bottom: 6px;
+    &:not(.field--type-text-long){
+      .field--item{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+        font-style: italic;
+      }
+    }
+  }
+  @media (min-width: $screen-sm-min){
+    .field--label-inline .field--label{
+      width: 25%;
+      float: $default;
+    }
+  }
+  .field--label{
+    font-weight: 500;
+    font-size: 20px;
+    @media (min-width: $screen-sm-min){
+      margin-bottom: 5px;
+    }
+  }
+  .field--type-text-long{
+    @extend .panel;
+    @extend .panel-default;
+    background-color: transparent;
+    .field--label{
+      @extend .panel-heading;
+      background-color: $dark-brown;
+      color: #fff;
+    }
+    .field--item{
+      @extend .panel-body;
+    }
+  }
+
+}

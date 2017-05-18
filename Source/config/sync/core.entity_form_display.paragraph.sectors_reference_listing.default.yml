@@ -1,0 +1,22 @@
+uuid: d880321c-b53f-439a-ad61-deeb11ca75ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sectors_reference_listing.field_reference_listing_sectors
+    - paragraphs.paragraphs_type.sectors_reference_listing
+id: paragraph.sectors_reference_listing.default
+targetEntityType: paragraph
+bundle: sectors_reference_listing
+mode: default
+content:
+  field_reference_listing_sectors:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

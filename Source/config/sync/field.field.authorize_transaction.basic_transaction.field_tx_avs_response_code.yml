@@ -1,0 +1,19 @@
+uuid: 7d347021-1604-4c49-99b6-fe44ab194007
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_avs_response_code
+id: authorize_transaction.basic_transaction.field_tx_avs_response_code
+field_name: field_tx_avs_response_code
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'AVS Response Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

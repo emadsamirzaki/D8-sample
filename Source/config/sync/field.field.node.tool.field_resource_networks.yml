@@ -1,0 +1,29 @@
+uuid: 438587e7-b1de-4643-8bf2-2e398dbd844d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_networks
+    - node.type.network
+    - node.type.tool
+id: node.tool.field_resource_networks
+field_name: field_resource_networks
+entity_type: node
+bundle: tool
+label: Networks
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      network: network
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

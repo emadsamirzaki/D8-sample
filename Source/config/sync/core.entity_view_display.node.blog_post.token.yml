@@ -1,0 +1,153 @@
+uuid: cb726c0b-629b-4851-bafb-0238219d7e0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.blog_post.field_author_is_staff
+    - field.field.node.blog_post.field_banner_image
+    - field.field.node.blog_post.field_blog_post_author
+    - field.field.node.blog_post.field_blog_post_campaign
+    - field.field.node.blog_post.field_blog_post_issue_sector
+    - field.field.node.blog_post.field_blog_post_staff_author
+    - field.field.node.blog_post.field_campaigns
+    - field.field.node.blog_post.field_content_image
+    - field.field.node.blog_post.field_description
+    - field.field.node.blog_post.field_issues
+    - field.field.node.blog_post.field_meta_tags
+    - field.field.node.blog_post.field_networks
+    - field.field.node.blog_post.field_reports
+    - field.field.node.blog_post.field_tags
+    - node.type.blog_post
+  module:
+    - entity_reference_revisions
+    - image
+    - metatag
+    - user
+id: node.blog_post.token
+targetEntityType: node
+bundle: blog_post
+mode: token
+content:
+  field_author_is_staff:
+    weight: 127
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_banner_image:
+    weight: 122
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_blog_post_author:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_blog_post_campaign:
+    weight: 125
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_blog_post_issue_sector:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_blog_post_staff_author:
+    weight: 126
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_campaigns:
+    weight: 118
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_content_image:
+    weight: 111
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_description:
+    type: entity_reference_revisions_entity_view
+    weight: 123
+    label: hidden
+    settings:
+      view_mode: token
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_issues:
+    weight: 117
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_meta_tags:
+    weight: 128
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_networks:
+    weight: 119
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_reports:
+    weight: 120
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags:
+    weight: 110
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

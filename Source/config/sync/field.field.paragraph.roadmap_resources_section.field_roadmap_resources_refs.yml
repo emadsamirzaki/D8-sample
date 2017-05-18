@@ -1,0 +1,28 @@
+uuid: af809a07-40ce-4c90-9334-c00d0c29498b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_roadmap_resources_refs
+    - node.type.roadmap_resource
+    - paragraphs.paragraphs_type.roadmap_resources_section
+id: paragraph.roadmap_resources_section.field_roadmap_resources_refs
+field_name: field_roadmap_resources_refs
+entity_type: paragraph
+bundle: roadmap_resources_section
+label: Resources
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      roadmap_resource: roadmap_resource
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

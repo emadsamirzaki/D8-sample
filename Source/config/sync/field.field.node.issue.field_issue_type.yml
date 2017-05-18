@@ -1,0 +1,23 @@
+uuid: 76c0decb-88a9-4c0a-a1df-24d97a5647c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_type
+    - node.type.issue
+  module:
+    - options
+id: node.issue.field_issue_type
+field_name: field_issue_type
+entity_type: node
+bundle: issue
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Issue
+default_value_callback: ''
+settings: {  }
+field_type: list_string

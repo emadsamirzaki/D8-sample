@@ -1,0 +1,11 @@
+uuid: 4ccd5ee8-1071-4cdd-b9ff-46e56a55a78c
+langcode: en
+status: true
+dependencies: {  }
+id: content_manager
+label: 'Content Manager'
+weight: 3
+is_admin: null
+permissions:
+  - 'administer meta tags'
+  - 'view files'

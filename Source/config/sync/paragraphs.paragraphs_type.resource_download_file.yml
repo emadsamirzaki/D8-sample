@@ -1,0 +1,6 @@
+uuid: d446fee0-00ff-43eb-802b-9e86388489d7
+langcode: en
+status: true
+dependencies: {  }
+id: resource_download_file
+label: 'Resource download file'

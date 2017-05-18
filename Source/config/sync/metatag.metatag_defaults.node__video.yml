@@ -1,0 +1,13 @@
+uuid: c3e72e98-e613-4785-b778-0545ccc230ed
+langcode: en
+status: true
+dependencies: {  }
+id: node__video
+label: 'Content: Video'
+tags:
+  description: '[node:field_description]'
+  og_video: 'https://www.youtube.com/embed/[node:field_video_youtube_id]'
+  og_video_secure_url: 'https://www.youtube.com/embed/[node:field_video_youtube_id]'
+  og_description: '[node:field_description]'
+  twitter_cards_player: 'https://www.youtube.com/embed/[node:field_video_youtube_id]'
+  twitter_cards_description: '[node:field_description]'

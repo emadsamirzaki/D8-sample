@@ -1,0 +1,113 @@
+uuid: f82eab30-5648-4304-a004-9a29fea6c3d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.donation.body
+    - field.field.node.donation.field_banner_image
+    - field.field.node.donation.field_donation_right_first_body
+    - field.field.node.donation.field_donation_right_first_link
+    - field.field.node.donation.field_donation_right_first_title
+    - field.field.node.donation.field_donation_right_sec_body
+    - field.field.node.donation.field_donation_right_sec_email
+    - field.field.node.donation.field_donation_right_sec_phone
+    - field.field.node.donation.field_donation_right_sec_title
+    - field.field.node.donation.field_meta_tags
+    - node.type.donation
+  module:
+    - image
+    - link
+    - metatag
+    - text
+    - user
+id: node.donation.default
+targetEntityType: node
+bundle: donation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_donation_right_first_body:
+    weight: 104
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_donation_right_first_link:
+    weight: 105
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_donation_right_first_title:
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_donation_right_sec_body:
+    weight: 107
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_donation_right_sec_email:
+    weight: 109
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_donation_right_sec_phone:
+    weight: 108
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_donation_right_sec_title:
+    weight: 106
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_meta_tags:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

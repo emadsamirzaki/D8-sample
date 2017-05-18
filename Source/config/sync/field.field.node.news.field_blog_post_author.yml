@@ -1,0 +1,28 @@
+uuid: 71dd9a08-617c-450d-a6c9-725ae1302814
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_post_author
+    - node.type.news
+    - taxonomy.vocabulary.authors
+id: node.news.field_blog_post_author
+field_name: field_blog_post_author
+entity_type: node
+bundle: news
+label: Author
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      authors: authors
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

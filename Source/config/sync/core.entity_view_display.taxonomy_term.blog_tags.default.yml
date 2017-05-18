@@ -1,0 +1,21 @@
+uuid: b34bf7bc-718e-441a-9f66-f305479eab16
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_tags
+  module:
+    - text
+id: taxonomy_term.blog_tags.default
+targetEntityType: taxonomy_term
+bundle: blog_tags
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

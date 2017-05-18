@@ -1,0 +1,35 @@
+uuid: b37b5595-1b1a-4634-bf34-14fed5737b5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_paragraph.field_basic_paragraph_body
+    - field.field.paragraph.basic_paragraph.field_basic_paragraph_image
+    - paragraphs.paragraphs_type.basic_paragraph
+  module:
+    - image
+    - text
+id: paragraph.basic_paragraph.default
+targetEntityType: paragraph
+bundle: basic_paragraph
+mode: default
+content:
+  field_basic_paragraph_body:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_basic_paragraph_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  uid: true

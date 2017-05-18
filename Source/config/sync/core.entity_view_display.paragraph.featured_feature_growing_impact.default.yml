@@ -1,0 +1,33 @@
+uuid: 4a7749d8-4f03-4366-a707-1f6333514846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_feature_growing_impact.field_featured_feature_impact
+    - field.field.paragraph.featured_feature_growing_impact.field_featured_feature_title
+    - paragraphs.paragraphs_type.featured_feature_growing_impact
+id: paragraph.featured_feature_growing_impact.default
+targetEntityType: paragraph
+bundle: featured_feature_growing_impact
+mode: default
+content:
+  field_featured_feature_impact:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: image_link_with_badge_title
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_featured_feature_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

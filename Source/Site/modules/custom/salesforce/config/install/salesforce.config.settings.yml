@@ -1,0 +1,6 @@
+salesforce:
+    config:
+        login_url: https://login.salesforce.com/
+        client_id: 3MVG98_Psg5cppyYdSNwUx8uWOi5PIGQRFOhJYT5I29zxLNaSueTHFa3jZxzYJiBxtUkNqZKqbCGYiQn4hu3O
+        client_secret: 5165321905919314529
+        api_url: /services/data/v37.0

@@ -1,0 +1,21 @@
+uuid: fa0df31c-618c-4e42-b9a1-d2868c46d783
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_transaction_hash
+field_name: field_tx_transaction_hash
+entity_type: authorize_transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

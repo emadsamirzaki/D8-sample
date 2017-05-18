@@ -1,0 +1,29 @@
+uuid: 13250863-573a-4309-b864-ee0f18846acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_campaigns
+    - node.type.campaign
+    - node.type.video
+id: node.video.field_resource_campaigns
+field_name: field_resource_campaigns
+entity_type: node
+bundle: video
+label: Campaigns
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

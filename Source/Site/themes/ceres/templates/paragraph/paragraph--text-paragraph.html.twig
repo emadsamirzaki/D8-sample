@@ -1,0 +1,13 @@
+<div class="clearfix clear col-xs-12">
+  {% if paragraph.field_text_paragraph_center.value %}    
+    <div class="row">
+      <div class="col-lg-5 col-md-7 col-sm-8 content-text">
+        <div class="row">
+        {% endif %}
+        {{ content.field_text_paragraph_body.0 }}
+        {% if paragraph.field_text_paragraph_center.value %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</div>

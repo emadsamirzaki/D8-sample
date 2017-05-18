@@ -1,0 +1,48 @@
+uuid: b41b9c2b-b544-43da-956a-67422af042d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.field_banner_image
+    - field.field.node.news.field_blog_post_author
+    - field.field.node.news.field_campaigns
+    - field.field.node.news.field_content_image
+    - field.field.node.news.field_description
+    - field.field.node.news.field_issues
+    - field.field.node.news.field_meta_tags
+    - field.field.node.news.field_networks
+    - field.field.node.news.field_news_press_source
+    - field.field.node.news.field_news_url
+    - field.field.node.news.field_press_contact
+    - field.field.node.news.field_referenced_campaign
+    - field.field.node.news.field_referenced_issue
+    - field.field.node.news.field_reports
+    - field.field.node.news.field_tags
+    - node.type.news
+  module:
+    - user
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_blog_post_author: true
+  field_campaigns: true
+  field_content_image: true
+  field_description: true
+  field_issues: true
+  field_meta_tags: true
+  field_networks: true
+  field_news_press_source: true
+  field_news_url: true
+  field_press_contact: true
+  field_referenced_campaign: true
+  field_referenced_issue: true
+  field_reports: true
+  field_tags: true

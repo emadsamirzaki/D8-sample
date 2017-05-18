@@ -1,0 +1,88 @@
+uuid: 4fba0301-eb18-4042-9f79-fc5984a65864
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.authors.field_author_department
+    - field.field.taxonomy_term.authors.field_author_email
+    - field.field.taxonomy_term.authors.field_author_organization
+    - field.field.taxonomy_term.authors.field_author_picture
+    - field.field.taxonomy_term.authors.field_author_position
+    - field.field.taxonomy_term.authors.field_author_twitter
+    - field.field.taxonomy_term.authors.field_banner_image
+    - image.style.staff
+    - taxonomy.vocabulary.authors
+  module:
+    - file_entity
+    - image
+    - text
+id: taxonomy_term.authors.default
+targetEntityType: taxonomy_term
+bundle: authors
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_author_department:
+    weight: 9
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_author_email:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_author_organization:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_author_picture:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: staff
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_author_position:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_author_twitter:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_banner_image:
+    weight: 8
+    label: hidden
+    settings:
+      access_message: 'You don''t have access to download this file.'
+      text: 'Download [file:name]'
+    third_party_settings: {  }
+    type: file_download_link
+    region: content
+hidden: {  }

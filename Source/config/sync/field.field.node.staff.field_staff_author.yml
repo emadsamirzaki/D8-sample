@@ -1,0 +1,28 @@
+uuid: d5ac1d17-da6b-45d0-a9cc-8875f1f9c580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_staff_author
+    - node.type.staff
+    - taxonomy.vocabulary.authors
+id: node.staff.field_staff_author
+field_name: field_staff_author
+entity_type: node
+bundle: staff
+label: Author
+description: 'It is referred to authors taxonomy and will be generated from node title (ReadOnly field)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      authors: authors
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

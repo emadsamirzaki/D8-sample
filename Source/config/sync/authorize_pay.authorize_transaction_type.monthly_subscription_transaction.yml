@@ -1,0 +1,6 @@
+uuid: d888d191-ce2c-43fa-8dbf-4df1947df8a0
+langcode: en
+status: true
+dependencies: {  }
+id: monthly_subscription_transaction
+label: 'Monthly Subscription Transaction'

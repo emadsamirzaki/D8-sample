@@ -1,0 +1,21 @@
+uuid: 23c8eded-b6a1-4eb3-9c7b-5c28e3431b35
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_footer_phone_number
+field_name: field_footer_phone_number
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

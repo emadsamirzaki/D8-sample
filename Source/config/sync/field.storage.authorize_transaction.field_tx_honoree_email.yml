@@ -1,0 +1,18 @@
+uuid: 03dda22c-8cc5-4f29-aa42-d92b48b73020
+langcode: en
+status: true
+dependencies:
+  module:
+    - authorize_pay
+id: authorize_transaction.field_tx_honoree_email
+field_name: field_tx_honoree_email
+entity_type: authorize_transaction
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

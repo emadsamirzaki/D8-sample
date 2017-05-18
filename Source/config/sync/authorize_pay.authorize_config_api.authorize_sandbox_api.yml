@@ -1,0 +1,8 @@
+uuid: c7e304fa-919e-4dc3-a0c6-33c140e7f4c5
+langcode: en
+status: true
+dependencies: {  }
+id: authorize_sandbox_api
+label: 'Authorize Sandbox API'
+apiId: 98RPc9EHd4
+transactionKey: 5RRrb325M2p7s6Aw

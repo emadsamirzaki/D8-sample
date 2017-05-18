@@ -1,0 +1,6 @@
+uuid: 08dbb394-ec8c-4168-b601-fa17dbe9927b
+langcode: en
+status: true
+dependencies: {  }
+id: featured_impact_story
+label: 'Featured Impact Story (Progress)'

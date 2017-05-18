@@ -1,0 +1,19 @@
+uuid: cdf47213-bf47-4283-acf9-0aea029607c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_roadmap_landing_cat_title
+    - paragraphs.paragraphs_type.roadmap_landing_categories
+id: paragraph.roadmap_landing_categories.field_roadmap_landing_cat_title
+field_name: field_roadmap_landing_cat_title
+entity_type: paragraph
+bundle: roadmap_landing_categories
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

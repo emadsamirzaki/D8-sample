@@ -1,0 +1,15 @@
+authorize_pay.authorize_config_settings:
+  path: 'admin/structure/authorize_config/settings'
+  defaults:
+    _form: '\Drupal\authorize_pay\Config\AuthorizeConfig'
+    _title: 'Authorize.Net Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
+system.admin_authorize_pay_config:
+  path: '/admin/config/authorize'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Authorize Payment'
+  requirements:
+    _permission: 'access administration pages'

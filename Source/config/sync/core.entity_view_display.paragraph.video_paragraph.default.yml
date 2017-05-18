@@ -1,0 +1,23 @@
+uuid: 34c0ce2c-ef2d-433e-b4e3-e203f228d46c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_paragraph.field_video_paragraph_youtube_id
+    - paragraphs.paragraphs_type.video_paragraph
+id: paragraph.video_paragraph.default
+targetEntityType: paragraph
+bundle: video_paragraph
+mode: default
+content:
+  field_video_paragraph_youtube_id:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true

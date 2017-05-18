@@ -1,0 +1,19 @@
+uuid: 519439b6-5695-4c9d-b7b3-64af9fcb4840
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_author_twitter
+    - taxonomy.vocabulary.authors
+id: taxonomy_term.authors.field_author_twitter
+field_name: field_author_twitter
+entity_type: taxonomy_term
+bundle: authors
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

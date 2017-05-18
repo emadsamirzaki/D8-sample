@@ -1,0 +1,17 @@
+uuid: 70d519f7-8974-467e-94a6-d92324f1e994
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Roadmap Category'
+type: roadmap
+description: 'Create new Roadmap Category.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

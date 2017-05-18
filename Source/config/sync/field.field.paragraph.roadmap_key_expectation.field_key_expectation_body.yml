@@ -1,0 +1,21 @@
+uuid: 39e5acb5-b73d-46ba-8e4e-387bfbabea29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_key_expectation_body
+    - paragraphs.paragraphs_type.roadmap_key_expectation
+  module:
+    - text
+id: paragraph.roadmap_key_expectation.field_key_expectation_body
+field_name: field_key_expectation_body
+entity_type: paragraph
+bundle: roadmap_key_expectation
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

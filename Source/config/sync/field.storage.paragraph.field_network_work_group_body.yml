@@ -1,0 +1,19 @@
+uuid: 0bc361eb-51fd-425c-9f8f-901d2119b312
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_network_work_group_body
+field_name: field_network_work_group_body
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

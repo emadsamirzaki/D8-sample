@@ -1,0 +1,27 @@
+uuid: 518de02e-376d-4d1d-a0a7-821a563a4957
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resource_download_file
+    - paragraphs.paragraphs_type.resource_download_file
+  module:
+    - file
+id: paragraph.resource_download_file.field_resource_download_file
+field_name: field_resource_download_file
+entity_type: paragraph
+bundle: resource_download_file
+label: 'File Upload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx doc'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

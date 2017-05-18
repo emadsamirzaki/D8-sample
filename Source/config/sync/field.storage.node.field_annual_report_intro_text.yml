@@ -1,0 +1,19 @@
+uuid: 0660bda7-3d3a-4b3b-8d5c-833cca1fbb68
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_annual_report_intro_text
+field_name: field_annual_report_intro_text
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+authorize_pay.authorize_transaction_type.*:
+  type: config_entity
+  label: 'Authorize transaction type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

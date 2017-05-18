@@ -1,0 +1,22 @@
+uuid: 1a956ed9-5961-4ffd-bce0-980ce12e9af8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resources_section.field_resources
+    - paragraphs.paragraphs_type.resources_section
+id: paragraph.resources_section.default
+targetEntityType: paragraph
+bundle: resources_section
+mode: default
+content:
+  field_resources:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

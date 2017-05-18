@@ -1,0 +1,52 @@
+uuid: 1cdbb16a-0397-4342-b3d5-0b47ab3d1bc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.annual_report_listing.body
+    - field.field.node.annual_report_listing.field_annual_report_intro_text
+    - field.field.node.annual_report_listing.field_banner_image
+    - field.field.node.annual_report_listing.field_list_page_sections
+    - field.field.node.annual_report_listing.field_meta_tags
+    - node.type.annual_report_listing
+  module:
+    - entity_reference_revisions
+    - metatag
+    - text
+    - user
+id: node.annual_report_listing.default
+targetEntityType: node
+bundle: annual_report_listing
+mode: default
+content:
+  body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_list_page_sections:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_meta_tags:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_annual_report_intro_text: true
+  field_banner_image: true

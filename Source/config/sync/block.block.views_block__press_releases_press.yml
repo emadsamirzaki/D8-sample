@@ -1,0 +1,36 @@
+uuid: f3ed55f0-b051-495b-ab73-7fc51b783a69
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.press_releases
+  module:
+    - block_visibility_groups
+    - system
+    - views
+  theme:
+    - ceres
+id: views_block__press_releases_press
+theme: ceres
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:press_releases-press'
+settings:
+  id: 'views_block:press_releases-press'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /news-center/press-releases
+    negate: false
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

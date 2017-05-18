@@ -1,0 +1,19 @@
+uuid: c01cc132-e4b8-4b4a-801f-c5647dfc3a70
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_mission_body
+field_name: field_mission_body
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

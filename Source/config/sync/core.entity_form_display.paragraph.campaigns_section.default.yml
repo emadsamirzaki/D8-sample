@@ -1,0 +1,34 @@
+uuid: ab32aec5-9683-4faa-a64e-a47a2b77ed05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campaigns_section.field_campaigns
+    - field.field.paragraph.campaigns_section.field_campaigns_body
+    - paragraphs.paragraphs_type.campaigns_section
+id: paragraph.campaigns_section.default
+targetEntityType: paragraph
+bundle: campaigns_section
+mode: default
+content:
+  field_campaigns:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_campaigns_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

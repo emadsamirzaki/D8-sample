@@ -1,0 +1,21 @@
+uuid: 92084591-c6e3-45ba-865b-18f54feef4e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_resource_download_link_txt
+    - paragraphs.paragraphs_type.resource_download_file
+id: paragraph.resource_download_file.field_resource_download_link_txt
+field_name: field_resource_download_link_txt
+entity_type: paragraph
+bundle: resource_download_file
+label: 'Link text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: Download
+default_value_callback: ''
+settings: {  }
+field_type: string

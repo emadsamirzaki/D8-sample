@@ -1,0 +1,44 @@
+uuid: e827f02e-12eb-42c9-b0cd-d8966c5d31af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_message_with_title.field_message_description
+    - field.field.paragraph.video_message_with_title.field_message_title
+    - field.field.paragraph.video_message_with_title.field_message_youtube_video_id
+    - paragraphs.paragraphs_type.video_message_with_title
+  module:
+    - text
+id: paragraph.video_message_with_title.default
+targetEntityType: paragraph
+bundle: video_message_with_title
+mode: default
+content:
+  field_message_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_message_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_message_youtube_video_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: bac67905-b6ab-4ddf-b713-ea02ac735ab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_badge_link_target
+    - paragraphs.paragraphs_type.image_link_with_badge_title
+id: paragraph.image_link_with_badge_title.field_image_badge_link_target
+field_name: field_image_badge_link_target
+entity_type: paragraph
+bundle: image_link_with_badge_title
+label: 'Open in new window'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

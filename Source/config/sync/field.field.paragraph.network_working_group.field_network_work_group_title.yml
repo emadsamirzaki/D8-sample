@@ -1,0 +1,19 @@
+uuid: afb188ad-23e3-4186-813d-870c73257286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_network_work_group_title
+    - paragraphs.paragraphs_type.network_working_group
+id: paragraph.network_working_group.field_network_work_group_title
+field_name: field_network_work_group_title
+entity_type: paragraph
+bundle: network_working_group
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

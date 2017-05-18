@@ -1,0 +1,23 @@
+.issue-issues-back{
+    background-image: none;
+    background-color: $light-gray-background;
+    border-top: 1px solid $border-color;
+}
+.issue-issues{
+    @media (min-width: $screen-sm-min){
+        font-size: 18px;
+    }
+    .section-title{
+        @include section-title-with-margin-bottom(50px);
+    }
+    padding-bottom: 50px;
+}
+.issue-issues-list {
+    @media (min-width: $screen-sm-min){
+        padding-#{$default}: 3%;
+    }
+    a{
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+}

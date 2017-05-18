@@ -1,0 +1,19 @@
+uuid: 26341a71-dd05-42e8-b604-645768434fc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.investor_leadership_newsletter
+    - field.storage.contact_message.field_newsletter_email
+id: contact_message.investor_leadership_newsletter.field_newsletter_email
+field_name: field_newsletter_email
+entity_type: contact_message
+bundle: investor_leadership_newsletter
+label: Email
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,10 @@
+uuid: 9179fdd7-32a6-4fb0-803f-3545db8981fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.program_section_display
+label: 'Program section display'
+targetEntityType: node
+cache: true

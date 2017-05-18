@@ -1,0 +1,6 @@
+uuid: 521077c8-9318-4281-a655-80bfe72b9a5c
+langcode: en
+status: true
+dependencies: {  }
+id: campaigns_section
+label: 'Campaigns Section'

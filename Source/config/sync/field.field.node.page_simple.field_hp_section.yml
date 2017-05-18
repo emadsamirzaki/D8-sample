@@ -1,0 +1,164 @@
+uuid: 9ada1279-7f15-4b12-acb1-29d8cb59487e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hp_section
+    - node.type.page_simple
+    - paragraphs.paragraphs_type.experts_section
+    - paragraphs.paragraphs_type.resources_section
+    - paragraphs.paragraphs_type.text_paragraph
+    - paragraphs.paragraphs_type.two_columns_section
+    - paragraphs.paragraphs_type.video_paragraph
+  module:
+    - entity_reference_revisions
+id: node.page_simple.field_hp_section
+field_name: field_hp_section
+entity_type: node
+bundle: page_simple
+label: Section
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      experts_section: experts_section
+      text_paragraph: text_paragraph
+      two_columns_section: two_columns_section
+      video_paragraph: video_paragraph
+      resources_section: resources_section
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 15
+        enabled: false
+      campaigns_section:
+        weight: 16
+        enabled: false
+      collage:
+        weight: 17
+        enabled: false
+      collage_section:
+        weight: 18
+        enabled: false
+      company_section:
+        weight: 19
+        enabled: false
+      events_awards_section:
+        weight: 20
+        enabled: false
+      experts_section:
+        enabled: true
+        weight: 21
+      footer_office:
+        weight: 22
+        enabled: false
+      image_link:
+        weight: 23
+        enabled: false
+      join_section:
+        weight: 24
+        enabled: false
+      networks_section:
+        weight: 25
+        enabled: false
+      news_section:
+        weight: 26
+        enabled: false
+      press_source:
+        weight: 27
+        enabled: false
+      testimonial_section:
+        weight: 28
+        enabled: false
+      basic_text_paragraph:
+        weight: 38
+        enabled: false
+      info_download_paragraph:
+        weight: 47
+        enabled: false
+      info_paragraph:
+        weight: 48
+        enabled: false
+      issues_reference_listing:
+        weight: 49
+        enabled: false
+      featured_feature_growing_impact:
+        weight: 52
+        enabled: false
+      network_members:
+        weight: 52
+        enabled: false
+      featured_impact_story:
+        weight: 53
+        enabled: false
+      network_working_group:
+        weight: 53
+        enabled: false
+      press_contacts_section:
+        weight: 55
+        enabled: false
+      image_link_with_badge_title:
+        weight: 56
+        enabled: false
+      programs_reference_listing:
+        weight: 57
+        enabled: false
+      programs_section:
+        weight: 58
+        enabled: false
+      quote_testimonial:
+        weight: 59
+        enabled: false
+      roadmap_key_expectation:
+        weight: 60
+        enabled: false
+      roadmap_landing_categories:
+        weight: 61
+        enabled: false
+      resource_download_file:
+        weight: 61
+        enabled: false
+      roadmap_landing_info:
+        weight: 62
+        enabled: false
+      roadmap_resources_section:
+        weight: 63
+        enabled: false
+      roadmap_section:
+        weight: 64
+        enabled: false
+      sectors_reference_listing:
+        weight: 65
+        enabled: false
+      text_paragraph:
+        enabled: true
+        weight: 67
+      two_columns_section:
+        enabled: true
+        weight: 68
+      two_column_section:
+        weight: 69
+        enabled: false
+      video_paragraph:
+        enabled: true
+        weight: 70
+      resources_section:
+        enabled: true
+        weight: 70
+      video_testimonial:
+        weight: 71
+        enabled: false
+      views_listing:
+        weight: 72
+        enabled: false
+      title_description:
+        weight: 80
+        enabled: false
+      video_message_with_title:
+        weight: 83
+        enabled: false
+field_type: entity_reference_revisions

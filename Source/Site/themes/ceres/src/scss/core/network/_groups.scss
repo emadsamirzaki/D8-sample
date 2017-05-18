@@ -1,0 +1,24 @@
+.network-groups{
+    padding: 40px 0 60px;
+    border-top: 1px solid $border-color;
+    @media (max-width: $screen-xs-max){
+        padding: 30px 0;
+    }
+    .section-title{
+        @include section-title-with-margin-bottom(50px);
+    }
+    &:nth-child(even){
+      background-color: #fff;
+    }
+}
+.group-item{
+    @media (min-width: $screen-sm-min){
+        &:nth-child(odd){
+            padding-#{$opposite}: 40px;
+        }
+        &:nth-child(even){
+            border-#{$default}: 1px solid $border-color;
+            padding-#{$default}: 40px;
+        }
+    }
+}

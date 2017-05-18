@@ -1,0 +1,23 @@
+uuid: f35656b5-38c1-4e7a-bb97-8323c5242590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.roadmap_resource
+  module:
+    - metatag
+id: node.roadmap_resource.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: roadmap_resource
+label: 'Meta Tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

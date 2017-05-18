@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_page_title()
+ */
+#}
+{% if title %}
+  <h1{{ title_attributes.addClass('page-title') }}>
+    {% if prefix_title is not iterable %}
+      <span class="subtitle prefix-title"> {{ prefix_title }} </span>
+    {% else %}
+      <span class="subtitle prefix-title"> From {{ prefix_title.0 }}   To  {{ prefix_title.1 }} </span>
+    {% endif %}
+    <div>
+      {% if pretitle %} <span> {{ pretitle }} </span> {% endif %}
+      {% if fluid_title %}
+        {{ title }}
+      {% else %}
+        <div class="dot-ellipsis dot-resize-update title-ellipsis">
+          {{ title }}
+        </div>
+      {% endif %}
+      {% if pre_subtitle %} <span class="subtitle pre-subtitle">{{ pre_subtitle }}</span> {% endif %}
+      {% if subtitle %}
+        {% if fluid_title %}
+          <span class="subtitle">{{ subtitle }}</span>
+        {% else %}
+          <span class="subtitle dot-ellipsis dot-resize-update subtitle-ellipsis">{{ subtitle }}</span>
+        {% endif %}
+      {% endif %}
+    </div>
+  </h1>
+{% endif %}

@@ -1,0 +1,19 @@
+uuid: b659777e-fb46-4300-8912-7d876dae9fcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_creditcardverf
+id: authorize_transaction.basic_transaction.field_tx_creditcardverf
+field_name: field_tx_creditcardverf
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: 'Credit Card Verfication'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

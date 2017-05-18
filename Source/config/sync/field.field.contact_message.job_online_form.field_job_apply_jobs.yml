@@ -1,0 +1,29 @@
+uuid: b4fa34ca-1284-4b5b-8edb-e42e85222e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.job_online_form
+    - field.storage.contact_message.field_job_apply_jobs
+    - node.type.job
+id: contact_message.job_online_form.field_job_apply_jobs
+field_name: field_job_apply_jobs
+entity_type: contact_message
+bundle: job_online_form
+label: Jobs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      job: job
+    sort:
+      field: title
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

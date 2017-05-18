@@ -1,0 +1,14 @@
+{% if paragraph.field_resource_download_body.value %}
+    <div class="universal-section-desc text-center">
+      {{ content.field_resource_download_body }}
+    </div>
+{% endif %}
+{% if paragraph.field_resource_download_link.value %}
+    <div class="read-more-wrapper text-center">
+      <a href="{{ content.field_resource_download_link.0 }}" target="_blank" class="read-more-btn text-uppercase white-back no-mar-top">{{ content.field_resource_download_link_txt.0 }}</a>
+    </div>
+{% elseif paragraph.field_resource_download_file.value %}
+    <div class="read-more-wrapper text-center">
+      <a href="{{ content.field_resource_download_file.0 }}" target="_blank" class="read-more-btn text-uppercase white-back no-mar-top">{{ content.field_resource_download_link_txt.0 }}</a>
+    </div>
+{% endif %}

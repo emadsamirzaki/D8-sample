@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the arkbootstrap theme.
+
+ceres_annual_report.settings:
+  type: theme_settings
+  label: 'Ceres Annual Report settings'

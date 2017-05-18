@@ -1,0 +1,14 @@
+{#{{dump(term|keys)}}#}
+{% if term.description.value %}
+    <section class="body-issue-wrapper no-back-border row">
+      <div class="container">
+        <div class="row clearfix">
+          <div class="col-lg-5 col-md-7 col-sm-8 content-text">
+            <div class="row">
+              {{ content.description }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endif %}

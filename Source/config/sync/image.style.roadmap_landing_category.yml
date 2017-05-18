@@ -1,0 +1,14 @@
+uuid: debef05d-ffed-4732-9fa3-058dcacd99d6
+langcode: en
+status: true
+dependencies: {  }
+name: roadmap_landing_category
+label: 'Roadmap landing Category'
+effects:
+  2247a45a-5d88-43d1-b150-63b7cae2152b:
+    uuid: 2247a45a-5d88-43d1-b150-63b7cae2152b
+    id: image_resize
+    weight: 1
+    data:
+      width: 470
+      height: 470

@@ -1,0 +1,14 @@
+uuid: 3c96214b-cef9-4471-a240-a8cb99c921a2
+langcode: en
+status: true
+dependencies: {  }
+name: basic_page_section
+label: 'Basic page section '
+effects:
+  dc3c64d4-dcec-4cd4-8c0c-d251ff2c2ee9:
+    uuid: dc3c64d4-dcec-4cd4-8c0c-d251ff2c2ee9
+    id: image_resize
+    weight: -9
+    data:
+      width: 300
+      height: 300

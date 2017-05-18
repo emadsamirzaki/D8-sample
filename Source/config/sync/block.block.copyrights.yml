@@ -1,0 +1,25 @@
+uuid: 992a24c0-42aa-4ec6-afc3-340cc6a23b92
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a30478e5-575e-4102-8d73-e7890a50ff71'
+  module:
+    - block_content
+  theme:
+    - ceres
+id: copyrights
+theme: ceres
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:a30478e5-575e-4102-8d73-e7890a50ff71'
+settings:
+  id: 'block_content:a30478e5-575e-4102-8d73-e7890a50ff71'
+  label: Copyrights
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 496eb4ab-3552-479e-acbd-f4bad7ab49fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ceres_annual_report
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: ceres_annual_report_content
+theme: ceres_annual_report
+region: content
+weight: -10
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

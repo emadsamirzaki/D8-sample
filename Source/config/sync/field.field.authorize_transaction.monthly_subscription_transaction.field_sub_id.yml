@@ -1,0 +1,19 @@
+uuid: 5bda3577-76bb-48f8-aba1-cdd1c8dfa85b
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_sub_id
+id: authorize_transaction.monthly_subscription_transaction.field_sub_id
+field_name: field_sub_id
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: 'Subscription Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

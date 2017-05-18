@@ -1,0 +1,42 @@
+uuid: 3e2f9880-9883-476c-826a-e842836eb7d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.roadmap_categories_section
+    - field.field.node.roadmap.body
+    - field.field.node.roadmap.field_banner_image
+    - field.field.node.roadmap.field_content_image
+    - field.field.node.roadmap.field_meta_tags
+    - field.field.node.roadmap.field_roadmap_description
+    - field.field.node.roadmap.field_roadmap_explore_categories
+    - field.field.node.roadmap.field_roadmap_key_expectations
+    - field.field.node.roadmap.field_roadmap_resources
+    - image.style.basic_page_section
+    - node.type.roadmap
+  module:
+    - image
+    - user
+id: node.roadmap.roadmap_categories_section
+targetEntityType: node
+bundle: roadmap
+mode: roadmap_categories_section
+content:
+  field_content_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: basic_page_section
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  field_banner_image: true
+  field_meta_tags: true
+  field_roadmap_description: true
+  field_roadmap_explore_categories: true
+  field_roadmap_key_expectations: true
+  field_roadmap_resources: true
+  links: true

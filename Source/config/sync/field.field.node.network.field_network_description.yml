@@ -1,0 +1,89 @@
+uuid: 34a91df3-5f3c-4bc4-b096-b4f613584330
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_network_description
+    - node.type.network
+    - paragraphs.paragraphs_type.text_paragraph
+    - paragraphs.paragraphs_type.video_paragraph
+  module:
+    - entity_reference_revisions
+id: node.network.field_network_description
+field_name: field_network_description
+entity_type: node
+bundle: network
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_paragraph: text_paragraph
+      video_paragraph: video_paragraph
+    target_bundles_drag_drop:
+      basic_paragraph:
+        weight: 21
+        enabled: false
+      campaigns_section:
+        weight: 22
+        enabled: false
+      collage:
+        weight: 23
+        enabled: false
+      collage_section:
+        weight: 24
+        enabled: false
+      company_section:
+        weight: 25
+        enabled: false
+      events_awards_section:
+        weight: 26
+        enabled: false
+      experts_section:
+        weight: 27
+        enabled: false
+      footer_office:
+        weight: 28
+        enabled: false
+      image_link:
+        weight: 29
+        enabled: false
+      info_download_paragraph:
+        weight: 30
+        enabled: false
+      info_paragraph:
+        weight: 31
+        enabled: false
+      join_section:
+        weight: 32
+        enabled: false
+      networks_section:
+        weight: 33
+        enabled: false
+      news_section:
+        weight: 34
+        enabled: false
+      press_source:
+        weight: 35
+        enabled: false
+      roadmap_key_expectation:
+        weight: 36
+        enabled: false
+      roadmap_resources_section:
+        weight: 37
+        enabled: false
+      testimonial_section:
+        weight: 38
+        enabled: false
+      text_paragraph:
+        enabled: true
+        weight: 39
+      video_paragraph:
+        enabled: true
+        weight: 40
+field_type: entity_reference_revisions

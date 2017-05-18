@@ -1,0 +1,20 @@
+uuid: 9b44d98f-6af8-43bf-889b-712a3592e89f
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'Send message'
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: job_online_form
+label: 'Job Online Form'
+recipients:
+  - ymonier@arkdev.net
+reply: ''
+weight: 0
+message: 'Thank you for applying to this job. We will contact you shortly...'
+redirect: ''

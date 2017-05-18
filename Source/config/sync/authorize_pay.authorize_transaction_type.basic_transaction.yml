@@ -1,0 +1,6 @@
+uuid: 80c0dc67-62cc-4e52-b698-03c62631014d
+langcode: en
+status: true
+dependencies: {  }
+id: basic_transaction
+label: 'Basic Transaction'

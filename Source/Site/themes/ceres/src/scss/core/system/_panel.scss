@@ -1,0 +1,24 @@
+.remove-panel-style{
+    border: 0;
+    .panel-body{
+        padding: 0;
+    }
+}
+.black-white-panel{
+    @media(min-width: $screen-sm-min){
+        margin-#{$opposite}: 10px;
+        &.no-pad-right .panel-body{
+            padding-#{$opposite}: 5px;
+        }
+    }
+    .panel-heading{
+        background-color: $dark-brown;
+        padding: 0;
+        .panel-title{
+            display: block;
+            padding: 10px 15px;
+            color: #fff;
+        }
+    }
+
+}

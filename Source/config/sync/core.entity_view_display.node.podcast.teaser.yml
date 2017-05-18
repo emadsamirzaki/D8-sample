@@ -1,0 +1,38 @@
+uuid: 5e4e4526-90cb-46a2-a6bf-b8fb29cf029b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.podcast.field_banner_image
+    - field.field.node.podcast.field_description
+    - field.field.node.podcast.field_meta_tags
+    - field.field.node.podcast.field_podcast_audio_link
+    - field.field.node.podcast.field_podcast_file_upload
+    - field.field.node.podcast.field_podcast_thumbnail
+    - field.field.node.podcast.field_resource_campaigns
+    - field.field.node.podcast.field_resource_issues
+    - field.field.node.podcast.field_resource_networks
+    - field.field.node.podcast.field_resource_programs
+    - node.type.podcast
+  module:
+    - user
+id: node.podcast.teaser
+targetEntityType: node
+bundle: podcast
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_description: true
+  field_meta_tags: true
+  field_podcast_audio_link: true
+  field_podcast_file_upload: true
+  field_podcast_thumbnail: true
+  field_resource_campaigns: true
+  field_resource_issues: true
+  field_resource_networks: true
+  field_resource_programs: true

@@ -1,0 +1,15 @@
+uuid: 0cd8eca4-5d70-4a3c-b72b-fd939c68ef43
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: news
+label: News
+effects:
+  8edb3784-6da6-4372-a05a-bc7d084de074:
+    uuid: 8edb3784-6da6-4372-a05a-bc7d084de074
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: news_section

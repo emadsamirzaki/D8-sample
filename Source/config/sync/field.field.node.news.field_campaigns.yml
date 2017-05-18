@@ -1,0 +1,29 @@
+uuid: 9675164c-b18b-4b4f-bdae-3b83c742180c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaigns
+    - node.type.campaign
+    - node.type.news
+id: node.news.field_campaigns
+field_name: field_campaigns
+entity_type: node
+bundle: news
+label: Campaigns
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      campaign: campaign
+    sort:
+      field: changed
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+{% if node.body.value %}
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="universal-section-desc text-center">{{ content.body }}</div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_hp_section.value %}
+  <section class="body-issue-wrapper row">
+    <div class="container">
+      <div class="row">
+        {{ content.field_hp_section }}
+      </div>
+    </div>
+  </section>
+{% endif %}

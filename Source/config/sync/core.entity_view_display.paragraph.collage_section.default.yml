@@ -1,0 +1,26 @@
+uuid: c2252784-e12a-448b-87a3-08444418f534
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.collage_section.field_collage_section
+    - paragraphs.paragraphs_type.collage_section
+  module:
+    - entity_reference_revisions
+id: paragraph.collage_section.default
+targetEntityType: paragraph
+bundle: collage_section
+mode: default
+content:
+  field_collage_section:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: 7f446a6d-01ab-4cf2-9939-501f6252f09a
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.basic_transaction
+    - field.storage.authorize_transaction.field_tx_amount
+id: authorize_transaction.basic_transaction.field_tx_amount
+field_name: field_tx_amount
+entity_type: authorize_transaction
+bundle: basic_transaction
+label: Amount
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

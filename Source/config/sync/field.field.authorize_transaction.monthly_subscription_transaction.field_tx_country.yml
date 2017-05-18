@@ -1,0 +1,19 @@
+uuid: 5ab7e5ba-3964-4b0f-a84d-8fa30dd52e25
+langcode: en
+status: true
+dependencies:
+  config:
+    - authorize_pay.authorize_transaction_type.monthly_subscription_transaction
+    - field.storage.authorize_transaction.field_tx_country
+id: authorize_transaction.monthly_subscription_transaction.field_tx_country
+field_name: field_tx_country
+entity_type: authorize_transaction
+bundle: monthly_subscription_transaction
+label: Country
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

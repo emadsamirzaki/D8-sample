@@ -1,0 +1,14 @@
+uuid: e3e37a52-b66e-4355-b7fd-ee6a90b8e0c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ceres_admin
+  module:
+    - user
+id: user_add_role_action.ceres_admin
+label: 'Add the Ceres Admin role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: ceres_admin

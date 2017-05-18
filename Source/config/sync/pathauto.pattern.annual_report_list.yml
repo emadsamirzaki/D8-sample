@@ -1,0 +1,24 @@
+uuid: 09a27b69-7ef5-44b6-aabe-59129fa57ad6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: annual_report_list
+label: 'Annual Report Node'
+type: 'canonical_entities:node'
+pattern: 'annual-report/2016/[node:title]'
+selection_criteria:
+  3e5146ff-192f-46c9-9d02-dbd8e06c49c9:
+    id: node_type
+    bundles:
+      annual_report_financial: annual_report_financial
+      annual_report_home: annual_report_home
+      annual_report_listing: annual_report_listing
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3e5146ff-192f-46c9-9d02-dbd8e06c49c9
+selection_logic: and
+weight: -5
+relationships: {  }

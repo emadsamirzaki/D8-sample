@@ -1,0 +1,63 @@
+uuid: 67219f06-c3a2-4848-9d1e-c7ae94ada4f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.corporate_leadership_newsletter
+    - field.field.contact_message.corporate_leadership_newsletter.field_newsletter_email
+    - field.field.contact_message.corporate_leadership_newsletter.field_newsletter_first_name
+    - field.field.contact_message.corporate_leadership_newsletter.field_newsletter_last_name
+    - field.field.contact_message.corporate_leadership_newsletter.field_newsletter_organization
+    - field.field.contact_message.corporate_leadership_newsletter.field_newsletter_zip
+id: contact_message.corporate_leadership_newsletter.default
+targetEntityType: contact_message
+bundle: corporate_leadership_newsletter
+mode: default
+content:
+  field_newsletter_email:
+    weight: 53
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_newsletter_first_name:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_last_name:
+    weight: 52
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_organization:
+    weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_newsletter_zip:
+    weight: 54
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

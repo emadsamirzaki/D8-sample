@@ -1,0 +1,33 @@
+{% if node.body.value %}
+  <section class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-push-1">
+        <div class="universal-section-desc text-center">{{ content.body }}</div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+
+{% if node.field_description.value %}
+  <section class="body-issue-wrapper pad-top-20 no-back-border row">
+    <div class="container">
+      <div class="row">
+        {{ content.field_description }}
+      </div>
+      {% if node.field_event_registration_link.value %}
+        <div class="read-more-wrapper text-center">
+          <a href="{{ file_url(content.field_event_registration_link['#items'].0.uri) }}" class="read-more-btn sign-slide-action text-uppercase" target="_blank">{{ content.field_event_registration_link['#items'].0.title }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+{% elseif node.field_event_registration_link.value  %}
+  <section class="no-back-border row">
+    <div class="container">
+      <div class="read-more-wrapper text-center">
+        <a href="{{ file_url(content.field_event_registration_link['#items'].0.uri) }}" class="read-more-btn sign-slide-action text-uppercase no-mar-top" target="_blank">{{ content.field_event_registration_link['#items'].0.title }}</a>
+      </div>
+    </div>
+  </section>
+{% endif %}

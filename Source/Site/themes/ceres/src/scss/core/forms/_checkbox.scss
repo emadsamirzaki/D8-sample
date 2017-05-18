@@ -1,0 +1,43 @@
+input[type="checkbox"]{
+    &:not(:checked) , &:checked{
+        position: absolute;
+        left: -9999px; 
+        + label{
+            cursor: pointer;
+            display: block;
+            margin: 0;
+            padding-top: 10px;
+            font-weight: 400;
+            padding-#{$default}: 35px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 8px;
+                #{$default}: 0;
+                width: 25px;
+                height: 25px;
+                line-height: 0.8;
+                border: 2px solid $input-border;
+                background-color: transparent;
+            }
+        }
+    }
+    &:checked + label{
+        &:after {
+            @include fa-icon();
+            content: $fa-var-check;
+            position: absolute;
+            top: 10px;
+            #{$default}: 2px;
+            font-size: 21px;
+            line-height: 1;
+            color: $light-green;
+            @include transition-animation();
+
+
+        }
+    }
+}
+.centered-checkbox .form-type-checkbox{
+    display: inline-block;
+}

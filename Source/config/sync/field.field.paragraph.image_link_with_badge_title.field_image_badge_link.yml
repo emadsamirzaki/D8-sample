@@ -1,0 +1,23 @@
+uuid: 708f383a-9151-47db-9b4a-c24459c365f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_badge_link
+    - paragraphs.paragraphs_type.image_link_with_badge_title
+  module:
+    - link
+id: paragraph.image_link_with_badge_title.field_image_badge_link
+field_name: field_image_badge_link
+entity_type: paragraph
+bundle: image_link_with_badge_title
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 0
+field_type: link

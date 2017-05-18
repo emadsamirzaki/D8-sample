@@ -1,0 +1,20 @@
+uuid: cd05ac9b-6488-42b5-a250-2ba6b7ad217c
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: Subscribe
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: corporate_leadership_newsletter
+label: 'Corporate Leadership Newsletter'
+recipients:
+  - example@example.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

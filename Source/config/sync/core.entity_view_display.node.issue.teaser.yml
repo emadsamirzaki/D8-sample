@@ -1,0 +1,42 @@
+uuid: d6816b98-da41-4444-9af9-521ce5817a60
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.issue.body
+    - field.field.node.issue.field_banner_image
+    - field.field.node.issue.field_experts
+    - field.field.node.issue.field_issue_campaigns
+    - field.field.node.issue.field_issue_description
+    - field.field.node.issue.field_issue_more_description
+    - field.field.node.issue.field_issue_type
+    - field.field.node.issue.field_meta_tags
+    - node.type.issue
+  module:
+    - text
+    - user
+id: node.issue.teaser
+targetEntityType: node
+bundle: issue
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banner_image: true
+  field_experts: true
+  field_issue_campaigns: true
+  field_issue_description: true
+  field_issue_more_description: true
+  field_issue_type: true
+  field_meta_tags: true

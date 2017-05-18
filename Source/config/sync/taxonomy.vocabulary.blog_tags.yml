@@ -1,0 +1,9 @@
+uuid: 04cd71d4-eceb-4c14-a4f3-3cbbc64c20e6
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Tags'
+vid: blog_tags
+description: 'Tags related to each single block'
+hierarchy: 0
+weight: 0

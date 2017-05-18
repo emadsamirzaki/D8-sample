@@ -1,0 +1,26 @@
+uuid: 04edcddd-758c-4efa-bf96-0884d5d814f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.roadmap_landing_info.field_roadmap_landing_info
+    - paragraphs.paragraphs_type.roadmap_landing_info
+  module:
+    - entity_reference_revisions
+id: paragraph.roadmap_landing_info.default
+targetEntityType: paragraph
+bundle: roadmap_landing_info
+mode: default
+content:
+  field_roadmap_landing_info:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  uid: true

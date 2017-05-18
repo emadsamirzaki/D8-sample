@@ -1,0 +1,34 @@
+uuid: 409aff4c-167b-48ce-9905-5c83005663a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.company_section.field_company_section_content
+    - field.field.paragraph.company_section.field_company_section_desc
+    - paragraphs.paragraphs_type.company_section
+  module:
+    - entity_reference_revisions
+id: paragraph.company_section.default
+targetEntityType: paragraph
+bundle: company_section
+mode: default
+content:
+  field_company_section_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_company_section_desc:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  created: true
+  uid: true

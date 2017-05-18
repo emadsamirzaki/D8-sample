@@ -1,0 +1,17 @@
+uuid: 909b8098-1f26-447b-98df-fe1d1267f8a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Case study'
+type: case_study
+description: 'Create new Case Study.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

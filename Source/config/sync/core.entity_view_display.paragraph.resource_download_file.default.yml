@@ -1,0 +1,56 @@
+uuid: cafea437-07bf-4e73-ac95-9459674bfc25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resource_download_file.field_resource_download_body
+    - field.field.paragraph.resource_download_file.field_resource_download_file
+    - field.field.paragraph.resource_download_file.field_resource_download_link
+    - field.field.paragraph.resource_download_file.field_resource_download_link_txt
+    - paragraphs.paragraphs_type.resource_download_file
+  module:
+    - file
+    - link
+    - text
+id: paragraph.resource_download_file.default
+targetEntityType: paragraph
+bundle: resource_download_file
+mode: default
+content:
+  field_resource_download_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_resource_download_file:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    region: content
+  field_resource_download_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_resource_download_link_txt:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  created: true
+  uid: true
